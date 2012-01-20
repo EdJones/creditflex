@@ -1,4 +1,6 @@
 Creditflex::Application.routes.draw do
+  resources :subjects
+
   resources :courses
 
   # The priority is based upon order of creation:
