@@ -1,0 +1,21 @@
+<%= form_for(@proposal_status) do |f| %>
+  <% if @proposal_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proposal_status.errors.count, "error") %> prohibited this proposal_status from being saved:</h2>
+
+      <ul>
+      <% @proposal_status.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

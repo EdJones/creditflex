@@ -1,0 +1,23 @@
+<h1>Listing proposal_statuses</h1>
+
+<table>
+  <tr>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @proposal_statuses.each do |proposal_status| %>
+  <tr>
+    <td><%= proposal_status.status %></td>
+    <td><%= link_to 'Show', proposal_status %></td>
+    <td><%= link_to 'Edit', edit_proposal_status_path(proposal_status) %></td>
+    <td><%= link_to 'Destroy', proposal_status, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Proposal status', new_proposal_status_path %>

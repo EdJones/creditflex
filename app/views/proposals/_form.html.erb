@@ -1,0 +1,52 @@
+<%= form_for(@proposal) do |f| %>
+  <% if @proposal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proposal.errors.count, "error") %> prohibited this proposal from being saved:</h2>
+
+      <ul>
+      <% @proposal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_id %><br />
+    <%= f.number_field :student_id %>
+  </div>
+  <div class="field">
+    <%= f.label :portfolio_id %><br />
+    <%= f.number_field :portfolio_id %>
+  </div>
+  <div class="field">
+    <%= f.select(:proposal_type_id, ProposalType.all.collect {|p| [ p.name, p.id ] }, {:prompt => 'Select Proposal Type'}) %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :goals %><br />
+    <%= f.text_area :goals %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :questions %><br />
+    <%= f.text_area :questions %>
+  </div>
+  <div class="field">
+    <%= f.label :resources %><br />
+    <%= f.text_area :resources %>
+  </div>
+  <div class="field">
+    <%= f.label :assessment %><br />
+    <%= f.text_area :assessment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

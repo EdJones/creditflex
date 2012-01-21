@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Status:</b>
+  <%= @proposal_status.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_proposal_status_path(@proposal_status) %> |
+<%= link_to 'Back', proposal_statuses_path %>

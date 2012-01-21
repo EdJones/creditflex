@@ -4,6 +4,7 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
+	<th>Subject</th>
     <th>Notes</th>
     <th>Plan url</th>
     <th></th>
@@ -15,6 +16,7 @@
   <tr>
     <td><%= course.title %></td>
     <td><%= course.description %></td>
+	<td><%= course.subject.name %></td>
     <td><%= course.notes %></td>
     <td><%= course.plan_url %></td>
     <td><%= link_to 'Show', course %></td>

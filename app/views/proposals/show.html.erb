@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<div id="student_info">
+  <b>Student:</b>
+  <%= @proposal.student_id %>
+<br />
+  <b>Portfolio:</b>
+  <%= @proposal.portfolio_id %>
+</div>
+<div style="clear:both">
+<p>
+  <b>Title:</b>
+  <%= @proposal.title %>
+</p>
+<p>
+  <b>Proposal status:</b>
+  <%= @proposal.proposal_type_id %>
+</p>
+<p>
+  <b>Proposal type:</b>
+  <%= @proposal.proposal_type_id %>
+</p>
+
+
+
+<p>
+  <b>Goals:</b>
+  <%= @proposal.goals %>
+</p>
+
+<div class = "container1">
+<% if @proposal.proposal_type_id = "1" %>
+<p><b>Online Course Info </b></p>
+<%= @proposal.description %>
+<% end %>
+</div>
+
+<p>
+  <b>Description:</b>
+  <%= @proposal.description %>
+</p>
+
+<div class = "container2">
+  <p><b>Questions: </b> </p>
+  <%= @proposal.questions %>
+</div>
+
+<div class = "container2">
+<p>  <b>Resources: </b></p>
+  <%= @proposal.resources %>
+</div>
+
+<div class = "container2">
+  <p><b>Assessment: </b></p>
+  <%= @proposal.assessment %>
+</div>
+
+
+<%= link_to 'Edit', edit_proposal_path(@proposal) %> |
+<%= link_to 'Back', proposals_path %>

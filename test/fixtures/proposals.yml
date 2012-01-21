@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student_id: 1
+  portfolio_id: 1
+  proposal_type_id: 1
+  title: MyString
+  goals: MyText
+  description: MyText
+  questions: MyText
+  resources: MyText
+  assessment: MyText
+
+two:
+  student_id: 1
+  portfolio_id: 1
+  proposal_type_id: 1
+  title: MyString
+  goals: MyText
+  description: MyText
+  questions: MyText
+  resources: MyText
+  assessment: MyText

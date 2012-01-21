@@ -1,4 +1,10 @@
 Creditflex::Application.routes.draw do
+  resources :proposals
+
+  resources :proposal_types
+
+  resources :proposal_statuses
+
   resources :subjects
 
   resources :courses

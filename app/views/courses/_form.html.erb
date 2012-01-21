@@ -16,7 +16,7 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-	<%= select("subject", "subject_id", Subject.all.collect {|p| [ p.name, p.id ] }, { :include_blank => false }) %>
+	<%= f.select(:subject_id, Subject.all.collect {|p| [ p.name, p.id ] }, {:prompt => 'Select Subject'}) %>
   </div>
   <div class="field">
     <%= f.label :description %><br />

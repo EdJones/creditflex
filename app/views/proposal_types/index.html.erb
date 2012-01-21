@@ -1,0 +1,23 @@
+<h1>Listing proposal_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @proposal_types.each do |proposal_type| %>
+  <tr>
+    <td><%= proposal_type.name %></td>
+    <td><%= link_to 'Show', proposal_type %></td>
+    <td><%= link_to 'Edit', edit_proposal_type_path(proposal_type) %></td>
+    <td><%= link_to 'Destroy', proposal_type, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Proposal type', new_proposal_type_path %>
