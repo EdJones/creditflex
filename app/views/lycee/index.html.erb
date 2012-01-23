@@ -1,68 +1,46 @@
 <h1>Who's Using Credit Flexibility?</h1>
 
+
+<div id="featured">
+
 <%= image_tag("cafe.jpg", {:height => 360}) %>
-<h3>Who's Looking for Help?</h3>
-<% @proposals.each do |proposal| %>
-<div id="lycee_bar">
-<div class="lycee_item">
-Proposal type:<%= proposal.proposal_type_id %>
-Title: <%= proposal.title %><br />
-Goals:<%= proposal.goals %><br />
+<div id="feature_text">
+Credit Flexibility is the new way to get credit toward high school graduation by <i>doing almost anything</i>.
+<p>Take a trip, get an internship, do research, start a business, take a class outside school, go to iTunesU, you name it!
+</p>
+<p>Want your project featured here? </p>
+<p>Send us a pic and description.</p>
+Want to learn more? Visit Ohio Credit Flexibility on Facebook and get in the discussion.
+Or visit the Credit Flexibility pages at the Ohio department of Education.
 </div>
+
+</div>
+
+
+<div id="requests">
+ <div class="clearfix" id="requests_bar">
+ <h3>Who's Looking for Help?<br />Students exploring creditflex</h3>
+<% @requests.each do |request| %>
+<div id="requests_item">
+	<div class="item_desc">
+		<b>Goals: </b> <%= truncate(request.goals, :length => 140, :separator => ' ') %> <%= link_to("more", request) %>
+		<p><b>Help needed:</b> <%= truncate(request.help_needed, :length => 140, :separator => ' ') %> <%= link_to("more", request) %></p>
+	</div>
 </div>
 <% end %>
-<table>
-  <tr>
-    <th>Student</th>
-    <th>Portfolio</th>
-    
-    
-    
-    <th>Description</th>
-    <th>Questions</th>
-    <th>Resources</th>
-    <th>Assessment</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @proposals.each do |proposal| %>
-  <tr>
-    <td><%= proposal.student_id %></td>
-    <td><%= proposal.portfolio_id %></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td><%= proposal.description %></td>
-    <td><%= proposal.questions %></td>
-    <td><%= proposal.resources %></td>
-    <td><%= proposal.assessment %></td>
-    <td><%= link_to 'Show', proposal %></td>
-    <td><%= link_to 'Edit', edit_proposal_path(proposal) %></td>
-    <td><%= link_to 'Destroy', proposal, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Proposal', new_proposal_path %>
-<p id="add_link"><%= link_to_function("Add a Subject",
-"Element.remove('add_link'); Element.show('add_subject')")%></p>
-
-<div id="add_subject" style="display:none;">
-<%# form_remote_tag(:url => {:action => 'create'},
-    :update => "subject_list", :position => :bottom,
-    :html => {:id => 'subject_form'})%>
-Name: <%= text_field "subject", "name" %>
-<%# submit_tag 'Add' %>
-<%# end_form_tag %>
 </div>
+</div>
+
+
+
+
+
+
+
 
 <div id="lycee">
  <div class="clearfix" id="courses_bar">
- <h3>What's Available?<br /><br />Approved online courses</h3>
+ <h3>What's Available?<br /><br />Approved online or non-traditional courses</h3>
 <% @courses.each do |course| %>
 <div id="courses_item">
 <div class="item_desc">
