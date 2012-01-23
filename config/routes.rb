@@ -1,4 +1,8 @@
 Creditflex::Application.routes.draw do
+  resources :portfolios
+
+  resources :requests
+
   resources :proposals
 
   resources :proposal_types
@@ -14,6 +18,7 @@ Creditflex::Application.routes.draw do
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
+     match 'lycee' => 'lycee#index'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

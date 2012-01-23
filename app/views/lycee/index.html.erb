@@ -1,0 +1,75 @@
+<h1>Who's Using Credit Flexibility?</h1>
+
+
+<h3>Who's Looking for Help?</h3>
+<% @proposals.each do |proposal| %>
+<div id="lycee_bar">
+<div class="lycee_item">
+Proposal type:<%= proposal.proposal_type_id %>
+Title: <%= proposal.title %><br />
+Goals:<%= proposal.goals %><br />
+</div>
+</div>
+<% end %>
+<table>
+  <tr>
+    <th>Student</th>
+    <th>Portfolio</th>
+    
+    
+    
+    <th>Description</th>
+    <th>Questions</th>
+    <th>Resources</th>
+    <th>Assessment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @proposals.each do |proposal| %>
+  <tr>
+    <td><%= proposal.student_id %></td>
+    <td><%= proposal.portfolio_id %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><%= proposal.description %></td>
+    <td><%= proposal.questions %></td>
+    <td><%= proposal.resources %></td>
+    <td><%= proposal.assessment %></td>
+    <td><%= link_to 'Show', proposal %></td>
+    <td><%= link_to 'Edit', edit_proposal_path(proposal) %></td>
+    <td><%= link_to 'Destroy', proposal, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Proposal', new_proposal_path %>
+<p id="add_link"><%= link_to_function("Add a Subject",
+"Element.remove('add_link'); Element.show('add_subject')")%></p>
+
+<div id="add_subject" style="display:none;">
+<%# form_remote_tag(:url => {:action => 'create'},
+    :update => "subject_list", :position => :bottom,
+    :html => {:id => 'subject_form'})%>
+Name: <%= text_field "subject", "name" %>
+<%# submit_tag 'Add' %>
+<%# end_form_tag %>
+</div>
+<h3>Approved online courses</h3>
+<% @courses.each do |course| %>
+<div class="lycee_bar">
+<div class="lycee_item">
+    <%= course.title %>
+    <%= course.description %>
+	<%= course.subject.name %>
+    <%= course.notes %>
+    <%= course.plan_url %>
+</div>
+</div>
+<% end %>
+</div>
+<p>salfdhl</p>

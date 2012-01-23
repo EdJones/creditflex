@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Student:</b>
+  <%= @portfolio.student_id %>
+</p>
+
+<p>
+  <b>Teacher:</b>
+  <%= @portfolio.teacher_id %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @portfolio.notes %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @portfolio.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+<%= link_to 'Back', portfolios_path %>

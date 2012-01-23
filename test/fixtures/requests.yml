@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  goals: MyText
+  portfolio_id: 1
+  help_needed: MyText
+
+two:
+  user_id: 1
+  goals: MyText
+  portfolio_id: 1
+  help_needed: MyText

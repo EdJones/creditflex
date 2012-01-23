@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @request.user_id %>
+</p>
+
+<p>
+  <b>Goals:</b>
+  <%= @request.goals %>
+</p>
+
+<p>
+  <b>Portfolio:</b>
+  <%= @request.portfolio_id %>
+</p>
+
+<p>
+  <b>Help needed:</b>
+  <%= @request.help_needed %>
+</p>
+
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
