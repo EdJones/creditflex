@@ -1,4 +1,6 @@
 Creditflex::Application.routes.draw do
+  resources :teachers
+
   resources :portfolios
 
   resources :requests

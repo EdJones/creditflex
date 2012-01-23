@@ -1,6 +1,6 @@
 <h1>Who's Using Credit Flexibility?</h1>
 
-
+<%= image_tag("cafe.jpg", {:height => 360}) %>
 <h3>Who's Looking for Help?</h3>
 <% @proposals.each do |proposal| %>
 <div id="lycee_bar">
@@ -59,17 +59,40 @@ Name: <%= text_field "subject", "name" %>
 <%# submit_tag 'Add' %>
 <%# end_form_tag %>
 </div>
-<h3>Approved online courses</h3>
+
+<div id="lycee">
+ <div class="clearfix" id="courses_bar">
+ <h3>What's Available?<br /><br />Approved online courses</h3>
 <% @courses.each do |course| %>
-<div class="lycee_bar">
-<div class="lycee_item">
-    <%= course.title %>
-    <%= course.description %>
-	<%= course.subject.name %>
+<div id="courses_item">
+<div class="item_desc">
+    <b><%= course.title %></b><br />
+    <%= truncate(course.description, :length => 140, :separator => ' ') %> <%= link_to("more", course) %>
+	<p><b>Subject: </b> <%= course.subject.name %></p>
     <%= course.notes %>
     <%= course.plan_url %>
-</div>
+	</div>
 </div>
 <% end %>
 </div>
-<p>salfdhl</p>
+</div>
+
+<div id="teachers">
+<h3>Who's Available to Help?<br /><br />Teachers </h3>
+
+<div class="clearfix"  id="teachers_bar">
+<%= @teachers.each do |teacher| %>
+<div id="teachers_item">
+<div class="item_desc">
+    <b>Mr. Ed Jones<%# teacher.name %></b><br />
+    <%= truncate(teacher.bio, :length => 140, :separator => ' ') %> 
+	<%= link_to("more", teacher) %>
+	<p><b>Subject: </b> <%= teacher.subject %></p>
+	</div>
+</div>
+<% end %>
+</div>
+
+</div>
+
+</div>

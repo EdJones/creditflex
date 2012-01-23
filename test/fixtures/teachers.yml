@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  district: MyString
+  school: MyString
+  subject: MyString
+  specialty: MyString
+  bio: MyText
+  notes: MyText
+
+two:
+  user_id: 1
+  district: MyString
+  school: MyString
+  subject: MyString
+  specialty: MyString
+  bio: MyText
+  notes: MyText
