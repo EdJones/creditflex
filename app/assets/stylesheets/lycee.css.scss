@@ -12,15 +12,47 @@ $bar_background__bottom: #dee698;
 	}
 
 #feature_text {
+	width: 550px;
+	float:right;
+	height:360px;
+	padding-bottom:0px;
+
+}
+#intro {
+	color:#8C1C32;
+	font-size:larger;
+	line-height: 24px;
+}
+#main_text {
 	width: 400px;
 	padding-left:20px;
 	padding-right:30px;
-	float:right;
 	font-size: large;
+	color:#322938;
+}
+#main_text p{
+	font-size: large;
+	color:#322938;
 }
 #feature_text p {
 	font-size: large;
+	color:#322938;
 }
+.learn_more {
+	color:#92a868a;
+	}
+#feature_text .not_ohio {
+	font-size: small;
+}
+#caption {
+	margin-top:auto;
+	margin-bottom:0px;
+}	
+#caption p{
+	font-size: small;
+	margin-left:15px;
+		float:left;
+	}
 #requests {
 	border-radius: 4px; 
 	-moz-border-radius: 4px; 

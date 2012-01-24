@@ -5,3 +5,38 @@
  *= require_self
  *= require_tree . 
 */
+body {
+	margin:0;
+	}
+.ribbon {
+	width: 100%;
+	height: 90px;
+	/*background-color:#CC3300;*/
+	background-image:url(file:///C|/Users/Ed/webapps/creditflex/app/assets/images/top_red_bar.gif);
+	background-repeat:repeat-x;
+	margin: 0;
+	}
+#diver {
+	padding-left: 10px;
+	padding-top:5px;
+	height: 80px;
+	width: 80px;
+	float:	left;
+		vertical-align:middle;
+	}
+#diver img {
+	height: 80px;
+	width: 80px;
+	float:	right;
+	vertical-align:middle;
+	}
+.clear{
+	clear:both;
+	}
+#title {
+	font-size:x-large;
+	float:left;
+	width:300px;
+	vertical-align:middle;
+	height:200px;;
+	}	

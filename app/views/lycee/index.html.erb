@@ -5,15 +5,20 @@
 
 <%= image_tag("cafe.jpg", {:height => 360}) %>
 <div id="feature_text">
-Credit Flexibility is the new way to get credit toward high school graduation by <i>doing almost anything</i>.
+<div id="main_text">
+<div id="intro">
+Credit Flexibility is the new way to get credit toward high school graduation by <i>doing almost anything</i>.</div>
 <p>Take a trip, get an internship, do research, start a business, take a class outside school, go to iTunesU, you name it!
 </p>
-<p>Want your project featured here? </p>
-<p>Send us a pic and description.</p>
-Want to learn more? Visit Ohio Credit Flexibility on Facebook and get in the discussion.
-Or visit the Credit Flexibility pages at the Ohio department of Education.
-</div>
 
+<p class="learn_more">Want to learn more? Visit <a href="http://www.facebook.com/pages/Ohio-Credit-Flexibility/177300152280207">Ohio Credit Flexibility on Facebook</a> or or the <a href="http://www.sharedwork.org/group/ohio-credit-flexibility/home1">Credit Flexibility Community of Practice</a> and get in the discussion.
+Then see your guidance councilor or visit the <a href="http://www.education.ohio.gov/GD/Templates/Pages/ODE/ODEDetail.aspx?page=3&TopicRelationID=1864&ContentID=82751">Credit Flexibility pages</a> at the Ohio Department of Education.</p><p></p><p></p>
+<p class="not_ohio">Not in Ohio? Credit Flexibility may be coming to your state!</p>
+</div>
+<div id="caption">
+Want your project featured here? <br/>Send us a pic and description.
+</div>
+</div>
 </div>
 
 
@@ -47,8 +52,9 @@ Or visit the Credit Flexibility pages at the Ohio department of Education.
     <b><%= course.title %></b><br />
     <%= truncate(course.description, :length => 140, :separator => ' ') %> <%= link_to("more", course) %>
 	<p><b>Subject: </b> <%= course.subject.name %></p>
-    <%= course.notes %>
-    <%= course.plan_url %>
+    <p><b>Notes: </b> <%= truncate(course.notes, :length => 50, :separator => ' ') %> <%= link_to("more", course) %>
+<br />
+    <b><%= link_to("Course link", course.plan_url) %></b>
 	</div>
 </div>
 <% end %>
