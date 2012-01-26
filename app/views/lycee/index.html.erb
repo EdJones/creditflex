@@ -24,7 +24,9 @@ Want your project featured here? <br/>Send us a pic and description.
 
 <div id="requests">
  <div class="clearfix" id="requests_bar">
- <h3>Who's Looking for Help?<br />Students exploring creditflex</h3>
+<div id="teachers_band">
+<%= image_tag("guitar_hero.png", :class => "penguin") %>
+ <h3>Who's Looking for Help?<br />Students exploring creditflex</h3></div>
 <% @requests.each do |request| %>
 <div id="requests_item">
 	<div class="item_desc">
@@ -45,7 +47,10 @@ Want your project featured here? <br/>Send us a pic and description.
 
 <div id="lycee">
  <div class="clearfix" id="courses_bar">
- <h3>What's Available?<br /><br />Approved online or non-traditional courses</h3>
+<div id="teachers_band">
+<%= image_tag("zt180.png", :class => "penguin") %>
+
+<h3>What's Available?<br /><br />Approved online or non-traditional courses</h3></div> 
 <% @courses.each do |course| %>
 <div id="courses_item">
 <div class="item_desc">
@@ -62,13 +67,15 @@ Want your project featured here? <br/>Send us a pic and description.
 </div>
 
 <div id="teachers">
+<div id="teachers_band">
+<%= image_tag("penguinredcross.png", :id => "penguin") %>
 <h3>Who's Available to Help?<br /><br />Teachers </h3>
-
+</div>
 <div class="clearfix"  id="teachers_bar">
 <% @teachers.each do |teacher| %>
 <div id="teachers_item">
 <div class="item_desc">
-    <b>Mr. Ed Jones<%# teacher.name %></b><br />
+    <b><%= teacher.title %>&nbsp;<%= teacher.name %></b><br />
     <%= truncate(teacher.bio, :length => 140, :separator => ' ') %> 
 	<%= link_to("more", teacher) %>
 	<p><b>Subject: </b> <%= teacher.subject %></p>
