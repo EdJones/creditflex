@@ -3,7 +3,7 @@ class TeachersController < ApplicationController
   # GET /teachers.json
   def index
     @teachers = Teacher.all
-
+logger.debug "@teachers: #{@teachers}"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @teachers }

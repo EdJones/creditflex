@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120124002030) do
+ActiveRecord::Schema.define(:version => 20120125184418) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -76,6 +76,16 @@ ActiveRecord::Schema.define(:version => 20120124002030) do
     t.datetime "updated_at"
   end
 
+  create_table "resources", :force => true do |t|
+    t.integer  "author_id"
+    t.string   "category"
+    t.string   "url"
+    t.text     "description"
+    t.integer  "viewed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "subjects", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -113,6 +123,7 @@ ActiveRecord::Schema.define(:version => 20120124002030) do
     t.datetime "last_login_at"
     t.datetime "last_logout_at"
     t.datetime "last_activity_at"
+    t.string   "role"
   end
 
   add_index "users", ["activation_token"], :name => "index_users_on_activation_token"

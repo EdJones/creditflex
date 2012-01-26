@@ -1,6 +1,11 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
   
+  ROLES = %w[admin moderator teacher student banned]
+  
+  has_one :teacher
+  has_one :student
+  
   validates_presence_of :username
   validates_uniqueness_of :username, :email, :allow_blank => true
   validates_format_of :username, :with => /^[-\w\._@]+$/i, :allow_blank => true, :message => "should only contain letters, numbers, or .-_@"
