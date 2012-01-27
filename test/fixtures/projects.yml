@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  student_id: 1
+  teacher_id: 1
+  summary: MyString
+  status: MyString
+  portfolio_id: 1
+
+two:
+  title: MyString
+  student_id: 1
+  teacher_id: 1
+  summary: MyString
+  status: MyString
+  portfolio_id: 1
