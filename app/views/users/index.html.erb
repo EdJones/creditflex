@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Avatar</th>
     <th>username</th>
     <th>email</th>
     <th>created_at</th>
@@ -9,6 +10,7 @@
 
 <% @users.each do |user| %>
   <tr>
+  	<td><%= image_tag user.avatar.url.to_s, {:height => 30} %></td>
 	<td><%= user.username %></td>
 	<td><%= user.email %></td>
 	<td><%= user.created_at %></td>

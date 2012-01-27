@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120126170415) do
+ActiveRecord::Schema.define(:version => 20120126214222) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(:version => 20120126170415) do
     t.datetime "last_logout_at"
     t.datetime "last_activity_at"
     t.string   "role"
+    t.string   "avatar"
   end
 
   add_index "users", ["activation_token"], :name => "index_users_on_activation_token"

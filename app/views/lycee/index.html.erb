@@ -11,8 +11,7 @@ Credit Flexibility is the new way to get credit toward high school graduation by
 <p>Take a trip, get an internship, do research, start a business, take a class outside school, go to iTunesU, you name it!
 </p>
 
-<p class="learn_more">Want to learn more? Visit <a href="http://www.facebook.com/pages/Ohio-Credit-Flexibility/177300152280207">Ohio Credit Flexibility on Facebook</a> or or the <a href="http://www.sharedwork.org/group/ohio-credit-flexibility/home1">Credit Flexibility Community of Practice</a> and get in the discussion.
-Then see your guidance councilor or visit the <a href="http://www.education.ohio.gov/GD/Templates/Pages/ODE/ODEDetail.aspx?page=3&TopicRelationID=1864&ContentID=82751">Credit Flexibility pages</a> at the Ohio Department of Education.</p><p></p><p></p>
+<p class="learn_more">Want to learn more? <br />Visit <a href="http://www.facebook.com/pages/Ohio-Credit-Flexibility/177300152280207" target="blank">Ohio Credit Flexibility on Facebook</a> or <%=link_to("get the poop here", requests_path) %>.</p><p></p><p></p>
 <p class="not_ohio">Not in Ohio? Credit Flexibility may be coming to your state!</p>
 </div>
 <div id="caption">
@@ -24,7 +23,7 @@ Want your project featured here? <br/>Send us a pic and description.
 
 <div id="requests">
  <div class="clearfix" id="requests_bar">
-<div id="teachers_band">
+<div class="t_band">
 <%= image_tag("guitar_hero.png", :class => "penguin") %>
  <h3>Who's Looking for Help?<br />Students exploring creditflex</h3></div>
 <% @requests.each do |request| %>
@@ -36,6 +35,7 @@ Want your project featured here? <br/>Send us a pic and description.
 </div>
 <% end %>
 </div>
+<br /><%=link_to("Ask about credit flex", new_request_path, :id => "add_request") %>
 </div>
 
 
@@ -47,8 +47,8 @@ Want your project featured here? <br/>Send us a pic and description.
 
 <div id="lycee">
  <div class="clearfix" id="courses_bar">
-<div id="teachers_band">
-<%= image_tag("zt180.png", :class => "penguin") %>
+<div class="t_band">
+<%= image_tag("zt180_ecosystems.png", :class => "penguin") %>
 
 <h3>What's Available?<br /><br />Approved online or non-traditional courses</h3></div> 
 <% @courses.each do |course| %>
@@ -64,10 +64,11 @@ Want your project featured here? <br/>Send us a pic and description.
 </div>
 <% end %>
 </div>
+<%=link_to("Add an approved course", new_course_path, :id => "add_course") %>
 </div>
 
 <div id="teachers">
-<div id="teachers_band">
+<div class="t_band">
 <%= image_tag("penguinredcross.png", :id => "penguin") %>
 <h3>Who's Available to Help?<br /><br />Teachers </h3>
 </div>
@@ -75,7 +76,7 @@ Want your project featured here? <br/>Send us a pic and description.
 <% @teachers.each do |teacher| %>
 <div id="teachers_item">
 <div class="item_desc">
-    <b><%= teacher.title %>&nbsp;<%= teacher.name %></b><br />
+    <b><%= "#{teacher.title} " if teacher.title? %><%= teacher.name %></b><%= image_tag( teacher.user.avatar.url.to_s, :class => "t_avatar") if teacher.user.avatar? %><br />
     <%= truncate(teacher.bio, :length => 140, :separator => ' ') %> 
 	<%= link_to("more", teacher) %>
 	<p><b>Subject: </b> <%= teacher.subject %></p>
@@ -84,6 +85,9 @@ Want your project featured here? <br/>Send us a pic and description.
 <% end %>
 </div>
 
+ <div>
+<%=link_to("Add teacher", new_teacher_path, :id => "add_mentor") %>
+</div>
 </div>
 
 </div>

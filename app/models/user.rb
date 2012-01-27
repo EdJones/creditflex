@@ -14,6 +14,6 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   validates_length_of :password, :minimum => 4, :allow_blank => true
   
-  
+  mount_uploader :avatar, AvatarUploader
   
 end

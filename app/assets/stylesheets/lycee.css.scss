@@ -21,7 +21,7 @@ $bar_background__bottom: #dee698;
 #intro {
 	color:#8C1C32;
 	font-size:larger;
-	line-height: 24px;
+	line-height: 26px;
 }
 #main_text {
 	width: 400px;
@@ -33,6 +33,7 @@ $bar_background__bottom: #dee698;
 #main_text p{
 	font-size: large;
 	color:#322938;
+	line-height: 20px;
 }
 #feature_text p {
 	font-size: large;
@@ -102,7 +103,7 @@ $bar_background__bottom: #dee698;
 #requests_bar #requests_item .item_desc {background: #e6f2f7; padding: 10px; border-bottom-right-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px}
 #requests_bar  h4 {margin: 0; font-size: 18px; text-align:center; font-weight:normal;}
 #requests_bar #requests_item .item_desc h5 {margin: 0; font-size: 18px;}
-#requests_bar #requests_item .item_desc a {color:#555555; text-decoration:none;}
+#requests_bar #requests_item .item_desc a {color:#322938; text-decoration:underline; text-align:right;}
 #requests_bar #requests_item .item_desc a:hover {color:#003399;}
 #requests_bar .portfolio_item .item_desc p {margin: 0; color: #5f697a; font-size: 14px}
 
@@ -201,7 +202,11 @@ $bar_background__bottom: #dee698;
 }
 #teachers #lycee_inner {padding: 15px 25px 0px 25px; overflow: hidden; width: auto}
 #teachers .full_column, #lycee .two_column_left, #lycee .two_column_right, #secondary_content .quarter_column_left {margin-bottom: 18px}
-#teachers_bar {margin-bottom: 35px; clear: left}
+#teachers_bar {
+	margin-bottom: 35px; 
+	clear: left;
+	height:200px;
+	}
 #teachers_bar img {
 	border-top-left-radius: 4px; 
 	-moz-border-radius-topleft: 4px; 
@@ -243,14 +248,35 @@ $bar_background__bottom: #dee698;
 #teachers_bar #teachers_item .item_desc a:hover {color:#003399;}
 #teachers_bar .portfolio_item .item_desc p {margin: 0; color: #5f697a; font-size: 14px}
 
-#teachers_band { width: 800px;}
-#teachers h3 { width: 300px;}
+.t_band { width: 800px;}
+.t_band h3 { width: 300px; padding-left:7px;}
+#teachers h3 { width: 300px; padding-left:5px;}
 .penguin {
 	float:right;
 	padding-top:0px;
 	margin-top:-10px;
 	}
+.t_avatar {
+	float:right;
+	margin-left:auto;
+	margin-right:5px;
+	vertical-align:middle;
+	height:40px;
+}	
 #penguin {
 	float:right;
+	margin-top:-20px;
 	}
+#add_mentor {
+	font-size:small;
+	margin-right:20px;
+	padding-bottom:20px;
+	float:right;
+}	
+#add_course {
+	font-size:small;
+	margin-right:20px;
+	padding-bottom:20px;
+	float:right;
+}
 .clearfix {zoom: 1}		
