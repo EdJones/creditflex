@@ -1,6 +1,7 @@
 class LyceeController < ApplicationController
 
    def index
+    @projects= Project.all
     @requests = Request.all
     @proposals = Proposal.all
 	@courses = Course.all

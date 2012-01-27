@@ -54,6 +54,70 @@ $bar_background__bottom: #dee698;
 	margin-left:15px;
 		float:left;
 	}
+	
+	
+	
+	
+#projects {
+	border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px; 
+	-moz-box-shadow: 0px 2px 2px #666666; 
+	-webkit-box-shadow: 0px 2px 2px #666666; 
+	box-shadow: 0px 2px 2px #666666; 
+	background: #fbf9e1; 
+	background: -moz-linear-gradient(top, $bar_background__top 0%, $bar_background__bottom 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
+	background: -webkit-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -o-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -ms-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
+	background: linear-gradient(top, #f7edcf 0%, #f7edcf 100%); 
+	color: #4c4c4c; 
+	margin: 0 0 24px 0; 
+	overflow: hidden
+	}
+#projects_bar {margin-bottom: 35px; clear: left}
+#projects_bar h2 {font-size: 28px; font-family: "MuseoSans500", Arial, "Lucida Grande", Tahoma, "Sans Serif"}
+#projects_bar #projects_item {
+	border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px; 
+	-moz-box-shadow: 0px 2px 2px #666666; 
+	-webkit-box-shadow: 0px 2px 2px #666666; 
+	box-shadow: 0px 2px 2px #666666; 
+	background: #fbf9e1; 
+	background: -moz-linear-gradient(top, $bar_background__top 0%, #f7edcf 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
+	background: -webkit-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -o-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -ms-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
+	background: linear-gradient(top, #f7edcf 0%, #f7edcf 100%); 
+	color: #4c4c4c; 
+	margin: 0 0 24px 0; 
+	overflow: hidden;
+	width: 190px; 
+	float: left; 
+	margin-right: 20px; 
+	margin-left: 15px;
+}
+#projects_bar #projects_item:hover {background-color: #0061D7;} 
+#projects_bar #projects_item_last {width: 190px; float: left; margin-right:0px; padding-left: 30px; padding-top:70px; } 
+#projects_bar #projects_item_last p {margin: 0; color: #5f697a; font-size: 14px}
+.courses_bar #projects_item:last-child {margin: 0}
+#projects_bar #projects_item .item_desc {background: #e6f2f7; padding: 10px; border-bottom-right-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px}
+#projects_bar  h4 {margin: 0; font-size: 18px; text-align:center; font-weight:normal;}
+#projects_bar #projects_item .item_desc h5 {margin: 0; font-size: 18px;}
+#projects_bar #projects_item .item_desc a {color:#322938; text-decoration:underline; text-align:right;}
+#projects_bar #projects_item .item_desc a:hover {color:#003399;}
+#projects_bar .portfolio_item .item_desc p {margin: 0; color: #5f697a; font-size: 14px}
+	
+	
+	
+	
+	
+	
+	
+	
 #requests {
 	border-radius: 4px; 
 	-moz-border-radius: 4px; 

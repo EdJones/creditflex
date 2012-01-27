@@ -21,6 +21,34 @@ Want your project featured here? <br/>Send us a pic and description.
 </div>
 
 
+
+
+<div id="projects">
+ <div class="clearfix" id="projects_bar">
+<div class="t_band">
+<%= image_tag("presentation.png", :class => "penguin") %>
+ <h3>Share Your Credit Flex Project</h3></div>
+<% @projects.each do |project| %>
+<div id="projects_item">
+	<div class="item_desc">
+		<b>Title</b> <%= truncate(project.title, :length => 140, :separator => ' ') %> <%= link_to("more", project) %>
+		<p><b>I'm:</b> <%= truncate(project.summary, :length => 140, :separator => ' ') %> <%= link_to("more", project) %></p>
+	</div>
+</div>
+<% end %>
+</div>
+<br /><%=link_to("Tell us about your CF project", new_project_path, :id => "add_project") %>
+</div>
+
+
+
+
+
+
+
+
+
+
 <div id="requests">
  <div class="clearfix" id="requests_bar">
 <div class="t_band">
@@ -76,7 +104,7 @@ Want your project featured here? <br/>Send us a pic and description.
 <% @teachers.each do |teacher| %>
 <div id="teachers_item">
 <div class="item_desc">
-    <b><%= "#{teacher.title} " if teacher.title? %><%= teacher.name %></b><%= image_tag( teacher.avatar.url.to_s, :class => "t_avatar") if teacher.user.avatar? %><br />
+    <b><%= "#{teacher.title} " if teacher.title? %><%= teacher.name %></b><%= image_tag( teacher.avatar.url.to_s, :class => "t_avatar") if teacher.avatar? %><br />
     <%= truncate(teacher.bio, :length => 140, :separator => ' ') %> 
 	<%= link_to("more", teacher) %>
 	<p><b>Subject: </b> <%= teacher.subject %></p>
