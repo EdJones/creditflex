@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
+load_and_authorize_resource
+skip_authorize_resource :only => :new
+
   # GET /users
   # GET /users.json
   def index
     @users = User.all
-
+logger.debug "current_user: #{current_user.inspect}"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @users }
