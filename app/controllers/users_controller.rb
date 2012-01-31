@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
-load_and_authorize_resource
-skip_authorize_resource :only => :new
+before_filter :require_login, :except => :new
+
+#load_and_authorize_resource
+#skip_authorize_resource :only => :new
 
   # GET /users
   # GET /users.json
   def index
+  
     @users = User.all
+	unauthorized! if cannot? :read, @users
 logger.debug "current_user: #{current_user.inspect}"
     respond_to do |format|
       format.html # index.html.erb
@@ -28,7 +32,6 @@ logger.debug "current_user: #{current_user.inspect}"
   # GET /users/new.json
   def new
     @user = User.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @user }

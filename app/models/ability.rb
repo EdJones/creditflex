@@ -8,14 +8,15 @@ class Ability
 	if user.role = 'admin'
       can :manage, :all
       # some other trainer specific roles here, like editing his/her profile
-    else if user.role = 'student'
+    elsif user.role = 'student'
       can :read, :all
+	  can :manage, Project, :student_id => user.id 
 	else 
-		cannot :read, User
+		cannot :read, Users
       # some other client specific roles here, like editing his/her profile
 	  
     end
-end
+
     #
     # The first argument to `can` is the action you are giving the user permission to do.
     # If you pass :manage it will apply to every action. Other common actions here are

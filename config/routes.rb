@@ -5,22 +5,34 @@ Creditflex::Application.routes.draw do
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
   
+  #get "/images/favicon.ico"
   resources :users
   resources :sessions
 
   resources :students
 
-  resources :projects
-
+  resources :projects do
+        member do
+            post 'new'
+			end
+	end
   resources :resources
 
   resources :users
 
-  resources :teachers
+  resources :teachers do
+        member do
+            post 'new'
+			end
+	end
 
   resources :portfolios
 
-  resources :requests
+  resources :requests do
+        member do
+            post 'new'
+			end
+	end
 
   resources :proposals
 
@@ -30,7 +42,11 @@ Creditflex::Application.routes.draw do
 
   resources :subjects
 
-  resources :courses
+  resources :courses do
+        member do
+            post 'new'
+			end
+	end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -11,10 +11,10 @@ Credit Flexibility is the new way to get credit toward high school graduation by
 <p>Take a trip, get an internship, do research, start a business, take a class outside school, go to iTunesU, you name it!
 </p>
 
-<p class="learn_more">Want to learn more? <br />Visit <a href="http://www.facebook.com/pages/Ohio-Credit-Flexibility/177300152280207" target="blank">Ohio Credit Flexibility on Facebook</a> or <%=link_to("get the poop here", requests_path) %>.</p><p></p><p></p>
-<p class="not_ohio">Not in Ohio? Credit Flexibility may be coming to your state!</p>
+<p class="learn_more">Want to learn more? <br />Visit <a href="http://www.facebook.com/pages/Ohio-Credit-Flexibility/177300152280207" target="blank">Ohio Credit Flexibility on Facebook</a> or <%=link_to("get the poop here", resources_path) %>.</p><p></p><p></p>
+<p style = "display:none" class="not_ohio">Not in Ohio? Credit Flexibility may be coming to your state!</p>
 </div>
-<div id="caption">
+<div id="caption"><br /><br />
 Want your project featured here? <br/>Send us a pic and description.
 </div>
 </div>
@@ -31,13 +31,14 @@ Want your project featured here? <br/>Send us a pic and description.
 <% @projects.each do |project| %>
 <div id="projects_item">
 	<div class="item_desc">
+		<%= image_tag( project.projekt.url.to_s, :class => "projekt") if project.projekt? %>
 		<b>Title</b> <%= truncate(project.title, :length => 140, :separator => ' ') %> <%= link_to("more", project) %>
-		<p><b>I'm:</b> <%= truncate(project.summary, :length => 140, :separator => ' ') %> <%= link_to("more", project) %></p>
+		<p><b>I'm:</b> <%= truncate(project.summary, :length => 200, :separator => ' ') %> <%= link_to("more", project) %></p>
 	</div>
 </div>
 <% end %>
 </div>
-<br /><%=link_to("Tell us about your CF project", new_project_path, :id => "add_project") %>
+<br /><%=button_to("Tell us about your CF project", new_project_path, :id => "add_project", :class => "add_button") %>
 </div>
 
 
@@ -63,7 +64,7 @@ Want your project featured here? <br/>Send us a pic and description.
 </div>
 <% end %>
 </div>
-<br /><%=link_to("Ask about credit flex", new_request_path, :id => "add_request") %>
+<br /><%=button_to("Ask about credit flex", new_request_path, :id => "add_request", :class => "add_button") %>
 </div>
 
 
@@ -92,7 +93,7 @@ Want your project featured here? <br/>Send us a pic and description.
 </div>
 <% end %>
 </div>
-<%=link_to("Add an approved course", new_course_path, :id => "add_course") %>
+<%=button_to("Add an approved course", new_course_path, :id => "add_course", :class => "add_button2") %>
 </div>
 
 <div id="teachers">
@@ -114,8 +115,43 @@ Want your project featured here? <br/>Send us a pic and description.
 </div>
 
  <div>
-<%=link_to("Add teacher", new_teacher_path, :id => "add_mentor") %>
+<%=button_to("Add teacher", new_teacher_path, :id => "add_mentor", :class => "add_button2") %>
 </div>
+</div>
+<div class="slideshow_wrapper slideshow_wrapper_single">
+					<div class="slideshow" id="multiple_slides_visible"></div>
+					<div class="slideshow_description">
+						<h1 class="slideshow_title">Multiple Slides Visible</h1>
+
+						<ul class="slideshow_features">
+							<li>3 Slides Visible</li>
+							<li>Circle Buttons</li>
+						</ul>
+					</div>
+				</div>
+<br clear="all">			
 </div>
 
-</div>
+<script type="text/javascript" src="agile_carousel/agile_carousel.a1.1.min.js"></script>
+	
+<script type="text/javascript">
+
+$.getJSON("agile_carousel/agile_carousel_data.php", function (data) {
+    $(document).ready(function () {
+        $("#multiple_slides_visible").agile_carousel({
+            carousel_data: data,
+            carousel_outer_height: 230,
+            carousel_height: 200,
+            slide_height: 200,
+            carousel_outer_width: 480,
+            slide_width: 160,
+            number_slides_visible: 3,
+            transition_time: 330,
+            control_set_1: "previous_button,next_button",
+            control_set_2: "group_numbered_buttons",
+            persistent_content: "<p class='persistent_content'>Agile Carousel Example: Multiple Slides Visible</p>"
+        });
+    });
+}); // ready
+
+</script>

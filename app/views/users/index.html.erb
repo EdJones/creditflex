@@ -5,6 +5,7 @@
     <th>Avatar</th>
     <th>username</th>
     <th>email</th>
+	<th>role</th>
     <th>created_at</th>
   </tr>
 
@@ -13,6 +14,7 @@
   	<td><%= image_tag user.avatar.url.to_s, {:height => 30} %></td>
 	<td><%= user.username %></td>
 	<td><%= user.email %></td>
+		<td><%= user.role %></td>
 	<td><%= user.created_at %></td>
 	<td><%= user.updated_at %></td>
 	<td><%= user.activation_state %></td>

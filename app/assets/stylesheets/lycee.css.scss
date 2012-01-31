@@ -327,6 +327,14 @@ $bar_background__bottom: #dee698;
 	vertical-align:middle;
 	height:40px;
 }	
+.projekt {
+	float:right;
+	margin-left:auto;
+	margin-right:5px;
+	vertical-align:middle;
+	height:100px;
+
+}
 #penguin {
 	float:right;
 	margin-top:-20px;
@@ -344,3 +352,36 @@ $bar_background__bottom: #dee698;
 	float:right;
 }
 .clearfix {zoom: 1}		
+
+.add_button {
+    background: -moz-linear-gradient(center top , #ff9900, #c13100) repeat scroll 0 0 transparent;
+    border: 1px solid #53171F;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 10px 6px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #661514;
+	float:right;
+	margin-bottom:7px;
+	margin-right:7px;
+}
+.add_button2 {
+    background: -moz-linear-gradient(center top , #c13100, #98998B ) repeat scroll 0 0 transparent;
+    border: 1px solid #53171F;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 10px 6px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #661514;
+	float:right;
+	margin-bottom:7px;
+	margin-right:7px;
+}
+#user_nav {
+width:300px;
+float:right;
+}
