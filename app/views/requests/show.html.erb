@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="form">
 <p>
   <b>User:</b>
   <%= @request.user_id %>
@@ -20,6 +20,9 @@
   <%= @request.help_needed %>
 </p>
 
-
+<%= button_to 'Help answer', new_response_path, :class => "add_button" %>
 <%= link_to 'Edit', edit_request_path(@request) %> |
 <%= link_to 'Back', requests_path %>
+
+
+</div>

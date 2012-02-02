@@ -1,5 +1,10 @@
 Creditflex::Application.routes.draw do
 
+  resources :responses do
+        member do
+            post 'new'
+		end
+	end
   get "sessions/new"
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"

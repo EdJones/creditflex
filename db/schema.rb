@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120131182209) do
+ActiveRecord::Schema.define(:version => 20120202152928) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -97,6 +97,18 @@ ActiveRecord::Schema.define(:version => 20120131182209) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "responses", :force => true do |t|
+    t.integer  "request_id"
+    t.string   "title"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "responses", ["request_id"], :name => "index_responses_on_request_id"
+  add_index "responses", ["user_id"], :name => "index_responses_on_user_id"
 
   create_table "students", :force => true do |t|
     t.string   "first_name"

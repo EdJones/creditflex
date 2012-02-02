@@ -17,19 +17,7 @@
     <%= f.text_field :username %>
   </p>
   <p>
-  <#= if !current_user %>
-  <# f.radio_button(:role, :student) %> student <br /> <%= f.radio_button(:role, :teacher) %> teacher 
-	<# else  %>     
-	<# f.collection_select :role, User::ROLES, :to_s, :humanize %> 
-
-   <# end %>
-   
-   
-  
-   
-  <p>
-
-
+  <%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
   </p>
   <p>
     <%= f.label :email, "Email Address" %><br />
