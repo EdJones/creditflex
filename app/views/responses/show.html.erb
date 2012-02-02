@@ -17,7 +17,8 @@
 
 <p>
   <b>User:</b>
-  <%= @response.user %>
+  <%# image_tag( response.user.avatar.url.to_s, :class => "t_avatar") if response.user.avatar? %>
+  <%= @response.user.username %>
 </p>
 
 

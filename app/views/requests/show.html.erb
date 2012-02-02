@@ -1,27 +1,57 @@
 <p id="notice"><%= notice %></p>
 <div class="form">
 <p>
-  <b>User:</b>
-  <%= @request.user_id %>
+<div id="request_header">
+Request: 
+</div>
+<div id="request_body">
+
+
+  <h5>Goals:</h5>
+<p>  <%= @request.goals %>
 </p>
 
-<p>
-  <b>Goals:</b>
-  <%= @request.goals %>
+  <h5>Help needed:</h5>
+<p>  <%= @request.help_needed %>
 </p>
 
 <p>
   <b>Portfolio:</b>
   <%= @request.portfolio_id %>
 </p>
-
-<p>
-  <b>Help needed:</b>
-  <%= @request.help_needed %>
+<% if can? :update, @request %>
+  <b>User:</b>
+  <%= image_tag( @request.user.avatar.url.to_s, :class => "t_avatar") if @request.user.avatar? %>
 </p>
+<p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<% end %>
+</p>
+</div>
+
+<div id="answers">
+
+<div id="answers_header">
+<%= pluralize(@responses.count, 'Answer') %>
+</div>
+<% @responses.each do |response| %>
+    <%= content_tag_for(:div, response) do %>
+		<%= response.body %>
+		<div class=response_user>
+		<%= image_tag( response.user.avatar.url.to_s, :class => "t_avatar") if response.user.avatar? %>
+		</div>
+	<% end %>
+<% end %>
+</div>
+<div id="add_response">
 
 <%= button_to 'Help answer', new_response_path, :class => "add_button" %>
-<%= link_to 'Edit', edit_request_path(@request) %> |
+
+</div>
+
+
+
 <%= link_to 'Back', requests_path %>
 
 

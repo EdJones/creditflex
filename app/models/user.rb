@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   
   has_one :teacher
   has_one :student
+  has_many :responses
    
   validates_presence_of :username
   validates_uniqueness_of :username, :email, :allow_blank => true

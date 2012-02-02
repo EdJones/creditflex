@@ -14,7 +14,7 @@ class RequestsController < ApplicationController
   # GET /requests/1.json
   def show
     @request = Request.find(params[:id])
-
+	@responses = Response.where(:request_id => params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @request }
