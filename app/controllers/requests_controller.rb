@@ -25,7 +25,7 @@ class RequestsController < ApplicationController
   # GET /requests/new.json
   def new
     @request = Request.new
-
+	@request.user_id = current_user.id
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @request }

@@ -39,14 +39,13 @@ ribbon {
 	vertical-align:middle;
 	}
 #logo {
-	margin-top:20px;
+	margin-top:15px;
 	vertical-align:middle;
 	padding-left:5px;
 	}		
 #logo img {
-	margin-top:20px;
 	float:	right;
-	vertical-align:middle;
+	vertical-align:top;
 	}	
 .clear{
 	clear:both;

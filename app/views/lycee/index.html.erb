@@ -52,7 +52,7 @@ Want your project featured here? <br/>Send us a pic and description.
 
 <div id="requests">
  <div class="clearfix" id="requests_bar">
-<div class="t_band">
+<div class="c_band">
 <%= image_tag("guitar_hero.png", :class => "penguin") %>
  <h3>Who's Looking for Help?<br />Students exploring creditflex</h3></div>
 <% @requests.each do |request| %>
@@ -64,7 +64,7 @@ Want your project featured here? <br/>Send us a pic and description.
 </div>
 <% end %>
 </div>
-<br /><%=button_to("Ask about credit flex", new_request_path, :id => "add_request", :class => "add_button") %>
+<br /><%=button_to("Ask about credit flex", new_request_path, :id => "add_request", :class => "add_button") %> <%= link_to("more", requests_path, :class => "list_them") %>
 </div>
 
 
@@ -76,10 +76,10 @@ Want your project featured here? <br/>Send us a pic and description.
 
 <div id="lycee">
  <div class="clearfix" id="courses_bar">
-<div class="t_band">
+<div class="c_band">
 <%= image_tag("zt180_ecosystems.png", :class => "penguin") %>
 
-<h3>What's Available?<br /><br />Approved online or non-traditional courses</h3></div> 
+<h3>Want a Course?<br /><br />Approved online or non-traditional courses</h3></div> 
 <% @courses.each do |course| %>
 <div id="courses_item">
 <div class="item_desc">
@@ -92,6 +92,7 @@ Want your project featured here? <br/>Send us a pic and description.
 	</div>
 </div>
 <% end %>
+<%= image_tag("right_arrow.png", :class => "right_arrow") %>
 </div>
 <%=button_to("Add an approved course", new_course_path, :id => "add_course", :class => "add_button2") %>
 </div>
@@ -112,6 +113,7 @@ Want your project featured here? <br/>Send us a pic and description.
 	</div>
 </div>
 <% end %>
+<%= image_tag("right_arrow.png", :class => "right_arrow") %>
 </div>
 
  <div>
@@ -121,11 +123,10 @@ Want your project featured here? <br/>Send us a pic and description.
 <div class="slideshow_wrapper slideshow_wrapper_single">
 					<div class="slideshow" id="multiple_slides_visible"></div>
 					<div class="slideshow_description">
-						<h1 class="slideshow_title">Multiple Slides Visible</h1>
+
 
 						<ul class="slideshow_features">
-							<li>3 Slides Visible</li>
-							<li>Circle Buttons</li>
+
 						</ul>
 					</div>
 				</div>
