@@ -204,11 +204,11 @@ $bar_background__bottom: #dee698;
 #lycee #lycee_inner {padding: 15px 25px 0px 25px; overflow: hidden; width: auto}
 #lycee .full_column, #lycee .two_column_left, #lycee .two_column_right, #secondary_content .quarter_column_left {margin-bottom: 18px}
 #lycee_bar {margin-bottom: 35px; clear: left}
-#lycee_bar img {border-top-left-radius: 4px; -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-right-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px}
+/*#lycee_bar img {border-top-left-radius: 4px; -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-right-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px} */
 #lycee_bar h2 {font-size: 28px; font-family: "MuseoSans500", Arial, "Lucida Grande", Tahoma, "Sans Serif"}
 
 #courses_bar {margin-bottom: 35px; clear: left}
-#courses_bar img {border-top-left-radius: 4px; -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-right-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px}
+/* #courses_bar img {border-top-left-radius: 4px; -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-right-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px} */
 #courses_bar h2 {font-size: 28px; font-family: "MuseoSans500", Arial, "Lucida Grande", Tahoma, "Sans Serif"}
 
 #courses_bar #courses_item {
@@ -233,7 +233,7 @@ $bar_background__bottom: #dee698;
 	margin-right: 20px; 
 	margin-left: 15px;
 } 
-#courses_bar #courses_item:hover {background-color: #0061D7;} 
+/* #courses_bar #courses_item:hover {background-color: #0061D7;} */
 #courses_bar #courses_item_last {width: 190px; float: left; margin-right:0px; padding-left: 30px; padding-top:70px; } 
 #courses_bar #courses_item_last p {margin: 0; color: #5f697a; font-size: 14px}
 .courses_bar #courses_item:last-child {margin: 0}
@@ -303,7 +303,7 @@ $bar_background__bottom: #dee698;
 	margin-right: 20px; 
 	margin-left: 15px;
 } 
-#teachers_bar #teachers_item:hover {background-color: #0061D7;} 
+/*#teachers_bar #teachers_item:hover {background-color: #0061D7;} */
 #teachers_bar #teachers_item_last {width: 190px; float: left; margin-right:0px; padding-left: 30px; padding-top:70px; } 
 #teachers_bar #teachers_item_last p {margin: 0; color: #5f697a; font-size: 14px}
 .courses_bar #teachers_item:last-child {margin: 0}
@@ -389,9 +389,21 @@ float:right;
 }
 .right_arrow {
 float:right;
-padding-top:100px;
+margin-top:100px;
 }
 .list_them {
+float:right;
+font-size:large;
+padding-right:20px;
+}
+.list_them a {
+background-color:none;
+float:right;
+font-size:large;
+padding-right:20px;
+}
+.list_them a:hover {
+color:#000000;
 float:right;
 font-size:large;
 padding-right:20px;

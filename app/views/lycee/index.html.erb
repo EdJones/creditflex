@@ -28,7 +28,7 @@ Want your project featured here? <br/>Send us a pic and description.
 <div class="t_band">
 <%= image_tag("presentation.png", :class => "penguin") %>
  <h3>Share Your Credit Flex Project</h3></div>
-<% @projects.each do |project| %>
+<% @projects[0..3].each do |project| %>
 <div id="projects_item">
 	<div class="item_desc">
 		<%= image_tag( project.projekt.url.to_s, :class => "projekt") if project.projekt? %>
@@ -55,7 +55,7 @@ Want your project featured here? <br/>Send us a pic and description.
 <div class="c_band">
 <%= image_tag("guitar_hero.png", :class => "penguin") %>
  <h3>Who's Looking for Help?<br />Students exploring creditflex</h3></div>
-<% @requests.each do |request| %>
+<% @requests[0..3].each do |request| %>
 <div id="requests_item">
 	<div class="item_desc">
 		<b>Goals: </b> <%= truncate(request.goals, :length => 140, :separator => ' ') %> <%= link_to("more", request) %>
@@ -80,7 +80,7 @@ Want your project featured here? <br/>Send us a pic and description.
 <%= image_tag("zt180_ecosystems.png", :class => "penguin") %>
 
 <h3>Want a Course?<br /><br />Approved online or non-traditional courses</h3></div> 
-<% @courses.each do |course| %>
+<% @courses[0..3].each do |course| %>
 <div id="courses_item">
 <div class="item_desc">
     <b><%= course.title %></b><br />
@@ -92,7 +92,7 @@ Want your project featured here? <br/>Send us a pic and description.
 	</div>
 </div>
 <% end %>
-<%= image_tag("right_arrow.png", :class => "right_arrow") %>
+<%= link_to(image_tag("right_arrow.png", :class => "right_arrow"), requests_path, :class => "list_them") %>
 </div>
 <%=button_to("Add an approved course", new_course_path, :id => "add_course", :class => "add_button2") %>
 </div>
@@ -103,7 +103,7 @@ Want your project featured here? <br/>Send us a pic and description.
 <h3>Who's Available to Help?<br /><br />Teachers </h3>
 </div>
 <div class="clearfix"  id="teachers_bar">
-<% @teachers.each do |teacher| %>
+<% @teachers[0..3].each do |teacher| %>
 <div id="teachers_item">
 <div class="item_desc">
     <b><%= "#{teacher.title} " if teacher.title? %><%= teacher.name %></b><%= image_tag( teacher.avatar.url.to_s, :class => "t_avatar") if teacher.avatar? %><br />

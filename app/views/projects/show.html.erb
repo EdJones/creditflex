@@ -4,7 +4,7 @@
   <b>Title:</b>
   <%= @project.title %>
 </p>
-
+<%= image_tag(@project.projekt.url.to_s, :class => "projekt") if @project.projekt? %>
 <p>
   <b>Student:</b>
   <%= @project.student_id %>
