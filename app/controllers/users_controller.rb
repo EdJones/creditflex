@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-#before_filter :require_login, :except => :new
+before_filter :require_login, :except => [:new, :create]
 
 #load_and_authorize_resource
 #skip_authorize_resource :only => :new
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def index
   
     @users = User.all
-	#unauthorized! if cannot? :read, @users
+	unauthorized! if cannot? :read, @users
 logger.debug "current_user: #{current_user.inspect}"
     respond_to do |format|
       format.html # index.html.erb
