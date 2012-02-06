@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_filter :require_login, :except => :new
+#before_filter :require_login, :except => :new
 
 #load_and_authorize_resource
 #skip_authorize_resource :only => :new
