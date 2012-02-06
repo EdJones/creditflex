@@ -9,7 +9,7 @@ before_filter :require_login, :except => :new
   def index
   
     @users = User.all
-	unauthorized! if cannot? :read, @users
+	#unauthorized! if cannot? :read, @users
 logger.debug "current_user: #{current_user.inspect}"
     respond_to do |format|
       format.html # index.html.erb
