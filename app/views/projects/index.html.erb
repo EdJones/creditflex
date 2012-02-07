@@ -1,33 +1,27 @@
-<h1>Listing projects</h1>
+<div class="content">
+<h1>CF projects</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Student</th>
-    <th>Teacher</th>
-    <th>Summary</th>
-    <th>Status</th>
-    <th>Portfolio</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
 
 <% @projects.each do |project| %>
-  <tr>
-    <td><%= project.title %></td>
-    <td><%= project.student_id %></td>
-    <td><%= project.teacher_id %></td>
-    <td><%= project.summary %></td>
-    <td><%= project.status %></td>
-    <td><%= project.portfolio_id %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<div class="project3" >
+<div class = "project_img">
+<%= image_tag( project.projekt.url.to_s) if project.projekt? %>
+</div>
+<div class = "project4" >
+   <span class="ptitle"><%= project.title %></span><br />
+    Student: <%= project.student.username if project.student %> | 
+    Teacher:<%= project.teacher_id %> <br /><br />
+    <%= project.summary %>
+    <p>Status:<%= project.status %> | 
+    Portfolio<%= project.portfolio_id %><br /></p>
+    <%= link_to 'Show', project %>
+    <%= link_to 'Edit', edit_project_path(project) %>
+    <%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
+</div>
+</div>
 <% end %>
-</table>
-
 <br />
 
 <%= link_to 'New Project', new_project_path %>
+</div>

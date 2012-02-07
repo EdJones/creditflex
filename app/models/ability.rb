@@ -10,9 +10,12 @@ class Ability
       # some other trainer specific roles here, like editing his/her profile
     elsif user.role = 'student'
       can :read, :all
+	  cannot :read, Users
 	  can :manage, Project, :student_id => user.id 
 	else 
 		cannot :read, Users
+		cannot :create, Projects
+		cannott :create, Requests
       # some other client specific roles here, like editing his/her profile
 	  
     end
