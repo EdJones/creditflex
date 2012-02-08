@@ -72,6 +72,9 @@ float:right;
 
 .show_button {
     background: -moz-linear-gradient(center top , #415377, #c13100) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(top, #415377 0%, #c13100 100%);
+	background: -ms-linear-gradient(center top, #415377, #c13100, #c13100);
+	background: -webkit-gradient(linear, left top, left bottom, from(#415377), to(#c13100));
     border: 1px solid #53171F;
     border-radius: 4px 4px 4px 4px;
     color: #FFFFFF;
@@ -199,17 +202,19 @@ float:right;
 	margin-bottom:7px;
 	margin-right:7px;
 
-background-image: -o-linear-gradient(center top, #cccccc, #c13100, #c13100);
+/*background: -o-linear-gradient(center top, #cccccc, #c13100, #c13100);*/
+	background: -o-linear-gradient(top, #c13100 0%, #98998B 100%);
 background-image: -moz-linear-gradient(center top, #cccccc,  #c13100, #c13100);
 background-image: -webkit-linear-gradient(center top,  #cccccc,  #c13100,  #c13100);
-background-image: -ms-linear-gradient(center top, #cccccc, #c13100, #c13100);
-
+background: -ms-linear-gradient(center top, #cccccc, #c13100, #c13100);
+	background: -webkit-gradient(linear, left top, left bottom, from(#c13100), to(#cccccc));
+	  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#c13100');
 background-image: -webkit-gradient(
 	linear,
 	center top,
 	center bottom,
-	color-stop(0.47,  #cccccc),
-	color-stop(0.74,  #c13100),
+	color-stop(0.1,  #cccccc),
+	color-stop(0.5,  #c13100),
 	color-stop(0.87, #c13100)
 );
 }

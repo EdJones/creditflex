@@ -5,4 +5,12 @@ class ApplicationController < ActionController::Base
 	#logger.debug "Access Denied: #{ exception.message } "
    # redirect_to root_url, :alert => exception.message
   #end
+  
+  private
+  
+  #def current_user
+    #User.find_by_id(session[:user_id]) 
+	#|| User.new(:username => "Guest", :role => "guest")
+  #end
+
 end

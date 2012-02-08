@@ -45,9 +45,9 @@ Question: <b><%= @request.topic %></b>
 <% end %>
 </div>
 <div id="add_response">
-
-<%= button_to 'Help answer', new_response_path, :class => "help_button" %>
-
+<% if @responses.count > 1 %>
+	<%= button_to 'Help answer', new_response_path, :class => "help_button" %>
+<% end %>
 </div>
 
 
