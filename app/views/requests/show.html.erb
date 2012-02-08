@@ -2,8 +2,9 @@
 <div class="form">
 <p>
 <div id="request_header">
-Request: 
+Question: <b><%= @request.topic %></b>
 </div>
+  <%= image_tag( @request.user.avatar.url.to_s, :class => "rq_avatar") if @request.user.avatar? %>
 <div id="request_body">
 
 
@@ -16,18 +17,14 @@ Request:
 </p>
 
 <p>
-  <b>Portfolio:</b>
+  Portfolio:
   <%= @request.portfolio_id %>
-</p>
+|
 <% if can? :update, @request %>
-  <b>User:</b>
-  <%= image_tag( @request.user.avatar.url.to_s, :class => "t_avatar") if @request.user.avatar? %>
-</p>
-<p>
-
-<%= link_to 'Edit', edit_request_path(@request) %> |
+	<%= link_to 'Edit', edit_request_path(@request) %> |
 <% end %>
 </p>
+<%= button_to 'Help answer', new_response_path, :class => "help_button" %>
 </div>
 
 <div id="answers">
@@ -37,16 +34,19 @@ Request:
 </div>
 <% @responses.each do |response| %>
     <%= content_tag_for(:div, response) do %>
-		<%= response.body %>
-		<div class=response_user>
-		<%= image_tag( response.user.avatar.url.to_s, :class => "t_avatar") if response.user.avatar? %>
+		
+		<div class="response_user">
+		
+		<%= image_tag( response.user.avatar.url.to_s, :class => "r_avatar") if response.user.avatar? %>
+		<br/><%= response.user.username %> <br />on <%= response.created_at.strftime("%b %d, %Y") %> at <%= response.created_at.strftime("%I:%M%p") %>
 		</div>
+		<div class="response_text"><%= response.body %></div>
 	<% end %>
 <% end %>
 </div>
 <div id="add_response">
 
-<%= button_to 'Help answer', new_response_path, :class => "add_button" %>
+<%= button_to 'Help answer', new_response_path, :class => "help_button" %>
 
 </div>
 

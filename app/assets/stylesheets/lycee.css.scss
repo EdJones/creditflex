@@ -7,6 +7,22 @@ $bar_background__bottom_old: #f7edcf;
 $bar_background__top: #f1f4d2;
 $bar_background__bottom: #dee698;
 
+.content {
+	padding-top:30px;
+	padding-left:85px;
+	width: 860px;
+	margin:10px auto 30px auto;
+	background:#ffffff;
+	-moz-border-radius:12px;
+	-khtml-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-webkit-box-shadow:1px 0px 5px #666;
+	-khtml-box-sizing:content-box;
+	box-sizing:content-box;
+	}		
 #featured {
 	margin-bottom: 20px;
 	}
@@ -344,19 +360,22 @@ $bar_background__bottom: #dee698;
 #add_mentor {
 	font-size:small;
 	margin-right:20px;
-	padding-bottom:20px;
+	/*padding-bottom:20px;*/
 	float:right;
 }	
 #add_course {
 	font-size:small;
 	margin-right:20px;
-	padding-bottom:20px;
+	/*padding-bottom:20px;*/
 	float:right;
 }
 .clearfix {zoom: 1}		
 
 .add_button {
     background: -moz-linear-gradient(center top , #ff9900, #c13100) repeat scroll 0 0 transparent;
+	  /*background: #DDD;*/
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9900), to(#c13100));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9900', endColorstr='#c13100');
     border: 1px solid #53171F;
     border-radius: 4px 4px 4px 4px;
     color: #FFFFFF;
@@ -371,6 +390,8 @@ $bar_background__bottom: #dee698;
 }
 .add_button2 {
     background: -moz-linear-gradient(center top , #c13100, #98998B ) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from(#c13100), to(#98998B));
+	  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c13100', endColorstr='#98998B');
     border: 1px solid #53171F;
     border-radius: 4px 4px 4px 4px;
     color: #FFFFFF;

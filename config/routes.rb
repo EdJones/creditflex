@@ -36,6 +36,7 @@ Creditflex::Application.routes.draw do
   resources :requests do
         member do
             post 'new'
+			post 'show'
 			end
 	end
 

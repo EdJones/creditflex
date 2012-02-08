@@ -13,9 +13,11 @@ class Ability
 	  cannot :read, Users
 	  can :manage, Project, :student_id => user.id 
 	else 
+		can :read, :all
 		cannot :read, Users
 		cannot :create, Projects
-		cannott :create, Requests
+		cannot :create, Requests
+		cannot :update, :all
       # some other client specific roles here, like editing his/her profile
 	  
     end
