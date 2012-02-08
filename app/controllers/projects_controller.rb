@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-load_and_authorize_resource :only => [:index, :show]
+load_and_authorize_resource :except => [:index, :show]
   # GET /projects
   # GET /projects.json
   def index
@@ -26,7 +26,6 @@ load_and_authorize_resource :only => [:index, :show]
   # GET /projects/new.json
   def new
     @project = Project.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @project }

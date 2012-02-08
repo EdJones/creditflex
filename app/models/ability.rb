@@ -15,8 +15,8 @@ class Ability
 	else 
 		can :read, :all
 		cannot :read, Users
-		cannot :create, Projects
-		cannot :create, Requests
+		cannot :create, :update, Projects
+		cannot :create, :update, Requests
 		cannot :update, :all
       # some other client specific roles here, like editing his/her profile
 	  

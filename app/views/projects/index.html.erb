@@ -12,7 +12,7 @@
    <span class="ptitle"><%= project.title %></span><br />
     Student: <%= project.student.username if project.student %> | 
     Teacher:<%= project.teacher_id %> <br /><br />
-    <%= project.summary %>
+    <%= raw(project.summary) %>
     <p>Status:<%= project.status %> | 
     Portfolio<%= project.portfolio_id %><br /></p>
     <%= link_to 'Show', project %>

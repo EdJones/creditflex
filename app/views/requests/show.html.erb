@@ -21,7 +21,7 @@ Question: <b><%= @request.topic %></b>
   <%= @request.portfolio_id %>
 |
 <% if can? :update, @request %>
-	<%= link_to 'Edit', edit_request_path(@request) %> |
+	<%= link_to 'Edit', edit_request_path(@request) %>
 <% end %>
 </p>
 <%= button_to 'Help answer', new_response_path, :class => "help_button" %>

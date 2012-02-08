@@ -1,5 +1,7 @@
 Creditflex::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   resources :responses do
         member do
             post 'new'

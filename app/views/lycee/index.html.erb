@@ -32,7 +32,7 @@ Want your project featured here? <br/>Send us a pic and description.
 <div id="projects_item">
 	<div class="item_desc">
 		
-		<b><%= truncate(project.title, :length => 140, :separator => ' ') %> </b>
+		<b><%= raw(truncate(project.title, :length => 140, :separator => ' ')) %> </b>
 		<%= image_tag( project.projekt.url.to_s, :class => "projekt") if project.projekt? %>
 		<p><b>I'm:</b>&nbsp;<%= truncate(project.summary, :length => 200, :separator => ' ') %> <%= link_to("more", project) %></p>
 	</div>
