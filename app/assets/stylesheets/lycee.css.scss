@@ -1,7 +1,8 @@
 // Place all the styles related to the lycee controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+#lycee_controller
+{
 $bar_background__top_old: #fbf9e1;
 $bar_background__bottom_old: #f7edcf;
 $bar_background__top: #f1f4d2;
@@ -10,7 +11,7 @@ $bar_background__bottom: #dee698;
 .content {
 	padding-top:30px;
 	padding-left:85px;
-	width: 860px;
+	width: 1050px;
 	margin:10px auto 30px auto;
 	background:#ffffff;
 	-moz-border-radius:12px;
@@ -430,4 +431,5 @@ color:#000000;
 float:right;
 font-size:large;
 padding-right:20px;
+}
 }
