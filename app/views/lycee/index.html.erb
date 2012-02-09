@@ -31,9 +31,10 @@ Want your project featured here? <br/>Send us a pic and description.
 <% @projects[0..3].each do |project| %>
 <div id="projects_item">
 	<div class="item_desc">
+		
+		<b><%= raw(truncate(project.title, :length => 140, :separator => ' ')) %> </b>
 		<%= image_tag( project.projekt.url.to_s, :class => "projekt") if project.projekt? %>
-		<b>Title</b> <%= truncate(project.title, :length => 140, :separator => ' ') %> <%= link_to("more", project) %>
-		<p><b>I'm:</b> <%= truncate(project.summary, :length => 200, :separator => ' ') %> <%= link_to("more", project) %></p>
+		<p><b>I'm:</b>&nbsp;<%= truncate(project.summary, :length => 200, :separator => ' ') %> <%= link_to("more", project) %></p>
 	</div>
 </div>
 <% end %>

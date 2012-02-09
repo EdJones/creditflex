@@ -1,3 +1,78 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$bar_background__top_old: #fbf9e1;
+$bar_background__bottom_old: #f7edcf;
+$bar_background__top: #f1f4d2;
+$bar_background__bottom: #dee698;
+body {
+  background-color: #324567;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+  
+.content1 {
+	padding-top:30px;
+	padding-left:85px;
+	width: 860px;
+	margin:10px auto 30px auto;
+	background:#415377;
+	-moz-border-radius:12px;
+	-khtml-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-webkit-box-shadow:1px 0px 5px #666;
+	-khtml-box-sizing:content-box;
+	box-sizing:content-box;
+	}	
+	
+h1 {
+color:#ffffff;
+}	
+.ptitle {
+	font-weight:bold;
+	color:#605307;
+	font-size:larger;
+}
+.project3 {
+	width: 500px;
+	border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	-moz-box-shadow: 0px 2px 2px #666666; 
+	-webkit-box-shadow: 0px 2px 2px #666666; 
+	box-shadow: 0px 2px 2px #666666; 
+	background: #ffffff; 
+	margin-left: 100px;
+	color: #4c4c4c; 
+	margin: 0 0 24px 0; 
+	overflow: hidden;
+	padding:8px;
+	}
+.project_img {
+float:left;
+min-height: 130px;
+margin-top: 20px;
+}
+.project3 img {
+float:left;
+width:150px;
+min-height: 140px;
+
+}	
+.project4 {
+float:left;
+width:300px;
+padding-left:12px;
+font-family:helvetica;
+font-size:13px;
+}	
+#user_nav {
+width:300px;
+float:right;
+}	

@@ -10,7 +10,7 @@ gem 'pg'
 gem 'carrierwave'
 #gem 'rmagick'
 gem 'mini_magick'
-
+gem "ckeditor", "3.7.0.rc2"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -38,6 +38,8 @@ gem 'cancan'
 
 group :devel do
     gem 'pry'
+	gem 'eventmachine', "1.0.0.beta.4.1"
+	gem 'thin'
     end
     
 group :test do

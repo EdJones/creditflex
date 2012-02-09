@@ -1,4 +1,5 @@
 class RequestsController < ApplicationController
+before_filter :require_login, :only => [:new, :create]
   # GET /requests
   # GET /requests.json
   def index
@@ -24,6 +25,7 @@ class RequestsController < ApplicationController
   # GET /requests/new
   # GET /requests/new.json
   def new
+	#authorize! :create, Request, :message => "Must login to add a request."
     @request = Request.new
 	@request.user_id = current_user.id
     respond_to do |format|
@@ -81,3 +83,11 @@ class RequestsController < ApplicationController
     end
   end
 end
+
+private
+
+  def require_login
+    unless current_user
+      redirect_to login_path
+    end
+  end

@@ -1,29 +1,28 @@
-<h1>Listing requests</h1>
+<h1>Questions</h1>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Goals</th>
-    <th>Portfolio</th>
-    <th>Help needed</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @requests.each do |request| %>
-  <tr>
-    <td><%= request.user_id %></td>
-    <td><%= request.goals %></td>
-    <td><%= request.portfolio_id %></td>
-    <td><%= request.help_needed %></td>
-    <td><%= link_to 'Show', request %></td>
-    <td><%= link_to 'Edit', edit_request_path(request) %></td>
-    <td><%= link_to 'Destroy', request, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<div class='request3'>
+    <%= image_tag(request.user.avatar, :class => 'avatar') %>
+    <div class='request4'
+	<b>Goals:</b><br />
+	<%= request.goals %>
+    <hr />
+	Help Needed<br />
+    <%= request.help_needed %>
+	<p><%= request.portfolio_id %></p>
+    <%= link_to('View/anwser request', request, :class => 'show_button') %>
+    <p> 
+	<% if can? :manage, request %>
+		<% link_to 'Edit', edit_request_path(request) %>
+		<% link_to 'Destroy', request, confirm: 'Are you sure?', method: :delete %></p>
+	<% end %>
+
+	</div>
+</div>
 <% end %>
-</table>
 
 <br />
-
+<% if can? :create, request %>
 <%= link_to 'New Request', new_request_path %>
+<% end %>

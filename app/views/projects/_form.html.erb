@@ -28,12 +28,10 @@
   </div>
   <div class="field">
     <%= f.label :summary %><br />
-    <%= f.text_area :summary %>
+	<%= f.cktext_area(:summary, :input_html => {:cols => 10, :rows => 20}, :toolbar => 'Easy') %>
+    <%# f.text_area :summary %>
   </div>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%= f.text_area :status %>
-  </div>
+
   <p>
     <%= f.label :projekt, "Upload a picture" %><br />
     <%= f.file_field :projekt %>
@@ -44,7 +42,7 @@
   </div>
     <div class="field">
     <%= f.label :student_id %><br />
-    <%= f.number_field :student_id %>
+    <%# @project.student_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

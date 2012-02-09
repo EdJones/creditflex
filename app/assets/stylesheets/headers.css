@@ -1,29 +1,18 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree . 
-*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+th {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
 	margin:0;
 	}
-.content {
-	padding-top:30px;
-	padding-left:85px;
-	width: 860px;
-	margin:10px auto 30px auto;
-	background:#ffffff;
-	-moz-border-radius:12px;
-	-khtml-border-radius:12px;
-	-webkit-border-radius:12px;
-	border-radius:12px;
-	-moz-box-sizing:content-box;
-	-webkit-box-sizing:content-box;
-	-webkit-box-shadow:1px 0px 5px #666;
-	-khtml-box-sizing:content-box;
-	box-sizing:content-box;
-	}		
 #h-bar {
     background: none repeat scroll 0 0 #0D678D;
     border-bottom: 1px solid #5B97B4;
@@ -118,6 +107,7 @@ ribbon {
 	margin-top:15px;
 	vertical-align:middle;
 	padding-left:5px;
+	border:0;
 	}		
 #logo img {
 	float:	right;
@@ -132,4 +122,4 @@ ribbon {
 	width:300px;
 	vertical-align:middle;
 	height:200px;;
-	}	
+	}
