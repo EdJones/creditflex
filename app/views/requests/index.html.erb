@@ -3,7 +3,7 @@
 
 <% @requests.each do |request| %>
 <div class='request3'>
-    <%= image_tag(request.user.avatar, :class => 'avatar') %>
+    <%= image_tag(request.user.avatar, :class => 'avatar') if request.user.avatar?%>
     <div class='request4'
 	<b>Goals:</b><br />
 	<%= request.goals %>
