@@ -59,10 +59,13 @@ color:#ffffff;
 	
 .request4 {
 float:left;
-width:300px;
+width:350px;
 padding-left:12px;
 font-family:helvetica;
 font-size:14px;
+}
+.request4 h3 {
+font-weight:bold;
 }
 	
 #user_nav {

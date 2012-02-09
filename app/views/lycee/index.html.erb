@@ -38,6 +38,7 @@ Want your project featured here? <br/>Send us a pic and description.
 	</div>
 </div>
 <% end %>
+<%= link_to(image_tag("right_arrow.png", :class => "right_arrow"), projects_path, ) %>
 </div>
 <br /><%=button_to("Tell us about your CF project", new_project_path, :id => "add_project", :class => "add_button") %>
 </div>
@@ -55,7 +56,7 @@ Want your project featured here? <br/>Send us a pic and description.
  <div class="clearfix" id="requests_bar">
 <div class="c_band">
 <%= image_tag("guitar_hero.png", :class => "penguin") %>
- <h3>Who's Looking for Help?<br />Students exploring creditflex</h3></div>
+ <h3>Who's Looking for Help?<br />Ask here about credit flex options.</h3></div>
 <% @requests[0..3].each do |request| %>
 <div id="requests_item">
 	<div class="item_desc">
@@ -64,8 +65,10 @@ Want your project featured here? <br/>Send us a pic and description.
 	</div>
 </div>
 <% end %>
+<%= link_to(image_tag("right_arrow.png", :class => "right_arrow"), requests_path, ) %>
+
 </div>
-<br /><%=button_to("Ask about credit flex", new_request_path, :id => "add_request", :class => "add_button") %> <%= link_to("more", requests_path, :class => "list_them") %>
+<br /><%=button_to("Ask about credit flex", new_request_path, :id => "add_request", :class => "add_button") %> 
 </div>
 
 
@@ -93,7 +96,7 @@ Want your project featured here? <br/>Send us a pic and description.
 	</div>
 </div>
 <% end %>
-<%= link_to(image_tag("right_arrow.png", :class => "right_arrow"), requests_path, :class => "list_them") %>
+<%= link_to(image_tag("right_arrow.png", :class => "right_arrow"), courses_path) %>
 </div>
 <%=button_to("Add an approved course", new_course_path, :id => "add_course", :class => "add_button2") %>
 </div>
@@ -114,7 +117,7 @@ Want your project featured here? <br/>Send us a pic and description.
 	</div>
 </div>
 <% end %>
-<%= image_tag("right_arrow.png", :class => "right_arrow") %>
+<%= link_to(image_tag("right_arrow.png", :class => "right_arrow"), teachers_path) %>
 </div>
 
  <div>
