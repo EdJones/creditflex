@@ -60,7 +60,8 @@ Want your project featured here? <br/>Send us a pic and description.
 <% @requests[0..3].each do |request| %>
 <div id="requests_item">
 	<div class="item_desc">
-		<b>Goals: </b> <%= truncate(request.goals, :length => 140, :separator => ' ') %> <%= link_to("more", request) %>
+	<%# image_tag( request.user.avatar.url.to_s, :class => "t_avatar") if request.user.avatar? %>
+		<b>Goals: </b> <%= truncate(request.goals, :length => 140, :separator => ' ') %> <%= link_to("more", request) %><br />
 		<p><b>Help needed:</b> <%= truncate(request.help_needed, :length => 140, :separator => ' ') %> <%= link_to("more", request) %></p>
 	</div>
 </div>
@@ -87,7 +88,7 @@ Want your project featured here? <br/>Send us a pic and description.
 <% @courses[0..3].each do |course| %>
 <div id="courses_item">
 <div class="item_desc">
-    <b><%= course.title %></b><br />
+    <span class="item_title"><%= course.title %></span><br />
     <%= truncate(course.description, :length => 140, :separator => ' ') %> <%= link_to("more", course) %>
 	<p><b>Subject: </b> <%= course.subject.name %></p>
     <p><b>Notes: </b> <%= truncate(course.notes, :length => 50, :separator => ' ') %> <%= link_to("more", course) %>
