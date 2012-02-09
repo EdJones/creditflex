@@ -8,10 +8,14 @@
 	<b>Goals:</b><br />
 	<%= request.goals %>
     <hr />
-	Help Needed<br />
+	<b>Help Needed</b><br />
     <%= request.help_needed %>
-	<p><%= request.portfolio_id %></p>
-    <%= link_to('View/anwser request', request, :class => 'show_button') %>
+	
+	<p>
+	<%= link_to('View/anwser request', request, :class => 'show_button') %>
+	<%# request.portfolio_id %>
+    <%= pluralize(request.responses.count, 'Answer') %> to this question. 
+	</p>
     <p> 
 	<% if can? :manage, request %>
 		<% link_to 'Edit', edit_request_path(request) %>
