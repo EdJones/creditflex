@@ -30,7 +30,35 @@ body {
 	-khtml-box-sizing:content-box;
 	box-sizing:content-box;
 	}	
-	
+.form {
+
+	padding:30px 30px;
+	width: 720px;
+	margin:10px auto 300px 40px;
+	background:#dddddd;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-webkit-box-shadow:1px 0px 5px #666;
+	-khtml-box-sizing:content-box;
+	box-sizing:content-box;
+	}
+#form_image {
+	float:right;
+	padding-top: -30px;
+	height: 150px;
+}	
+input {
+/*border: 1px solid #000000;*/
+border-radius: 5px 5px 5px 5px;
+}
+.actions {
+	margin-top: 8px;
+	margin-left: 300px;
+}			
 h1 {
 color:#ffffff;
 }	

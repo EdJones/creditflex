@@ -10,32 +10,30 @@
       </ul>
     </div>
   <% end %>
+ <%= image_tag("abstract_landscape.png", :id => "form_image") %>
+ <h2>What's Your CF project?</h2>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.label :Title %><br />
+    <%= f.text_field :title, :size => 50 %>
   </div>
-    <p>
+   
     <p>
   <%= f.label :status %><br />
   <%= f.collection_select :status, Project::STATUSES, :to_s, :humanize %>
   </p>
-  </p>
+  <p>&nbsp;</p>
+
 
   <div class="field">
-    <%= f.label :teacher_id %><br />
-    <%= f.number_field :teacher_id %>
-  </div>
-  <div class="field">
-    <%= f.label :summary %><br />
-	<%= f.cktext_area(:summary, :input_html => {:cols => 10, :rows => 20}, :toolbar => 'Easy') %>
+    <b><%= f.label "Tell us about your project (tentative or otherwise!)" %></b><br />
+	<%= f.cktext_area(:summary, :input_html => {:cols => 8, :rows => 20}, :toolbar => 'Basic') %>
     <%# f.text_area :summary %>
   </div>
-
-  <p>
+  <div class="field">
     <%= f.label :projekt, "Upload a picture" %><br />
     <%= f.file_field :projekt %>
-  </p>
+  </div>
   <div class="field">
     <%= f.label :portfolio_id %><br />
     <%= f.number_field :portfolio_id %>
@@ -43,6 +41,10 @@
     <div class="field">
     <%= f.label :student_id %><br />
     <%# @project.student_id %>
+  </div>  
+  <div class="field">
+    <%= f.label :teacher_id %> (if known)<br />
+    <%= f.number_field :teacher_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
