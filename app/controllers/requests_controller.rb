@@ -1,5 +1,28 @@
 class RequestsController < ApplicationController
 before_filter :require_login, :only => [:new, :create]
+
+
+
+  def create_response
+    @response = Response.new(params[:response])
+
+    respond_to do |format|
+      if @response.save
+        format.html { redirect_to @response, notice: 'Response was successfully created.' }
+		#redirect_to(:back, :notice => 'Response was successfully created.' )
+        format.json { render json: @response, status: :created, location: @response }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @response.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
+
+
+
+
   # GET /requests
   # GET /requests.json
   def index
