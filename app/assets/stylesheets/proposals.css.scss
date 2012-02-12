@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#proposals_controller
+{
 body {
 	background-color: #324219;
 	}
@@ -30,7 +32,13 @@ body {
 	box-sizing:content-box;
 	}	
 .content h1 {
-    margin-top:-7px;
+    /* margin-top:-7px; */
+}
+#page_title {
+	text-align:center;
+	font-size:26px;
+	font-weigth:bold;
+	padding-bottom: 10px;
 }	
 .form {
 	padding:30px 30px;
@@ -80,6 +88,40 @@ body {
 .container2 p {
     margin-top: 0px;
     }
+#warning {
+	border:1px;
+	border-style:solid;
+	border-color:#c13100;
+	font-size:large;
+	margin:10px;
+	margin-bottom:25px;
+	padding:10px;
+}
+#warning p {
+	font-size:medium;
+}
+.reddish {
+	color:#c13100;
+}
+.add_button {
+    background: -moz-linear-gradient(center top , #ff9900, #c13100) repeat scroll 0 0 transparent;
+	  /*background: #DDD;*/
+	 background: -o-linear-gradient(top, #ff9900 0%, #c13100 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9900), to(#c13100));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9900', endColorstr='#c13100');
+    border: 1px solid #53171F;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 10px 6px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #661514;
+	text-align:center;
+	margin-bottom:7px;
+
+
+}	
 #student_info {
     float:right;
 	padding:10px 10px;
@@ -94,3 +136,4 @@ body {
 	-khtml-box-sizing:content-box;
 	box-sizing:content-box;
 	}	
+	}
