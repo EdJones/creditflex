@@ -1,3 +1,57 @@
 // Place all the styles related to the teachers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#teachers_controller
+{
+$bar_background__top: #f1f4d2;
+$bar_background__bottom: #f1f4d2;
+
+.content {
+width: 1060px;
+padding-left:10px;
+
+}
+h1 {
+	color:#8c1c32;
+	line-height:26px;
+	}
+.mentor {
+	width:250px;
+	height:300px;
+	float:left;
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	-moz-box-shadow: 0px 4px 5px #666666; 
+	-webkit-box-shadow: 0px 4px 5px #666666; 
+	box-shadow: 0px 4px 5px #666666; 
+	background: #fbf9e1; 
+	background: -moz-linear-gradient(top, $bar_background__top 0%, $bar_background__bottom 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
+	background: -webkit-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -o-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -ms-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
+	background: linear-gradient(top, #f7edcf 0%, #f7edcf 100%); 
+	color: #4c4c4c; 
+	margin-right:15px; 
+	overflow: hidden
+	}
+.m_avatar {
+	height:70px;
+	valign:right;
+}
+.mentor_badge {
+	width:75px;
+	margin-right:4px;
+	float:right;
+}
+#nursery_bar {margin-bottom: 35px; clear: left}
+.clearfix {zoom: 1};
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden};
+
+
+
+
+
+}

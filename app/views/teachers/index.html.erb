@@ -1,39 +1,31 @@
-<h1>Listing teachers</h1>
+<h1>Mentors / Teachers</h1>
 
-<table>
-  <tr>
-    <th>User</th>
-	<th>First Name</th>
-	<th>Last Name</th>
-    <th>District</th>
-    <th>School</th>
-    <th>Subject</th>
-    <th>Specialty</th>
-    <th>Bio</th>
-    <th>Notes</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
+<div class="clearfix" id="nursery_bar">
 <% @teachers.each do |teacher| %>
-  <tr>
-    <td><%= teacher.user.username %></td>
-	<td><%= teacher.first_name %></td>
-	<td><%= teacher.last_name %></td>
-    <td><%= teacher.district %></td>
-    <td><%= teacher.school %></td>
-    <td><%= teacher.subject %></td>
-    <td><%= teacher.specialty %></td>
-    <td><%= teacher.bio %></td>
-    <td><%= teacher.notes %></td>
-    <td><%= link_to 'Show', teacher %></td>
-    <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
-    <td><%= link_to 'Destroy', teacher, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<div class='mentor'>
+
+    
+	<b><%= teacher.title %><%= teacher.first_name %>&nbsp;<%= teacher.last_name %></b><br />
+	<div class='mentor_badge'>
+	<%= image_tag( teacher.avatar.url.to_s, :class => "m_avatar") if teacher.avatar? %>
+	<%= teacher.user.username %>
+	</div>    
+	District:<%= teacher.district %>, School: <%= teacher.school %>
+    Subject, Specialty<%= teacher.subject %> <%= teacher.specialty %>
+
+    <p><%= teacher.bio %>
+    Notes: <%= teacher.notes %>
+    <%= link_to 'More', teacher %>
+	<% if current_user.role = 'admin' %>
+    <%= link_to 'Edit', edit_teacher_path(teacher) %>
+    <%= link_to 'Destroy', teacher, confirm: 'Are you sure?', method: :delete %>
+	<% end %>
+  </div>
 <% end %>
-</table>
+</div>
 
 <br />
-
+<div>
 <%= link_to 'New Teacher', new_teacher_path %>
+</div>
