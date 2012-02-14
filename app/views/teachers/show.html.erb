@@ -1,9 +1,12 @@
-
+<div class='show_mentor'>
 <p id="notice"><%= notice %></p>
 
+	<div class='mentor_badge'>
+	<%= image_tag( @teacher.avatar.url.to_s, :class => "m_avatar") if @teacher.avatar? %>
+	<%= @teacher.user.username %>
+	</div>  
 <p>
-  <b>User:</b>
-  <%= @teacher.user_id %>
+	<b><%= @teacher.title %><%= @teacher.first_name %>&nbsp;<%= @teacher.last_name %></b><br />
 </p>
 
 <p>
@@ -37,5 +40,14 @@
 </p>
 
 
+<% if current_user.role = 'admin' %>
+<p>
+  <b>User:</b>
+  <%= @teacher.user_id %>
+</p>
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
 <%= link_to 'Back', teachers_path %>
+<% end %>
+
+</div>
+<div>&nbsp;</div>
