@@ -39,7 +39,13 @@ Creditflex::Application.routes.draw do
         member do
             post 'new'
 			post 'show'
+			get 'add_response'
+			post 'add_response'
 			end
+		collection do
+			get 'add_response'
+			post 'add_response'
+			end	
 	end
 
   resources :proposals

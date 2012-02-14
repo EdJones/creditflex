@@ -12,12 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :author_id %><br />
-    <%= f.number_field :author_id %>
+    <%= f.label :Contributor %><br />
+    <%= @resource.user.username %>
   </div>
   <div class="field">
     <%= f.label :category %><br />
-    <%= f.text_field :category %>
+    <%# f.text_field :category %>
+	<%= f.collection_select :category, Resource::CATEGORIES, :to_s, :humanize %>
+  </div>
+  <div class="field">
+    <%= f.label :county %><br />
+    <%= f.text_field :county %>
+  </div>
+    <div class="field">
+    <%= f.label :district %><br />
+    <%= f.text_field :district %>
   </div>
   <div class="field">
     <%= f.label :url %><br />
@@ -27,10 +36,7 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
-  <div class="field">
-    <%= f.label :viewed %><br />
-    <%= f.number_field :viewed %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

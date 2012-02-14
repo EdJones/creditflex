@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120210192832) do
+ActiveRecord::Schema.define(:version => 20120214122050) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -105,13 +105,15 @@ ActiveRecord::Schema.define(:version => 20120210192832) do
   end
 
   create_table "resources", :force => true do |t|
-    t.integer  "author_id"
+    t.integer  "user_id"
     t.string   "category"
     t.string   "url"
     t.text     "description"
     t.integer  "viewed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "district"
+    t.string   "county"
   end
 
   create_table "responses", :force => true do |t|

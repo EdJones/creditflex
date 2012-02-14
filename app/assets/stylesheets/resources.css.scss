@@ -1,3 +1,105 @@
 // Place all the styles related to the Resources controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#resources_controller
+{
+$bar_background__top: #F3f4e8;
+$bar_background__bottom: #F1F2D1;
+
+
+.content {
+	width:1000px;
+	border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	-moz-box-shadow: 0px 2px 2px #666666; 
+	-webkit-box-shadow: 0px 2px 2px #666666; 
+	box-shadow: 0px 2px 2px #666666; 
+	/*background: #fbf9e1; */
+	background: -moz-linear-gradient(top, $bar_background__top 0%, $bar_background__bottom 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
+	background: -webkit-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -o-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -ms-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
+	background: linear-gradient(top, #f7edcf 0%, #f7edcf 100%); 
+	color: #4c4c4c; 
+	margin-top:10px; 
+	overflow: hidden;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:30px;
+	padding-bottom:15px;
+}
+#featured {
+	background-color:#ffffff;
+	margin-left:-30px;
+	padding:10px;
+	padding-left:20px;
+
+
+}
+h1 {
+	color:#70AF4B;
+	line-height:24px;
+}
+#word_map {
+	margin-left:auto;
+	margin-right:auto;
+	}
+#main_text, p {
+	font-size: medium;
+}	
+#main_text p {
+	font-size: medium;
+}
+#ode_guidance {
+	width:470px;
+	float:right;
+	padding:10px;
+	margin-right:20px;
+	margin-top:20px;
+	border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px; 
+	-moz-box-shadow: 0px 2px 2px #666666; 
+	-webkit-box-shadow: 0px 2px 2px #666666; 
+	box-shadow: 0px 2px 2px #666666; 
+	background: #fbf9e1; background: 
+	-moz-linear-gradient(top, $bar_background__top 0%, #f7edcf 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
+	background: -webkit-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -o-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -ms-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
+	background: linear-gradient(top, #f7edcf 0%, #f7edcf 100%); 
+	color: #4c4c4c; 
+	overflow: hidden;
+}
+#photo {
+	width:300px;
+	float:left;
+}
+.not_ohio {
+	width:120px;
+	font-size:small;
+}
+.resource {
+	width:400px;
+	padding:8px 8px;
+	margin:8px;
+	background:#dddddd;
+	-moz-border-radius:2px;
+	-khtml-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-webkit-box-shadow:1px 0px 5px #666;
+	-khtml-box-sizing:content-box;
+	box-sizing:content-box;
+
+}
+.learn_more {
+	list-style-image:url('arrow_button_green_right.png');
+}
+}

@@ -1,58 +1,67 @@
-<h1>Why Use Credit Flexibility?<br /><br />
-How?</h1>
+
+<%= image_tag("cf_word_map.png", {:id => "word_map"}) %>
+
+
 
 
 
 
 <div id="featured">
+<h1>Why Use Credit Flexibility?  
 
+How?</h1>
 
 
 <div id="main_text">
 <div id="intro">
-Want to learn more about geting credit toward high school graduation by <i>doing almost anything?</i></div>
+Get out of class! You can get credit toward high school graduation by <i>doing almost anything?</i></div>
 <p>Take a trip, get an internship, do research, start a business, take a class outside school, go to iTunesU, you name it!
 </p>
 
-<p class="learn_more">Want to learn more?<br />
-=> Visit <a href="http://www.facebook.com/pages/Ohio-Credit-Flexibility/177300152280207">Ohio Credit Flexibility on Facebook</a> or or the <a href="http://www.sharedwork.org/group/ohio-credit-flexibility/home1">Credit Flexibility Community of Practice</a> and get in the discussion.
-<p>=> Then see your guidance councilor or visit the <a href="http://www.education.ohio.gov/GD/Templates/Pages/ODE/ODEDetail.aspx?page=3&TopicRelationID=1864&ContentID=82751">Credit Flexibility pages</a> at the Ohio Department of Education.</p></p><p></p><p></p>
+<p class="learn_more">How?<br />
+<ul class='learn_more'>
+<li><%= link_to 'Explore the ideas here, ask a question', :root  %>.</li>
+<li>Talk to your guidance counselor, principal, or teacher. </li>
+<li>Visit <a href="http://www.facebook.com/pages/Ohio-Credit-Flexibility/177300152280207">Ohio Credit Flexibility on Facebook</a>.
+<li>visit the <a href="http://www.education.ohio.gov/GD/Templates/Pages/ODE/ODEDetail.aspx?page=3&TopicRelationID=1864&ContentID=82751">Credit Flexibility pages</a> at the Ohio Department of Education.</p></p><p></p><p></p>
+</ul>
+
+Teachers, parents, others, have something to ask or contribute about the process? 
+<ul>
+<li>Explore or ask a question at the <a href="http://www.sharedwork.org/group/ohio-credit-flexibility/home1">ODE Community of Practice</a> and get in on the discussion.</li>
+<li><%= link_to 'Sign up here as a teacher/mentor', new_teacher_path %></li>
+</ul>
+
+</div>
+
+<%= image_tag("students.jpg", {:id => 'photo'}) %>
+</div>
+
+<%= render(:partial => 'ode_guidance') %>
+
 <p class="not_ohio">Not in Ohio? Credit Flexibility may be coming to your state!</p>
-</div>
-
-<%= image_tag("cafe.jpg", {:height => 360}) %>
-</div>
 
 
 
 
-<h1>Listing resources</h1>
+<h1>Credit Flex Resources</h1>
+This area will contain a sortable list of district-by district plans, forms, and other resources.
 
-<table>
-  <tr>
-    <th>Author</th>
-    <th>Category</th>
-    <th>Url</th>
-    <th>Description</th>
-    <th>Viewed</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
 
 <% @resources.each do |resource| %>
-  <tr>
-    <td><%= resource.author_id %></td>
-    <td><%= resource.category %></td>
-    <td><%= resource.url %></td>
-    <td><%= resource.description %></td>
-    <td><%= resource.viewed %></td>
-    <td><%= link_to 'Show', resource %></td>
-    <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-    <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+
+  <div class='resource'>
+    
+    Category:<%= resource.category %>&nbsp;&nbsp;<%= link_to 'Link', resource.url %><br />
+	<%= resource.district %>
+    <p><%= resource.description %></p>
+    <%# resource.author_id %><%# resource.viewed %>
+	<%= link_to 'more', resource %>
+	</div>
+
 <% end %>
-</table>
+
 
 <br />
 

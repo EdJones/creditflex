@@ -1,15 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Author:</b>
-  <%= @resource.author_id %>
+  <b>Contributor:</b>
+  <%= @resource.user.username %>
 </p>
 
 <p>
   <b>Category:</b>
   <%= @resource.category %>
 </p>
-
+<p>
+  <b>County:</b>
+  <%= @resource.county %>
+</p>
+<p>
+  <b>District:</b>
+  <%= @resource.district %>
+</p>
 <p>
   <b>Url:</b>
   <%= @resource.url %>

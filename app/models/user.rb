@@ -1,11 +1,15 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
-  attr_accessible  :username, :email, :password, :password_confirmation, :role, :avatar
+  attr_accessible  :username, :email, :password, :password_confirmation, :role, :avatar, :teachers_attributes
   ROLES = %w[admin moderator teacher student banned]
   
   has_one :teacher
   has_one :student
   has_many :responses
+  has_many :resources
+  
+  accepts_nested_attributes_for :student, :allow_destroy => true
+  accepts_nested_attributes_for :teacher, :allow_destroy => true
    
   validates_presence_of :username
   validates_uniqueness_of :username, :email, :allow_blank => true

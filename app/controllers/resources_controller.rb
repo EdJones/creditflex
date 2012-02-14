@@ -25,7 +25,7 @@ class ResourcesController < ApplicationController
   # GET /resources/new.json
   def new
     @resource = Resource.new
-
+	@resource.user = current_user
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @resource }
@@ -41,7 +41,7 @@ class ResourcesController < ApplicationController
   # POST /resources.json
   def create
     @resource = Resource.new(params[:resource])
-
+	@resource.user_id = current_user.id
     respond_to do |format|
       if @resource.save
         format.html { redirect_to @resource, notice: 'Resource was successfully created.' }
