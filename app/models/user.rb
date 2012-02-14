@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
-  attr_accessible  :username, :email, :password, :password_confirmation, :role, :avatar, :teachers_attributes
+  #attr_accessible  :username, :email, :password, :password_confirmation, :role, :avatar, :teachers_attributes
   ROLES = %w[admin moderator teacher student banned]
   
   has_one :teacher

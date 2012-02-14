@@ -47,6 +47,61 @@
     <%= f.label :avatar, "Upload an avatar" %><br />
     <%= f.file_field :avatar %>
   </p>
+  
+  
+  
+  
+  
+  
+  <%= f.fields_for :teacher do |teacher_form| %>
+  
+
+
+  <div class="field">
+    <%= teacher_form.label "First Name" %><br />
+    <%= teacher_form.number_field :first_name %>
+  </div>
+    <div class="field">
+    <%= teacher_form.label :last_name %><br />
+    <%= teacher_form.number_field :last_name %>
+  </div>
+      <div class="field">
+    <%= teacher_form.label :title %><br />
+    <%= teacher_form.number_field :title %>
+  </div>
+  <div class="field">
+    <%= teacher_form.label :district %><br />
+    <%= teacher_form.text_field :district %>
+  </div>
+  <div class="field">
+    <%= teacher_form.label :school %><br />
+    <%= teacher_form.text_field :school %>
+  </div>
+  <div class="field">
+    <%= teacher_form.label :subject %><br />
+    <%= teacher_form.text_field :subject %>
+  </div>
+  <div class="field">
+    <%= teacher_form.label :specialty %><br />
+    <%= teacher_form.text_field :specialty %>
+  </div>
+  <div class="field">
+    <%= teacher_form.label :bio %><br />
+    <%= teacher_form.text_area :bio %>
+  </div>
+  <div class="field">
+    <%= teacher_form.label :notes %><br />
+    <%= teacher_form.text_area :notes %>
+  </div>
+  
+  
+  <% end %>
+  
+  
+  
+  
+  
+  
     <%= f.submit %>
   </div>
 <% end %>

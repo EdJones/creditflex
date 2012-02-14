@@ -1,7 +1,7 @@
 class Teacher < ActiveRecord::Base
 belongs_to :user
 delegate :username, :avatar, :avatar?, :email, :to => :user
-attr_accessible  :district, :school, :subject, :specialty, :bio, :notes, :first_name, :last_name, :title
+#attr_accessible  :district, :school, :subject, :specialty, :bio, :notes, :first_name, :last_name, :title, :user_attributes
 
 def name
  logger.debug "name #{self.first_name}"
