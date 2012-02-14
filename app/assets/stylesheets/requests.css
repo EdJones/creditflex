@@ -49,6 +49,9 @@ color:#ffffff;
 	overflow: hidden;
 	padding:8px;
 	}
+.request3 h1 {
+	color:#4c4c4c;
+}
 .avatar img {
 	height: 60px;
 }	
@@ -165,14 +168,16 @@ float:right;
 	font-family:arial;
 	font-size:20px;
 	padding-bottom:5px;
-	border-bottom:1px;
-	border-bottom-style:none;
+	border-bottom-style:solid;
+	border-bottom:2px;
+	border-bottom-color:#000000;
+
 	}
 #answers .response {
 	min-height:120px;
 	border-top:2px;
 	border-top-color:#c13100;
-	border-top-style:solid;
+	border-top-style:none;
 	color:#330000;
 	padding-top:15px;
 	padding-left:30px;
@@ -223,4 +228,26 @@ background-image: -webkit-gradient(
 }
 h5 {
 
+}
+#respond {
+	padding:7px 7px;
+	width: 400px;
+	min-height:140px;
+	background:#EDE4C0;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-webkit-box-shadow:1px 0px 5px #666;
+	-khtml-box-sizing:content-box;
+	box-sizing:content-box;
+	margin-right:auto;
+	margin-left:auto;
+}
+.response_edit {
+	font-size: smaller;
+	float:right;
+	margin-bottom:0px;
 }

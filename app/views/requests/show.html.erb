@@ -24,7 +24,7 @@ Question: <b><%= @request.topic %></b>
 	<%= link_to 'Edit', edit_request_path(@request) %>
 <% end %>
 </p>
-<%= button_to 'Help answer', new_response_path, :class => "help_button" %>
+<%= link_to'Help answer', add_response_request_path(:request_id => @request ), :class => "help_button" %>
 </div>
 
 <div id="answers">
@@ -40,7 +40,17 @@ Question: <b><%= @request.topic %></b>
 		<%= image_tag( response.user.avatar.url.to_s, :class => "r_avatar") if response.user.avatar? %>
 		<br/><%= response.user.username %> <br />on <%= response.created_at.strftime("%b %d, %Y") %> at <%= response.created_at.strftime("%I:%M%p") %>
 		</div>
-		<div class="response_text"><%= response.body %></div>
+		<div class="response_text">
+		<%= response.body %>
+		 <div class='response_edit'>
+		 <% if can? :update, response %>
+		    <%= link_to 'Edit', edit_response_path(response) %>
+			<% end %>
+		<% if can? :destroy, response %>
+			<%= link_to 'Delete', response, confirm: 'Are you sure?', method: :delete %> 
+		<% end %>
+		</div>
+		</div>
 	<% end %>
 <% end %>
 </div>
@@ -50,6 +60,50 @@ Question: <b><%= @request.topic %></b>
 <% end %>
 </div>
 
+<div>
+<p>&nbsp;</p>
+</div>
+<div id="respond">
+
+<%= form_for(@response_new) do |f| %>
+  <% if @response_new.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@response_new.errors.count, "error") %> prohibited this response from being saved:</h2>
+
+      <ul>
+      <% @response_new.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%# f.label :request %><br />
+    <%# f.number_field :request_id %>
+  </div>
+  <div class="field">
+    <%= f.label 'your answer' %><br />
+    <%= f.text_area :body %>
+  </div>
+  
+  
+  <% if current_user.role = 'admin' %>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.number_field :user_id %>
+	<% else %>
+	<%= current_user.role %>
+  </div>
+  <% end %>
+ <p>
+ </p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+</div>
 
 
 <%= link_to 'Back', requests_path %>

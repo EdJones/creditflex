@@ -1,20 +1,15 @@
 class RequestsController < ApplicationController
-before_filter :require_login, :only => [:new, :create]
+before_filter :require_login, :only => [:add_response, :new, :create]
 
 
 
-  def create_response
+  def add_response
     @response = Response.new(params[:response])
-
+	@response.user_id = current_user.id
+	@response.request_id = params[:id]
     respond_to do |format|
-      if @response.save
-        format.html { redirect_to @response, notice: 'Response was successfully created.' }
-		#redirect_to(:back, :notice => 'Response was successfully created.' )
-        format.json { render json: @response, status: :created, location: @response }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @response.errors, status: :unprocessable_entity }
-      end
+      render :partial =>  # new.html.erb
+      format.json { render json: @request }
     end
   end
 
@@ -39,6 +34,9 @@ before_filter :require_login, :only => [:new, :create]
   def show
     @request = Request.find(params[:id])
 	@responses = Response.where(:request_id => params[:id])
+	@response_new = Response.new(params[:response])
+	@response_new.user_id = current_user.id
+	@response_new.request_id = params[:id]
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @request }
