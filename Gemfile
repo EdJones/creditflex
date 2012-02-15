@@ -5,8 +5,8 @@ gem 'rails', '3.2.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-#gem 'pg'
+
+
 gem 'carrierwave'
 #gem 'rmagick'
 gem 'mini_magick'
@@ -40,9 +40,14 @@ group :devel do
     gem 'pry'
 	#gem 'eventmachine', "1.0.0.beta.4.1"
 	#gem 'thin'
+	#gem 'sqlite3'
  end
     
 group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end
+
+group :production do
+ gem 'pg'
+ end
