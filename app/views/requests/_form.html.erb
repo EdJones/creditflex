@@ -16,9 +16,11 @@
   
     <%= f.label :user_id %><br />
 	<% if current_user.role = 'admin' %>
+		<div class="admin">&nbsp;
 		<%= f.text_field :user_id %>
+		</div>
 	<% else %>
-		<%= @request.user_id %>
+		<%= @request.user.username %>
 	<% end %>
 	
   </div>

@@ -133,3 +133,10 @@ ribbon {
 	vertical-align:middle;
 	height:200px;;
 	}	
+	
+.admin {
+	background-color:#EF8792;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+
+}	
