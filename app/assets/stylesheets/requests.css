@@ -26,9 +26,19 @@ body {
 	box-sizing:content-box;
 	}	
 	
-h1 {
-color:#ffffff;
-}	
+.request3 h1 {
+color:#8C1C32;
+line-height:28px;
+}
+.form h2 {
+color:#8C1C32;
+line-height:28px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+input {
+/*border: 1px solid #000000;*/
+border-radius: 5px 5px 5px 5px;
+}		
 .ptitle {
 	font-weight:bold;
 	color:#605307;
@@ -48,10 +58,9 @@ color:#ffffff;
 	margin: 0 0 24px 0; 
 	overflow: hidden;
 	padding:8px;
+	font-size:large;
 	}
-.request3 h1 {
-	color:#4c4c4c;
-}
+
 .avatar img {
 	height: 60px;
 }	
@@ -59,7 +68,10 @@ color:#ffffff;
 	height:60px;
 	float:left;
 }
-	
+#help {
+	float:right;
+	height:100px;
+}
 .request4 {
 float:left;
 width:350px;
@@ -99,9 +111,9 @@ float:right;
 .form {
 
 	padding:30px 30px;
-	width: 600px;
+	width: 720px;
 	margin:10px auto 300px auto;
-	background:#ffffff;
+	background:#dddddd;
 	-moz-border-radius:5px;
 	-khtml-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -111,7 +123,10 @@ float:right;
 	-webkit-box-shadow:1px 0px 5px #666;
 	-khtml-box-sizing:content-box;
 	box-sizing:content-box;
-	}	
+		padding:8px;
+	font-size:large;
+	}
+		
 #request_header {
 	font-family:arial;
 	font-wieght:bold;
@@ -252,8 +267,22 @@ h5 {
 	margin-bottom:0px;
 }
 .admin {
-	background-color:#EF8792;
-	border-bottom-style:solid;
-	border-bottom-width:1px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#EF8792;
+	padding:8px;
+	width:200px;
+	float:right;
 
 }	
+.field {
+	margin-bottom:20px;
+
+}
+#brainstorm {
+	height:150px;
+	float:right;
+}
+#f1 {
+	height: 50px;
+}
