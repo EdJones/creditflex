@@ -11,34 +11,38 @@
     </div>
   <% end %>
 
-  <div class="field">
-  
-  
-    <%= f.label :user_id %><br />
-	<% if current_user.role = 'admin' %>
-		<%= f.text_field :user_id %>
-	<% else %>
-		<%= @request.user_id %>
-	<% end %>
-	
+  <div id="f1" class="field">
+  &nbsp;
   </div>
     <div class="field">
+
     <%= f.label :topic %><br />
-    <%= f.text_field :topic %>
+    <%= f.text_field :topic, :size => 90 %>
   </div>
   <div class="field">
-    <%= f.label :goals %><br />
-    <%= f.text_area :goals %>
+    <b><%= f.label :goals %></b> (What do you hope to learn or accomplish with this project or course?<br />
+    <%= f.text_area :goals, :cols => 70, :rows => 10 %>
   </div>
   <div class="field">
-    <%= f.label :portfolio_id %><br />
-    <%= f.number_field :portfolio_id %>
+    <%# f.label :portfolio_id %><br />
+    <%# f.number_field :portfolio_id %>
   </div>
   <div class="field">
-    <%= f.label :help_needed %><br />
-    <%= f.text_area :help_needed %>
+    <b><%= f.label :help_needed %></b><br />(How can the community help you move forward?)<br />
+    <%= f.text_area :help_needed, :cols => 70, :rows => 15 %>
   </div>
+  	<% if current_user.role = 'admin' %>
+		<div class="admin">
+		User_name:
+	<%= @request.user.username %>
+	
+	<br />
+		<%= f.label :user_id %>
+		<%= f.text_field :user_id %>
+		</div>
+	<% end %>
+	<br />
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Ask question' %>
   </div>
 <% end %>
