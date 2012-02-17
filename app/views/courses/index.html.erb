@@ -1,33 +1,31 @@
-<div class="content5">
-<h1>Listing courses</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-	<th>Subject</th>
-    <th>Notes</th>
-    <th>Plan url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h2>Courses</h2>
+
+
+
+    
+    
+    
+
 
 <% @courses.each do |course| %>
-  <tr>
-    <td><%= course.title %></td>
-    <td><%= course.description %></td>
-	<td><%= course.subject.name %></td>
-    <td><%= course.notes %></td>
-    <td><%= course.plan_url %></td>
-    <td><%= link_to 'Show', course %></td>
-    <td><%= link_to 'Edit', edit_course_path(course) %></td>
-    <td><%= link_to 'Destroy', course, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<div class="course2">
+    <b><%= course.title %></b><br />
+	Subject area: <%= course.subject.name %>
+	<p><%= course.description %></p>
+	
+    <p><%= course.notes %></p>
+    <%= link_to 'Course link', course.plan_url %>
+    <%= link_to 'More', course %> 
+	
+	<% if current_user.role = 'admin' %>
+    <%= link_to 'Edit', edit_course_path(course) %>
+    <%= link_to 'Destroy', course, confirm: 'Are you sure,?', method: :delete %>
+	<% end %>
+</div>
 <% end %>
-</table>
+
 
 <br />
 
 <%= link_to 'New Course', new_course_path %>
-</div>
