@@ -1,8 +1,26 @@
 // Place all the styles related to the lycee controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin rounded-corners($radius: 5px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+@mixin box-shadow($sol, $sot, $bd, $color) {
+	-moz-box-shadow: $sol $sot $bd $color; 
+	-webkit-box-shadow: $sol $sot $bd $color; 
+	box-shadow: $sol $sot $bd $color; 
+}
+
 #lycee_controller
 {
+
+
+
+
+
+
+
 $bar_background__top_old: #fbf9e1;
 $bar_background__bottom_old: #f7edcf;
 $bar_background__top: #f1f4d2;
@@ -80,12 +98,8 @@ $bar_background__bottom: #dee698;
 	
 	
 #projects {
-	border-radius: 4px; 
-	-moz-border-radius: 4px; 
-	-webkit-border-radius: 4px; 
-	-moz-box-shadow: 0px 2px 2px #666666; 
-	-webkit-box-shadow: 0px 2px 2px #666666; 
-	box-shadow: 0px 2px 2px #666666; 
+	@include rounded-corners(4px);
+	@include box-shadow(0px, 5px, 2px, #666666 ); 
 	background: #fbf9e1; 
 	background: -moz-linear-gradient(top, $bar_background__top 0%, $bar_background__bottom 100%); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
@@ -100,12 +114,8 @@ $bar_background__bottom: #dee698;
 #projects_bar {margin-bottom: 35px; clear: left}
 #projects_bar h2 {font-size: 28px; font-family: "MuseoSans500", Arial, "Lucida Grande", Tahoma, "Sans Serif"}
 #projects_bar #projects_item {
-	border-radius: 4px; 
-	-moz-border-radius: 4px; 
-	-webkit-border-radius: 4px; 
-	-moz-box-shadow: 0px 2px 2px #666666; 
-	-webkit-box-shadow: 0px 2px 2px #666666; 
-	box-shadow: 0px 2px 2px #666666; 
+	@include rounded-corners(4px); 
+	@include box-shadow(0px, 2px, 2px, #666666 ); 
 	background: #fbf9e1; 
 	background: -moz-linear-gradient(top, $bar_background__top 0%, #f7edcf 100%); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
@@ -140,12 +150,8 @@ $bar_background__bottom: #dee698;
 	
 	
 #requests {
-	border-radius: 4px; 
-	-moz-border-radius: 4px; 
-	-webkit-border-radius: 4px; 
-	-moz-box-shadow: 0px 2px 2px #666666; 
-	-webkit-box-shadow: 0px 2px 2px #666666; 
-	box-shadow: 0px 2px 2px #666666; 
+	@include rounded-corners(4px);
+	@include box-shadow(0px, 5px, 2px, #666666 ); 
 	background: #fbf9e1; 
 	background: -moz-linear-gradient(top, $bar_background__top 0%, $bar_background__bottom 100%); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
@@ -160,12 +166,8 @@ $bar_background__bottom: #dee698;
 #requests_bar {margin-bottom: 35px; clear: left}
 #requests_bar h2 {font-size: 28px; font-family: "MuseoSans500", Arial, "Lucida Grande", Tahoma, "Sans Serif"}
 #requests_bar #requests_item {
-	border-radius: 4px; 
-	-moz-border-radius: 4px; 
-	-webkit-border-radius: 4px; 
-	-moz-box-shadow: 0px 2px 2px #666666; 
-	-webkit-box-shadow: 0px 2px 2px #666666; 
-	box-shadow: 0px 2px 2px #666666; 
+	@include rounded-corners(4px); 
+	@include box-shadow(0px, 2px, 2px, #666666 );
 	background: #fbf9e1; 
 	background: -moz-linear-gradient(top, $bar_background__top 0%, #f7edcf 100%); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
@@ -205,12 +207,8 @@ $bar_background__bottom: #dee698;
 
 
 #lycee {
-	border-radius: 4px; 
-	-moz-border-radius: 4px; 
-	-webkit-border-radius: 4px; 
-	-moz-box-shadow: 0px 2px 2px #666666; 
-	-webkit-box-shadow: 0px 2px 2px #666666; 
-	box-shadow: 0px 2px 2px #666666; 
+	@include rounded-corners(4px);
+	@include box-shadow(0px, 3px, 2px, #666666 ); 
 	background: #fbf9e1; 
 	background: -moz-linear-gradient(top, $bar_background__top 0%, $bar_background__bottom 100%); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
@@ -237,12 +235,8 @@ $bar_background__bottom: #dee698;
 	font-weight:bold;
 	}
 #courses_bar #courses_item {
-	border-radius: 4px; 
-	-moz-border-radius: 4px; 
-	-webkit-border-radius: 4px; 
-	-moz-box-shadow: 0px 2px 2px #666666; 
-	-webkit-box-shadow: 0px 2px 2px #666666; 
-	box-shadow: 0px 2px 2px #666666; 
+	@include rounded-corners(4px); 
+	@include box-shadow(0px, 2px, 2px, #666666 );
 	background: #fbf9e1; 
 	background: -moz-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
@@ -307,18 +301,15 @@ $bar_background__bottom: #dee698;
 	-webkit-border-top-right-radius: 4px}
 #teachers_bar h2 {font-size: 28px; font-family: "MuseoSans500", Arial, "Lucida Grande", Tahoma, "Sans Serif"}
 #teachers_bar #teachers_item {
-	border-radius: 4px; 
-	-moz-border-radius: 4px; 
-	-webkit-border-radius: 4px; 
-	-moz-box-shadow: 0px 2px 2px #666666; 
-	-webkit-box-shadow: 0px 2px 2px #666666; 
-	box-shadow: 0px 2px 2px #666666; 
+	@include rounded-corners(4px); 
+	@include box-shadow(0px, 2px, 2px, #666666 );
 	background: #fbf9e1; 
 	background: -moz-linear-gradient(top, $bar_background__top 0%, #f7edcf 100%); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
 	background: -webkit-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
 	background: -o-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
-	background: -ms-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
+	background: -ms-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
 	background: linear-gradient(top, #f7edcf 0%, #f7edcf 100%); 
 	color: #4c4c4c; 
 	margin: 0 0 24px 0; 
