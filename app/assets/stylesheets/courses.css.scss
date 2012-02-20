@@ -4,6 +4,11 @@
 $bar_background__top: #f1f4d2;
 $bar_background__bottom: #dee698;
 
+
+.course_title {
+	color:#3EB70E;
+	font-weight:bold;
+}
 .content5 {
 	border-radius: 4px; 
 	-moz-border-radius: 4px; 
@@ -66,5 +71,10 @@ $bar_background__bottom: #dee698;
 	box-sizing:content-box;
 		padding:8px;
 	/* font-size:large; */
+	}
+	.course_avatar {
+		height:130px;
+		float:right;
+		padding-left:15px;
 	}
 		

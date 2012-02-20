@@ -1,23 +1,24 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag( @course.course_image.url.to_s, :class => "course_avatar") if @course.course_image? %>
 <p>
   <b>Title:</b>
-  <%= @course.title %>
+  <span class="course_title"><%= @course.title %></span>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Description:</b><br />
   <%= @course.description %>
 </p>
 
 <p>
-  <b>Subject</b>
+  <b>Subject:</b>
   <%= @course.subject.name %>
 </p>
 
 <p>
-  <b>Curriculum URL?</b>
-  <%= @course.curriculum_url %>
+  <b>Curriculum URL</b><br/>
+  <%= link_to(@course.curriculum_url, @course.curriculum_url) %>
 </p>
 
 <p>
@@ -26,8 +27,8 @@
 </p>
 
 <p>
-  <b>Plan url:</b>
-  <%= @course.plan_url %>
+  <b>Course url:</b>
+  <%= link_to(@course.plan_url, @course.plan_url) %>
 </p>
 
 

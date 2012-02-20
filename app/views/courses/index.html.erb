@@ -10,7 +10,8 @@
 
 <% @courses.each do |course| %>
 <div class="course2">
-    <b><%= course.title %></b><br />
+	<%= image_tag( course.course_image.url.to_s, :class => "course_avatar") if course.course_image? %>
+    <span class="course_title"><%= course.title %></span><br />
 	Subject area: <%= course.subject.name %>
 	<p><%= course.description %></p>
 	

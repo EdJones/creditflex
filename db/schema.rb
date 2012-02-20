@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214122050) do
+ActiveRecord::Schema.define(:version => 20120220155441) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20120214122050) do
     t.datetime "updated_at"
     t.integer  "subject_id"
     t.string   "curriculum_url"
+    t.string   "course_image"
   end
 
   create_table "portfolios", :force => true do |t|
