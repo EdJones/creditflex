@@ -32,7 +32,7 @@
   <%= link_to(@course.plan_url, @course.plan_url) %>
 </p>
 
-<%= if can? :edit @course %>
+<% if can? :update, @course %>
 <%= link_to 'Edit', edit_course_path(@course) %>
 <% end %> |
 <%= link_to 'All courses', courses_path %>
