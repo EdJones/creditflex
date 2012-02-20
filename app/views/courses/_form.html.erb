@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+  
+  
+   <div class="desc">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :rows => 8, :cols => 50 %>
+  </div>
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -28,13 +34,10 @@
     <%= f.file_field :course_image %>
   </div>
   
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
+<div class="clearfix"></div>
   <div class="field">
     <%= f.label :notes %><br />
-    <%= f.text_area :notes %>
+    <%= f.text_area :notes, :rows => 8, :cols => 50 %>
   </div>
   <div class="field">
     <%= f.label "Still in planning? Plan url" %><br />
