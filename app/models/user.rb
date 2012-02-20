@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
+#  default_scope where(:role => 'guest')
   #attr_accessible  :username, :email, :password, :password_confirmation, :role, :avatar, :teachers_attributes
   ROLES = %w[admin moderator teacher student banned]
   
