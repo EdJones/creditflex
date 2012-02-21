@@ -40,7 +40,7 @@
 </p>
 
 
-<% if current_user.role = 'admin' %>
+<% if can? :manage, @teacher %>
 <p>
   <b>User:</b>
   <%= @teacher.user_id %>
