@@ -30,6 +30,7 @@ Creditflex::Application.routes.draw do
   resources :teachers do
         member do
             post 'new'
+			delete 'destroy'
 			end
 	end
 

@@ -18,16 +18,10 @@
   </p>
   <p>
   <% if !current_user %>
-	<%# f.radio_button(:role, :student) %> student <br /> <%# f.radio_button(:role, :teacher) %> teacher 
-   <% end %>
-   
-   
-  
-   
-  <p>
-<%# if current_user.username == ('ej0c' || 'EdJones' )  %>
-	<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
-<%# end %>
+	<% f.radio_button(:role, :student) %> student <br /> <%# f.radio_button(:role, :teacher) %> teacher 
+	<% elsif current_user.role == 'admin'   %>
+		<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+	<% end %>
   </p>
   <p>
     <%= f.label :email, "Email Address" %><br />

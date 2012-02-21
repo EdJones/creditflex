@@ -18,7 +18,7 @@
     <p><%= teacher.bio %>
     Notes: <%= teacher.notes %>
     <%= link_to 'More', teacher %>
-	<% if current_user.role = 'admin' %>
+	<% if can? :manage, teacher %>
     <%= link_to 'Edit', edit_teacher_path(teacher) %>
     <%= link_to 'Destroy', teacher, confirm: 'Are you sure?', method: :delete %>
 	<% end %>
