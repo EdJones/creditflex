@@ -16,8 +16,10 @@
     <p>Status:<%= project.status %> | 
     Portfolio<%= project.portfolio_id %><br /></p>
     <%= link_to 'Show', project %>
+	<% if can? :manage, project %>
     <%= link_to 'Edit', edit_project_path(project) %>
-    <%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
+    <%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %>
+	<% end %>
 </div>
 </div>
 <% end %>

@@ -3,3 +3,10 @@
 
 en:
   hello: "Hello world"
+
+  unauthorized:
+    manage:
+      all: "Not authorized to %{action} %{subject}."
+      user: "Not allowed to manage other user accounts."
+    create:
+      project: "Please sign up / log in to enter your project."

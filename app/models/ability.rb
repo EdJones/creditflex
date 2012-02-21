@@ -10,19 +10,19 @@ class Ability
 
       can :manage, :all
       # some other trainer specific roles here, like editing his/her profile
-    #elsif user.role = 'student'
-      #can :read, :all
-	  #cannot :read, Users
-	  #can :manage, Project, :student_id => user.id
-
+    elsif user.role == 'student'
+      can :read, :all
+	  cannot :read, User
+	  can :manage, Project, :student_id => user.id
+#raise "role: #{user.role }"
 	else
 		can :read, :all
-		cannot :read, User
-		cannot :create, :update, Project
-		cannot :create, :update, Request
-		cannot :update, Course
+		#cannot :read, User
+		#cannot :create, :update, Project
+		#cannot :create, :update, Request
+		#cannot :update, Course
       # some other client specific roles here, like editing his/her profile
-	  	#raise "role: #{user.role }" 
+	  	 
     end
 
     #

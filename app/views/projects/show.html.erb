@@ -29,7 +29,9 @@
   <b>Portfolio:</b>
   <%= @project.portfolio_id %>
 </p>
-<
+
 </div>
+<% if can? :update, @project %>
 <%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<% end %>
+<%= link_to 'Projects list', projects_path %>
