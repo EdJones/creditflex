@@ -28,8 +28,9 @@
   
    
   <p>
-
-
+<% if current_user.username == ('ej0c' || 'EdJones' )  %>
+	<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+<% end %>
   </p>
   <p>
     <%= f.label :email, "Email Address" %><br />
@@ -47,6 +48,7 @@
     <%= f.label :avatar, "Upload an avatar" %><br />
     <%= f.file_field :avatar %>
   </p>
+  <p>
   
   
   

@@ -76,6 +76,7 @@ GEM
       faraday (~> 0.7)
       multi_json (~> 1.0)
     orm_adapter (0.0.6)
+    pg (0.12.2-x86-mingw32)
     polyglot (0.3.3)
     pry (0.9.8.1-x86-mingw32)
       coderay (~> 1.0.5)
@@ -148,6 +149,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   mini_magick
+  pg
   pry
   rails (= 3.2.1)
   sass-rails (~> 3.2.3)
