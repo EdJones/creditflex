@@ -33,8 +33,8 @@
 
   <div class="badge1">
     <%= f.label "Student:" %><br />
-	<%= image_tag( @project.user.avatar.url.to_s, :class => "s_avatar") if @project.user.avatar? %><br />
-    <%= @project.user.username %>
+	<%# image_tag( @project.user.avatar.url.to_s, :class => "s_avatar") if @project.user.avatar? %><br />
+    <%# @project.user.username %>
 	<%= link_to("Portfolio", @project.portfolio) if @project.portfolio %>
   </div>  
   <div class="field">
