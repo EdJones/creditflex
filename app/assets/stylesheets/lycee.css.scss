@@ -11,6 +11,17 @@
 	-webkit-box-shadow: $sol $sot $bd $color; 
 	box-shadow: $sol $sot $bd $color; 
 }
+@mixin gradient($top-color, $bottom-color) {
+	background: $top-color; 
+	background: -moz-linear-gradient(top, $bar_background__top 0%, $bar_background__bottom 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top-color), color-stop(100%, $bottom-color)); 
+	background: -webkit-linear-gradient(top, $top-color 0%, $bottom-color 100%); 
+	background: -o-linear-gradient(top, $top-color 0%, $bottom-color 100%); 
+	background: -ms-linear-gradient(top, $top-color 0%, $bottom-color 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#$top-color', endColorstr='$bottom-color',GradientType=0 ); 
+	background: linear-gradient(top, $top-color 0%, $bottom-color 100%);  
+}
+
 
 #lycee_controller
 {
@@ -27,7 +38,7 @@ $bar_background__top: #f1f4d2;
 $bar_background__bottom: #dee698;
 
 .content {
-	padding-top:30px;
+	padding-top:10px;
 	padding-left:75px;
 	padding-right:40px;
 	width: 1050px;
