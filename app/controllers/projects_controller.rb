@@ -26,6 +26,7 @@ load_and_authorize_resource :except => [:index, :show]
   # GET /projects/new.json
   def new
     @project = Project.new
+	@project.user = current_user
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @project }
