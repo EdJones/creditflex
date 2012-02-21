@@ -20,7 +20,7 @@ Creditflex::Application.routes.draw do
 
   resources :projects do
         member do
-            post 'new'
+            #post 'new'
 			end
 	end
   resources :resources
