@@ -1,31 +1,31 @@
-<div class="content5">
-<h1>Listing courses</h1>
+<div class="content" >
+<h2>Courses</h2>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-	<th>Subject</th>
-    <th>Notes</th>
-    <th>Plan url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
+
+    
+    
+    
 
 <% @courses.each do |course| %>
-  <tr>
-    <td><%= course.title %></td>
-    <td><%= course.description %></td>
-	<td><%= course.subject.name %></td>
-    <td><%= course.notes %></td>
-    <td><%= course.plan_url %></td>
-    <td><%= link_to 'Show', course %></td>
-    <td><%= link_to 'Edit', edit_course_path(course) %></td>
-    <td><%= link_to 'Destroy', course, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+
+<div class="course2">
+	<%= image_tag( course.course_image.url.to_s, :class => "course_avatar") if course.course_image? %>
+    <span class="course_title"><%= course.title %></span><br />
+	Subject area: <%= course.subject.name %>
+	<p><%= course.description %></p>
+	
+    <p><b>Notes:</b> <%= course.notes %></p>
+    <%= link_to 'More', course %> 
+	<%= link_to 'Course link', course.plan_url %>
+    
+	<% if can? :update, course %>
+    <%= link_to 'Edit', edit_course_path(course) %>
+    <%= link_to 'Destroy', course, confirm: 'Are you sure,?', method: :delete %>
+	<% end %>
+</div>
 <% end %>
-</table>
+
 
 <br />
 

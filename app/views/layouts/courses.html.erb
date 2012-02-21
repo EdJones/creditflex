@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Questions - Ohio Credit Flexibility</title>
-  <%= stylesheet_link_tag    "teachers" %>
+  <title>Courses - Ohio Credit Flexibility</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "courses" %>
   <%= stylesheet_link_tag    "headers" %>
   <% javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -10,8 +11,7 @@
 <body>
 <%= render(:partial => "shared/header") %>
 <div class="clear"></div>
-<div class="content4">
 <%= yield %>
-</div>
+
 </body>
 </html>

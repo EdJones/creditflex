@@ -22,14 +22,15 @@
   </div>
   <div class="field">
     <%= f.label :county %><br />
-    <%= f.text_field :county %>
+    <%# f.text_field :county %>
+	<%= f.collection_select :county, Resource::COUNTIES, :to_s, :humanize %>
   </div>
     <div class="field">
-    <%= f.label :district %><br />
+    <%= f.label 'School district' %><br />
     <%= f.text_field :district %>
   </div>
   <div class="field">
-    <%= f.label :url %><br />
+    <%= f.label 'URL for resource' %><br />
     <%= f.text_field :url %>
   </div>
   <div class="field">

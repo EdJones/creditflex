@@ -1,6 +1,12 @@
-<h1>Editing course</h1>
+<div class="content1">
+<div class="form">
+<%= image_tag( @course.course_image, :class => "course_avatar")  %>
 
+<h1>Editing course</h1>
+<div class="clearfix"></div>
 <%= render 'form' %>
 
 <%= link_to 'Show', @course %> |
 <%= link_to 'Back', courses_path %>
+</div>
+</div>

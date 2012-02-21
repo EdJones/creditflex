@@ -4,6 +4,11 @@
 $bar_background__top: #f1f4d2;
 $bar_background__bottom: #dee698;
 
+
+.course_title {
+	color:#607890;
+	font-weight:bold;
+}
 .content5 {
 	border-radius: 4px; 
 	-moz-border-radius: 4px; 
@@ -25,3 +30,55 @@ $bar_background__bottom: #dee698;
 	width:860;
 	
 	}
+	
+	.course2 {
+	border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px; 
+	-moz-box-shadow: 0px 2px 2px #666666; 
+	-webkit-box-shadow: 0px 2px 2px #666666; 
+	box-shadow: 0px 2px 2px #666666; 
+	background: #fbf9e1; background: 
+	-moz-linear-gradient(top, $bar_background__top 0%, #f7edcf 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
+	background: -webkit-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -o-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	background: -ms-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
+	background: linear-gradient(top, #f7edcf 0%, #f7edcf 100%); 
+	color: #4c4c4c; 
+	margin: 0 25px 15px 0;
+	padding: 7px; 
+	overflow: hidden;
+	width:860;
+	
+	}
+	
+	.formas {
+
+	padding:30px 30px;
+	width: 720px;
+	margin:10px auto 300px auto;
+	background:#dddddd;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-webkit-box-shadow:1px 0px 5px #666;
+	-khtml-box-sizing:content-box;
+	box-sizing:content-box;
+		padding:8px;
+	/* font-size:large; */
+	}
+	.course_avatar {
+		height:130px;
+		float:right;
+		padding-left:15px;
+	}
+	.desc {
+	float:right;
+	margin-right:15px;
+
+}

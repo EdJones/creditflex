@@ -30,17 +30,16 @@
 	<%= f.cktext_area(:summary, :input_html => {:cols => 8, :rows => 20}, :toolbar => 'Basic') %>
     <%# f.text_area :summary %>
   </div>
+
+  <div class="badge1">
+    <%= f.label "Student:" %><br />
+	<%= image_tag( @project.user.avatar.url.to_s, :class => "s_avatar") if @project.user.avatar? %><br />
+    <%= @project.user.username %>
+	<%= link_to("Portfolio", @project.portfolio) if @project.portfolio %>
+  </div>  
   <div class="field">
     <%= f.label :projekt, "Upload a picture" %><br />
     <%= f.file_field :projekt %>
-  </div>
-  <div class="field">
-    <%= f.label :portfolio_id %><br />
-    <%= f.number_field :portfolio_id %>
-  </div>
-    <div class="field">
-    <%= f.label :student_id %><br />
-    <%# @project.student_id %>
   </div>  
   <div class="field">
     <%= f.label :teacher_id %> (if known)<br />

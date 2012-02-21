@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #teachers_controller
-{
+{}
 $bar_background__top: #f1f4d2;
 $bar_background__bottom: #f1f4d2;
 
@@ -67,7 +67,15 @@ h1 {
 	margin-bottom:20px; 
 	overflow: hidden;
 	}
-
-
+.bio {
+	float:right;
+	margin-right:15px;
 
 }
+.form {
+	font-size:small;
+}
+#penguin1 {
+	float:right;
+	margin-top:0px;
+	}

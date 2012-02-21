@@ -11,23 +11,36 @@
     </div>
   <% end %>
 
+  
+  
+   <div class="desc">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :rows => 8, :cols => 50 %>
+  </div>
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
   <div class="field">
+  <%= f.label :subject_id %><br />
 	<%= f.select(:subject_id, Subject.all.collect {|p| [ p.name, p.id ] }, {:prompt => 'Select Subject'}) %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <div class="field">
+    <%= f.label :curriculum_url %><br />
+    <%= f.text_field :curriculum_url %>
   </div>
+  <div class="field">
+    <%= f.label :avatar, "Upload a picture" %><br />
+    <%= f.file_field :course_image %>
+  </div>
+  
+<div class="clearfix"></div>
   <div class="field">
     <%= f.label :notes %><br />
-    <%= f.text_area :notes %>
+    <%= f.text_area :notes, :rows => 8, :cols => 50 %>
   </div>
   <div class="field">
-    <%= f.label :plan_url %><br />
+    <%= f.label "Still in planning? Plan url" %><br />
     <%= f.text_field :plan_url %>
   </div>
   <div class="actions">

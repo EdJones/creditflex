@@ -34,7 +34,7 @@ body {
 
 	padding:30px 30px;
 	width: 720px;
-	margin:10px auto 300px 40px;
+	margin:10px auto 30px 40px;
 	background:#dddddd;
 	-moz-border-radius:5px;
 	-khtml-border-radius:5px;
@@ -46,6 +46,23 @@ body {
 	-khtml-box-sizing:content-box;
 	box-sizing:content-box;
 	}
+.form1 {
+
+	padding:30px 30px;
+	width: 720px;
+	margin:10px auto 30px 40px;
+	/*background:#D8CEC0;*/
+	-moz-border-radius:30px;
+	-khtml-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-webkit-box-shadow:1px 0px 5px #666;
+	-khtml-box-sizing:content-box;
+	box-sizing:content-box;
+	background: -moz-linear-gradient(top, #D8CEC0 100%, #E0DCDB 10%); 
+	}	
 #form_image {
 	float:right;
 	padding-top: -30px;
@@ -103,4 +120,10 @@ font-size:13px;
 #user_nav {
 width:300px;
 float:right;
+}
+.badge1{
+	float:right;
+}
+.s_avatar {
+	height:50px;
 }	

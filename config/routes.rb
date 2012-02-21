@@ -68,6 +68,8 @@ Creditflex::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
      match 'lycee' => 'lycee#index'
+	 match 'lycee/credits' => 'lycee#credits'
+	 match 'signup_now' => 'users#new'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

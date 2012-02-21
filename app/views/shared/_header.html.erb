@@ -12,10 +12,11 @@
 <%= image_tag("creditflex.png", :id => "diver" ) %>
 <%= link_to(image_tag("logo2.gif", :id => "logo" ), :root) %>
 </div>
-
+<div class="flash">
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, :id => "flash#{name}" %>
   <% end %>
+  </div>
 <div class="ribbon">
 
 </div>

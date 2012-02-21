@@ -5,21 +5,24 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
     user ||= User.new # guest user (not logged in)
-	if user.role = 'admin'
+	
+	if user.role == 'admin'
+
       can :manage, :all
       # some other trainer specific roles here, like editing his/her profile
-    elsif user.role = 'student'
+    elsif user.role == 'student'
       can :read, :all
-	  cannot :read, Users
-	  can :manage, Project, :student_id => user.id 
-	else 
+	  cannot :read, User
+	  can :manage, Project, :student_id => user.id
+#raise "role: #{user.role }"
+	else
 		can :read, :all
-		cannot :read, Users
-		cannot :create, :update, Projects
-		cannot :create, :update, Requests
-		cannot :update, :all
+		#cannot :read, User
+		#cannot :create, :update, Project
+		#cannot :create, :update, Request
+		#cannot :update, Course
       # some other client specific roles here, like editing his/her profile
-	  
+	  	 
     end
 
     #
