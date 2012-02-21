@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 #  default_scope where(:role => 'guest')
   #attr_accessible  :username, :email, :password, :password_confirmation, :role, :avatar, :teachers_attributes
   ROLES = %w[admin moderator teacher student banned]
-  
+  has_many :projects
   has_one :teacher
   has_one :student
   has_many :responses
