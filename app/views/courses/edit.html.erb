@@ -1,6 +1,6 @@
 <div class="content1">
 <div class="form">
-<%= image_tag( @course.course_image, :class => "course_avatar")  %>
+<%= image_tag( @course.course_image, :class => "course_avatar") if @course.course_image?  %>
 
 <h1>Editing course</h1>
 <div class="clearfix"></div>
