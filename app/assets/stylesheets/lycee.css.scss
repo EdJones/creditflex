@@ -14,12 +14,11 @@
 }
 @mixin gradient($top-color, $bottom-color) {
 	background: $top-color; 
-	background: -moz-linear-gradient(top, $bar_background__top 0%, $bar_background__bottom 100%); 
+	background: -moz-linear-gradient(top, $top-color 0%, $bottom-color 100%); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top-color), color-stop(100%, $bottom-color)); 
 	background: -webkit-linear-gradient(top, $top-color 0%, $bottom-color 100%); 
 	background: -o-linear-gradient(top, $top-color 0%, $bottom-color 100%); 
 	background: -ms-linear-gradient(top, $top-color 0%, $bottom-color 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#$top-color', endColorstr='$bottom-color',GradientType=0 ); 
 	background: linear-gradient(top, $top-color 0%, $bottom-color 100%);  
 }
 
@@ -106,19 +105,11 @@ $bar_background__bottom: #dee698;
 		float:left;
 	}
 	
-	
-	
-	
 #projects {
 	@include rounded-corners(4px);
-	@include box-shadow(0px, 5px, 2px, #666666 ); 
-	background: #fbf9e1; 
-	background: -moz-linear-gradient(top, $bar_background__top 0%, $bar_background__bottom 100%); 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
-	background: -webkit-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
-	background: -o-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
-	background: -ms-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
-	background: linear-gradient(top, #f7edcf 0%, #f7edcf 100%); 
+	@include box-shadow(0px, 5px, 2px, #666666 );
+	@include gradient($bar_background__top, $bar_background__bottom );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
 	color: #4c4c4c; 
 	margin: 0 0 24px 0; 
 	overflow: hidden
@@ -164,13 +155,8 @@ $bar_background__bottom: #dee698;
 #requests {
 	@include rounded-corners(4px);
 	@include box-shadow(0px, 5px, 2px, #666666 ); 
-	background: #fbf9e1; 
-	background: -moz-linear-gradient(top, $bar_background__top 0%, $bar_background__bottom 100%); 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf9e1), color-stop(100%, #f7edcf)); 
-	background: -webkit-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
-	background: -o-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); 
-	background: -ms-linear-gradient(top, #fbf9e1 0%, #f7edcf 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
-	background: linear-gradient(top, #f7edcf 0%, #f7edcf 100%); 
+	@include gradient($bar_background__top, $bar_background__bottom );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
 	color: #4c4c4c; 
 	margin: 0 0 24px 0; 
 	overflow: hidden
@@ -208,14 +194,6 @@ $bar_background__bottom: #dee698;
 
 .r_band { width: 800px;}
 .r_band h3 { width: 300px; padding-left:7px;}
-
-
-
-
-
-
-
-
 
 
 #lycee {
