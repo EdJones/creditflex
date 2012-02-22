@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   #check_authorization
    rescue_from CanCan::AccessDenied do |exception|
 	logger.debug "Access Denied: #{ exception.message } "
-   redirect_to :signup_now, :notice => exception.message
+   redirect_to :login, :notice => exception.message
   end
   
   private
