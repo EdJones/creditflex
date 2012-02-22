@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+/***********************************************Projects**************************************/
 $bar_background__top_old: #fbf9e1;
 $bar_background__bottom_old: #f7edcf;
 $bar_background__top: #f1f4d2;
@@ -14,6 +14,12 @@ body {
   font-size: 13px;
   line-height: 18px; }
   
+.content {
+	background-color:#ffffff;
+	width: 1060px;
+	padding-left:10px;
+
+}  
 .content1 {
 	padding-top:30px;
 	padding-left:85px;

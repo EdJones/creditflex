@@ -8,6 +8,12 @@
 body {
 	margin:0;
 	}
+body {
+  background-color: #324567;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }	
 .content {
 	padding-top:30px;
 	padding-left:85px;
@@ -24,105 +30,6 @@ body {
 	-khtml-box-sizing:content-box;
 	box-sizing:content-box;
 	}		
-#h-bar {
-    background: none repeat scroll 0 0 #0D678D;
-    border-bottom: 1px solid #5B97B4;
-    height: 86px;
-    min-width: 914px;
-	
-}	
-a#user_nav1  {
-margin-right:100px;
-position: absolute;
-right: 15px;
-top: 15px;
-display: block;
-float: right;
-height: 29px;
-line-height: 27px;
-font-size: 15px;
-font-weight: bold;
-color: rgba(255, 255, 255, 0.7)!important;
-color: white;
-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-background: #607890;
-padding: 0 12px;
-opacity: .9;
-text-decoration: none;
-border: 1px solid #2E4459;
--moz-border-radius: 6px;
--webkit-border-radius: 6px;
-border-radius: 6px;
--moz-box-shadow: 0 1px 0 rgba(255,255,255,0.15),0 1px 0 rgba(255,255,255,0.15) inset;
--webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.15),0 1px 0 rgba(255,255,255,0.15) inset;
-box-shadow: 0 1px 0 rgba(255,255,255,0.15),0 1px 0 rgba(255,255,255,0.15) inset;
-}
-
-a#user_nav2  {
-margin-right:10px;
-position: absolute;
-right: 15px;
-top: 15px;
-display: block;
-float: right;
-height: 29px;
-line-height: 27px;
-font-size: 15px;
-font-weight: bold;
-color: rgba(255, 255, 255, 0.7)!important;
-color: white;
-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-background: #607890;
-padding: 0 12px;
-opacity: .9;
-text-decoration: none;
-border: 1px solid #2E4459;
--moz-border-radius: 6px;
--webkit-border-radius: 6px;
-border-radius: 6px;
--moz-box-shadow: 0 1px 0 rgba(255,255,255,0.15),0 1px 0 rgba(255,255,255,0.15) inset;
--webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.15),0 1px 0 rgba(255,255,255,0.15) inset;
-box-shadow: 0 1px 0 rgba(255,255,255,0.15),0 1px 0 rgba(255,255,255,0.15) inset;
-}
-body {
-  background-color: #324567;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
-
-ribbon {
-	width: 100%;
-	height: 90px;
-	/*background-color:#CC3300;*/
-	background-image:url(file:///C|/Users/Ed/webapps/creditflex/app/assets/images/top_red_bar.gif);
-	background-repeat:repeat-x;
-	margin: 0;
-	}
-#diver {
-	padding-left: 10px;
-	padding-top:5px;
-	height: 80px;
-	width: 80px;
-	float:	left;
-		vertical-align:middle;
-	}
-#diver img {
-	height: 80px;
-	width: 80px;
-
-	float:	right;
-	vertical-align:middle;
-	}
-#logo {
-	margin-top:15px;
-	vertical-align:middle;
-	padding-left:5px;
-	}		
-#logo img {
-	float:	right;
-	vertical-align:top;
-	}	
 .clear{
 	clear:both;
 	}
