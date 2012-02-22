@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*********************************Requests*********************************************/
+@import "rounded";
 body {
   background-color: #324567;
   color: #333;
@@ -9,6 +10,23 @@ body {
   font-size: 13px;
   line-height: 18px; }
   
+.content {
+	padding-top:10px;
+	padding-left:75px;
+	padding-right:40px;
+	width: 1050px;
+	margin:10px auto 30px auto;
+	background:#ffffff;
+	-moz-border-radius:12px;
+	-khtml-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-webkit-box-shadow:1px 0px 5px #666;
+	-khtml-box-sizing:content-box;
+	box-sizing:content-box;
+	}	  
 .content1 {
 	padding-top:30px;
 	padding-left:85px;
@@ -73,8 +91,18 @@ border-radius: 5px 5px 5px 5px;
 	-webkit-border-radius: 8px; 
 	-moz-box-shadow: 0px 2px 2px #666666; 
 	-webkit-box-shadow: 0px 2px 2px #666666; 
-	box-shadow: 0px 2px 2px #666666; 
-	background: #ffffff; 
+	box-shadow: 0px 2px 2px #666666;
+	 
+	
+	background: #fbf9e1; 
+	background: -moz-linear-gradient(top, #f1f4d2 0%, #dee698 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1f4d2), color-stop(100%, #dee698)); 
+	background: -webkit-linear-gradient(top, #f1f4d2 0%, #dee698 100%); 
+	background: -o-linear-gradient(top, #f1f4d2 0%, #dee698 100%); 
+	background: -ms-linear-gradient(top, #f1f4d2 0%, #dee698 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f4d2', endColorstr='#dee698',GradientType=0 ); 
+	background: linear-gradient(top, #f1f4d2 0%, #dee698 100%); 
+
 	margin-left: 100px;
 	color: #4c4c4c; 
 	margin: 0 0 24px 0; 
@@ -100,6 +128,8 @@ width:350px;
 padding-left:12px;
 font-family:helvetica;
 font-size:14px;
+
+
 }
 .request4 h3 {
 font-weight:bold;
@@ -111,14 +141,16 @@ float:right;
 }
 
 .show_button {
-    background: -moz-linear-gradient(center top , #415377, #c13100) repeat scroll 0 0 transparent;
-	background: -o-linear-gradient(top, #415377 0%, #c13100 100%);
-	background: -ms-linear-gradient(center top, #415377, #c13100, #c13100);
-	background: -webkit-gradient(linear, left top, left bottom, from(#415377), to(#c13100));
+    background: -moz-linear-gradient(center top , #ff9900, #c13100) repeat scroll 0 0 transparent;
+	  /*background: #DDD;*/
+	 background: -o-linear-gradient(top, #ff9900 0%, #c13100 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9900), to(#c13100));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9900', endColorstr='#c13100');
     border: 1px solid #53171F;
     border-radius: 4px 4px 4px 4px;
-    color: #FFFFFF;
-    font-size: 11px;
+    color: #dddddd;
+    font-size: 13px;
+    font-weight: bold;
     padding: 5px 10px 6px;
     text-decoration: none;
     text-shadow: 0 -1px 0 #661514;
@@ -126,6 +158,9 @@ float:right;
 	margin-bottom:7px;
 	margin-right:7px;
 }
+.show_button:visited {
+	color:#dddddd;
+	}
 
 
 
@@ -135,11 +170,9 @@ float:right;
 	padding:30px 30px;
 	width: 720px;
 	margin:10px auto 300px auto;
+	@include rounded-corners(5px);
+
 	background:#dddddd;
-	-moz-border-radius:5px;
-	-khtml-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius:5px;
 	-moz-box-sizing:content-box;
 	-webkit-box-sizing:content-box;
 	-webkit-box-shadow:1px 0px 5px #666;
@@ -173,7 +206,7 @@ float:right;
 }
 .response_user {	
  	/*background-color:#CCCCCC;*/
-	background-image:url('speech.png')
+	background-image:url('speech.png');
 	font-size:small;
 	width:90px;
 	float:right;
