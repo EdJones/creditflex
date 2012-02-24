@@ -128,17 +128,39 @@ ribbon {
 .clear{
 	clear:both;
 	}
+message-container	{
+	position:absolute;
+}
+.message {
+	position:relative;
+	width:505px;
+	margin-left:auto;
+	margin-right:auto;
+}
 .flash {
-	display:none;
+	text-align:center;
+	color:#eeeeee;
+	font-size:medium;
+	padding-top:3px;
+	}
+	
+.flash2 {
+	
 	@include rounded-corners-2(5px);
 	width:500px;
 	height:50px;
+	display:hidden;
+	display: table-cell;
+    vertical-align: middle;
+	padding-top:20px;
+	text-align:center;
 	position:relative;
 	z-index:1500;
 	margin-top:1px;
 	margin-left:auto;
 	margin-right:auto;
 	background-color:#dddddd;
+	/*background: url(/assets/images/flash-notice-bg.jpg) repeat-x left top;*/
 	font-size:large;
 	}
 #title {
