@@ -22,7 +22,6 @@
   <%= f.label :status %><br />
   <%= f.collection_select :status, Project::STATUSES, :to_s, :humanize %>
   </p>
-  <p>&nbsp;</p>
 
 
   <div class="field">
@@ -45,7 +44,11 @@
     <%= f.label :teacher_id %> (if known)<br />
     <%= f.number_field :teacher_id %>
   </div>
+    <% unless can? :create, :project %>
+  <div class="login_warning">Warning: You must <%= link_to 'log in', :login %> to create/save a project.</div>
+	<% end %>  
   <div class="actions">
+
     <%= f.submit %>
   </div>
 <% end %>
