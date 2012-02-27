@@ -37,7 +37,7 @@ Question: <b><%= @request.topic %></b>
 		
 		<div class="response_user">
 		
-		<%= image_tag( response.user.avatar.url.to_s, :class => "r_avatar") if response.user.avatar? %>
+		<%= image_tag( response.user.avatar.url.to_s, :class => "r_avatar")  %>
 		<br/><%= response.user.username %> <br />on <%= response.created_at.strftime("%b %d, %Y") %> at <%= response.created_at.strftime("%I:%M%p") %>
 		</div>
 		<div class="response_text">
@@ -88,12 +88,12 @@ Question: <b><%= @request.topic %></b>
   </div>
   
   
-  <% if current_user.role = 'admin' %>
+  <% if current_user.try(:role) == 'admin' %>
   <div class="field">
     <%= f.label :user %><br />
     <%= f.number_field :user_id %>
 	<% else %>
-	<%= current_user.role %>
+	<%= current_user.try(:role) %>
   </div>
   <% end %>
  <p>

@@ -224,13 +224,16 @@ float:right;
 	margin-bottom:-14px;
 }
 .response_user {	
- 	/*background-color:#CCCCCC;*/
+ 	/*background-color:#ffffff;*/
 	background-image:url('speech.png');
+	background-repeat:no-repeat;
 	font-size:small;
-	width:90px;
+	width:100px;
+	height:130px;
 	float:right;
 	padding:2px;
 	text-align:center;
+	
  }
 .response_text {
 	padding:7px 7px;
@@ -281,7 +284,7 @@ float:right;
 	float:right;
 }		
 .r_avatar {
-	margin-top:0px;
+	margin-top:2px;
 	margin-left:10px;
 	height:40px;
 
