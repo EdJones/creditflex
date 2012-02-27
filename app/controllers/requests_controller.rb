@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-before_filter :require_login, :only => [:add_response, :new, :create]
+before_filter :require_login, :only => [:add_response, :create]
 
 
 
@@ -35,7 +35,11 @@ before_filter :require_login, :only => [:add_response, :new, :create]
     @request = Request.find(params[:id])
 	@responses = Response.where(:request_id => params[:id])
 	@response_new = Response.new(params[:response])
-	@response_new.user_id = current_user.id
+	if current_user 
+	then @response_new.user_id = current_user.id 
+	else 
+	@response_new.user_id = 8 
+	end 
 	@response_new.request_id = params[:id]
     respond_to do |format|
       format.html # show.html.erb
@@ -48,7 +52,12 @@ before_filter :require_login, :only => [:add_response, :new, :create]
   def new
 	#authorize! :create, Request, :message => "Must login to add a request."
     @request = Request.new
-	@request.user_id = current_user.id
+	#@request.user_id = current_user.id if current_user != nil else @request.user_id = 8
+		if current_user 
+	then @request.user_id = current_user.id 
+	else 
+	@request.user_id = 8 
+	end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @request }
