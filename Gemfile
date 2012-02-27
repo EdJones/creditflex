@@ -10,6 +10,8 @@ gem 'rails', '3.2.1'
 gem 'carrierwave'
 #gem 'rmagick'
 gem 'mini_magick'
+gem 'fog'
+
 gem "ckeditor", "3.7.0.rc2"
 
 # Gems used only for assets and not required
