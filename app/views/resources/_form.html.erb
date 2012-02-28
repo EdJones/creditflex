@@ -16,14 +16,14 @@
     <%# @resource.user.username %>
   </div>
   <div class="field">
-    <%# f.label :category %><br />
+    <% f.label :category %><br />
     <%# f.text_field :category %>
-	<%= f.collection_select :category, Resource::CATEGORIES, :to_s, :humanize %>
+	<%= f.collection_select :district, Resource::DISTRICTS, :to_s, :humanize %>
   </div>
   <div class="field">
-    <%= f.label :county %><br />
+    <%# f.label :county %><br />
     <%# f.text_field :county %>
-	<%= f.collection_select :district, Resource::DISTRICTS, :to_s, :humanize %>
+	<%# f.collection_select :district, Resource::DISTRICTS, :to_s, :humanize %>
   </div>
     <div class="field">
     <%= f.label 'School district' %><br />
