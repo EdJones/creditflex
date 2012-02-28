@@ -23,7 +23,7 @@
   <div class="field">
     <%= f.label :county %><br />
     <%# f.text_field :county %>
-	<%= f.collection_select :county, Resource::COUNTIES, :to_s, :humanize %>
+	<%= f.collection_select :district, Resource::DISTRICTS, :to_s, :humanize %>
   </div>
     <div class="field">
     <%= f.label 'School district' %><br />
