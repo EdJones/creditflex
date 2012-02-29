@@ -2,7 +2,7 @@
 
 <p>
   <b>Contributor:</b>
-  <%= @resource.user.username %>
+  <%= @resource.user.username if @resource.user %>
 </p>
 
 <p>
