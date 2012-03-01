@@ -1,6 +1,19 @@
 // Place all the styles related to the courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin rounded-corners($radius: 5px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -khtml-border-radius:5px;
+}
+@mixin box-shadow($sol, $sot, $bd, $color) {
+	-moz-box-shadow: $sol $sot $bd $color; 
+	-webkit-box-shadow: $sol $sot $bd $color; 
+	box-shadow: $sol $sot $bd $color; 
+}
+
 $bar_background__top: #f1f4d2;
 $bar_background__bottom: #dee698;
 
@@ -30,8 +43,51 @@ $bar_background__bottom: #dee698;
 	width:860;
 	
 	}
+
+#ilearn {
+		float:right;
+		@include rounded-corners(9px);
+		background-color:#cf9;
+		width:460px;
+		margin-bottom:30px;
+		margin-right:100px;
+		}
+
+#ilearn_logo {
+	margin-left:13px;
+	margin-top:13px;
+	height:60px;
+}
+#ilearn_search {
+	height:120px;
+}
+
+#ilearn #d1 {
+		padding: 0;
+		background:  url(/d/mountaintop/box_bottom.gif) no-repeat bottom left;
+		}
+
+#ilearn	#d2 {
+		margin: 0 0 10px 0;
+		padding: 10px;
+		font-size: 130%;
+		color: #fff;
+		border-bottom: 1px solid #fff;
+		background:  url(/d/mountaintop/box_top.gif) no-repeat top left;
+		}
 	
-	.course2 {
+#ilearn #d3 {
+		margin: 0 0 0 10px;
+		padding: 0 10px 10px 10px;
+		color: #666;
+		font-family: Verdana, sans-serif;
+		font-size: 125%;
+		background: url(/d/mountaintop/arrow.gif) no-repeat 0 3px;
+		}
+.fees {
+		font-size:80%
+}		
+.course2 {
 	border-radius: 4px; 
 	-moz-border-radius: 4px; 
 	-webkit-border-radius: 4px; 
@@ -81,4 +137,22 @@ $bar_background__bottom: #dee698;
 	float:right;
 	margin-right:15px;
 
+}
+.add_button {
+    background: -moz-linear-gradient(center top , #ff9900, #c13100) repeat scroll 0 0 transparent;
+	  /*background: #DDD;*/
+	 background: -o-linear-gradient(top, #ff9900 0%, #c13100 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9900), to(#c13100));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9900', endColorstr='#c13100');
+    border: 1px solid #53171F;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 10px 6px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #661514;
+	float:right;
+	margin-bottom:7px;
+	margin-right:7px;
 }

@@ -1,12 +1,20 @@
 <div class="content" >
-<h2>Courses</h2>
 
 
 
-    
-    
-    
 
+ <div id="ilearn">   
+    <div id="d1"><%= link_to image_tag( 'ilearn_logo.png', :id => "ilearn_logo"), 'http://ilearnohio.org/', :target => 'blank' %></div>
+	<div id="d2"><%= link_to image_tag( 'ilearn_search_banner.jpg', :id => "ilearn_search"), 'http://ilearnohio.org/catalog_hs/' %></div>
+	<div id="d3">Search nearly 500 full courses at iLearnOhio.org<br /><span class="fees">AP courses <i>may</i> be without fee.</span></div>
+ </div>
+ 
+ 
+ <h2>Courses</h2>
+Are you a teacher (maybe even retired) who has an idea for a course? Do you know of a credit-worthy activity in your area? Is there an e-course you've seen which may benefit Ohio students?
+
+This is the place to share, discuss, and reach students.   
+<div class="clear"></div>
 <% @courses.each do |course| %>
 
 <div class="course2">
@@ -26,8 +34,8 @@
 </div>
 <% end %>
 
-
+<%= link_to( 'New Course', new_course_path, :class => 'add_button') %>
 <br />
+<div class="clear"></div>
 
-<%= link_to 'New Course', new_course_path %>
 </div>
