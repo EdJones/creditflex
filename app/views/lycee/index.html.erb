@@ -97,7 +97,7 @@ Want your project featured here? <br/>Send us a pic and description.
 	<p><b>Subject: </b> <%= course.subject.name %></p>
     <p><b>Notes: </b> <%= truncate(course.notes, :length => 50, :separator => ' ') %> <%= link_to("more", course) %>
 <br />
-    <b><%= link_to("Course link", course.plan_url) %></b>
+    <b><%= link_to("Course link", course.curriculum_url) %></b>
 	</div>
 </div>
 <% end %>
