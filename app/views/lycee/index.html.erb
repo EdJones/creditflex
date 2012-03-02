@@ -64,6 +64,7 @@ Want your project featured here? <br/>Send us a pic and description.
 <div id="requests_item">
 	<div class="item_desc">
 	<%# image_tag( request.user.avatar.url.to_s, :class => "t_avatar") if request.user.avatar? %>
+	<%# image_tag( "thumbup30.png" ) %>
 		<b><%= request.topic %></b><br /><br />
 		<b>Goals: </b> <%= truncate(request.goals, :length => 140, :separator => ' ') %> <%= link_to("more", request) %><br />
 		<p><b>Help needed:</b> <%= truncate(request.help_needed, :length => 140, :separator => ' ') %> <%= link_to("more", request) %></p>
