@@ -44,8 +44,10 @@
     <%= f.label :teacher_id %> (if known)<br />
     <%= f.number_field :teacher_id %>
   </div>
-    <% unless can? :create, :project %>
+    <% unless can? :create, Project %>
   <div class="login_warning">Warning: You must <%= link_to 'log in', :login %> to create/save a project.</div>
+	<%= can? :create, Project %>
+	
 	<% end %>  
   <div class="actions">
 
