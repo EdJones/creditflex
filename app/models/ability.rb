@@ -23,6 +23,7 @@ class Ability
 #raise "role: #{user.role }, can create? #{can? :create, Project }"
 	else
 		can :read, :all
+		can :create, User
 		cannot :read, User
 		#cannot :create, :update, Project
 		#cannot :create, :update, Request
