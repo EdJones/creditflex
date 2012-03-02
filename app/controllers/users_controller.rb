@@ -1,15 +1,16 @@
 class UsersController < ApplicationController
 before_filter :require_login, :except => [:new, :create]
 
-#load_and_authorize_resource
-#skip_authorize_resource :only => :new
+load_and_authorize_resource
+skip_authorize_resource :only => :new
 
   # GET /users
   # GET /users.json
   def index
-  
+ 	unauthorized! if cannot? :read, User
+#raise "Role: #{ current_user.role } | can? :read, User #{ can? :read, User }"
     @users = User.all
-	unauthorized! if cannot? :read, @users
+
 logger.debug "current_user: #{current_user.inspect}"
     respond_to do |format|
       format.html # index.html.erb
