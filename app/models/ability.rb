@@ -14,13 +14,20 @@ class Ability
       can :read, :all
 	  cannot :read, User
 	  can :manage, Project, :student_id => user.id
-#raise "role: #{user.role }"
+	  can :create, Project
+	elsif user.role == 'teacher'
+      can :read, :all
+	  cannot :read, User
+	  can :manage, Project, :teacher_id => user.id
+	  can :create, Project  
+#raise "role: #{user.role }, can create? #{can? :create, Project }"
 	else
 		can :read, :all
-		#cannot :read, User
+		cannot :read, User
 		#cannot :create, :update, Project
 		#cannot :create, :update, Request
 		#cannot :update, Course
+		cannot :create, Project
       # some other client specific roles here, like editing his/her profile
 	  	 
     end
