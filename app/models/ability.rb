@@ -15,10 +15,10 @@ class Ability
 	  cannot :read, User
 	  can :manage, Project, :student_id => user.id
 	  can :create, Project
-	#elsif user.role == 'teacher'
+	elsif user.role == 'teacher'
       can :read, :all
 	  cannot :read, User
-	#  can :manage, Project, :teacher_id => user.id
+	  can :manage, Project, :teacher_id => user.id
 	  can :create, Project  
 #raise "role: #{user.role }, can create? #{can? :create, Project }"
 	else
