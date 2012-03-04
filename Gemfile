@@ -40,8 +40,8 @@ gem 'fog'
 group :development do
     gem 'pry'
 	#gem 'eventmachine', "1.0.0.beta.4.1"
-	gem 'thin'
-	gem 'sqlite3'
+	#gem 'thin'
+	#gem 'sqlite3'
  end
     
 group :test do
