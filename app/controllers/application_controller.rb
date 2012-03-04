@@ -2,8 +2,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   #check_authorization
    rescue_from CanCan::AccessDenied do |exception|
-	logger.debug "Access Denied: #{ exception.message } "
-   redirect_to :login, :notice => exception.message
+	logger.debug "Cancan denied Access: #{ exception.subject } "
+	if current_user
+		redirect_to :root, :notice => exception.message
+	else	
+		logger.debug "Access Denied: #{ exception.message } "
+		redirect_to :login, :notice => exception.message
+	end
   end
   
   private
