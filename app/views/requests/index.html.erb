@@ -4,14 +4,25 @@
 
 <% @requests.each do |request| %>
 <div class='request3'>
+	<div class="left_box">
     <%= image_tag(request.user.avatar, :class => 'avatar') if request.user.avatar?%>
-    <div class='request4'
+	<div class="votes">
+	<br />
+	<b><%= pluralize(request.up_votes, 'vote') %></b><br />
+	
+	<%= link_to image_tag( 'upvote.png', :class => "upvote"), up_vote_request_path(request), {:method => 'post'} %><br />
+	<%= link_to 'Vote up question', up_vote_request_path(request), {:method => 'post'} %>
+	</div>    
+	</div>
+	<div class='request4'>
+	<h4><%= request.topic if request.topic %></h4>
 	<b>Goals:</b><br />
 	<%= request.goals %>
-    <hr />
+    <br />
 	<b>Help Needed</b><br />
     <%= request.help_needed %>
-	
+	<hr />
+
 	<p>
 	<%= link_to('View/anwser request', request, :class => 'show_button') %>
 	<%# request.portfolio_id %>

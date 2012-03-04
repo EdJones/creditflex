@@ -46,7 +46,18 @@ before_filter :require_login, :only => [:add_response, :create]
       format.json { render json: @request }
     end
   end
-
+def up_vote
+logger.info "*************************************************************"
+logger.debug "params[:id]: #{params[:id]}"
+@request = Request.find(params[:id])
+	current_user.up_vote!(@request)
+	
+    respond_to do |format|
+	@requests = Request.all
+      format.html {render action: "index"} # index.html.erb
+      format.json { render json: @requests }
+	end
+end
   # GET /requests/new
   # GET /requests/new.json
   def new
