@@ -42,8 +42,11 @@ Creditflex::Application.routes.draw do
 			post 'show'
 			get 'add_response'
 			post 'add_response'
+			get 'up_vote'
+			post 'up_vote'
 			end
 		collection do
+			
 			get 'add_response'
 			post 'add_response'
 			end	

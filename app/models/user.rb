@@ -23,4 +23,5 @@ class User < ActiveRecord::Base
   
   mount_uploader :avatar, AvatarUploader
   
+  make_voter
 end

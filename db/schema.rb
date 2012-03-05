@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120220155441) do
+ActiveRecord::Schema.define(:version => 20120302011531) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -103,6 +103,8 @@ ActiveRecord::Schema.define(:version => 20120220155441) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "topic"
+    t.integer  "up_votes",     :default => 0, :null => false
+    t.integer  "down_votes",   :default => 0, :null => false
   end
 
   create_table "resources", :force => true do |t|
@@ -163,7 +165,7 @@ ActiveRecord::Schema.define(:version => 20120220155441) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",                        :null => false
+    t.string   "username",                                       :null => false
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
@@ -182,11 +184,27 @@ ActiveRecord::Schema.define(:version => 20120220155441) do
     t.datetime "last_activity_at"
     t.string   "role"
     t.string   "avatar"
+    t.integer  "up_votes",                        :default => 0, :null => false
+    t.integer  "down_votes",                      :default => 0, :null => false
   end
 
   add_index "users", ["activation_token"], :name => "index_users_on_activation_token"
   add_index "users", ["last_logout_at", "last_activity_at"], :name => "index_users_on_last_logout_at_and_last_activity_at"
   add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token"
+
+  create_table "votings", :force => true do |t|
+    t.string   "voteable_type"
+    t.integer  "voteable_id"
+    t.string   "voter_type"
+    t.integer  "voter_id"
+    t.boolean  "up_vote",       :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "votings", ["voteable_type", "voteable_id", "voter_type", "voter_id"], :name => "unique_voters", :unique => true
+  add_index "votings", ["voteable_type", "voteable_id"], :name => "index_votings_on_voteable_type_and_voteable_id"
+  add_index "votings", ["voter_type", "voter_id"], :name => "index_votings_on_voter_type_and_voter_id"
 
 end
