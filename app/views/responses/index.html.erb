@@ -16,11 +16,11 @@
     <td><%= response.request %></td>
     <td><%= response.title %></td>
     <td><%= response.body %></td>
-    <td><%= image_tag( response.user.avatar.url.to_s, :class => "avatar") if response.user.avatar? %></td>
+    <td><%= image_tag( response.user.avatar.url.to_s, :class => "avatar") if (response.user && response.user.avatar? ) %></td>
     <td><%= link_to 'Show', response %></td>
-    <td><%= link_to 'Edit', edit_response_path(response) %></td>
-    <td><%= link_to 'Destroy', response, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+    <td><% if can? :manage, response %>
+		<%= link_to 'Edit', edit_response_path(response) %> <%= link_to 'Destroy', response, confirm: 'Are you sure?', method: :delete %></td>
+		<% end %>
 <% end %>
 </table>
 

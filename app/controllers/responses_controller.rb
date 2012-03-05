@@ -1,4 +1,5 @@
 class ResponsesController < ApplicationController
+load_and_authorize_resource 
   # GET /responses
   # GET /responses.json
   def index
@@ -45,7 +46,7 @@ class ResponsesController < ApplicationController
     respond_to do |format|
       if @response.save
         #format.html { redirect_to @response, notice: 'Response was successfully created.' }
-		logger.debug("##################################{ root_url }")
+		logger.debug("##################################{ :back }")
 		redirect_to(:back, :notice => 'Response was successfully created.' )
         format.json { render json: @response, status: :created, location: @response }
       else

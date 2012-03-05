@@ -29,6 +29,7 @@ class Ability
 		#cannot :create, :update, Request
 		#cannot :update, Course
 		cannot :create, Project
+		cannot [:create, :update, :destroy], Response
       # some other client specific roles here, like editing his/her profile
 	  	 
     end
