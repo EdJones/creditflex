@@ -1,19 +1,28 @@
 <div class="content" >
 
+ <h2>Courses</h2>
 
-
-
+Search or contribute to a diversity of coursework.
+ <div>
  <div id="ilearn">   
-    <div id="d1"><%= link_to image_tag( 'ilearn_logo.png', :id => "ilearn_logo"), 'http://ilearnohio.org/', :target => 'blank' %></div>
+    <div id="d1"><h3>Or you may find a better option at:</h3><%= link_to image_tag( 'ilearn_logo.png', :id => "ilearn_logo"), 'http://ilearnohio.org/', :target => 'blank' %></div>
 	<div id="d2"><%= link_to image_tag( 'ilearn_search_banner.jpg', :id => "ilearn_search"), 'http://ilearnohio.org/catalog_hs/' %></div>
 	<div id="d3">Search nearly 500 full courses at iLearnOhio.org<br /><span class="fees">AP courses <i>may</i> be without fee.</span></div>
  </div>
  
+ <div id="featured_c">
+    <div id="d1"><h2>Featured Opportunity</h2></div>
+	<div id="d2"><%= link_to image_tag( 'pltw_logo.gif', :id => "pltw"), 'http://ptlw.org' %>
+	<h4>Project Lead The Way</h4>What if there was a class where curiosity ruled? Where you learned not only how things worked, but how you might make them work better. <br /><br />Where the biggest challenge was between you and your imagination.</div>
+	<div id="d3"><%= link_to 'Project Lead the Way', 'http://www.pltw.org/students/students' %></span></div>
+ </div>
  
- <h2>Courses</h2>
+ </div>
+ 
+
 Are you a teacher (maybe even retired) who has an idea for a course? Do you know of a credit-worthy activity in your area? Is there an e-course you've seen which may benefit Ohio students?
 
-This is the place to share, discuss, and reach students.   
+This is the place to share, discuss, and reach students.   <br />&nbsp;
 <div class="clear"></div>
 <% @courses.each do |course| %>
 
