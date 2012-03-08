@@ -1,8 +1,8 @@
 <div class="content" >
 
  <h2>Courses</h2>
-
-Search or contribute to a diversity of coursework.
+<div class="intro">
+Search or contribute to a diversity of coursework.</div>
  <div>
  <div id="ilearn">   
     <div id="d1"><h3>Or you may find a better option at:</h3><%= link_to image_tag( 'ilearn_logo.png', :id => "ilearn_logo"), 'http://ilearnohio.org/', :target => 'blank' %></div>
@@ -19,10 +19,10 @@ Search or contribute to a diversity of coursework.
  
  </div>
  
+<div id="teacher_invite">
+<b>Teachers</b> Are you a teacher (maybe even retired) who has an idea for a course? Do you know of a credit-worthy activity in your area? Is there an e-course you've seen which may benefit Ohio students?
 
-Are you a teacher (maybe even retired) who has an idea for a course? Do you know of a credit-worthy activity in your area? Is there an e-course you've seen which may benefit Ohio students?
-
-This is the place to share, discuss, and reach students.   <br />&nbsp;
+This is the place to share, discuss, and reach students.   <br />&nbsp;</div>
 <div class="clear"></div>
 <% @courses.each do |course| %>
 
