@@ -89,10 +89,15 @@ $bar_background__bottom: #dee698;
 }
 .learn_more {
 	color:#92a868a;
+	padding-left:20px;
 	}
 .learn_more a:hover{
 	color:#cccccc;
-	}	
+	}
+#fb {
+	width:200px;
+	float:right;
+}		
 #feature_text .not_ohio {
 	font-size: small;
 }
