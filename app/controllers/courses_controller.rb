@@ -9,7 +9,14 @@ class CoursesController < ApplicationController
       format.json { render json: @courses }
     end
   end
+  def courses_by_subject
+    @courses = Course.where(:subject_id => params[:subject_id]).all
 
+    respond_to do |format|
+      format.html { render :partial => "courses" } 
+      format.json { render json: @courses }
+    end
+  end
   # GET /courses/1
   # GET /courses/1.json
   def show

@@ -64,6 +64,9 @@ Creditflex::Application.routes.draw do
         member do
             post 'new'
 			end
+		collection do
+			get 'courses_by_subject'
+			end	
 	end
 
   # The priority is based upon order of creation:
