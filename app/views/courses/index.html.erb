@@ -24,8 +24,15 @@ Search or contribute to a diversity of coursework.</div>
 
 This is the place to share, discuss, and reach students.   <br />&nbsp;</div>
 <div class="clear"></div>
-<%= render 'courses' %>
+ <%= form_tag('courses/by_subject', :remote => true,  :method => "get" ) do  %>
+ 	<%= select_tag( "subject_id", options_for_select(Subject.all.collect {|p| [ p.name, p.id ] }), {:prompt => 'Select Subject', :remote => true, :onchange => "this.form.submit();"}) %>
+ <%= submit_tag "Search", :remote => true %>
 
+<% end %>
+<div id="course_list">
+  
+<%= render 'courses' %>
+</div>
 <%= link_to( 'New Course', new_course_path, :class => 'add_button') %>
 <br />
 <div class="clear"></div>

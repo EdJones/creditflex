@@ -3,17 +3,20 @@ class CoursesController < ApplicationController
   # GET /courses.json
   def index
     @courses = Course.all
-
+	@subjects = Subject.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @courses }
     end
   end
-  def courses_by_subject
-    @courses = Course.where(:subject_id => params[:subject_id]).all
-
+  def by_subject
+  #raise "Courses: #{ Course.all }"
+    @courses = Course.where(:subject_id => params[:subject_id])
+	#raise "@courses: #{ @courses.inspect }"
+	#raise "format: #{ format }"
     respond_to do |format|
-      format.html { render :partial => "courses" } 
+      format.html { render :partial => "courses" }
+	  format.js 
       format.json { render json: @courses }
     end
   end

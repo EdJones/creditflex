@@ -65,7 +65,7 @@ Creditflex::Application.routes.draw do
             post 'new'
 			end
 		collection do
-			get 'courses_by_subject'
+			get 'by_subject'
 			end	
 	end
 
