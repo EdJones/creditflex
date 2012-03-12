@@ -15,8 +15,8 @@ class CoursesController < ApplicationController
 	#raise "@courses: #{ @courses.inspect }"
 	#raise "format: #{ format }"
     respond_to do |format|
-      format.html { render :partial => "courses" }
-	  format.js 
+      format.html { raise "It rendered HTML again."  }
+	  format.js { raise "Ah, it wants to render Javascript."  }
       format.json { render json: @courses }
     end
   end
