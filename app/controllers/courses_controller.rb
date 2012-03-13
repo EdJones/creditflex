@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  respond_to :js, :html
   # GET /courses
   # GET /courses.json
   def index
@@ -10,14 +11,13 @@ class CoursesController < ApplicationController
     end
   end
   def by_subject
-  #raise "Courses: #{ Course.all }"
+  req = Rack::Request.new(env)
+  raise "#{req.inspect}"
     @courses = Course.where(:subject_id => params[:subject_id])
-	#raise "@courses: #{ @courses.inspect }"
-	#raise "format: #{ format }"
-    respond_to do |format|
-      format.html { raise "It rendered HTML again."  }
+    respond_to do |format| 
 	  format.js { raise "Ah, it wants to render Javascript."  }
       format.json { render json: @courses }
+	  format.html { raise "It rendered HTML again."  }
     end
   end
   # GET /courses/1
