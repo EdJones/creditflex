@@ -1,15 +1,26 @@
 class CoursesController < ApplicationController
+  respond_to :js, :html
   # GET /courses
   # GET /courses.json
   def index
     @courses = Course.all
-
+	@subjects = Subject.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @courses }
     end
   end
-
+  def by_subject
+  #req = Rack::Request.new(env)
+  #raise "#{req.inspect}"
+    @courses = Course.where(:subject_id => params[:subject_id])
+	#logger.debug "#{ @courses.inspect }"
+    respond_to do |format| 
+	  format.js 
+      format.json { render json: @courses }
+	  format.html 
+    end
+  end
   # GET /courses/1
   # GET /courses/1.json
   def show

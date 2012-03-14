@@ -9,7 +9,7 @@
 
 <p>
   <b>Description:</b><br />
-  <%= @course.description %>
+  <%= simple_format(h(@course.description)) %>
 </p>
 
 <p>
