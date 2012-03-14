@@ -1,4 +1,5 @@
 class SubjectsController < ApplicationController
+load_and_authorize_resource
   # GET /subjects
   # GET /subjects.json
   def index
