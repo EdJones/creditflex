@@ -24,25 +24,13 @@ Search or contribute to a diversity of coursework.</div>
 
 This is the place to share, discuss, and reach students.   <br />&nbsp;</div>
 <div class="clear"></div>
-<% @courses.each do |course| %>
-
-<div class="course2">
-	<%= image_tag( course.course_image.url.to_s, :class => "course_avatar") if course.course_image? %>
-    <span class="course_title"><%= course.title %></span><br />
-	Subject area: <%= course.subject.name %>
-	<p><%= course.description %></p>
-	
-    <p><b>Notes:</b> <%= course.notes %></p>
-    <%= link_to 'More', course %> 
-	<%= link_to 'Course link', course.plan_url %>
-    
-	<% if can? :update, course %>
-    <%= link_to 'Edit', edit_course_path(course) %>
-    <%= link_to 'Destroy', course, confirm: 'Are you sure,?', method: :delete %>
-	<% end %>
-</div>
+ <%= form_tag('courses/by_subject', :remote => true, :method => "get", :data => { :type => "script" }, :id => 'course_search') do  %>
+ 	<%= select_tag( "subject_id", options_for_select(Subject.all.collect {|p| [ p.name, p.id ] }),:prompt => 'Select Subject' ) %>
+ <%= submit_tag "Search" %>
 <% end %>
-
+<div id="course_list">
+<%= render 'courses' %>
+</div>
 <%= link_to( 'New Course', new_course_path, :class => 'add_button') %>
 <br />
 <div class="clear"></div>
