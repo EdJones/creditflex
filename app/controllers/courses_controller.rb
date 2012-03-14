@@ -11,13 +11,14 @@ class CoursesController < ApplicationController
     end
   end
   def by_subject
-  req = Rack::Request.new(env)
-  raise "#{req.inspect}"
+  #req = Rack::Request.new(env)
+  #raise "#{req.inspect}"
     @courses = Course.where(:subject_id => params[:subject_id])
+	#logger.debug "#{ @courses.inspect }"
     respond_to do |format| 
-	  format.js { raise "Ah, it wants to render Javascript."  }
+	  format.js 
       format.json { render json: @courses }
-	  format.html { raise "It rendered HTML again."  }
+	  format.html 
     end
   end
   # GET /courses/1
