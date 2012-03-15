@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.2'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -42,7 +42,7 @@ gem 'fog'
 group :development do
     gem 'pry'
 	#gem 'eventmachine', "1.0.0.beta.4.1"
-	gem 'thin'
+	#gem 'thin'
 	gem 'sqlite3'
  end
     
