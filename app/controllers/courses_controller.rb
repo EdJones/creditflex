@@ -21,6 +21,17 @@ class CoursesController < ApplicationController
 	  format.html 
     end
   end
+  
+  def add_response
+    @response = Response.new(params[:response])
+	@response.user_id = current_user.id
+	@response.course_id = params[:id]
+    respond_to do |format|
+      render :partial =>  # new.html.erb
+      format.json { render json: @request }
+    end
+  end
+  
   # GET /courses/1
   # GET /courses/1.json
   def show
