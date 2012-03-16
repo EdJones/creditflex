@@ -13,8 +13,10 @@ class Ability
     elsif user.role == 'student'
       can :read, :all
 	  cannot :read, User
+	  #can :manage, User, :user_id => user.id
 	  can :manage, Project, :student_id => user.id
 	  can :create, Project
+	  can :create, Response
 	elsif user.role == 'teacher'
       can :read, :all
 	  cannot :read, User
