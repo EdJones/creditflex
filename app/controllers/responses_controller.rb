@@ -42,12 +42,11 @@ load_and_authorize_resource
   # POST /responses.json
   def create
     @response = Response.new(params[:response])
-
+	@request = Request.where(:id => params[:response][:request_id])
+	logger.debug "@request: #{@request.inspect}"
     respond_to do |format|
       if @response.save
-        #format.html { redirect_to @response, notice: 'Response was successfully created.' }
-		logger.debug("##################################{ :back }")
-		redirect_to(:back, :notice => 'Response was successfully created.' )
+        format.html { redirect_to @response.request, notice: 'Response was successfully created.' }
         format.json { render json: @response, status: :created, location: @response }
       else
         format.html { render action: "new" }

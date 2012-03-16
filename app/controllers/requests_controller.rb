@@ -9,7 +9,8 @@ before_filter :require_login, :only => [:add_response, :create]
 	@response.request_id = params[:id]
     respond_to do |format|
       render :partial =>  # new.html.erb
-      format.json { render json: @request }
+	  format.js
+      format.json 
     end
   end
 
