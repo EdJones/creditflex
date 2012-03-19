@@ -1,5 +1,7 @@
 Creditflex::Application.routes.draw do
 
+  resources :comments
+
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :responses do
@@ -27,12 +29,13 @@ Creditflex::Application.routes.draw do
 
   resources :users
 
-  resources :teachers do
-        member do
-            post 'new'
-			delete 'destroy'
-			end
-	end
+  resources :teachers 
+  #do
+  #      member do
+  #          post 'new'
+	#		delete 'destroy'
+#			end
+#	end
 
   resources :portfolios
 
