@@ -25,6 +25,12 @@ th {
 body {
 	margin:0;
 	}
+body {
+  background-color: #324567;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  /*line-height: 18px; */}	
 #h-bar {
     background: none repeat scroll 0 0 #0D678D;
     border-bottom: 1px solid #5B97B4;
@@ -85,12 +91,7 @@ border-radius: 6px;
 -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.15),0 1px 0 rgba(255,255,255,0.15) inset;
 box-shadow: 0 1px 0 rgba(255,255,255,0.15),0 1px 0 rgba(255,255,255,0.15) inset;
 }
-body {
-  background-color: #324567;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+
 
 ribbon {
 	width: 100%;
