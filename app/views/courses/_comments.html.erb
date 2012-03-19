@@ -1,0 +1,26 @@
+<h3>Others said...</h3>
+
+
+<br />
+<% @comments.each do |comment| %>
+    <%= content_tag_for(:div, comment) do %>
+<div class="response_user">
+		
+		<%= image_tag( comment.user.avatar.url.to_s, :class => "r_avatar")  %>
+		<br/><%= comment.user.username %> <br />on <%= comment.created_at.strftime("%b %d, %Y") %> at <%= comment.created_at.strftime("%I:%M%p") %>
+		</div>
+		<div class="response_text">
+		<b><%= comment.title %></b><br />
+		<%= comment.body %>
+		 <div class='response_edit'>
+		 <% if can? :update, comment %>
+		    <%= link_to 'Edit', edit_comment_path(comment) %>
+			<% end %>
+		<% if can? :destroy, comment %>
+			<%= link_to 'Delete', comment, confirm: 'Are you sure?', method: :delete %> 
+		<% end %>	
+		</div>
+	<% end %>
+<% end %>
+		</div>
+

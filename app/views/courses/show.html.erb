@@ -17,23 +17,32 @@
   <%= @course.subject.name %>
 </p>
 
-<p>
+<div>
   <b>Curriculum URL</b><br/>
   <%= link_to(@course.curriculum_url, @course.curriculum_url) %>
-</p>
-
+</div>
+<div>
+  <b>Plan url</b>
+  <%= link_to(@course.plan_url, @course.plan_url) %>
+</div>
 <p>
   <b>Notes:</b>
   <%= @course.notes %>
 </p>
 
-<p>
-  <b>Plan url</b>
-  <%= link_to(@course.plan_url, @course.plan_url) %>
-</p>
+
 
 <% if can? :update, @course %>
 <%= link_to 'Edit', edit_course_path(@course) %>
 <% end %> |
 <%= link_to 'All courses', courses_path %>
+
+<div class='clear'>
+<div id="comments">
+   <%= render 'comments' %>
+</div>
+<div id="new_comment">
+   <%= render 'comment_form' %>
+</div>
+<div class='clear'>
 </div>

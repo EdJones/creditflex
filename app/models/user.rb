@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_one :teacher
   has_one :student
   has_many :responses
+  has_many :comments
   has_many :resources
   
   accepts_nested_attributes_for :student, :allow_destroy => true
