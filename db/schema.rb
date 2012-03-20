@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120315194228) do
+ActiveRecord::Schema.define(:version => 20120320123418) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(:version => 20120315194228) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
+
+  create_table "comments", :force => true do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "courses", :force => true do |t|
     t.string   "title"
@@ -188,6 +197,8 @@ ActiveRecord::Schema.define(:version => 20120315194228) do
     t.string   "avatar"
     t.integer  "up_votes",                        :default => 0, :null => false
     t.integer  "down_votes",                      :default => 0, :null => false
+    t.string   "User"
+    t.boolean  "tos"
   end
 
   add_index "users", ["activation_token"], :name => "index_users_on_activation_token"
