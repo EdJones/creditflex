@@ -392,7 +392,7 @@ $bar_background__bottom: #dee698;
 	  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c13100', endColorstr='#98998B');
     border: 1px solid #53171F;
     border-radius: 4px 4px 4px 4px;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-size: 13px;
     font-weight: bold;
     padding: 5px 10px 6px;
@@ -401,6 +401,12 @@ $bar_background__bottom: #dee698;
 	float:right;
 	margin-bottom:7px;
 	margin-right:7px;
+}
+.add_button2 a {
+    color: #FFFFFF;
+	}
+.add_button2 a:visited {
+    color: #FFFFFF;
 }
 #user_nav {
 width:300px;
