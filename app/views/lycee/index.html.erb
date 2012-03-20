@@ -38,7 +38,7 @@ Want your project featured here? <br/>Send us a pic and description.
 		
 		<b><%= raw(truncate(project.title, :length => 140, :separator => ' ')) %> </b>
 		<%= image_tag( project.projekt.url.to_s, :class => "projekt") if project.projekt? %>
-		<p><b>I'm:</b>&nbsp;<%= truncate(project.summary, :length => 200, :separator => ' ') %> <%= link_to("more", project) %></p>
+		<p><b>I'm:</b>&nbsp;<%= raw(truncate(project.summary, :length => 200, :separator => ' ')) %> <%= link_to("more", project) %></p>
 	</div>
 </div>
 <% end %>
@@ -117,5 +117,6 @@ Want your project featured here? <br/>Send us a pic and description.
  <div>
 <%=link_to("Add teacher", new_teacher_path, :id => "add_mentor", :class => "add_button2") %>
 </div>
-</div>
 
+</div>
+<%=link_to("Credits", "/lycee/credits", :id => 'bottom_nav') %>

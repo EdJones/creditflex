@@ -13,6 +13,8 @@ gem 'mini_magick'
 gem 'fog'
 
 gem "ckeditor", "3.7.0.rc2"
+gem 'rinku'
+
 gem 'make_voteable'
 
 # Gems used only for assets and not required
@@ -27,6 +29,7 @@ gem 'jquery-rails', '>= 2.0.1'
 gem 'sorcery'
 gem 'cancan'
 gem 'fog'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

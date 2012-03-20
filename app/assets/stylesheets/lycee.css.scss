@@ -442,4 +442,35 @@ padding-right:20px;
 	top:0; 
 	left:0; 
 	border:0; }
+
+#bottom_nav {
+	text-align:center;
+}
+.quote  {
+	font-style:italic;
+	font-size:medium;
+	color:#666666;
+	width:400px;
+	text-align:center;
+}
+.left {
+	width:400px;
+	margin-left:50px;
+	text-align:center;
+	float:left;
+	@include rounded-corners(9px);
+	border-style:double;
+	border-color:#cc9999;
+	min-height:300px;
+}
+.right {
+	width:400px;
+	margin-left:50px;
+	text-align:center;
+	float:left;
+		@include rounded-corners(9px);
+	border-style:double;
+	border-color:#cc9999;
+		min-height:300px;
+}
 }

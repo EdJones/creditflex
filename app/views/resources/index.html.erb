@@ -1,12 +1,20 @@
-
-<%= image_tag("cf_word_map.png", {:id => "word_map"}) %>
-
-
-
-
-
-
 <div id="featured">
+
+<%= image_tag("competition.jpg", {:height => 300}) %>
+<div id="feature_graphic">
+<div id="main_text">
+
+<%= image_tag("cf_word_map.png", {:height => 280}) %>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+<div id="feature_text">
 <h1>Why Use Credit Flexibility?  
 
 How?</h1>
@@ -14,10 +22,10 @@ How?</h1>
 
 <div id="main_text">
 <div id="intro">
-Get out of class! You can get credit toward high school graduation by <i>doing almost anything?</i></div>
+Get out of class! You can get credit toward high school graduation by <i>doing almost anything.</i></div>
 <p>Play the Blues, take a trip, get an internship, do research, start a business, take a class outside school, go to iTunesU, you name it!
 </p>
-
+<%= link_to("Is it Rigorous?", "lycee/rigor", :id => "rigor_button") %>
 <p class="learn_more">How?<br />
 <ul class='learn_more'>
 <li><%= link_to 'Explore the ideas here, ask a question', :root  %>.</li>
@@ -31,6 +39,7 @@ Teachers, parents, others, have something to ask or contribute about the process
 <li>Explore or ask a question at the <a href="http://www.sharedwork.org/group/ohio-credit-flexibility/home1">ODE Community of Practice</a> and get in on the discussion.</li>
 <li><%= link_to 'Sign up here as a teacher/mentor', new_teacher_path %></li>
 </ul>
+</p>
 
 </div>
 
