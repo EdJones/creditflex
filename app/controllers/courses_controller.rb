@@ -36,7 +36,10 @@ class CoursesController < ApplicationController
   # GET /courses/1.json
   def show
     @course = Course.find(params[:id])
-
+	@comment = Comment.new
+	@comment.user_id = current_user.try(:id)
+	@comment.course_id = @course.id
+	@comments = Comment.where(:course_id => params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @course }

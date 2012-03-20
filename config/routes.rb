@@ -79,6 +79,7 @@ Creditflex::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
      match 'lycee' => 'lycee#index'
 	 match 'lycee/credits' => 'lycee#credits'
+	 match 'lycee/rigor' => 'lycee#rigor'
 	 match 'signup_now' => 'users#new'
   # Keep in mind you can assign values other than :controller and :action
 
