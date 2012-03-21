@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120321111438) do
+ActiveRecord::Schema.define(:version => 20120321165348) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20120321111438) do
     t.integer  "subject_id"
     t.string   "curriculum_url"
     t.string   "course_image"
+    t.boolean  "hqt",            :default => false
   end
 
   create_table "portfolios", :force => true do |t|

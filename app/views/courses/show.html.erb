@@ -11,6 +11,7 @@
   <b>Description:</b><br />
   <%= simple_format(h(@course.description)) %>
 </p>
+<%= if @course.hqt == true then link_to(image_tag("penguin_thumb_up.png", :class => "hqt_needed"), @course)  else link_to(image_tag("penguin_question.png", :class => "hqt_needed"), @course) end %>
 
 <p>
   <b>Subject:</b>

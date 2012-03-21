@@ -84,7 +84,9 @@ Want your project featured here? <br/>Send us a pic and description.
     <span class="item_title"><%= course.title %></span><br />
     <%= truncate(course.description, :length => 140, :separator => ' ') %> <%= link_to("more", course) %>
 	<p><b>Subject: </b> <%= course.subject.name %></p>
+	<%= if course.hqt == true then link_to(image_tag("penguin_thumb_up.png", :class => "hqt_needed"), course)  else link_to(image_tag("penguin_question.png", :class => "hqt_needed"), course) end %>
     <p><b>Notes: </b> <%= truncate(course.notes, :length => 50, :separator => ' ') %> <%= link_to("more", course) %>
+
 <br />
     <b><%= link_to("Course link", course.curriculum_url) %></b>
 	</div>
