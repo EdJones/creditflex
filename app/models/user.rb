@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
   validates_presence_of :role, :on => :create
   validates_confirmation_of :password
   validates_length_of :password, :minimum => 4, :allow_blank => true
+  validates_acceptance_of :tos, :accept => true, :message => "Yip! We need you to be 13 or older."
   
   mount_uploader :avatar, AvatarUploader
   
