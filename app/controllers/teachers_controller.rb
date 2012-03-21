@@ -25,8 +25,9 @@ logger.debug "@teachers: #{@teachers}"
   # GET /teachers/new.json
   def new
     @teacher = Teacher.new
-	@user = User.new
-
+	
+	#@user = User.new
+	@teacher.user = current_user
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @teacher }

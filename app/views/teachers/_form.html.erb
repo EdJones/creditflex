@@ -16,8 +16,8 @@
     <%= f.text_area :bio, :cols => 50 %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= f.label 'User_name:' %>
+    <b><%= current_user.username if current_user.present? %></b>
   </div>
   <div class="field">
     <%= f.label "First Name" %><br />
@@ -53,6 +53,6 @@
     <%= f.text_area :notes, :cols => 70, :rows => 9 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Send it'%>
   </div>
 <% end %>
