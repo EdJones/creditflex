@@ -39,9 +39,11 @@
     <%= f.label :notes %><br />
     <%= f.text_area :notes, :rows => 8, :cols => 50 %>
   </div>
-  <div class="field">
+  <div class="hqt">
     <%= f.label "Still in planning? Plan url" %><br />
     <%= f.text_field :plan_url %>
+	<p>
+	<%= f.check_box(:hqt, {:class => 'hqt'}, true, false) %> This course has been accepted by an Ohio Highly Qualified teacher.</p>
   </div>
   <div class="actions">
     <%= f.submit %>

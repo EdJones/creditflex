@@ -15,7 +15,7 @@
 	District:<%= teacher.district %>, School: <%= teacher.school %>
     Subject, Specialty<%= teacher.subject %> <%= teacher.specialty %>
 
-    <p><%= teacher.bio %>
+    <p><%= auto_link(teacher.bio, :all, :html => { :target => '_blank' } ) %>
     Notes: <%= teacher.notes %>
     <%= link_to 'More', teacher %>
 	<% if can? :manage, teacher %>
