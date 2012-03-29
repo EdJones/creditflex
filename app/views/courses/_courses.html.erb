@@ -5,7 +5,8 @@
 	<%= image_tag( course.course_image.url.to_s, :class => "course_avatar") if course.course_image? %>
     <span class="course_title"><%= course.title %></span><br />
 	Subject area: <%= course.subject.name %>
-	<p><%= simple_format(h(course.description)) %></p>
+	<p><%= simple_format(raw(truncate(course.description, :length => 700, :separator => ' '))) %><%= link_to 'More', course %>
+	</p>
 	<%= if course.hqt == true then link_to(image_tag("penguin_thumb_up.png", :class => "hqt_needed"), course)  else link_to(image_tag("penguin_question.png", :class => "hqt_needed"), course) end %>
     <p><b>Notes:</b> <%= course.notes %></p>
     <%= link_to 'More', course %> 
