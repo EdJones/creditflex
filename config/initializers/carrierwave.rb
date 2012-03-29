@@ -23,9 +23,10 @@ CarrierWave.configure do |config|
   config.root = Rails.root.join('tmp') # adding these...
   config.cache_dir = 'carrierwave' # ...two lines
 
-  config.s3_access_key_id = ENV['AKIAI7NSIOUFIDPFRWCA']
-  config.s3_secret_access_key = ENV['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']
-  config.s3_bucket = ENV['creditflexibility']
+#Remove these because they are covered by fog?
+  #config.s3_access_key_id = ENV['AKIAI7NSIOUFIDPFRWCA']
+  #config.s3_secret_access_key = ENV['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']
+  #config.s3_bucket = ENV['creditflexibility']
   
       # hack fix for windows machine due to tmp file permission error
      # per https://github.com/jnicklas/carrierwave/issues/220/
