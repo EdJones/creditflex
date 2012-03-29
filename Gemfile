@@ -42,7 +42,7 @@ gem 'fog'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :development do
+group :development, :test do
     gem 'pry'
 	#gem 'eventmachine', "1.0.0.beta.4.1"
 	#gem 'thin'
