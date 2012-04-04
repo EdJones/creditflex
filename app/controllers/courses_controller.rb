@@ -37,8 +37,11 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
 	@comment = Comment.new
+	if can? :create, Comment 
 	@comment.user_id = current_user.try(:id)
+	end
 	@comment.course_id = @course.id
+	
 	@comments = Comment.where(:course_id => params[:id])
     respond_to do |format|
       format.html # show.html.erb

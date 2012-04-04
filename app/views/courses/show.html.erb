@@ -43,9 +43,16 @@
 <div id="comments">
    <%= render 'comments' %>
 </div>
+<% if can? :create, Comment %>
 <div id="new_comment">
    <%= render 'comment_form' %>
 </div>
+<% else %>
+<div id="new_comment">
+<h3>You say...</h3>
+<div class="warning">Must be logged in to add comments.</div>
+</div>
+<% end %>
 <div class='clear'>
 </div>
 </div>
