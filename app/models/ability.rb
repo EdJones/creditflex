@@ -22,6 +22,13 @@ class Ability
 	  cannot :read, User
 	  can :manage, Project, :teacher_id => user.id
 	  can :create, Project  
+	elsif user.role == 'moderator'
+      can :read, :all
+	  cannot :read, User
+	  can :manage, Project, :teacher_id => user.id
+	  can :create, Project 
+	  can :manage, Course
+	  cannot :destroy, Course
 #raise "role: #{user.role }, can create? #{can? :create, Project }"
 	else
 		can :read, :all

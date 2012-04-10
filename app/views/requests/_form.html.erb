@@ -43,7 +43,7 @@
 	<% end %>
 	<br />
 	    <% unless can? :create, :project %>
-  <div class="login_warning">Warning: You must <%= link_to 'log in', :login %> to create/save a project.</div>
+  <div class="login_warning">Notice: You must <%= link_to 'log in', :login %> to ask a question.</div>
 	<% end %>  
   <div class="actions">
     <%= f.submit 'Ask question' %>
