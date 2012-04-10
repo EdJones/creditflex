@@ -58,8 +58,8 @@ body {
 	box-sizing:content-box;
 	}
 #pcolumn {
-	margin-left: 65px;
-	width:500px;
+	margin-left: 30px;
+	width:1040px;
 }		
 .form {
 
@@ -123,7 +123,7 @@ color:#ffffff;
 	font-size:larger;
 }
 .project3 {
-	width: 500px;
+	width: 490px;
 	border-radius: 8px; 
 	-moz-border-radius: 8px; 
 	-webkit-border-radius: 8px; 
@@ -132,15 +132,17 @@ color:#ffffff;
 	box-shadow: 0px 2px 2px #666666; 
 	background: #ffffff;
 	@include gradient($bar_background__top, $bar_background__bottom ); 
-	margin-left: 100px;
+
 	color: #4c4c4c; 
-	margin: 0 0 24px 0; 
+	margin: 0 0 24px 10px; 
 	overflow: hidden;
 	padding:8px;
+	float:left;
+	height:320px;
 	}
 .project_img {
 float:left;
-min-height: 130px;
+min-height: 110px;
 margin-top: 20px;
 }
 .project3 img {
@@ -165,4 +167,7 @@ float:right;
 }
 .s_avatar {
 	height:50px;
+}
+#bottom {
+	margin-top:60px;
 }	

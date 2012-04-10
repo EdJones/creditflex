@@ -13,10 +13,12 @@
    <span class="ptitle"><%= project.title %></span><br />
     Student: <%= project.student.user.username if project.student %> | 
     Teacher:<%= project.teacher_id %> <br /><br />
-    <%= raw(project.summary) %>
-    <p>Status:<%= project.status %> | 
+    <%= raw(truncate(project.summary, :length => 400, :separator => ' ')) %>
+	
+    <%= link_to 'more', project %>
+	<p>Status:<%= project.status %> | 
     Portfolio<%= project.portfolio_id %><br /></p>
-    <%= link_to 'Show', project %>
+    
 	<% if can? :manage, project %>
     <%= link_to 'Edit', edit_project_path(project) %>
     <%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %>
@@ -31,5 +33,5 @@
 
 <br />
 <br />
-
+<div id="bottom"><%=link_to("Credits", "/lycee/credits", :id => 'bottom_nav') %></div>
 </div>

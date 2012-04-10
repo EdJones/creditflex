@@ -10,3 +10,4 @@ en:
       user: "Not allowed to manage other user accounts."
     create:
       project: "Please sign up / log in to enter your project."
+      request: "Please sign up / log in to ask question."
