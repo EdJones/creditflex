@@ -7,7 +7,7 @@ class Ability
     user ||= User.new # guest user (not logged in)
 	
 	if user.role == 'admin'
-
+      can :admin, :all
       can :manage, :all
       # some other trainer specific roles here, like editing his/her profile
     elsif user.role == 'student'
@@ -21,7 +21,8 @@ class Ability
       can :read, :all
 	  cannot :read, User
 	  can :manage, Project, :teacher_id => user.id
-	  can :create, Project  
+	  can :create, Project 
+	  can :manage, Request
 	elsif user.role == 'moderator'
       can :read, :all
 	  cannot :read, User

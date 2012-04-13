@@ -5,7 +5,7 @@
 <% @requests.each do |request| %>
 <div class='request3'>
 	<div class="left_box">
-    <%= image_tag(request.user.avatar, :class => 'avatar') if request.user.avatar?%>
+    <%= image_tag(request.user.avatar, :class => 'avatar') if request.user.avatar? %>
 	<div class="votes">
 	<br />
 	<b><%= pluralize(request.up_votes, 'vote') %></b><br />
