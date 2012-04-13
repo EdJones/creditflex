@@ -85,7 +85,7 @@ end
   # POST /requests.json
   def create
     @request = Request.new(params[:request])
-
+#raise(params[:request])
     respond_to do |format|
       if @request.save
         format.html { redirect_to @request, notice: 'Request was successfully created.' }
