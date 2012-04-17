@@ -17,6 +17,32 @@
 $bar_background__top: #f1f4d2;
 $bar_background__bottom: #dee698;
 
+.content_course_outer {
+    -moz-box-sizing: content-box;
+    background: none repeat scroll 0 0 #415377;
+    border-radius: 12px 12px 12px 12px;
+    margin: 10px auto 30px;
+    padding-top: 30px;
+	padding-bottom: 30px;
+    width: 890px;
+}
+.content_course_inner {
+	padding-top:30px;
+	padding-left:20px;
+	padding-right:20px;
+	width: 740px;
+	margin:10px auto 30px auto;
+	background:#EEE6E3;
+	@include rounded-corners(12px);	
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-webkit-box-shadow:1px 0px 5px #666;
+	-khtml-box-sizing:content-box;
+	box-sizing:content-box;
+	overflow: hidden;
+	}	
+
+
 
 .course_title {
 	color:#607890;
@@ -229,21 +255,25 @@ img#pltw  {
 	margin-right:7px;
 }
 #comments {
-	width:500px;
-
+	width:380px;
 	float:left;
-	margin-left:40px;
+	margin-left:20px;
 }
 #new_comment {
-	margin-left:35px;
+	margin-left:20px;
 	float:left;
-	width:400px;
+	width:300px;
+}
+#new_comment form {
+	margin-left:10px;
+	float:left;
 }
 .response_text {
 	margin-bottom:10px;
+		width:350px;
 }
 .comment {
-	width:450px;
+	width:370px;
 	}
 .hqt_needed {
 	float:right;
@@ -259,3 +289,6 @@ img#pltw  {
 	color:#892b1c;
 	font-weight:bold;
 }	
+.actions_comment {
+    margin-left: 100px;
+	}

@@ -1,4 +1,5 @@
-<div class="content">
+<div class="content_course_outer">
+<div class="content_course_inner">
 <p id="notice"><%= notice %></p>
 
 <%= image_tag( @course.course_image.url.to_s, :class => "course_avatar") if @course.course_image? %>
@@ -28,7 +29,7 @@
 </div>
 <p>
   <b>Notes:</b>
-  <%= @course.notes %>
+  <%= simple_format(@course.notes) %>
 </p>
 
 
@@ -38,7 +39,7 @@
 <% end %> |
 <%= link_to 'All courses', courses_path %>
 
-<div class='clear'>
+<div class='clear'></div>
 <div id="comment_section">
 <div id="comments">
    <%= render 'comments' %>
@@ -50,9 +51,13 @@
 <% else %>
 <div id="new_comment">
 <h3>You say...</h3>
+<% if cannot? :create, Comment %>
 <div class="warning">Must be logged in to add comments.</div>
+<% end %>
 </div>
 <% end %>
+</div>
+</div>
 <div class='clear'>
 </div>
 </div>
