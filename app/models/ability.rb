@@ -22,6 +22,7 @@ class Ability
 	  cannot :read, User
 	  can :manage, Project, :teacher_id => user.id
 	  can :create, Project 
+	  can :create, Comment
 	  can :manage, Request
 	elsif user.role == 'moderator'
       can :read, :all
