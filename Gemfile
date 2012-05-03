@@ -12,7 +12,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 
-gem "ckeditor", "3.7.0.rc3"
+gem "ckeditor", "3.7.0.rc2"
 gem 'rinku'
 
 gem 'make_voteable'
