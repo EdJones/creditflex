@@ -123,6 +123,24 @@ color:#ffffff;
 	color:#605307;
 	font-size:larger;
 }
+.project_show {
+	width: 600px;
+	border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	-moz-box-shadow: 0px 2px 2px #666666; 
+	-webkit-box-shadow: 0px 2px 2px #666666; 
+	box-shadow: 0px 2px 2px #666666; 
+	background: #ffffff;
+	@include gradient($bar_background__top, $bar_background__bottom ); 
+
+	color: #4c4c4c; 
+	margin: 0 0 24px 10px; 
+	overflow: hidden;
+	padding:8px;
+	float:left;
+
+	}
 .project3 {
 	width: 490px;
 	border-radius: 8px; 

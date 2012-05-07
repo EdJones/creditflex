@@ -13,7 +13,7 @@
    <span class="ptitle"><%= project.title %></span><br />
     Student: <%= project.student.user.username if project.student %> | 
     Teacher:<%= project.teacher_id %> <br /><br />
-    <%= raw(truncate(project.summary, :length => 400, :separator => ' ')) %>
+    <%= simple_format((project.summary)) %>
 	
     <%= link_to 'more', project %>
 	<p>Status:<%= project.status %> | 

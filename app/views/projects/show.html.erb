@@ -1,39 +1,39 @@
 <div class="content">
-<p id="notice"><%= notice %></p>
-<Div class="project3">
-<p>
-  <b>Title:</b>
-  <%= @project.title %>
-</p>
-<%= image_tag(@project.projekt.url.to_s, :class => "projekt") if @project.projekt? %>
-<p>
-  <b>Student:</b>
-  <%= @project.student_id %>
-</p>
+  <p id="notice"><%= notice %></p>
+  <div class="project_show">
+    <p>
+      <b>Title:</b>
+      <%= @project.title %>
+    </p>
+    <%= image_tag(@project.projekt.url.to_s, :class => "projekt") if @project.projekt? %>
+    <p>
+      <b>Student:</b>
+      <%= @project.student_id %>
+    </p>
 
-<p>
-  <b>Teacher:</b>
-  <%= @project.teacher_id %>
-</p>
+    <p>
+      <b>Teacher:</b>
+      <%= @project.teacher_id %>
+    </p>
 
-<p>
-  <b>Summary:</b>
-  <%= simple_format(h(@project.summary)) %>
-</p>
+    <p>
+      <b>Summary:</b>
+      <%= simple_format((@project.summary)) %>
+    </p>
 
-<p>
-  <b>Status:</b>
-  <%= @project.status %>
-</p>
+    <p>
+      <b>Status:</b>
+      <%= @project.status %>
+    </p>
 
-<p>
-  <b>Portfolio:</b>
-  <%= @project.portfolio_id %>
-</p>
+    <p>
+      <b>Portfolio:</b>
+      <%= @project.portfolio_id %>
+    </p>
 
-</div>
-<% if can? :update, @project %>
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<% end %>
-<%= link_to 'Projects list', projects_path %>
+  </div>
+  <% if can? :update, @project %>
+  <%= link_to 'Edit', edit_project_path(@project) %> |
+  <% end %>
+  <%= link_to 'Projects list', projects_path %>
 </div>
