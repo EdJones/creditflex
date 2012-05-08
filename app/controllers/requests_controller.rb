@@ -88,6 +88,7 @@ end
 #raise(params[:request])
     respond_to do |format|
       if @request.save
+	  UserMailer.activity_email(User.where( :username => 'EdJones').first).deliver
         format.html { redirect_to @request, notice: 'Request was successfully created.' }
         format.json { render json: @request, status: :created, location: @request }
       else
@@ -104,6 +105,7 @@ end
 
     respond_to do |format|
       if @request.update_attributes(params[:request])
+	  UserMailer.activity_email(User.where( :username => 'EdJones').first).deliver
         format.html { redirect_to @request, notice: 'Request was successfully updated.' }
         format.json { head :ok }
       else

@@ -73,6 +73,7 @@ class CoursesController < ApplicationController
 
     respond_to do |format|
       if @course.save
+	  UserMailer.activity_email(User.where( :username => 'EdJones').first).deliver
         format.html { redirect_to @course, notice: 'Course was successfully created.' }
         format.json { render json: @course, status: :created, location: @course }
       else
@@ -89,6 +90,7 @@ class CoursesController < ApplicationController
 
     respond_to do |format|
       if @course.update_attributes(params[:course])
+	    UserMailer.activity_email(User.where( :username => 'EdJones').first).deliver
         format.html { redirect_to @course, notice: 'Course was successfully updated.' }
         format.json { head :ok }
       else
