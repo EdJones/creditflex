@@ -46,6 +46,7 @@ load_and_authorize_resource :except => [:index, :show, :new]
 
     respond_to do |format|
       if @project.save
+	    UserMailer.activity_email(User.where( :username => 'EdJones').first).deliver
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render json: @project, status: :created, location: @project }
       else
@@ -62,6 +63,7 @@ load_and_authorize_resource :except => [:index, :show, :new]
 
     respond_to do |format|
       if @project.update_attributes(params[:project])
+	    UserMailer.activity_email().deliver
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
         format.json { head :ok }
       else
