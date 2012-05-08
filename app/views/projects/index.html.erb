@@ -13,8 +13,8 @@
    <span class="ptitle"><%= project.title %></span><br />
     Student: <%= project.student.user.username if project.student %> | 
     Teacher:<%= project.teacher_id %> <br /><br />
-    <%= simple_format((project.summary)) %>
-	
+    <%= truncate_html(simple_format(project.summary), :length => 200, :omission => '...') %>
+
     <%= link_to 'more', project %>
 	<p>Status:<%= project.status %> | 
     Portfolio<%= project.portfolio_id %><br /></p>

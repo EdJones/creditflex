@@ -29,6 +29,7 @@ gem 'jquery-rails', '>= 2.0.1'
 gem 'sorcery'
 gem 'cancan'
 gem 'fog'
+gem 'truncate_html'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
