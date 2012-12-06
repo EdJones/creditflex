@@ -1,0 +1,151 @@
+Microsoft Windows [Version 6.0.6002]
+Copyright (c) 2006 Microsoft Corporation.  All rights reserved.
+
+C:\Users\Ed>cd webapps/creditflex
+
+C:\Users\Ed\webapps\creditflex>pik 193
+
+There is no command '193'
+Usage: pik command [options]
+
+To get help with a command
+
+  pik help (command)
+
+To list all commands and descriptions:
+
+  pik help commands
+
+    -V, --version                    Pik version
+    -d, --debug                      Outputs debug information
+
+
+C:\Users\Ed\webapps\creditflex>pik
+
+C:\Users\Ed\webapps\creditflex>git merge devel
+Updating ffc5eec..cbc3759
+Fast-forward
+ public/roadmap.pdf | Bin 0 -> 47289 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 public/roadmap.pdf
+
+C:\Users\Ed\webapps\creditflex>git push heroku master
+Counting objects: 6, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 43.18 KiB, done.
+Total 4 (delta 2), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.1
+       Ruby version change detected. Clearing bundler cache.
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/
+       Fetching gem metadata from http://rubygems.org/.......
+       Fetching gem metadata from http://rubygems.org/..
+       Installing rake (10.0.2)
+       Installing i18n (0.6.1)
+       Installing multi_json (1.3.7)
+       Installing activesupport (3.2.3)
+       Installing builder (3.0.4)
+       Installing activemodel (3.2.3)
+       Installing erubis (2.7.0)
+       Installing journey (1.0.4)
+       Installing rack (1.4.1)
+       Installing rack-cache (1.2)
+       Installing rack-test (0.6.2)
+       Installing hike (1.2.1)
+       Installing tilt (1.3.3)
+       Installing sprockets (2.1.3)
+       Installing actionpack (3.2.3)
+       Installing mime-types (1.17.2)
+       Installing polyglot (0.3.3)
+       Installing treetop (1.4.12)
+       Installing mail (2.4.4)
+       Installing actionmailer (3.2.3)
+       Installing arel (3.0.2)
+       Installing tzinfo (0.3.35)
+       Installing activerecord (3.2.3)
+       Installing activeresource (3.2.3)
+       Installing bcrypt-ruby (3.0.1) with native extensions
+       Using bundler (1.2.1)
+       Installing cancan (1.6.8)
+       Installing carrierwave (0.7.1)
+       Installing orm_adapter (0.0.7)
+       Installing ckeditor (3.7.0.rc2)
+       Installing coffee-script-source (1.4.0)
+       Installing execjs (1.4.0)
+       Installing coffee-script (2.2.0)
+       Installing rack-ssl (1.3.2)
+       Installing json (1.7.5) with native extensions
+       Installing rdoc (3.12)
+       Installing thor (0.14.6)
+       Installing railties (3.2.3)
+       Installing coffee-rails (3.2.2)
+       Installing excon (0.16.10)
+       Installing multipart-post (1.1.5)
+       Installing faraday (0.8.4)
+       Installing formatador (0.2.4)
+       Installing net-ssh (2.6.1)
+       Installing net-scp (1.0.4)
+       Installing nokogiri (1.5.5) with native extensions
+       Installing ruby-hmac (0.4.0)
+       Installing fog (1.7.0)
+       Installing httpauth (0.2.0)
+       Installing jquery-rails (2.1.3)
+       Installing make_voteable (0.1.1)
+       Installing subexec (0.2.2)
+       Installing mini_magick (3.4)
+       Installing newrelic_rpm (3.5.2.17)
+       Installing oauth (0.4.7)
+       Installing oauth2 (0.6.1)
+       Installing pg (0.14.1) with native extensions
+       Installing rails (3.2.3)
+       Installing rinku (1.7.2) with native extensions
+       Installing sass (3.2.3)
+       Installing sass-rails (3.2.5)
+       Installing sorcery (0.7.13)
+       Installing truncate_html (0.5.5)
+       Installing uglifier (1.3.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Post-install message from rdoc:
+       Depending on your version of ruby, you may need to install ruby rdoc/ri data:
+       <= 1.8.6 : unsupported
+       = 1.8.7 : gem install rdoc-data; rdoc-data --install
+       = 1.9.1 : gem install rdoc-data; rdoc-data --install
+       >= 1.9.2 : nothing to do! Yay!
+
+       Post-install message from newrelic_rpm:
+       PLEASE NOTE:
+       Developer Mode is now a Rack middleware.
+       Developer Mode is no longer available in Rails 2.1 and earlier.
+       However, starting in version 2.12 you can use Developer Mode in any
+       Rack based framework, in addition to Rails.  To install developer mode
+       in a non-Rails application, just add NewRelic::Rack::DeveloperMode to
+       your middleware stack.
+       If you are using JRuby, we recommend using at least version 1.4 or
+       later because of issues with the implementation of the timeout library.
+       Refer to the README.md file for more information.
+       Please see http://github.com/newrelic/rpm/blob/master/CHANGELOG
+       for a complete description of the features and enhancements available
+       in this version of the Ruby Agent.
+
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (57.66s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 32.6MB
+-----> Launching... done, v112
+       http://pure-mist-7004.herokuapp.com deployed to Heroku
+
+To git@heroku.com:pure-mist-7004.git
+   ffc5eec..cbc3759  master -> master
+
+C:\Users\Ed\webapps\creditflex>

@@ -1,0 +1,800 @@
+2012-08-23T15:28:40+00:00 app[web.1]: Completed 200 OK in 562ms (Views: 476.4ms | ActiveRecord: 67.9ms)
+2012-08-23T15:28:40+00:00 heroku[nginx]: 141.101.88.54 - - [23/Aug/2012:15:28:40 +0000] "GET /projects HTTP/1.1" 200 3059 "-" "Mozilla/5.0 (compatible; AhrefsBot/3.1; +http://ahref
+s.com/robot/)" ohiocreditflexibility.org
+2012-08-23T15:28:42+00:00 app[web.1]: Connected to NewRelic Service at collector-5.newrelic.com
+2012-08-23T16:31:07+00:00 app[web.1]:
+2012-08-23T16:31:07+00:00 app[web.1]:
+2012-08-23T16:31:07+00:00 app[web.1]: Started GET "/requests/10" for 173.245.51.216 at 2012-08-23 16:31:07 +0000
+2012-08-23T16:31:07+00:00 app[web.1]: Processing by RequestsController#show as HTML
+2012-08-23T16:31:07+00:00 app[web.1]:   Parameters: {"id"=>"10"}
+2012-08-23T16:31:07+00:00 app[web.1]:   Rendered requests/show.html.erb within layouts/requests (109.0ms)
+2012-08-23T16:31:07+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.8ms)
+2012-08-23T16:31:07+00:00 app[web.1]: Completed 200 OK in 191ms (Views: 93.8ms | ActiveRecord: 48.3ms)
+2012-08-23T16:31:07+00:00 heroku[router]: GET ohiocreditflexibility.org/requests/10 dyno=web.1 queue=0 wait=0ms service=204ms status=200 bytes=4988
+2012-08-23T16:31:07+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:07 +0000] "GET /requests/10 HTTP/1.1" 200 4988 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1
+; SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:08+00:00 app[web.1]:
+2012-08-23T16:31:08+00:00 app[web.1]:
+2012-08-23T16:31:08+00:00 app[web.1]: Started POST "/responses" for 173.245.51.216 at 2012-08-23 16:31:08 +0000
+2012-08-23T16:31:08+00:00 app[web.1]: Processing by ResponsesController#create as HTML
+2012-08-23T16:31:08+00:00 app[web.1]:   Parameters: {"utf8"=>"G£ô", "authenticity_token"=>"HZvUIRSlE/zilt26p5w6Hn/5dB90WmkN9PzZuaa/RFI=", "response"=>{"request_id"=>"10", "user_id"
+=>"8", "body"=>"There are several ways to tone your ctayrsl tuning fork. for the softest sound, tap tuning forks on a hard muscle such as the palm of your hand.Oscilent offer a ful
+l range of industry standard Surface Mount and Through Hole Ceramic Resonators both with and without internal capacitors. For standard Operating Temperatures (-20 C to 80 C). Fitte
+d with temperature controlled cystal oscillator * 50Hz   40MHz (1 Meg Ohm) * 10MHz   2.8GHz (50 Ohm) * Sens:<1mV @ 150MHz * Display: 10 digit LCD * Interface: CI-V * Supply: Int Ni
+-Cads * Battery life: 4-5 Hrs * 65x85x30mmCeramic Resonators provide a viable alternative to Quartz Crystals for oscillation frequency stabilization. Everyone wants cleaner air. Th
+e question is what are we willing to pay for it   collectively and individually   air cleaner. Oscilent is a world-class manufacturer of Frequency Control Produc
+2012-08-23T16:31:08+00:00 app[web.1]: ts, including an innovative and technologically advanced offering of mobile communication devices, TCXO, temperature compensated ctayrsl oscil
+lator,in which, e.g., the output signal from a temperature sensor (e.g., a thermistor) is used to generate a correction voltage that is applied to a variable reactance(e.g., a vara
+ctor) in the ctayrsl network.The reactance variations compensate for the ctayrsls f vs. T characteristic. Analog TCXOs can provide about a 20X improvement over the ctayrsls.s are a
+vailable in a wide variety of packages. The most common are referenced below and provide a basis for Design Engineers to consider the most common characteristics found incrystal fi
+lterproducts. Crystal Filters are available in a wide variety of packages that allow focus on individual Electrical Parameters. We strongly encourage contacting Oscilent Engineerin
+g to discuss Oscilent's full capability in Crystal Filter design and development.Although there are numerous ctayrsl oscillators available on the market, it is i
+2012-08-23T16:31:08+00:00 app[web.1]: Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+2012-08-23T16:31:08+00:00 app[web.1]: mportant to find ctayrsl clock oscillators that are safe and contain no hazardous substances for human to ensure that you could sell your prod
+ucts easily and safely. for consumer electronics. Oscilent has completed the expansion of it s state-of-the art production facility for RF Filter and standard SAW Filter manufactur
+ing. When the first ctayrsl oscillators were built in the 1920s, the only ctayrsls available, such as the X-cut, exhibited poor temperature performance.  The expansion increases pr
+oduction capacity by
+over 26% overall solidifying Oscilent s position as the fourth largest  production manufacturer in the world. Murata's hybrid ctayrsl resonators now all feature four connection pad
+s on the base, to make them a more direct replacement for quartz.Generally, TCXO's are manufactured according to industry standard guidelines. A  is best viewed as a derivative of
+a standard Crystal Oscillator. The latest  green  TCXO delivers the performance of an Oven Controlled  (OCXO) with significant reductions in
+2012-08-23T16:31:08+00:00 app[web.1]:  current consumption."}, "commit"=>"Create Response"}
+2012-08-23T16:31:08+00:00 app[web.1]: Redirected to http://ohiocreditflexibility.org/login
+2012-08-23T16:31:08+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:08 +0000] "POST /responses HTTP/1.1" 302 104 "http://ohiocreditflexibility.org/requests/10" "Mozilla/
+4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:08+00:00 heroku[router]: POST ohiocreditflexibility.org/responses dyno=web.1 queue=0 wait=0ms service=123ms status=302 bytes=104
+2012-08-23T16:31:09+00:00 app[web.1]:
+2012-08-23T16:31:09+00:00 app[web.1]:
+2012-08-23T16:31:09+00:00 app[web.1]: Started GET "/login" for 173.245.51.216 at 2012-08-23 16:31:09 +0000
+2012-08-23T16:31:09+00:00 app[web.1]: Processing by SessionsController#new as HTML
+2012-08-23T16:31:09+00:00 app[web.1]:   Rendered sessions/new.html.erb within layouts/application (2.8ms)
+2012-08-23T16:31:09+00:00 app[web.1]:   Rendered shared/_header.html.erb (1.1ms)
+2012-08-23T16:31:09+00:00 app[web.1]: Completed 200 OK in 145ms (Views: 144.5ms | ActiveRecord: 0.0ms)
+2012-08-23T16:31:09+00:00 heroku[router]: GET ohiocreditflexibility.org/login dyno=web.1 queue=0 wait=0ms service=158ms status=200 bytes=2664
+2012-08-23T16:31:09+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:09 +0000] "GET /login HTTP/1.1" 200 2664 "http://ohiocreditflexibility.org/requests/10" "Mozilla/4.0
+(compatible; MSIE 6.0; Windows NT 5.1; SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:09+00:00 app[web.1]:
+2012-08-23T16:31:09+00:00 app[web.1]:
+2012-08-23T16:31:09+00:00 app[web.1]: Started GET "/login" for 173.245.51.216 at 2012-08-23 16:31:09 +0000
+2012-08-23T16:31:09+00:00 heroku[router]: GET ohiocreditflexibility.org/login dyno=web.1 queue=0 wait=0ms service=109ms status=200 bytes=2663
+2012-08-23T16:31:09+00:00 app[web.1]: Processing by SessionsController#new as HTML
+2012-08-23T16:31:09+00:00 app[web.1]:   Rendered sessions/new.html.erb within layouts/application (3.6ms)
+2012-08-23T16:31:09+00:00 app[web.1]:   Rendered shared/_header.html.erb (2.9ms)
+2012-08-23T16:31:09+00:00 app[web.1]: Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+2012-08-23T16:31:09+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:09 +0000] "GET /login HTTP/1.1" 200 2663 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+" ohiocreditflexibility.org
+2012-08-23T16:31:10+00:00 app[web.1]:
+2012-08-23T16:31:10+00:00 app[web.1]:
+2012-08-23T16:31:10+00:00 app[web.1]: Started GET "/requests/10" for 173.245.51.216 at 2012-08-23 16:31:10 +0000
+2012-08-23T16:31:10+00:00 app[web.1]: Processing by RequestsController#show as HTML
+2012-08-23T16:31:10+00:00 app[web.1]:   Rendered requests/show.html.erb within layouts/requests (19.3ms)
+2012-08-23T16:31:10+00:00 app[web.1]: Completed 200 OK in 56ms (Views: 17.9ms | ActiveRecord: 36.0ms)
+2012-08-23T16:31:10+00:00 app[web.1]:   Parameters: {"id"=>"10"}
+2012-08-23T16:31:10+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.9ms)
+2012-08-23T16:31:10+00:00 heroku[router]: GET ohiocreditflexibility.org/requests/10 dyno=web.1 queue=0 wait=0ms service=68ms status=200 bytes=4987
+2012-08-23T16:31:10+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:10 +0000] "GET /requests/10 HTTP/1.1" 200 4987 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1
+; SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:10+00:00 app[web.1]:
+2012-08-23T16:31:10+00:00 app[web.1]:
+2012-08-23T16:31:10+00:00 app[web.1]: Started GET "/requests/" for 173.245.51.216 at 2012-08-23 16:31:10 +0000
+2012-08-23T16:31:10+00:00 app[web.1]: Processing by RequestsController#index as HTML
+2012-08-23T16:31:10+00:00 app[web.1]:   Rendered requests/index.html.erb within layouts/requests (199.4ms)
+2012-08-23T16:31:10+00:00 app[web.1]:   Rendered shared/_header.html.erb (1.0ms)
+2012-08-23T16:31:10+00:00 app[web.1]: Completed 200 OK in 210ms (Views: 166.5ms | ActiveRecord: 41.8ms)
+2012-08-23T16:31:10+00:00 heroku[router]: GET ohiocreditflexibility.org/requests/ dyno=web.1 queue=0 wait=0ms service=220ms status=200 bytes=11918
+2012-08-23T16:31:10+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:10 +0000] "GET /requests/ HTTP/1.1" 200 11918 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;
+ SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:11+00:00 app[web.1]:
+2012-08-23T16:31:11+00:00 app[web.1]:
+2012-08-23T16:31:11+00:00 app[web.1]: Started GET "/signup" for 173.245.51.216 at 2012-08-23 16:31:11 +0000
+2012-08-23T16:31:11+00:00 app[web.1]: Processing by UsersController#new as HTML
+2012-08-23T16:31:11+00:00 app[web.1]:   Rendered users/_form.html.erb (26.7ms)
+2012-08-23T16:31:11+00:00 app[web.1]:   Rendered users/new.html.erb within layouts/application (27.9ms)
+2012-08-23T16:31:11+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.8ms)
+2012-08-23T16:31:11+00:00 app[web.1]: Completed 200 OK in 42ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+2012-08-23T16:31:11+00:00 heroku[router]: GET ohiocreditflexibility.org/signup dyno=web.1 queue=0 wait=0ms service=51ms status=200 bytes=3402
+2012-08-23T16:31:11+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:11 +0000] "GET /signup HTTP/1.1" 200 3402 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1
+)" ohiocreditflexibility.org
+2012-08-23T16:31:11+00:00 app[web.1]:
+2012-08-23T16:31:11+00:00 app[web.1]: Started GET "/" for 173.245.51.216 at 2012-08-23 16:31:11 +0000
+2012-08-23T16:31:11+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]: ActionView::Template::Error (Teacher#avatar? delegated to user.avatar?, but user is nil: #<Teacher id: 6, user_id: nil, district: "OJumsKWanLt
+aEtLTtUp", school: "WjpgBvsdMzkuO", subject: "rRsWKjUtFpSq", specialty: "yaKboLQEJqeuPWNoRJB", bio: "Wow, this is in every respect what I ndeeed to know...", notes: "Wow, this is i
+n every respect what I ndeeed to know...", created_at: "2012-08-23 11:50:52", updated_at: "2012-08-23 11:50:52", first_name: "", last_name: "", title: "">):
+2012-08-23T16:31:12+00:00 app[web.1]:     106: <% @teachers[0..3].each do |teacher| %>
+2012-08-23T16:31:12+00:00 app[web.1]:     107: <div id="teachers_item">
+2012-08-23T16:31:12+00:00 app[web.1]:     108: <div class="item_desc">
+2012-08-23T16:31:12+00:00 app[web.1]:     111:  <%= link_to("more", teacher) %>
+2012-08-23T16:31:12+00:00 app[web.1]:     110:     <%= truncate(teacher.bio, :length => 140, :separator => ' ') %>
+2012-08-23T16:31:12+00:00 app[web.1]:     109:     <b><%= "#{teacher.title} " if teacher.title? %><%= teacher.name %></b><%= image_tag( teacher.avatar.url.to_s, :class => "t_avatar
+") if teacher.avatar? %><br />
+2012-08-23T16:31:12+00:00 app[web.1]:     112:  <p><b>Subject: </b> <%= teacher.subject %></p>
+2012-08-23T16:31:12+00:00 app[web.1]:   app/models/teacher.rb:6:in `rescue in avatar?'
+2012-08-23T16:31:12+00:00 app[web.1]:   app/models/teacher.rb:3:in `avatar?'
+2012-08-23T16:31:12+00:00 app[web.1]:   app/views/lycee/index.html.erb:109:in `block in _app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T16:31:12+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `each'
+2012-08-23T16:31:12+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `_app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T16:31:12+00:00 app[web.1]:   app/controllers/lycee_controller.rb:9:in `index'
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]: Processing by LyceeController#index as HTML
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered lycee/index.html.erb within layouts/application (208.2ms)
+2012-08-23T16:31:12+00:00 app[web.1]: Completed 500 Internal Server Error in 423ms
+2012-08-23T16:31:12+00:00 heroku[router]: GET ohiocreditflexibility.org/ dyno=web.1 queue=0 wait=0ms service=439ms status=500 bytes=728
+2012-08-23T16:31:12+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:12 +0000] "GET / HTTP/1.1" 500 728 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)" ohio
+creditflexibility.org
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]: Started GET "/users/new" for 173.245.51.216 at 2012-08-23 16:31:12 +0000
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered users/_form.html.erb (4.3ms)
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered users/new.html.erb within layouts/application (4.9ms)
+2012-08-23T16:31:12+00:00 app[web.1]: Processing by UsersController#new as HTML
+2012-08-23T16:31:12+00:00 app[web.1]: Completed 200 OK in 20ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.8ms)
+2012-08-23T16:31:12+00:00 heroku[router]: GET ohiocreditflexibility.org/users/new dyno=web.1 queue=0 wait=0ms service=32ms status=200 bytes=3402
+2012-08-23T16:31:12+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:12 +0000] "GET /users/new HTTP/1.1" 200 3402 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;
+SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]: Started GET "/requests" for 173.245.51.216 at 2012-08-23 16:31:12 +0000
+2012-08-23T16:31:12+00:00 app[web.1]: Processing by RequestsController#index as HTML
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered requests/index.html.erb within layouts/requests (97.2ms)
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.9ms)
+2012-08-23T16:31:12+00:00 app[web.1]: Completed 200 OK in 105ms (Views: 88.1ms | ActiveRecord: 16.0ms)
+2012-08-23T16:31:12+00:00 heroku[router]: GET ohiocreditflexibility.org/requests dyno=web.1 queue=0 wait=0ms service=115ms status=200 bytes=11918
+2012-08-23T16:31:12+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:12 +0000] "GET /requests HTTP/1.1" 200 11918 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;
+SV1)" ohiocreditflexibility.org
+2012-08-23T17:05:13+00:00 heroku[router]: GET ohiocreditflexibility.org/robots.txt dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=204
+2012-08-23T17:05:13+00:00 heroku[nginx]: 108.162.231.197 - - [23/Aug/2012:17:05:13 +0000] "GET /robots.txt HTTP/1.1" 200 204 "-" "Mozilla/5.0 (compatible; YandexBot/3.0; +http://ya
+ndex.com/bots)" ohiocreditflexibility.org
+2012-08-23T17:38:15+00:00 app[web.1]:
+2012-08-23T17:38:15+00:00 app[web.1]:
+2012-08-23T17:38:15+00:00 app[web.1]: Started GET "/courses/new" for 108.162.231.90 at 2012-08-23 17:38:15 +0000
+2012-08-23T17:38:15+00:00 app[web.1]: Processing by CoursesController#new as HTML
+2012-08-23T17:38:15+00:00 app[web.1]:   Rendered courses/_form.html.erb (7.0ms)
+2012-08-23T17:38:15+00:00 app[web.1]:   Rendered courses/new.html.erb within layouts/courses (8.4ms)
+2012-08-23T17:38:15+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.8ms)
+2012-08-23T17:38:15+00:00 app[web.1]: Completed 200 OK in 53ms (Views: 16.0ms | ActiveRecord: 35.2ms)
+2012-08-23T17:38:15+00:00 heroku[router]: GET ohiocreditflexibility.org/courses/new dyno=web.1 queue=0 wait=0ms service=63ms status=200 bytes=4770
+2012-08-23T17:38:15+00:00 heroku[nginx]: 108.162.231.90 - - [23/Aug/2012:17:38:15 +0000] "GET /courses/new HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; r
+v:1.9.0.10) Gecko/2009042316 Firefox/3.0.10" ohiocreditflexibility.org
+2012-08-23T17:38:15+00:00 app[web.1]:
+2012-08-23T17:38:15+00:00 app[web.1]:
+2012-08-23T17:38:15+00:00 app[web.1]: Started POST "/courses" for 108.162.231.90 at 2012-08-23 17:38:15 +0000
+2012-08-23T17:38:16+00:00 app[web.1]:
+2012-08-23T17:38:16+00:00 app[web.1]: Sent mail to edjones@openhistoryproject.org (758ms)
+2012-08-23T17:38:16+00:00 app[web.1]:   Parameters: {"utf8"=>"G£ô", "authenticity_token"=>"EniAkT2GtxM8SpTUGlqc80QNx/Ak2qw20J4rcAOz2sc=", "course"=>{"description"=>"well sir very i
+ntresting and also very iapmrtont to know about the geography the brief concept of geography in kannada from you shall bring awareness and its importence to every one not only to s
+tudents and teachers.", "title"=>"yvMCpABQZ", "subject_id"=>"9", "curriculum_url"=>"http://www.facebook.com/profile.php?id=100003406509975", "notes"=>"well sir very intresting and
+also very iapmrtont to know about the geography the brief concept of geography in kannada from you shall bring awareness and its importence to every one not only to students and te
+achers.", "plan_url"=>"http://www.facebook.com/profile.php?id=100003406509975"}, "commit"=>"Create Course"}
+2012-08-23T17:38:16+00:00 app[web.1]: Processing by CoursesController#create as HTML
+2012-08-23T17:38:16+00:00 app[web.1]:   Rendered user_mailer/activity_email.html.erb (0.5ms)
+2012-08-23T17:38:16+00:00 app[web.1]: Redirected to http://ohiocreditflexibility.org/courses/28
+2012-08-23T17:38:16+00:00 app[web.1]: Completed 302 Found in 1034ms (ActiveRecord: 45.9ms)
+2012-08-23T17:38:16+00:00 heroku[nginx]: 108.162.231.90 - - [23/Aug/2012:17:38:16 +0000] "POST /courses HTTP/1.1" 302 109 "http://ohiocreditflexibility.org/courses/new" "Mozilla/5.
+0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10" ohiocreditflexibility.org
+2012-08-23T17:38:16+00:00 heroku[router]: POST ohiocreditflexibility.org/courses dyno=web.1 queue=0 wait=0ms service=1055ms status=302 bytes=109
+2012-08-23T17:38:17+00:00 app[web.1]:
+2012-08-23T17:38:17+00:00 app[web.1]:
+2012-08-23T17:38:17+00:00 app[web.1]: Started GET "/courses/28" for 108.162.231.90 at 2012-08-23 17:38:17 +0000
+2012-08-23T17:38:17+00:00 app[web.1]:
+2012-08-23T17:38:17+00:00 app[web.1]: EOFError (bad content body):
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/multipart/parser.rb:73:in `block in fast_forward_to_first_boundary'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/multipart/parser.rb:70:in `loop'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/multipart/parser.rb:70:in `fast_forward_to_first_boundary'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/multipart/parser.rb:15:in `parse'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/multipart.rb:25:in `parse_multipart'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/request.rb:338:in `parse_multipart'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/request.rb:201:in `POST'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/http/request.rb:231:in `POST'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/http/parameters.rb:10:in `parameters'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/http/filter_parameters.rb:33:in `filtered_parameters'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.4.0.1/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/abstract_controller/base.rb:121:in `process'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:45:in `process'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_controller/metal.rb:203:in `dispatch'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_con
+troller/metal.rb:246:in `block in action'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:73:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:36:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:600:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.4.0.1/lib/new_relic/rack/browser_monitoring.rb:12:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/flash.rb:242:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.3/lib/active_record/query_cache.rb:64:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `_run__328840433319227186__call__959853049120696836
+__callbacks'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `__run_callback'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/rack/logger.rb:26:in `call_app'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/rack/logger.rb:16:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/static.rb:62:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/engine.rb:479:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/application.rb:220:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/static.rb:66:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/rack/log_tailer.rb:14:in `call'
+2012-08-23T17:38:17+00:00 heroku[router]: GET ohiocreditflexibility.org/courses/28 dyno=web.1 queue=0 wait=0ms service=11ms status=500 bytes=728
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+2012-08-23T17:38:17+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+2012-08-23T17:38:17+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+2012-08-23T17:38:17+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+2012-08-23T17:38:17+00:00 app[web.1]:
+2012-08-23T17:38:17+00:00 app[web.1]:
+2012-08-23T17:38:17+00:00 heroku[nginx]: 108.162.231.90 - - [23/Aug/2012:17:38:17 +0000] "GET /courses/28 HTTP/1.1" 500 728 "http://ohiocreditflexibility.org/courses/new" "Mozilla/
+5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10" ohiocreditflexibility.org
+2012-08-23T18:23:51+00:00 heroku[router]: GET ohiocreditflexibility.org/assets/creditflex-1b73248c69b774a8aad5f6668c02a344.png dyno=web.1 queue=0 wait=0ms service=11ms status=200 b
+ytes=69794
+2012-08-23T18:23:51+00:00 heroku[nginx]: 173.245.55.235 - - [23/Aug/2012:18:23:51 +0000] "GET /assets/creditflex-1b73248c69b774a8aad5f6668c02a344.png HTTP/1.0" 200 69794 "-" "Mozil
+la/5.0 (Windows NT 6.0; rv:14.0) Gecko/20120713 Thunderbird/14.0 Lightning/1.6" ohiocreditflexibility.org
+2012-08-23T18:24:17+00:00 app[web.1]:
+2012-08-23T18:24:17+00:00 app[web.1]:
+2012-08-23T18:24:17+00:00 app[web.1]: Started GET "/" for 108.162.216.235 at 2012-08-23 18:24:17 +0000
+2012-08-23T18:24:17+00:00 app[web.1]:
+2012-08-23T18:24:17+00:00 app[web.1]:     107: <div id="teachers_item">
+2012-08-23T18:24:17+00:00 app[web.1]:     109:     <b><%= "#{teacher.title} " if teacher.title? %><%= teacher.name %></b><%= image_tag( teacher.avatar.url.to_s, :class => "t_avatar
+") if teacher.avatar? %><br />
+2012-08-23T18:24:17+00:00 app[web.1]:   app/models/teacher.rb:6:in `rescue in avatar?'
+2012-08-23T18:24:17+00:00 app[web.1]:     110:     <%= truncate(teacher.bio, :length => 140, :separator => ' ') %>
+2012-08-23T18:24:17+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `_app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T18:24:17+00:00 app[web.1]:     111:  <%= link_to("more", teacher) %>
+2012-08-23T18:24:17+00:00 app[web.1]:     106: <% @teachers[0..3].each do |teacher| %>
+2012-08-23T18:24:17+00:00 app[web.1]: ActionView::Template::Error (Teacher#avatar? delegated to user.avatar?, but user is nil: #<Teacher id: 6, user_id: nil, district: "OJumsKWanLt
+aEtLTtUp", school: "WjpgBvsdMzkuO", subject: "rRsWKjUtFpSq", specialty: "yaKboLQEJqeuPWNoRJB", bio: "Wow, this is in every respect what I ndeeed to know...", notes: "Wow, this is i
+n every respect what I ndeeed to know...", created_at: "2012-08-23 11:50:52", updated_at: "2012-08-23 11:50:52", first_name: "", last_name: "", title: "">):
+2012-08-23T18:24:17+00:00 app[web.1]:     112:  <p><b>Subject: </b> <%= teacher.subject %></p>
+2012-08-23T18:24:17+00:00 app[web.1]:     108: <div class="item_desc">
+2012-08-23T18:24:17+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `each'
+2012-08-23T18:24:17+00:00 app[web.1]:   app/controllers/lycee_controller.rb:9:in `index'
+2012-08-23T18:24:17+00:00 app[web.1]:
+2012-08-23T18:24:17+00:00 app[web.1]: Completed 500 Internal Server Error in 57ms
+2012-08-23T18:24:17+00:00 app[web.1]:   app/models/teacher.rb:3:in `avatar?'
+2012-08-23T18:24:17+00:00 app[web.1]:   app/views/lycee/index.html.erb:109:in `block in _app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T18:24:17+00:00 app[web.1]:
+2012-08-23T18:24:17+00:00 app[web.1]:   Rendered lycee/index.html.erb within layouts/application (26.6ms)
+2012-08-23T18:24:17+00:00 app[web.1]: Processing by LyceeController#index as HTML
+2012-08-23T18:24:17+00:00 heroku[nginx]: 108.162.216.235 - - [23/Aug/2012:18:24:17 +0000] "GET / HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Windows NT 6.0; rv:14.0) Gecko/20100101 Firefox
+/14.0.1" www.creditflexibility.org
+2012-08-23T18:24:17+00:00 heroku[router]: GET www.creditflexibility.org/ dyno=web.1 queue=0 wait=0ms service=86ms status=500 bytes=728
+2012-08-23T18:24:17+00:00 heroku[router]: GET www.creditflexibility.org/favicon.ico dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=0
+2012-08-23T18:24:17+00:00 heroku[nginx]: 108.162.216.134 - - [23/Aug/2012:18:24:17 +0000] "GET /favicon.ico HTTP/1.0" 200 0 "-" "Mozilla/5.0 (Windows NT 6.0; rv:14.0) Gecko/2010010
+1 Firefox/14.0.1" www.creditflexibility.org
+2012-08-23T18:24:27+00:00 app[web.1]: Started GET "/" for 173.245.55.176 at 2012-08-23 18:24:27 +0000
+2012-08-23T18:24:27+00:00 app[web.1]:
+2012-08-23T18:24:27+00:00 app[web.1]:
+2012-08-23T18:24:27+00:00 app[web.1]:
+2012-08-23T18:24:27+00:00 app[web.1]: ActionView::Template::Error (Teacher#avatar? delegated to user.avatar?, but user is nil: #<Teacher id: 6, user_id: nil, district: "OJumsKWanLt
+aEtLTtUp", school: "WjpgBvsdMzkuO", subject: "rRsWKjUtFpSq", specialty: "yaKboLQEJqeuPWNoRJB", bio: "Wow, this is in every respect what I ndeeed to know...", notes: "Wow, this is i
+n every respect what I ndeeed to know...", created_at: "2012-08-23 11:50:52", updated_at: "2012-08-23 11:50:52", first_name: "", last_name: "", title: "">):
+2012-08-23T18:24:27+00:00 app[web.1]:     106: <% @teachers[0..3].each do |teacher| %>
+2012-08-23T18:24:27+00:00 app[web.1]:     107: <div id="teachers_item">
+2012-08-23T18:24:27+00:00 app[web.1]:     108: <div class="item_desc">
+2012-08-23T18:24:27+00:00 app[web.1]:     109:     <b><%= "#{teacher.title} " if teacher.title? %><%= teacher.name %></b><%= image_tag( teacher.avatar.url.to_s, :class => "t_avatar
+") if teacher.avatar? %><br />
+2012-08-23T18:24:27+00:00 app[web.1]:     110:     <%= truncate(teacher.bio, :length => 140, :separator => ' ') %>
+2012-08-23T18:24:27+00:00 app[web.1]:     111:  <%= link_to("more", teacher) %>
+2012-08-23T18:24:27+00:00 app[web.1]:   app/models/teacher.rb:6:in `rescue in avatar?'
+2012-08-23T18:24:27+00:00 app[web.1]:   app/models/teacher.rb:3:in `avatar?'
+2012-08-23T18:24:27+00:00 app[web.1]:     112:  <p><b>Subject: </b> <%= teacher.subject %></p>
+2012-08-23T18:24:27+00:00 app[web.1]:   app/views/lycee/index.html.erb:109:in `block in _app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T18:24:27+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `each'
+2012-08-23T18:24:27+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `_app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T18:24:27+00:00 app[web.1]:   app/controllers/lycee_controller.rb:9:in `index'
+2012-08-23T18:24:27+00:00 app[web.1]:
+2012-08-23T18:24:27+00:00 app[web.1]:
+2012-08-23T18:24:27+00:00 app[web.1]: Processing by LyceeController#index as HTML
+2012-08-23T18:24:27+00:00 app[web.1]:   Rendered lycee/index.html.erb within layouts/application (84.7ms)
+2012-08-23T18:24:27+00:00 app[web.1]: Completed 500 Internal Server Error in 100ms
+2012-08-23T18:24:27+00:00 heroku[router]: GET creditflexibility.org/ dyno=web.1 queue=0 wait=0ms service=107ms status=500 bytes=728
+2012-08-23T18:24:27+00:00 heroku[nginx]: 173.245.55.176 - - [23/Aug/2012:18:24:27 +0000] "GET / HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Windows NT 6.0; rv:14.0) Gecko/20100101 Firefox/
+14.0.1" creditflexibility.org
+
+C:\Users\Ed\webapps\creditflex>heroku logs --num 400
+2012-08-23T11:50:54+00:00 app[web.1]:   Rendered teachers/show.html.erb within layouts/teachers (51.8ms)
+2012-08-23T11:50:54+00:00 heroku[nginx]: 108.162.222.84 - - [23/Aug/2012:11:50:52 +0000] "POST /teachers HTTP/1.1" 302 109 "http://ohiocreditflexibility.org/teachers/new" "Mozilla/
+5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10" ohiocreditflexibility.org
+2012-08-23T11:50:54+00:00 heroku[nginx]: 173.245.62.210 - - [23/Aug/2012:11:50:54 +0000] "GET /teachers/6 HTTP/1.1" 500 728 "http://ohiocreditflexibility.org/teachers/new" "Mozilla
+/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10" ohiocreditflexibility.org
+2012-08-23T11:51:00+00:00 app[web.1]:
+2012-08-23T11:51:00+00:00 app[web.1]:
+2012-08-23T11:51:00+00:00 app[web.1]: Started GET "/teachers/6" for 199.27.128.157 at 2012-08-23 11:51:00 +0000
+2012-08-23T11:51:00+00:00 app[web.1]:
+2012-08-23T11:51:00+00:00 app[web.1]: ActionView::Template::Error (Teacher#avatar? delegated to user.avatar?, but user is nil: #<Teacher id: 6, user_id: nil, district: "OJumsKWanLt
+aEtLTtUp", school: "WjpgBvsdMzkuO", subject: "rRsWKjUtFpSq", specialty: "yaKboLQEJqeuPWNoRJB", bio: "Wow, this is in every respect what I ndeeed to know...", notes: "Wow, this is i
+n every respect what I ndeeed to know...", created_at: "2012-08-23 11:50:52", updated_at: "2012-08-23 11:50:52", first_name: "", last_name: "", title: "">):
+2012-08-23T11:51:00+00:00 app[web.1]:     2: <p id="notice"><%= notice %></p>
+2012-08-23T11:51:00+00:00 app[web.1]:     3:
+2012-08-23T11:51:00+00:00 app[web.1]:     5:    <%= image_tag( @teacher.avatar.url.to_s, :class => "m_avatar") if @teacher.avatar? %>
+2012-08-23T11:51:00+00:00 app[web.1]:     4:    <div class='mentor_badge'>
+2012-08-23T11:51:00+00:00 app[web.1]:     6:    <%= @teacher.user.username %>
+2012
+-08-23T11:51:00+00:00 app[web.1]:     7:        </div>
+2012-08-23T11:51:00+00:00 app[web.1]:     8: <p>
+2012-08-23T11:51:00+00:00 app[web.1]:   app/models/teacher.rb:6:in `rescue in avatar?'
+2012-08-23T11:51:00+00:00 app[web.1]:   app/models/teacher.rb:3:in `avatar?'
+2012-08-23T11:51:00+00:00 app[web.1]:   app/views/teachers/show.html.erb:5:in `_app_views_teachers_show_html_erb__1309669735932602656_56991080'
+2012-08-23T11:51:00+00:00 app[web.1]:   app/controllers/teachers_controller.rb:18:in `show'
+2012-08-23T11:51:00+00:00 app[web.1]:
+2012-08-23T11:51:00+00:00 app[web.1]:
+2012-08-23T11:51:00+00:00 app[web.1]: Processing by TeachersController#show as HTML
+2012-08-23T11:51:00+00:00 app[web.1]:   Parameters: {"id"=>"6"}
+2012-08-23T11:51:00+00:00 app[web.1]:   Rendered teachers/show.html.erb within layouts/teachers (0.9ms)
+2012-08-23T11:51:00+00:00 app[web.1]: Completed 500 Internal Server Error in 16ms
+2012-08-23T11:51:00+00:00 heroku[router]: GET ohiocreditflexibility.org/teachers/6 dyno=web.1 queue=0 wait=0ms service=30ms status=500 bytes=728
+2012-08-23T11:51:00+00:00 heroku[nginx]: 199.27.128.157 - - [23/Aug/2012:11:51:00 +0000] "GET /teachers/6 HTTP/1.1" 500 728 "http://ohiocreditflexibility.org/teachers/new" "Mozilla
+/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10" ohiocreditflexibility.org
+2012-08-23T11:53:00+00:00 app[web.1]:
+2012-08-23T11:53:00+00:00 app[web.1]:
+2012-08-23T11:53:00+00:00 app[web.1]: Started GET "/resources/2/edit" for 141.101.70.189 at 2012-08-23 11:53:00 +0000
+2012-08-23T11:53:00+00:00 app[web.1]: Processing by ResourcesController#edit as HTML
+2012-08-23T11:53:00+00:00 app[web.1]:   Parameters: {"id"=>"2"}
+2012-08-23T11:53:00+00:00 app[web.1]:   Rendered resources/_form.html.erb (15.3ms)
+2012-08-23T11:53:00+00:00 app[web.1]:   Rendered resources/edit.html.erb within layouts/application (16.3ms)
+2012-08-23T11:53:00+00:00 heroku[router]: GET ohiocreditflexibility.org/resources/2/edit dyno=web.1 queue=0 wait=0ms service=42ms status=200 bytes=3610
+2012-08-23T11:53:00+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.8ms)
+2012-08-23T11:53:00+00:00 app[web.1]: Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 2.4ms)
+2012-08-23T11:53:01+00:00 app[web.1]:
+2012-08-23T11:53:01+00:00 app[web.1]:
+2012-08-23T11:53:01+00:00 app[web.1]: Started PUT "/resources/2" for 141.101.70.189 at 2012-08-23 11:53:01 +0000
+2012-08-23T11:53:01+00:00 app[web.1]:   Parameters: {"utf8"=>"G£ô", "authenticity_token"=>"FywZxxPT2w1F8KbVZkvjhnJFZeNPy4NXeoqAqDdUA4Y=", "resource"=>{"category"=>"District_form",
+"county"=>"Franklin", "district"=>"Hamilton Township", "url"=>"http://bnbrumzilaop.com/", "description"=>"sAYguQ  <a href=\"http://wpvkuborlkac.com/\">wpvkuborlkac</a>"}, "commit"=
+>"Update Resource", "id"=>"2"}
+2012-08-23T11:53:01+00:00 app[web.1]: Processing by ResourcesController#update as HTML
+2012-08-23T11:53:01+00:00 app[web.1]: Redirected to http://ohiocreditflexibility.org/resources/2
+2012-08-23T11:53:01+00:00 app[web.1]: Completed 302 Found in 103ms (ActiveRecord: 18.1ms)
+2012-08-23T11:53:01+00:00 heroku[router]: POST ohiocreditflexibility.org/resources/2 dyno=web.1 queue=0 wait=0ms service=120ms status=302 bytes=110
+2012-08-23T11:53:01+00:00 heroku[nginx]: 141.101.70.189 - - [23/Aug/2012:11:53:00 +0000] "GET /resources/2/edit HTTP/1.1" 200 1597 "-" "Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.
+01" ohiocreditflexibility.org
+2012-08-23T11:53:01+00:00 heroku[nginx]: 141.101.70.189 - - [23/Aug/2012:11:53:01 +0000] "POST /resources/2 HTTP/1.1" 302 110 "http://ohiocreditflexibility.org/resources/2/edit" "M
+ozilla/5.0 (Windows NT 5.1; U; en) Opera 8.01" ohiocreditflexibility.org
+2012-08-23T11:53:02+00:00 app[web.1]:
+2012-08-23T11:53:02+00:00 app[web.1]: Started GET "/resources/2" for 141.101.70.189 at 2012-08-23 11:53:02 +0000
+2012-08-23T11:53:02+00:00 app[web.1]:
+2012-08-23T11:53:02+00:00 app[web.1]: Processing by ResourcesController#show as HTML
+2012-08-23T11:53:02+00:00 app[web.1]:   Parameters: {"id"=>"2"}
+2012-08-23T11:53:02+00:00 app[web.1]:   Rendered shared/_header.html.erb (12.8ms)
+2012-08-23T11:53:02+00:00 app[web.1]:   Rendered resources/show.html.erb within layouts/application (1.2ms)
+2012-08-23T11:53:02+00:00 app[web.1]: Completed 200 OK in 58ms (Views: 16.3ms | ActiveRecord: 40.1ms)
+2012-08-23T11:53:02+00:0
+0 heroku[nginx]: 141.101.70.189 - - [23/Aug/2012:11:53:02 +0000] "GET /resources/2 HTTP/1.1" 200 1175 "http://ohiocreditflexibility.org/resources/2/edit" "Mozilla/5.0 (Windows NT 5
+.1; U; en) Opera 8.01" ohiocreditflexibility.org
+2012-08-23T11:53:02+00:00 heroku[router]: GET ohiocreditflexibility.org/resources/2 dyno=web.1 queue=0 wait=0ms service=88ms status=200 bytes=2144
+2012-08-23T11:53:02+00:00 app[web.1]:
+2012-08-23T11:53:02+00:00 app[web.1]:
+2012-08-23T11:53:02+00:00 app[web.1]: Started GET "/resources/2" for 141.101.70.189 at 2012-08-23 11:53:02 +0000
+2012-08-23T11:53:02+00:00 app[web.1]: Processing by ResourcesController#show as HTML
+2012-08-23T11:53:02+00:00 app[web.1]:   Parameters: {"id"=>"2"}
+2012-08-23T11:53:02+00:00 app[web.1]:   Rendered resources/show.html.erb within layouts/application (0.9ms)
+2012-08-23T11:53:02+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.7ms)
+2012-08-23T11:53:02+00:00 app[web.1]: Completed 200 OK in 11ms (Views: 3.1ms | ActiveRecord: 6.3ms)
+2012-08-23T11:53:02+00:00 heroku[nginx]: 141.101.70.189 - - [23/Aug/2012:11:53:02 +0000] "GET /resources/2 HTTP/1.1" 200 1122 "-" "Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.01" o
+hiocreditflexibility.org
+2012-08-23T11:53:02+00:00 heroku[router]: GET ohiocreditflexibility.org/resources/2 dyno=web.1 queue=0 wait=0ms service=27ms status=200 bytes=2144
+2012-08-23T12:57:24+00:00 heroku[web.1]: Idling
+2012-08-23T12:57:26+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2012-08-23T12:57:26+00:00 app[web.1]: [2012-08-23 12:57:26] ERROR SignalException: SIGTERM
+2012-08-23T12:57:26+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2012-08-23T12:57:36+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+2012-08-23T12:57:36+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2012-08-23T12:57:38+00:00 heroku[web.1]: Process exited with status 137
+2012-08-23T12:57:38+00:00 heroku[web.1]: State changed from up to down
+2012-08-23T12:57:38+00:00 heroku[web.1]: State changed from down to starting
+2012-08-23T12:57:42+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 13484`
+2012-08-23T12:57:55+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out
+ and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrai
+ls.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-08-23T12:57:55+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out
+ and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrai
+ls.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-08-23T12:57:58+00:00 app[web.1]: => Booting WEBrick
+2012-08-23T12:57:58+00:00 app[web.1]: => Rails 3.2.3 application starting in production on http://0.0.0.0:13484
+2012-08-23T12:57:58+00:00 app[web.1]: => Ctrl-C to shutdown server
+2012-08-23T12:57:58+00:00 app[web.1]: => Call with -d to detach
+2012-08-23T12:58:01+00:00 app[web.1]: /app/app/controllers/resources_controller.rb:54: warning: else without rescue is useless
+2012-08-23T12:58:06+00:00 app[web.1]: [2012-08-23 12:58:06] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+2012-08-23T12:58:06+00:00 app[web.1]: [2012-08-23 12:58:06] INFO  WEBrick::HTTPServer#start: pid=2 port=13484
+2012-08-23T12:58:06+00:00 app[web.1]: [2012-08-23 12:58:06] INFO  WEBrick 1.3.1
+2012-08-23T12:58:07+00:00 heroku[web.1]: State changed from starting to up
+2012-08-23T12:58:08+00:00 app[web.1]: Connected to NewRelic Service at collector-5.newrelic.com
+2012-08-23T13:38:47+00:00 heroku[router]: GET ohiocreditflexibility.org/robots.txt dyno=web.1 queue=0 wait=0ms service=80ms status=200 bytes=204
+2012-08-23T13:38:47+00:00 heroku[nginx]: 108.162.226.124 - - [23/Aug/2012:13:38:47 +0000] "GET /robots.txt HTTP/1.0" 200 204 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww
+w.google.com/bot.html)" ohiocreditflexibility.org
+2012-08-23T13:38:47+00:00 app[web.1]:
+2012-08-23T13:38:47+00:00 app[web.1]:
+2012-08-23T13:38:47+00:00 app[web.1]: Started GET "/courses/20" for 108.162.226.122 at 2012-08-23 13:38:47 +0000
+2012-08-23T13:38:48+00:00 heroku[router]: GET ohiocreditflexibility.org/courses/20 dyno=web.1 queue=0 wait=0ms service=724ms status=200 bytes=3825
+2012-08-23T13:38:48+00:00 app[web.1]: Processing by CoursesController#show as */*
+2012-08-23T13:38:48+00:00 app[web.1]:   Parameters: {"id"=>"20"}
+2012-08-23T13:38:48+00:00 app[web.1]:   Rendered courses/show.html.erb within layouts/courses (215.2ms)
+2012-08-23T13:38:48+00:00 app[web.1]:   Rendered courses/_comments.html.erb (10.3ms)
+2012-08-23T13:38:48+00:00 app[web.1]:   Rendered shared/_header.html.erb (1.7ms)
+2012-08-23T13:38:48+00:00 app[web.1]: Completed 200 OK in 543ms (Views: 325.6ms | ActiveRecord: 91.8ms)
+2012-08-23T13:38:48+00:00 heroku[nginx]: 108.162.226.122 - - [23/Aug/2012:13:38:48 +0000] "GET /courses/20 HTTP/1.1" 200 1904 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://w
+ww.google.com/bot.html)" ohiocreditflexibility.org
+2012-08-23T14:46:06+00:00 heroku[web.1]: Idling
+2012-08-23T14:46:09+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2012-08-23T14:46:10+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2012-08-23T14:46:10+00:00 app[web.1]: [2012-08-23 14:46:10] ERROR SignalException: SIGTERM
+2012-08-23T14:46:20+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+2012-08-23T14:46:20+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2012-08-23T14:46:22+00:00 heroku[web.1]: Process exited with status 137
+2012-08-23T14:46:22+00:00 heroku[web.1]: State changed from up to down
+2012-08-23T15:28:13+00:00 heroku[web.1]: Unidling
+2012-08-23T15:28:13+00:00 heroku[web.1]: State changed from down to starting
+2012-08-23T15:28:18+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 12157`
+2012-08-23T15:28:29+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out
+ and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrai
+ls.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-08-23T15:28:29+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out
+ and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrai
+ls.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-08-23T15:28:32+00:00 app[web.1]: => Rails 3.2.3 application starting in production on http://0.0.0.0:12157
+2012-08-23T15:28:32+00:00 app[web.1]: => Booting WEBrick
+2012-08-23T15:28:32+00:00 app[web.1]: => Call with -d to detach
+2012-08-23T15:28:32+00:00 app[web.1]: => Ctrl-C to shutdown server
+2012-08-23T15:28:35+00:00 app[web.1]: /app/app/controllers/resources_controller.rb:54: warning: else without rescue is useless
+2012-08-23T15:28:37+00:00 app[web.1]: [2012-08-23 15:28:37] INFO  WEBrick 1.3.1
+2012-08-23T15:28:37+00:00 app[web.1]: [2012-08-23 15:28:37] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+2012-08-23T15:28:37+00:00 app[web.1]: [2012-08-23 15:28:37] INFO  WEBrick::HTTPServer#start: pid=2 port=12157
+2012-08-23T15:28:38+00:00 heroku[web.1]: State changed from starting to up
+2012-08-23T15:28:40+00:00 app[web.1]:
+2012-08-23T15:28:40+00:00 app[web.1]:
+2012-08-23T15:28:40+00:00 app[web.1]: Started GET "/projects" for 141.101.88.54 at 2012-08-23 15:28:40 +0000
+2012-08-23T15:28:40+00:00 app[web.1]:   Rendered projects/index.html.erb within layouts/projects (387.9ms)
+2012-08-23T15:28:40+00:00 heroku[router]: GET ohiocreditflexibility.org/projects dyno=web.1 queue=0 wait=0ms service=1215ms status=200 bytes=9890
+2012-08-23T15:28:40+00:00 app[web.1]: Processing by ProjectsController#index as */*
+2012-08-23T15:28:40+00:00 app[web.1]:   Rendered shared/_header.html.erb (1.7ms)
+2012-08-23T15:28:40+00:00 app[web.1]: Completed 200 OK in 562ms (Views: 476.4ms | ActiveRecord: 67.9ms)
+2012-08-23T15:28:40+00:00 heroku[nginx]: 141.101.88.54 - - [23/Aug/2012:15:28:40 +0000] "GET /projects HTTP/1.1" 200 3059 "-" "Mozilla/5.0 (compatible; AhrefsBot/3.1; +http://ahref
+s.com/robot/)" ohiocreditflexibility.org
+2012-08-23T15:28:42+00:00 app[web.1]: Connected to NewRelic Service at collector-5.newrelic.com
+2012-08-23T16:31:07+00:00 app[web.1]:
+2012-08-23T16:31:07+00:00 app[web.1]:
+2012-08-23T16:31:07+00:00 app[web.1]: Started GET "/requests/10" for 173.245.51.216 at 2012-08-23 16:31:07 +0000
+2012-08-23T16:31:07+00:00 app[web.1]: Processing by RequestsController#show as HTML
+2012-08-23T16:31:07+00:00 app[web.1]:   Parameters: {"id"=>"10"}
+2012-08-23T16:31:07+00:00 app[web.1]:   Rendered requests/show.html.erb within layouts/requests (109.0ms)
+2012-08-23T16:31:07+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.8ms)
+2012-08-23T16:31:07+00:00 app[web.1]: Completed 200 OK in 191ms (Views: 93.8ms | ActiveRecord: 48.3ms)
+2012-08-23T16:31:07+00:00 heroku[router]: GET ohiocreditflexibility.org/requests/10 dyno=web.1 queue=0 wait=0ms service=204ms status=200 bytes=4988
+2012-08-23T16:31:07+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:07 +0000] "GET /requests/10 HTTP/1.1" 200 4988 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1
+; SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:08+00:00 app[web.1]:
+2012-08-23T16:31:08+00:00 app[web.1]:
+2012-08-23T16:31:08+00:00 app[web.1]: Started POST "/responses" for 173.245.51.216 at 2012-08-23 16:31:08 +0000
+2012-08-23T16:31:08+00:00 app[web.1]: Processing by ResponsesController#create as HTML
+2012-08-23T16:31:08+00:00 app[web.1]:   Parameters: {"utf8"=>"G£ô", "authenticity_token"=>"HZvUIRSlE/zilt26p5w6Hn/5dB90WmkN9PzZuaa/RFI=", "response"=>{"request_id"=>"10", "user_id"
+=>"8", "body"=>"There are several ways to tone your ctayrsl tuning fork. for the softest sound, tap tuning forks on a hard muscle such as the palm of your hand.Oscilent offer a ful
+l range of industry standard Surface Mount and Through Hole Ceramic Resonators both with and without internal capacitors. For standard Operating Temperatures (-20 C to 80 C). Fitte
+d with temperature controlled cystal oscillator * 50Hz   40MHz (1 Meg Ohm) * 10MHz   2.8GHz (50 Ohm) * Sens:<1mV @ 150MHz * Display: 10 digit LCD * Interface: CI-V * Supply: Int Ni
+-Cads * Battery life: 4-5 Hrs * 65x85x30mmCeramic Resonators provide a viable alternative to Quartz Crystals for oscillation frequency stabilization. Everyone wants cleaner air. Th
+e question is what are we willing to pay for it   collectively and individually   air cleaner. Oscilent is a world-class manufacturer of Frequency Control Produc
+2012-08-23T16:31:08+00:00 app[web.1]: ts, including a
+n innovative and technologically advanced offering of mobile communication devices, TCXO, temperature compensated ctayrsl oscillator,in which, e.g., the output signal from a temper
+ature sensor (e.g., a thermistor) is used to generate a correction voltage that is applied to a variable reactance(e.g., a varactor) in the ctayrsl network.The reactance variations
+ compensate for the ctayrsls f vs. T characteristic. Analog TCXOs can provide about a 20X improvement over the ctayrsls.s are available in a wide variety of packages. The most comm
+on are referenced below and provide a basis for Design Engineers to consider the most common characteristics found incrystal filterproducts. Crystal Filters are available in a wide
+ variety of packages that allow focus on individual Electrical Parameters. We strongly encourage contacting Oscilent Engineering to discuss Oscilent's full capability in Crystal Fi
+lter design and development.Although there are numerous ctayrsl oscillators available on the market, it is i
+2012-08-23T16:31:08+00:00 app[web.1]: Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+2012-08-23T16:31:08+00:00 app[web.1]: mportant to find ctayrsl clock oscillators that are safe and contain no hazardous substances for human to ensure that you could sell your prod
+ucts easily and safely. for consumer electronics. Oscilent has completed the expansion of it s state-of-the art production facility for RF Filter and standard SAW Filter manufactur
+ing. When the first ctayrsl oscillators were built in the 1920s, the only ctayrsls available, such as the X-cut, exhibited poor temperature performance.  The expansion increases pr
+oduction capacity by over 26% overall solidifying Oscilent s position as the fourth largest  production manufacturer in the world. Murata's hybrid ctayrsl resonators now all featur
+e four connection pads on the base, to make them a more direct replacement for quartz.Generally, TCXO's are manufactured according to industry standard guidelines. A  is best viewe
+d as a derivative of a standard Crystal Oscillator. The latest  green  TCXO delivers the performance of an Oven Controlled  (OCXO) with significant reductions in
+2012-08-23T16:31:08+00:00 app[web.1]:  current consumption."}, "commit"=>"Create Response"}
+2012-08-23T16:31:08+00:00 app[web.1]: Redirected to http://ohiocreditflexibility.org/login
+2012-08-23T16:31:08+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:08 +0000] "POST /responses HTTP/1.1" 302 104 "http://ohiocreditflexibility.org/requests/10" "Mozilla/
+4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:08+00:00 heroku[router]: POST ohiocreditflexibility.org/responses dyno=web.1 queue=0 wait=0ms service=123ms status=302 bytes=104
+2012-08-23T16:31:09+00:00 app[web.1]:
+2012-08-23T16:31:09+00:00 app[web.1]:
+2012-08-23T16:31:09+00:00 app[web.1]: Started GET "/login" for 173.245.51.216 at 2012-08-23 16:31:09 +0000
+2012-08-23T16:31:09+00:00 app[web.1]: Processing by SessionsController#new as HTML
+2012-08-23T16:31:09+00:00 app[web.1]:   Rendered sessions/new.html.erb within layouts/application (2.8ms)
+2012-08-23T16:31:09+00:00 app[web.1]:   Rendered shared/_header.html.erb (1.1ms)
+2012-08-23T16:31:09+00:00 app[web.1]: Completed 200 OK in 145ms (Views: 144.5ms | ActiveRecord: 0.0ms)
+2012-08-23T16:31:09+00:00 heroku[router]: GET ohiocreditflexibility.org/login dyno=web.1 queue=0 wait=0ms service=158ms status=200 bytes=2664
+2012-08-23T16:31:09+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:09 +0000] "GET /login HTTP/1.1" 200 2664 "http://ohiocreditflexibility.org/requests/10" "Mozilla/4.0
+(compatible; MSIE 6.0; Windows NT 5.1; SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:09+00:00 app[web.1]:
+2012-08-23T16:31:09+00:00 app[web.1]:
+2012-08-23T16:31:09+00:00 app[web.1]: Started GET "/login" for 173.245.51.216 at 2012-08-23 16:31:09 +0000
+2012-08-23T16:31:09+00:00 heroku[router]: GET ohiocreditflexibility.org/login dyno=web.1 queue=0 wait=0ms service=109ms status=200 bytes=2663
+2012-08-23T16:31:09+00:00 app[web.1]: Processing by SessionsController#new as HTML
+2012-08-23T16:31:09+00:00 app[web.1]:   Rendered sessions/new.html.erb within layouts/application (3.6ms)
+2012-08-23T16:31:09+00:00 app[web.1]:   Rendered shared/_header.html.erb (2.9ms)
+2012-08-23T16:31:09+00:00 app[web.1]: Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+2012-08-23T16:31:09+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:09 +0000] "GET /login HTTP/1.1" 200 2663 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+" ohiocreditflexibility.org
+2012-08-23T16:31:10+00:00 app[web.1]:
+2012-08-23T16:31:10+00:00 app[web.1]:
+2012-08-23T16:31:10+00:00 app[web.1]: Started GET "/requests/10" for 173.245.51.216 at 2012-08-23 16:31:10 +0000
+2012-08-23T16:31:10+00:00 app[web.1]: Processing by RequestsController#show as HTML
+2012-08-23T16:31:10+00:00 app[web.1]:   Rendered requests/show.html.erb within layouts/requests (19.3ms)
+2012-08-23T16:31:10+00:00 app[web.1]: Completed 200 OK in 56ms (Views: 17.9ms | ActiveRecord: 36.0ms)
+2012-08-23T16:31:10+00:00 app[web.1]:   Parameters: {"id"=>"10"}
+2012-08-23T16:31:10+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.9ms)
+2012-08-23T16:31:10+00:00 heroku[router]: GET ohiocreditflexibility.org/requests/10 dyno=web.1 queue=0 wait=0ms service=68ms status=200 bytes=4987
+2012-08-23T16:31:10+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:10 +0000] "GET /requests/10 HTTP/1.1" 200 4987 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1
+; SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:10+00:00 app[web.1]:
+2012-08-23T16:31:10+00:00 app[web.1]:
+2012-08-23T16:31:10+00:00 app[web.1]: Started GET "/requests/" for 173.245.51.216 at 2012-08-23 16:31:10 +0000
+2012-08-23T16:31:10+00:00 app[web.1]: Processing by RequestsController#index as HTML
+2012-08-23T16:31:10+00:00 app[web.1]:   Rendered requests/index.html.erb within layouts/requests (199.4ms)
+2012-08-23T16:31:10+00:00 app[web.1]:   Rendered shared/_header.html.erb (1.0ms)
+2012-08-23T16:31:10+00:00 app[web.1]: Completed 200 OK in 210ms (Views: 166.5ms | ActiveRecord: 41.8ms)
+2012-08-23T16:31:10+00:00 heroku[router]: GET ohiocreditflexibility.org/requests/ dyno=web.1 queue=0 wait=0ms service=220ms status=200 bytes=11918
+2012-08-23T16:31:10+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:10 +0000] "GET /requests/ HTTP/1.1" 200 11918 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;
+ SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:11+00:00 app[web.1]:
+2012-08-23T16:31:11+00:00 app[web.1]:
+2012-08-23T16:31:11+00:00 app[web.1]: Started GET "/signup" for 173.245.51.216 at 2012-08-23 16:31:11 +0000
+2012-08-23T16:31:11+00:00 app[web.1]: Processing by UsersController#new as HTML
+2012-08-23T16:31:11+00:00 app[web.1]:   Rendered users/_form.html.erb (26.7ms)
+2012-08-23T16:31:11+00:00 app[web.1]:   Rendered users/new.html.erb within layouts/application (27.9ms)
+2012-08-23T16:31:11+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.8ms)
+2012-08-23T16:31:11+00:00 app[web.1]: Completed 200 OK in 42ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+2012-08-23T16:31:11+00:00 heroku[router]: GET ohiocreditflexibility.org/signup dyno=web.1 queue=0 wait=0ms service=51ms status=200 bytes=3402
+2012-08-23T16:31:11+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:11 +0000] "GET /signup HTTP/1.1" 200 3402 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1
+)" ohiocreditflexibility.org
+2012-08-23T16:31:11+00:00 app[web.1]:
+2012-08-23T16:31:11+00:00 app[web.1]: Started GET "/" for 173.245.51.216 at 2012-08-23 16:31:11 +0000
+2012-08-23T16:31:11+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]: ActionView::Template::Error (Teacher#avatar? delegated to user.avatar?, but user is nil: #<Teacher id: 6, user_id: nil, district: "OJumsKWanLt
+aEtLTtUp", school: "WjpgBvsdMzkuO", subject: "rRsWKjUtFpSq", specialty: "yaKboLQEJqeuPWNoRJB", bio: "Wow, this is in every respect what I ndeeed to know...", notes: "Wow, this is i
+n every respect what I ndeeed to know...", created_at: "2012-08-23 11:50:52", updated_at: "2012-08-23 11:50:52", first_name: "", last_name: "", title: "">):
+2012-08-23T16:31:12+00:00 app[web.1]:     106: <% @teachers[0..3].each do |teacher| %>
+2012-08-23T16:31:12+00:00 app[web.1]:     107: <div id="teachers_item">
+2012-08-23T16:31:12+00:00 app[web.1]:     108: <div class="item_desc">
+2012-08-23T16:31:12+00:00 app[web.1]:     111:  <%= link_to("more", teacher) %>
+2012-08-23T16:31:12+00:00 app[web.1]:     110:     <%= truncate(teacher.bio, :length => 140, :separator => ' ') %>
+2012-08-23T16:31:12+00:00 app[web.1]:     109:     <b><%= "#{teacher.title} " if teacher.title? %><%= teacher.name %></b><%= image_tag( teacher.avatar.url.to_s, :class => "t_avatar
+") if teacher.avatar? %><br />
+2012-08-23T16:31:12+00:00 app[web.1]:     112:  <p><b>Subject: </b> <%= teacher.subject %></p>
+2012-08-23T16:31:12+00:00 app[web.1]:   app/models/teacher.rb:6:in `rescue in avatar?'
+2012-08-23T16:31:12+00:00 app[web.1]:   app/models/teacher.rb:3:in `avatar?'
+2012-08-23T16:31:12+00:00 app[web.1]:   app/views/lycee/index.html.erb:109:in `block in _app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T16:31:12+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `each'
+2012-08-23T16:31:12+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `_app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T16:31:12+00:00 app[web.1]:   app/controllers/lycee_controller.rb:9:in `index'
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]: Processing by LyceeController#index as HTML
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered lycee/index.html.erb within layouts/application (208.2ms)
+2012-08-23T16:31:12+00:00 app[web.1]: Completed 500 Internal Server Error in 423ms
+2012-08-23T16:31:12+00:00 heroku[router]: GET ohiocreditflexibility.org/ dyno=web.1 queue=0 wait=0ms service=439ms status=500 bytes=728
+2012-08-23T16:31:12+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:12 +0000] "GET / HTTP/1.1" 500 728 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)" ohio
+creditflexibility.org
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]: Started GET "/users/new" for 173.245.51.216 at 2012-08-23 16:31:12 +0000
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered users/_form.html.erb (4.3ms)
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered users/new.html.erb within layouts/application (4.9ms)
+2012-08-23T16:31:12+00:00 app[web.1]: Processing by UsersController#new as HTML
+2012-08-23T16:31:12+00:00 app[web.1]: Completed 200 OK in 20ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.8ms)
+2012-08-23T16:31:12+00:00 heroku[router]: GET ohiocreditflexibility.org/users/new dyno=web.1 queue=0 wait=0ms service=32ms status=200 bytes=3402
+2012-08-23T16:31:12+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:12 +0000] "GET /users/new HTTP/1.1" 200 3402 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;
+SV1)" ohiocreditflexibility.org
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]:
+2012-08-23T16:31:12+00:00 app[web.1]: Started GET "/requests" for 173.245.51.216 at 2012-08-23 16:31:12 +0000
+2012-08-23T16:31:12+00:00 app[web.1]: Processing by RequestsController#index as HTML
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered requests/index.html.erb within layouts/requests (97.2ms)
+2012-08-23T16:31:12+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.9ms)
+2012-08-23T16:31:12+00:00 app[web.1]: Completed 200 OK in 105ms (Views: 88.1ms | ActiveRecord: 16.0ms)
+2012-08-23T16:31:12+00:00 heroku[router]: GET ohiocreditflexibility.org/requests dyno=web.1 queue=0 wait=0ms service=115ms status=200 bytes=11918
+2012-08-23T16:31:12+00:00 heroku[nginx]: 173.245.51.216 - - [23/Aug/2012:16:31:12 +0000] "GET /requests HTTP/1.1" 200 11918 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;
+SV1)" ohiocreditflexibility.org
+2012-08-23T17:05:13+00:00 heroku[router]: GET ohiocreditflexibility.org/robots.txt dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=204
+2012-08-23T17:05:13+00:00 heroku[nginx]: 108.162.231.197 - - [23/Aug/2012:17:05:13 +0000] "GET /robots.txt HTTP/1.1" 200 204 "-" "Mozilla/5.0 (compatible; YandexBot/3.0; +http://ya
+ndex.com/bots)" ohiocreditflexibility.org
+2012-08-23T17:38:15+00:00 app[web.1]:
+2012-08-23T17:38:15+00:00 app[web.1]:
+2012-08-23T17:38:15+00:00 app[web.1]: Started GET "/courses/new" for 108.162.231.90 at 2012-08-23 17:38:15 +0000
+2012-08-23T17:38:15+00:00 app[web.1]: Processing by CoursesController#new as HTML
+2012-08-23T17:38:15+00:00 app[web.1]:   Rendered courses/_form.html.erb (7.0ms)
+2012-08-23T17:38:15+00:00 app[web.1]:   Rendered courses/new.html.erb within layouts/courses (8.4ms)
+2012-08-23T17:38:15+00:00 app[web.1]:   Rendered shared/_header.html.erb (0.8ms)
+2012-08-23T17:38:15+00:00 app[web.1]: Completed 200 OK in 53ms (Views: 16.0ms | ActiveRecord: 35.2ms)
+2012-08-23T17:38:15+00:00 heroku[router]: GET ohiocreditflexibility.org/courses/new dyno=web.1 queue=0 wait=0ms service=63ms status=200 bytes=4770
+2012-08-23T17:38:15+00:00 heroku[nginx]: 108.162.231.90 - - [23/Aug/2012:17:38:15 +0000] "GET /courses/new HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; r
+v:1.9.0.10) Gecko/2009042316 Firefox/3.0.10" ohiocreditflexibility.org
+2012-08-23T17:38:15+00:00 app[web.1]:
+2012-08-23T17:38:15+00:00 app[web.1]:
+2012-08-23T17:38:15+00:00 app[web.1]: Started POST "/courses" for 108.162.231.90 at 2012-08-23 17:38:15 +0000
+2012-08-23T17:38:16+00:00 app[web.1]:
+2012-08-23T17:38:16+00:00 app[web.1]: Sent mail to edjones@openhistoryproject.org (758ms)
+2012-08-23T17:38:16+00:00 app[web.1]:   Parameters: {"utf8"=>"G£ô", "authenticity_token"=>"EniAkT2GtxM8SpTUGlqc80QNx/Ak2qw20J4rcAOz2sc=", "course"=>{"description"=>"well sir very i
+ntresting and also very iapmrtont to know about the geography the brief concept of geography in kannada from you shall bring awareness and its importence to every one not only to s
+tudents and teachers.", "title"=>"yvMCpABQZ", "subject_id"=>"9", "curriculum_url"=>"http://www.facebook.com/profile.php?id=100003406509975", "notes"=>"well sir very intresting and
+also very iapmrtont to know about the geography the brief concept of geography in kannada from you shall bring awareness and its importence to every one not only to students and te
+achers.", "plan_url"=>"http://www.facebook.com/profile.php?id=100003406509975"}, "commit"=>"Create Course"}
+2012-08-23T17:38:16+00:00 app[web.1]: Processing by CoursesController#create as HTML
+2012-08-23T17:38:16+00:00 app[web.1]:   Rendered user_mailer/activity_email.html.erb (0.5ms)
+2012-08-23T17:38:16+00:00 app[web.1]: Redirected to http://ohiocreditflexibility.org/courses/28
+2012-08-23T17:38:16+00:00 app[web.1]: Completed 302 Found in 1034ms (ActiveRecord: 45.9ms)
+2012-08-23T17:38:16+00:00 heroku[nginx]: 108.162.231.90 - - [23/Aug/2012:17:38:16 +0000] "POST /courses HTTP/1.1" 302 109 "http://ohiocreditflexibility.org/courses/new" "Mozilla/5.
+0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10" ohiocreditflexibility.org
+2012-08-23T17:38:16+00:00 heroku[router]: POST ohiocreditflexibility.org/courses dyno=web.1 queue=0 wait=0ms service=1055ms status=302 bytes=109
+2012-08-23T17:38:17+00:00 app[web.1]:
+2012-08-23T17:38:17+00:00 app[web.1]:
+2012-08-23T17:38:17+00:00 app[web.1]: Started GET "/courses/28" for 108.162.231.90 at 2012-08-23 17:38:17 +0000
+2012-08-23T17:38:17+00:00 app[web.1]:
+2012-08-23T17:38:17+00:00 app[web.1]: EOFError (bad content body):
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/multipart/parser.rb:73:in `block in fast_forward_to_first_boundary'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/multipart/parser.rb:70:in `loop'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/multipart/parser.rb:70:in `fast_forward_to_first_boundary'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/multipart/parser.rb:15:in `pa
+rse'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/multipart.rb:25:in `parse_multipart'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/request.rb:338:in `parse_multipart'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/request.rb:201:in `POST'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/http/request.rb:231:in `POST'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/http/parameters.rb:10:in `parameters'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/http/filter_parameters.rb:33:in `filtered_parameters'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.4.0.1/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/abstract_controller/base.rb:121:in `process'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:45:in `process'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_controller/metal.rb:203:in `dispatch'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_controller/metal.rb:246:in `block in action'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:73:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:36:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:600:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.4.0.1/lib/new_relic/rack/browser_monitoring.rb:12:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/flash.rb:242:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.3/lib/active_record/query_cache.rb:64:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `_run__328840433319227186__call__959853049120696836
+__callbacks'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `__run_callback'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/rack/logger.rb:26:in `call_app'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/rack/logger.rb:16:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.3/lib/action_dispatch/middleware/static.rb:62:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/engine.rb:479:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/application.rb:220:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/static.rb:66:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.3/lib/rails/rack/log_tailer.rb:14:in `call'
+2012-08-23T17:38:17+00:00 heroku[router]: GET ohiocreditflexibility.org/courses/28 dyno=web.1 queue=0 wait=0ms service=11ms status=500 bytes=728
+2012-08-23T17:38:17+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+2012-08-23T17:38:17+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+2012-08-23T17:38:17+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+2012-08-23T17:38:17+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+2012-08-23T17:38:17+00:00 app[web.1]:
+2012-08-23T17:38:17+00:00 app[web.1]:
+2012-08-23T17:38:17+00:00 heroku[nginx]: 108.162.231.90 - - [23/Aug/2012:17:38:17 +0000] "GET /courses/28 HTTP/1.1" 500 728 "http://ohiocreditflexibility.org/courses/new" "Mozilla/
+5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10" ohiocreditflexibility.org
+2012-08-23T18:23:51+00:00 heroku[router]: GET ohiocreditflexibility.org/assets/creditflex-1b73248c69b774a8aad5f6668c02a344.png dyno=web.1 queue=0 wait=0ms service=11ms status=200 b
+ytes=69794
+2012-08-23T18:23:51+00:00 heroku[nginx]: 173.245.55.235 - - [23/Aug/2012:18:23:51 +0000] "GET /assets/creditflex-1b73248c69b774a8aad5f6668c02a344.png HTTP/1.0" 200 69794 "-" "Mozil
+la/5.0 (Windows NT 6.0; rv:14.0) Gecko/20120713 Thunderbird/14.0 Lightning/1.6" ohiocreditflexibility.org
+2012-08-23T18:24:17+00:00 app[web.1]:
+2012-08-23T18:24:17+00:00 app[web.1]:
+2012-08-23T18:24:17+00:00 app[web.1]: Started GET "/" for 108.162.216.235 at 2012-08-23 18:24:17 +0000
+2012-08-23T18:24:17+00:00 app[web.1]:
+2012-08-23T18:24:17+00:00 app[web.1]:     107: <div id="teachers_item">
+2012-08-23T18:24:17+00:00 app[web.1]:     109:     <b><%= "#{teacher.title} " if teacher.title? %><%= teacher.name %></b><%= image_tag( teacher.avatar.url.to_s, :class => "t_avatar
+") if teacher.avatar? %><br />
+2012-08-23T18:24:17+00:00 app[web.1]:   app/models/teacher.rb:6:in `rescue in avatar?'
+2012-08-23T18:24:17+00:00 app[web.1]:     110:     <%= truncate(teacher.bio, :length => 140, :separator => ' ') %>
+2012-08-23T18:24:17+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `_app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T18:24:17+00:00 app[web.1]:     111:  <%= link_to("more", teacher) %>
+2012-08-23T18:24:17+00:00 app[web.1]:     106: <% @teachers[0..3].each do |teacher| %>
+2012-08-23T18:24:17+00:00 app[web.1]: ActionView::Template::Error (Teacher#avatar? delegated to user.avatar?, but user is nil: #<Teacher id: 6, user_id: nil, district: "OJumsKWanLt
+aEtLTtUp", school: "WjpgBvsdMzkuO", subject: "rRsWKjUtFpSq", specialty: "yaKboLQEJqeuPWNoRJB", bio: "Wow, this is in every respect what I ndeeed to know...", notes: "Wow, this is i
+n every respect what I ndeeed to know...", created_at: "2012-08-23 11:50:52", updated_at: "2012-08-23 11:50:52", first_name: "", last_name: "", title: "">):
+2012-08-23T18:24:17+00:00 app[web.1]:     112:  <p><b>Subject: </b> <%= teacher.subject %></p>
+2012-08-23T18:24:17+00:00 app[web.1]:     108: <div class="item_desc">
+2012-08-23T18:24:17+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `each'
+2012-08-23T18:24:17+00:00 app[web.1]:   app/controllers/lycee_controller.rb:9:in `index'
+2012-08-23T18:24:17+00:00 app[web.1]:
+2012-08-23T18:24:17+00:00 app[web.1]: Completed 500 Internal Server Error in 57ms
+2012-08-23T18:24:17+00:00 app[web.1]:   app/models/teacher.rb:3:in `avatar?'
+2012-08-23T18:24:17+00:00 app[web.1]:   app/views/lycee/index.html.erb:109:in `block in _app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T18:24:17+00:00 app[web.1]:
+2012-08-23T18:24:17+00:00 app[web.1]:   Rendered lycee/index.html.erb within layouts/application (26.6ms)
+2012-08-23T18:24:17+00:00 app[web.1]: Processing by LyceeController#index as HTML
+2012-08-23T18:24:17+00:00 heroku[nginx]: 108.162.216.235 - - [23/Aug/2012:18:24:17 +0000] "GET / HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Windows NT 6.0; rv:14.0) Gecko/20100101 Firefox
+/14.0.1" www.creditflexibility.org
+2012-08-23T18:24:17+00:00 heroku[router]: GET www.creditflexibility.org/ dyno=web.1 queue=0 wait=0ms service=86ms status=500 bytes=728
+2012-08-23T18:24:17+00:00 heroku[router]: GET www.creditflexibility.org/favicon.ico dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=0
+2012-08-23T18:24:17+00:00 heroku[nginx]: 108.162.216.134 - - [23/Aug/2012:18:24:17 +0000] "GET /favicon.ico HTTP/1.0" 200 0 "-" "Mozilla/5.0 (Windows NT 6.0; rv:14.0) Gecko/2010010
+1 Firefox/14.0.1" www.creditflexibility.org
+2012-08-23T18:24:27+00:00 app[web.1]: Started GET "/" for 173.245.55.176 at 2012-08-23 18:24:27 +0000
+2012-08-23T18:24:27+00:00 app[web.1]:
+2012-08-23T18:24:27+00:00 app[web.1]:
+2012-08-23T18:24:27+00:00 app[web.1]:
+2012-08-23T18:24:27+00:00 app[web.1]: ActionView::Template::Error (Teacher#avatar? delegated to user.avatar?, but user is nil: #<Teacher id: 6, user_id: nil, district: "OJumsKWanLt
+aEtLTtUp", school: "WjpgBvsdMzkuO", subject: "rRsWKjUtFpSq", specialty: "yaKboLQEJqeuPWNoRJB", bio: "Wow, this is in every respect what I ndeeed to know...", notes: "Wow, this is i
+n every respect what I ndeeed to know...", created_at: "2012-08-23 11:50:52", updated_at: "2012-08-23 11:50:52", first_name: "", last_name: "", title: "">):
+2012-08-23T18:24:27+00:00 app[web.1]:     106: <% @teachers[0..3].each do |teacher| %>
+2012-08-23T18:24:27+00:00 app[web.1]:     107: <div id="teachers_item">
+2012-08-23T18:24:27+00:00 app[web.1]:     108: <div class="item_desc">
+2012-08-23T18:24:27+00:00 app[web.1]:     109:     <b><%= "#{teacher.title} " if teacher.title? %><%= teacher.name %></b><%= image_tag( teacher.avatar.url.to_s, :class => "t_avatar
+") if teacher.avatar? %><br />
+2012-08-23T18:24:27+00:00 app[web.1]:     110:     <%= truncate(teacher.bio, :length => 140, :separator => ' ') %>
+2012-08-23T18:24:27+00:00 app[web.1]:     111:  <%= link_to("more", teacher) %>
+2012-08-23T18:24:27+00:00 app[web.1]:   app/models/teacher.rb:6:in `rescue in avatar?'
+2012-08-23T18:24:27+00:00 app[web.1]:   app/models/teacher.rb:3:in `avatar?'
+2012-08-23T18:24:27+00:00 app[web.1]:     112:  <p><b>Subject: </b> <%= teacher.subject %></p>
+2012-08-23T18:24:27+00:00 app[web.1]:   app/views/lycee/index.html.erb:109:in `block in _app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T18:24:27+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `each'
+2012-08-23T18:24:27+00:00 app[web.1]:   app/views/lycee/index.html.erb:106:in `_app_views_lycee_index_html_erb__4146585693575765111_40170740'
+2012-08-23T18:24:27+00:00 app[web.1]:   app/controllers/lycee_controller.rb:9:in `index'
+2012-08-23T18:24:27+00:00 app[web.1]:
+2012-08-23T18:24:27+00:00 app[web.1]:
+2012-08-23T18:24:27+00:00 app[web.1]: Processing by LyceeController#index as HTML
+2012-08-23T18:24:27+00:00 app[web.1]:   Rendered lycee/index.html.erb within layouts/application (84.7ms)
+2012-08-23T18:24:27+00:00 app[web.1]: Completed 500 Internal Server Error in 100ms
+2012-08-23T18:24:27+00:00 heroku[router]: GET creditflexibility.org/ dyno=web.1 queue=0 wait=0ms service=107ms status=500 bytes=728
+2012-08-23T18:24:27+00:00 heroku[nginx]: 173.245.55.176 - - [23/Aug/2012:18:24:27 +0000] "GET / HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Windows NT 6.0; rv:14.0) Gecko/20100101 Firefox/
+14.0.1" creditflexibility.org
+
+C:\Users\Ed\webapps\creditflex>
