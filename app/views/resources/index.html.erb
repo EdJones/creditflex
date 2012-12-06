@@ -66,12 +66,19 @@ This area will contain a sortable list of district-by district plans, forms, and
 	<%= resource.district %>
     <p><%= resource.description %></p>
     <%# resource.author_id %><%# resource.viewed %>
-	<%= link_to 'more', resource %>
+	<%= link_to 'more', resource %><br />
+	<% if can? :manage, resource %>
+		<%= link_to 'Edit', edit_resource_path(resource) %>
+		<%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></p>
+	<% end %>
 	</div>
 
 <% end %>
 
 
 <br />
-
+<% if can? :create, Resource %>
 <%= link_to 'New Resource', new_resource_path %>
+<% else %>
+<%= link_to("Log in", login_path) %> to add a resource.
+	<% end %>
