@@ -1,5 +1,8 @@
 Creditflex::Application.routes.draw do
 
+  resources :wishes
+
+
   resources :comments
 
   mount Ckeditor::Engine => '/ckeditor'

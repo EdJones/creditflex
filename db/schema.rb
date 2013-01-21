@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120321165348) do
+ActiveRecord::Schema.define(:version => 20130121112750) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -55,6 +55,17 @@ ActiveRecord::Schema.define(:version => 20120321165348) do
     t.string   "curriculum_url"
     t.string   "course_image"
     t.boolean  "hqt",            :default => false
+  end
+
+  create_table "flex_credits", :force => true do |t|
+    t.string   "title"
+    t.string   "subject"
+    t.integer  "creator_id"
+    t.text     "achievement"
+    t.integer  "init_credits"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "user_id"
   end
 
   create_table "portfolios", :force => true do |t|
@@ -219,5 +230,12 @@ ActiveRecord::Schema.define(:version => 20120321165348) do
   add_index "votings", ["voteable_type", "voteable_id", "voter_type", "voter_id"], :name => "unique_voters", :unique => true
   add_index "votings", ["voteable_type", "voteable_id"], :name => "index_votings_on_voteable_type_and_voteable_id"
   add_index "votings", ["voter_type", "voter_id"], :name => "index_votings_on_voter_type_and_voter_id"
+
+  create_table "wishes", :force => true do |t|
+    t.string   "wish"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end
