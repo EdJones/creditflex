@@ -1,15 +1,19 @@
+<div class="content_course_outer">
+<div class="content_course_inner">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Wish:</b>
-  <%= @wish.wish %>
-</p>
 
 <p>
-  <b>User:</b>
-  <%= @wish.user_id %>
+  <b>You want to learn:</b><br />
+  <div class="wish_title"><%= @wish.wish %></div>
 </p>
+<div>
+<%=link_to("Look at what others are doing.", lycee_path, :id => "add_project", :class => "add_button") %>
+</div><p><br /></p>
+<link_to("Start designing your challenge.", challenge_path,  :class => "add_button") class="add_button">Start designing your challenge.</span>
 
 
+</div><div>
 <%= link_to 'Edit', edit_wish_path(@wish) %> |
 <%= link_to 'Back', wishes_path %>
+</div>
