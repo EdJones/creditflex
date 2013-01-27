@@ -1,5 +1,11 @@
 Creditflex::Application.routes.draw do
 
+  resources :badges
+
+
+  resources :challenges
+
+
   resources :wishes
 
 

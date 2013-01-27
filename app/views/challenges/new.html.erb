@@ -1,0 +1,131 @@
+<script>
+quarterBadge = '<img src="<%= asset_path("badges/quarter.png")%>", class="challenge_badge" >';
+halfBadge = '<img src="<%= asset_path("badges/half.png")%>", class="challenge_badge" >';
+fullBadge = '<img src="<%= asset_path("badges/full.png")%>", class="challenge_badge" >';
+partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challenge_badge" >';
+</script> 
+<div class="content1">
+<div class="content_course_inner">
+<h3>New challenge</h3>
+
+
+  <b>You want to learn:</b><br />
+  <div class="wish_title"><%= @wish.wish %></div>
+  <%= link_to("Add an image for your challenge", new_challenge_path, :id => "add_image", :class => "") %>
+</p>
+<div id="challenge">
+<div id="badge_holder">
+</div>
+<div id="challenge_options">
+<br />
+<br />
+<%= link_to("I found a badge I'd like to earn and get credit for.", new_badge_path, :id => "add_badge", :class => "b_button") %>
+<p><br /></p>
+<%# link_to("I have my own ideas about what to do.", new_challenge_path, :id => "add_project", :class => "b_button") %>
+
+<button type="button", onclick="displayChallenge()", class="b_button" >I have my own ideas about what to do.</button>
+</div>
+
+<div id="credit_amount" class="challenge_details" >
+<p>Great! Let's get going.</p>
+
+<p><label for="cf_credit_value">How much credit will you earn?</label><br />
+		<input type = "radio"
+                 name = "cf_credit_value"
+                 id = "quarter"
+                 value = "quarter"
+                 checked = "TRUE" />
+          <label for = "planYes">1/4 credit</label>
+		<input type = "radio"
+                 name = "cf_credit_value"
+                 id = "half"
+                 value = "half"
+                  />
+          <label for = "planNo">1/2 credit</label>
+		<input type = "radio"
+                 name = "cf_credit_value"
+                 id = "full"
+                 value = "full"
+                  />
+          <label for = "planNo">Full year</label> <br />		  		
+		<input type = "radio"
+                 name = "cf_credit_value"
+                 id = "partial"
+                 value = "partial"
+                  />
+          <label for = "planNo">Activity, lesson, unit</label>
+            </p> 
+   <button type="button", onclick="challengeView2()", class="c_button" >Next</button> 
+</div>
+
+<div id="challenge_view2" class="challenge_details2" >
+		<label for="goals">Rad. Here's a draft badge for you.<p>Tell more about your course/challenge/project/experience. 1-5 paragraphs should do. (You can always edit this later.)</label></p>
+        <textarea name="goals" rows="8" cols="57">
+
+</textarea> 
+<button type="button", onclick="challengeView3()", class="c_button" >Next</button>
+
+</div>
+
+<div id="challenge_view3" class="challenge_details" >
+		<p>K! You're on your way!
+			</p>
+   			<label for="subject">Is this for a specific academic Subject? (It's cool if you don't have one.)</label>
+            <select id="subject">
+                <option value="1">Art</option>
+                <option value="2">Music</option>
+                <option value="3">Science</option>
+                <option value="4">Social Studies</option>
+                <option value="5">Language Arts</option>
+                <option value="6">Foreign Language</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">Other/None</option>
+            </select>
+<button type="button", onclick="challengeView4()", class="c_button" >Next</button>
+
+</div>
+
+<div id="challenge_view4" class="challenge_details" >
+<label for="needs">What will you need for this challenge? <p>Is it an online class? A series of experiments? What will you need to buy or borrow or beg?</p> 
+	<p>Who or what type of people will you need to get help from?(Again, you can change this later).</p> </label>
+			  <br >
+             <textarea name="needs" rows="4" cols="50">
+			</textarea>
+<button type="button", onclick="challengeView5()", class="c_button" >Next</button> 
+</div>
+
+<div id="challenge_view5" class="challenge_details" >
+<label for="goals">Last item! <p>List specific goals you'll need to achieve. You'll perhaps make these more detailed in your plan; or maybe your goals are simply "Get A in online course. 
+</p>
+<p>Or maybe you'll need to complete 4 of 6 badgtes in a series.<p>
+<p>This is just to get you thinking. You can change it all later.</p> 
+	<p>Who or what type of people will you need to get help from?(Again, you can change this later).</p> </label>
+			  <br > 
+             <textarea name="goals" rows="4" cols="50">
+			</textarea>
+<button type="button", onclick="challengeDone()", class="c_button" >Done</button> 
+</div>
+
+
+<div id="challenge_progress">
+<ul>
+<li id="prog1" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check1") %>Credit Amount</li>
+<li id="prog2" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check2") %>Description</li>
+<li id="prog3" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check3") %>Subject</li>
+<li id="prog4" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check4") %>Needs</li>
+<li id="prog5" class="challenge_progress"></li>
+
+
+</ul>
+</div>
+</div>
+<div id="challenge_form" >
+<%= render 'form' %>
+</div>
+</div>
+<%= link_to 'Back', challenges_path %>
+</div>

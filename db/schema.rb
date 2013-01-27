@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130121112750) do
+ActiveRecord::Schema.define(:version => 20130122204725) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -19,6 +19,24 @@ ActiveRecord::Schema.define(:version => 20130121112750) do
     t.string   "uid",        :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "badges", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "challenges", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "user_id"
+    t.string   "credit"
+    t.string   "badge_name"
+    t.integer  "badge_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "ckeditor_assets", :force => true do |t|

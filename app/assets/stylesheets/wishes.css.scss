@@ -5,4 +5,44 @@
 .wish_title {
 font-size:2em;
 text-align:center;
+ color: #8C1C32;
+    line-height: 26px;
 }
+
+.b_button {
+    background: -moz-linear-gradient(center top , #79BBFF 5%, #378DE5 100%) repeat scroll 0 0 #79BBFF;
+    border: 0px solid #84BBF3;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 0 0 #BBDAF7 inset;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Trebuchet MS;
+    font-size: 11pt;
+    font-weight: normal;
+    padding: 10px 17px;
+    text-decoration: none;
+    text-shadow: 0px 0px 0 #1B4A7A;
+	width:375px;
+	text-align:center;
+}
+.b_button:visited {
+color: #FFFFFF;
+}
+.b_button:hover {
+    background: -moz-linear-gradient(center top , #378DE5 5%, #79BBFF 100%) repeat scroll 0 0 #378DE5;
+}
+.b_button:active {
+    position: relative;
+    top: 1px;
+}
+span:focus {
+    outline: medium none;
+}
+#challenge_options {
+	width:400px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+	margin-bottom:45px;
+	}
