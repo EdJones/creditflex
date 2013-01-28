@@ -5,6 +5,7 @@
 
 #challenge {
 	font-size:medium;
+	height:500px;
 }
 #challenge p {
 	font-size:medium;
@@ -22,7 +23,7 @@
 	margin-right:50px;
 	}
 .challenge_details {
-	margin-top:100px;
+	margin-top:50px;
 	width:400px;
 	margin-left:auto;
 	margin-right:auto;
@@ -57,17 +58,19 @@ color: #FFFFFF;
     top: 1px;
 }
 #challenge_view2 {
-	visibility:hidden;
+	display:none;
 }
 #challenge_view3 {
-	visibility:hidden;
+	display:none;
 }
 #challenge_view4 {
-	visibility:hidden;
+
 	display:none;
 }
 #challenge_view5 {
-	visibility:hidden;
+	display:none;
+}
+#challenge_view6 {
 	display:none;
 }
 .challenge_details2 {
@@ -76,18 +79,25 @@ color: #FFFFFF;
 	margin-left:auto;
 	margin-right:auto;
 }
+p.smaller  {
+	font-size:9px !important;
 
+}
 #challenge_progress {
-	width:700px;
+
+	width:730px;
+	z-index:-500;
+	clear:both;
 	}
 #challenge_progress ul {
-	width:700px;
+	width:730px;
 	}
 .challenge_progress {
-	width:130px;
+	width:110px;
 	background-color:#ffffff;
 	float:left;
-	margin-right:10px;
+	margin-right:0px;
+	margin-bottom:0px;
 	list-style-type:none;
 	height:27px;
 
@@ -95,26 +105,42 @@ color: #FFFFFF;
 }
 #check1 {
 	visibility:hidden;
+	background-color:#50D55D;
 }
 #check2 {
 	visibility:hidden;
+	background-color:#50D55D;
 }
 #check3 {
 	visibility:hidden;
+	background-color:#50D55D;
 }
 #check4 {
 	visibility:hidden;
+	background-color:#50D55D;
 }
 #check5 {
 	visibility:hidden;
+	background-color:#50D55D;
 }
-#prog1 {
-	background-color:#ffffff;
+#check6 {
+	visibility:hidden;
+	background-color:#50D55D;
 }
+
+
 #badge_holder {
 	width:175px;
 	float:right;
 
+}
+#badge_title {
+	font-size:small;
+	text-align:center;
+}
+#badge_subject {
+	font-size:.8em;
+	text-align:center;
 }
 .challenge_badge {
 	width:170px;

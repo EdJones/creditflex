@@ -1,4 +1,5 @@
 <script>
+challengeTitle = '<%= @wish.wish %>'
 quarterBadge = '<img src="<%= asset_path("badges/quarter.png")%>", class="challenge_badge" >';
 halfBadge = '<img src="<%= asset_path("badges/half.png")%>", class="challenge_badge" >';
 fullBadge = '<img src="<%= asset_path("badges/full.png")%>", class="challenge_badge" >';
@@ -15,6 +16,9 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
 </p>
 <div id="challenge">
 <div id="badge_holder">
+<div id="badge_image"></div>
+<div id="badge_title"></div>
+<div id="badge_subject"></div>
 </div>
 <div id="challenge_options">
 <br />
@@ -72,9 +76,9 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
 			</p>
    			<label for="subject">Is this for a specific academic Subject? (It's cool if you don't have one.)</label>
             <select id="subject">
-                <option value="1">Art</option>
-                <option value="2">Music</option>
-                <option value="3">Science</option>
+                <option value="Art">Art</option>
+                <option value="Music">Music</option>
+                <option value="Science">Science</option>
                 <option value="4">Social Studies</option>
                 <option value="5">Language Arts</option>
                 <option value="6">Foreign Language</option>
@@ -99,32 +103,45 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
 </div>
 
 <div id="challenge_view5" class="challenge_details" >
-<label for="goals">Last item! <p>List specific goals you'll need to achieve. You'll perhaps make these more detailed in your plan; or maybe your goals are simply "Get A in online course. 
+<label for="goals">Next-to-Last item! <p>List specific goals you'll need to achieve.<p>
+
+<p class="smaller"> You'll perhaps make these more detailed in your plan; or maybe your goals are simply "Get A in online course." 
 </p>
-<p>Or maybe you'll need to complete 4 of 6 badgtes in a series.<p>
-<p>This is just to get you thinking. You can change it all later.</p> 
-	<p>Who or what type of people will you need to get help from?(Again, you can change this later).</p> </label>
+<p class="smaller">Or maybe you'll need to complete 4 of 6 badges in a series.<p>
+<p class="smaller">This is just to get you thinking. You can change it all later.</p> 
+<p class="smaller">Who or what type of people will you need to get help from?(Again, you can change this later).</p> </label>
+			  <br > 
+             <textarea name="goals" rows="4" cols="50">
+			</textarea>
+<button type="button", onclick="challengeView6()", class="c_button" >Next</button> 
+</div>
+
+
+<div id="challenge_view6" class="challenge_details" >
+<label for="goals">One and you're done. <p>Who will decide if you succeeded? </p>
+
+<p>A teacher, counselor, or administrator at your school must give the final OK. Have you thought about who?<p>
+<p></p> 
+</label>
 			  <br > 
              <textarea name="goals" rows="4" cols="50">
 			</textarea>
 <button type="button", onclick="challengeDone()", class="c_button" >Done</button> 
 </div>
 
-
 <div id="challenge_progress">
 <ul>
-<li id="prog1" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check1") %>Credit Amount</li>
+<li id="prog1" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check1") %>Credit Value</li>
 <li id="prog2" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check2") %>Description</li>
 <li id="prog3" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check3") %>Subject</li>
 <li id="prog4" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check4") %>Needs</li>
-<li id="prog5" class="challenge_progress"></li>
-
-
+<li id="prog5" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check5") %>Milestones</li>
+<li id="prog6" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check6") %>Assessment</li>
 </ul>
 </div>
 </div>
 <div id="challenge_form" >
-<%= render 'form' %>
+<%# render 'form' %>
 </div>
 </div>
 <%= link_to 'Back', challenges_path %>
