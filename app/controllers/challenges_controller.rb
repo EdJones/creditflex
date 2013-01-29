@@ -1,4 +1,7 @@
 class ChallengesController < ApplicationController
+  require 'rubygems'
+  require 'mini_magick'
+
   # GET /challenges
   # GET /challenges.json
   def index
@@ -27,6 +30,26 @@ class ChallengesController < ApplicationController
    @challenge = Challenge.new
 #@wish = Wish.find(params[:id])
 @wish = Wish.find(1)
+
+subject = "Sciencing"
+image = MiniMagick::Image.open("#{Rails.root}/app/assets/images/badges/quarter.png")
+image.combine_options do |c|
+	c.font "helvetica"
+	c.fill "white"
+	c.pointsize '20'
+	c.gravity "center"
+	c.draw "text 0,0 '#{subject}'"
+	end
+image.write  "public/output.jpg"
+
+#variable = "Science"
+
+#mm = MiniMagick::Image.open("#{Rails.root}/app/assets/images/badges/quarter.png")
+  #$mm.combine_options do |c| 
+    #c.gravity 'center' 
+    #c.pointsize '13' 
+    #c.draw "text 33,0 '#{variable}'" 
+  #end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @challenge }
