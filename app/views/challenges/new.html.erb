@@ -6,7 +6,7 @@ fullBadge = '<img src="<%= asset_path("badges/full.png")%>", class="challenge_ba
 partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challenge_badge" >';
 </script> 
 <div class="content1">
-<div class="content_course_inner">
+<div class="content_challenge_inner">
 <h3>New challenge</h3>
 
 
@@ -15,16 +15,23 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
   <%= link_to("Add an image for your challenge", new_challenge_path, :id => "add_image", :class => "") %>
 </p>
 <div id="challenge">
+<div id="rightside">
 <div id="badge_holder">
-<div id="badge_image"></div>
+
 <div id="badge_title"></div>
+<div id="badge_image"></div>
 <div id="badge_subject"></div>
 </div>
+<div id="now_what">
+<button type="button", onclick="displayChallenge()", class="d_button" >Now what?</button>
+</div>
+</div>
+<div id="leftside">
 <div id="challenge_options">
 <br />
 <br />
 <%= link_to("I found a badge I'd like to earn and get credit for.", new_badge_path, :id => "add_badge", :class => "b_button") %>
-<p><br /></p>
+<p></p>
 <%# link_to("I have my own ideas about what to do.", new_challenge_path, :id => "add_project", :class => "b_button") %>
 
 <button type="button", onclick="displayChallenge()", class="b_button" >I have my own ideas about what to do.</button>
@@ -62,7 +69,7 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
    <button type="button", onclick="challengeView2()", class="c_button" >Next</button> 
 </div>
 
-<div id="challenge_view2" class="challenge_details2" >
+<div id="challenge_view2" class="challenge_details" >
 		<label for="goals">Rad. Here's a draft badge for you.<p>Tell more about your course/challenge/project/experience. 1-5 paragraphs should do. (You can always edit this later.)</label></p>
         <textarea name="goals" rows="8" cols="57">
 
@@ -129,6 +136,15 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
 <button type="button", onclick="challengeDone()", class="c_button" >Done</button> 
 </div>
 
+
+<div id="challenge_view_done" class="challenge_details" >
+Congrats. You've got a CF concept!<p>Here's your draft badge:</p>
+<div id="badge_holder_2">
+
+</div>
+</div>
+</div>
+</div>
 <div id="challenge_progress">
 <ul>
 <li id="prog1" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check1") %>Credit Value</li>
@@ -138,7 +154,6 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
 <li id="prog5" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check5") %>Milestones</li>
 <li id="prog6" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check6") %>Assessment</li>
 </ul>
-</div>
 </div>
 <div id="challenge_form" >
 <%# render 'form' %>
