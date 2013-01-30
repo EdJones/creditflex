@@ -1,6 +1,25 @@
 class BadgesController < ApplicationController
   # GET /badges
   # GET /badges.json
+  
+  
+  def assertion
+  @badge = Badge.find(params[:id])
+    assertion = OpenBadges::Assertion.new
+    # You'd probably fill in these values from some `badges` table and
+    # user information
+    assertion.email = "<email>"
+    assertion.issued_on = Time.now
+    assertion.name = @badge.title
+    assertion.description = @badge.description
+    assertion.badge_url = OpenBadges.issuer_url + (badge_path(@badge)).to_s
+    assertion.criteria_url = "http://www.ohiocreditflexibility.org" + (badge_path(@badge)).to_s
+
+    render json: assertion
+  end
+  
+  
+  
   def index
     @badges = Badge.all
 

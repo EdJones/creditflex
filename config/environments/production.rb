@@ -1,6 +1,14 @@
 Creditflex::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  
+  # Mozilla Open Badges
+  config.after_initialize do
+    OpenBadges.issuer_url = "http://www.ohiocreditflexibility.org"
+    OpenBadges.issuer_name = "OhioCreditFlexibility.org"
+  end
+
+  
   # Code is not reloaded between requests
   config.cache_classes = true
 

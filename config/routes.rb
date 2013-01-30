@@ -1,7 +1,10 @@
 Creditflex::Application.routes.draw do
 
-  resources :badges
-
+  resources :badges do
+	member do
+		get 'assertion'
+	end
+  end
 
   resources :challenges
 
