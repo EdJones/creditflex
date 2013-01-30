@@ -67,7 +67,12 @@ document.getElementById("check6").style.visibility="visible";
 document.getElementById("prog6").style.color="#123456";
 document.getElementById("prog6").style.backgroundColor="#50D55D";
 }
+function displayNext()
+{
+document.getElementById("challenge_view_done").style.display="none";
+document.getElementById("execution_view").style.display="block";
 
+}
 
 
 function pickBadge()
