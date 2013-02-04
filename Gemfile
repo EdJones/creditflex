@@ -8,7 +8,7 @@ gem 'rails', '3.2.11'
 
 gem 'open_badges'
 
-gem 'carrierwave'
+gem 'carrierwave', '>= 0.8.0'
 #gem 'rmagick'
 gem 'mini_magick'
 gem 'fog'
