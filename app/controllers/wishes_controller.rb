@@ -2,7 +2,7 @@ class WishesController < ApplicationController
   # GET /wishes
   # GET /wishes.json
   def index
-    @wishes = Wish.all
+    @wishes = Wish.last(4).reverse
 
     respond_to do |format|
       format.html # index.html.erb

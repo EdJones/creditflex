@@ -10,12 +10,15 @@
 <div id="challenge_options">
 <p>Well, don't just sit there wishing...</p>
 
-<%= link_to("Look at what others are doing.", lycee_path, :id => "add_project", :class => "b_button") %>
-<p></p>
+
+
 <%= link_to("Start designing your challenge.", new_challenge_path, :id => "1", :class => "b_button") %>
+<p></p>
+<%= link_to("Not yet. Let's see more of what others are doing.", lycee_path, :id => "add_project", :class => "b_button2") %>
 </div>
 
 </div><div>
 <%= link_to 'Edit', edit_wish_path(@wish) %> |
 <%= link_to 'Back', wishes_path %>
+<%= @wish.user.avatar? %>
 </div>

@@ -1,25 +1,42 @@
-<h1>Listing wishes</h1>
+<div id="content-wishes" class="wrapper">
+<div id="column-1">
+<div id="wish-list">
+<div class="stream_header">
+<h2>What would you master?</h2>
+...for credit in school?
+</div>
+<div class="stream">
 
-<table>
-  <tr>
-    <th>Wish</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @wishes.each do |wish| %>
-  <tr>
-    <td><%= wish.wish %></td>
-    <td><%= wish.user_id %></td>
-    <td><%= link_to 'Show', wish %></td>
-    <td><%= link_to 'Edit', edit_wish_path(wish) %></td>
-    <td><%= link_to 'Destroy', wish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <div class="stream-item">
+  <div class="left-user">
+  <%= image_tag(wish.user.avatar.url, :class => 'avatar-small') if wish.user.avatar? %>&nbsp;
+  </div>
+  <div class="wish">
+    <div class="wish-header"><span class="wisher">
+    <%= wish.user.username if wish.user %>
+	</span></div>
+	<div class="wish-body">
+	<%= wish.wish %>
+	<div class="wish-admin">
+	User: <%= wish.user_id %>
+    <%= link_to 'Show', wish %>
+    <%= link_to 'Edit', edit_wish_path(wish) %>
+    <%= link_to 'Destroy', wish, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</div>
+	</div>
+	<div class="wish-footer">Echo&nbsp;&nbsp;&nbsp;   View Challenge<%# link_to 'View Challenge', challenge_path(wish.challenge) %>
+	</div>
+	</div></div>
 <% end %>
-</table>
 
-<br />
+</div>
 
+
+<div class="stream_footer">
 <%= link_to 'New Wish', new_wish_path %>
+</div>
+</div>
+</div>
+</div>

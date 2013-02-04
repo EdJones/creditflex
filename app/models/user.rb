@@ -3,12 +3,13 @@ class User < ActiveRecord::Base
 #  default_scope where(:role => 'guest')
   #attr_accessible  :username, :email, :password, :password_confirmation, :role, :avatar, :teachers_attributes
   ROLES = %w[admin moderator teacher student banned]
+  has_many :wishes
   has_many :projects
   has_one :teacher
   has_one :student
   has_many :responses
   has_many :comments
-  has_many :resources
+  has_many :rwishes
   
   accepts_nested_attributes_for :student, :allow_destroy => true
   accepts_nested_attributes_for :teacher, :allow_destroy => true
