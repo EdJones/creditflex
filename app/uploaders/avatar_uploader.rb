@@ -16,7 +16,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
     def cache_dir
-    "#{Rails.root}/tmp/uploads"
+    "#{Rails.root}/public/uploads"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -26,12 +26,34 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [50, 50]
-  process :resize_to_fill => [200, 200]
+  
+
+  
+
+	
+
+
+process :resize_to_fill => [200, 200]
+  
+  #process :resize_to_fill => [200, 200]
+  #process :convert => '-alpha set -virtual-pixel transparent \
+   #       -channel A -blur 0x8  -level 50%,100% +channel'
   #
   # def scale(width, height)
   #   # do something
   # end
 
+  # Create rounded corner version of uploaded file:
+   version :rounded do
+       process :resize_to_fill => [50, 50]
+	   process :convert => ['-alpha img -virtual-pixel transparent \
+          -channel A -blur 0x8  -level 50%,100% +channel']
+   end
+  
+
+  
+  
+  
   # Create different versions of your uploaded files:
   # version :thumb do
   #   process :scale => [50, 50]
