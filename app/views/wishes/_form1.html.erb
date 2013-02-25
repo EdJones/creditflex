@@ -1,0 +1,27 @@
+<%= form_for(@wish) do |f| %>
+  <% if @wish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wish.errors.count, "error") %> prohibited this wish from being saved:</h2>
+
+      <ul>
+      <% @wish.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="new-wish">
+
+    <%= f.text_area :wish, :size => "30x4", :placeholder => "I'd learn..." %>
+  </div>
+  <div class="field-hidden">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="flex-button">
+
+    <%= f.submit "Wish!" %>
+
+  </div>
+<% end %>

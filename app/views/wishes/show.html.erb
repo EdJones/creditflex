@@ -12,8 +12,10 @@
 
 
 
-<%= link_to("Start designing your challenge.", new_challenge_path, :id => "1", :class => "b_button") %>
-<p></p>
+<%= link_to("Start designing your challenge.", new_challenge_path(:wish => @wish), :id => "1", :class => "b_button") %>
+<p>
+<%= link_to("I found a badge I'd like to earn and get credit for.", new_badge_path, :id => "add_badge", :class => "b_button") %>
+</p>
 <%= link_to("Not yet. Let's see more of what others are doing.", lycee_path, :id => "add_project", :class => "b_button2") %>
 </div>
 

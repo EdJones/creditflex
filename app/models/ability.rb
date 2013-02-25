@@ -17,6 +17,7 @@ class Ability
 	  can :manage, Project, :student_id => user.id
 	  can :create, Project
 	  can :create, Response
+	  can :create, Resource
 	elsif user.role == 'teacher'
       can :read, :all
 	  cannot :read, User
@@ -24,6 +25,7 @@ class Ability
 	  can :create, Project 
 	  can :create, Comment
 	  can :manage, Request
+	  can :create, Resource
 	elsif user.role == 'moderator'
       can :read, :all
 	  cannot :read, User

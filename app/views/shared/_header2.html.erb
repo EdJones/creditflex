@@ -1,0 +1,25 @@
+<div id="h-bar2">
+<div id="user_nav">
+  
+<% if current_user %>
+    Logged in as <%= current_user.username %>
+    <%= link_to "Log out", logout_path %>
+	<%= link_to("Home", :root, :id => 'user_nav2')  %>
+  <% else %>
+    <%= link_to( "Sign up", signup_path, :id => 'user_nav1') %> <%= link_to("Log in", login_path, :id => 'user_nav2') %>
+  <% end %>
+</div>
+<%= image_tag("creditflex.gif", :id => "diver" ) %>
+<%= link_to(image_tag("creditflex_magneto.png", :id => "logo" ), :root) %>
+</div>
+<div class="message-container">
+<div class="message">
+<div class="flash">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash#{name}" %>
+  <% end %>
+  </div>
+</div>  
+</div>
+
+<div class="clear"></div>

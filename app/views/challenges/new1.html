@@ -12,7 +12,7 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
 
   <b>You want to learn:</b><br />
   <div class="wish_title"><%= @wish.wish %></div>
-  <a href="", id="add_image", onclick="pickChallengeImage()" >Add an image for your challenge</a>
+  <%= link_to("Add an image for your challenge", new_challenge_path, :id => "add_image", :class => "") %>
 </p>
 <div id="challenge">
 <div id="rightside">
@@ -21,67 +21,62 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
 <div id="badge_title"></div>
 <div id="badge_image"></div>
 <div id="badge_subject"></div>
-
 </div>
 <div id="now_what">
 <button type="button", onclick="displayNext()", class="d_button" >Now what?</button>
 </div>
 </div>
 <div id="leftside">
-<div id="challenge_options2">
+<div id="challenge_options">
 <br />
 <br />
-
+<%= link_to("I found a badge I'd like to earn and get credit for.", new_badge_path, :id => "add_badge", :class => "b_button") %>
 <p></p>
 <%# link_to("I have my own ideas about what to do.", new_challenge_path, :id => "add_project", :class => "b_button") %>
 
 <button type="button", onclick="displayChallenge()", class="b_button" >I have my own ideas about what to do.</button>
 </div>
-
-<%= form_for(@challenge) do |f| %>
-  <% if @challenge.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h2>
-
-      <ul>
-      <% @challenge.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-
+<%= form_tag(@challenge, :method => "post") do %>
 <div id="credit_amount" class="challenge_details" >
 <p>Great! Let's get going.</p>
-<div id="hidden_name">
-Challenge name: 
-<%= f.text_field :name %>
-</div>
 
 <p><label for="cf_credit_value">How much credit will you earn?</label><br />
-
-<%= f.radio_button(:credit, "quarter") %>
-<%= label_tag(:credit_quarter, "1/4 credit") %>
-<%= f.radio_button(:credit, "half") %>
-<%= label_tag(:credit_half, "1/2 credit") %>
-<%= f.radio_button(:credit, "full") %>
-<%= label_tag(:credit_full, "full credit") %><br />
-<%= f.radio_button(:credit, "partial") %>
-<%= label_tag(:credit_partial, "partial credit") %>
-
-
-		
+		<input type = "radio"
+                 name = "cf_credit_value"
+                 id = "quarter"
+                 value = "quarter"
+                 checked = "TRUE" />
+          <label for = "planYes">1/4 credit</label>
+		<input type = "radio"
+                 name = "cf_credit_value"
+                 id = "half"
+                 value = "half"
+                  />
+          <label for = "planNo">1/2 credit</label>
+		<input type = "radio"
+                 name = "cf_credit_value"
+                 id = "full"
+                 value = "full"
+                  />
+          <label for = "planNo">Full year</label> <br />		  		
+		<input type = "radio"
+                 name = "cf_credit_value"
+                 id = "partial"
+                 value = "partial"
+                  />
+          <label for = "planNo">Activity, lesson, unit</label>
+            </p> 
    <button type="button", onclick="challengeView2()", class="c_button" >Next</button> 
 </div>
 
 <div id="challenge_view2" class="challenge_details" >
-		<label for="description">Rad. Here's a draft badge for you.<p>Tell more about your course/challenge/project/experience. 1-5 paragraphs should do. (You can always edit this later.)</label></p>
+		<label for="goals">Rad. Here's a draft badge for you.<p>Tell more about your course/challenge/project/experience. 1-5 paragraphs should do. (You can always edit this later.)</label></p>
         
-		<%= f.label :description %><br />
-		<%= f.text_area :description, :size => "50x4" %>
-		
-	<button type="button", onclick="challengeView3()", class="c_button" >Next</button>
+		<%= text_area_tag(:descrption, "My plan is...", :size => "24x6") %>
+		<textarea name="goals" rows="8" cols="57">
+
+</textarea> 
+<button type="button", onclick="challengeView3()", class="c_button" >Next</button>
 
 </div>
 
@@ -90,9 +85,23 @@ Challenge name:
 			</p>
    			<label for="subject">Is this for a specific academic Subject? (It's cool if you don't have one.)</label>
 			
-			<%= f.select( "subject", options_for_select(Subject.all.collect {|p| [ p.name, p.id ] }),:prompt => 'Select Subject' ) %>
+			<%= select_tag( "subject_id", options_for_select(Subject.all.collect {|p| [ p.name, p.id ] }),:prompt => 'Select Subject' ) %>
 			
-	<button type="button", onclick="challengeView4()", class="c_button" >Next</button>
+            <select id="subject">
+                <option value="Art">Art</option>
+                <option value="Music">Music</option>
+                <option value="Science">Science</option>
+                <option value="Social Studies">Social Studies</option>
+                <option value="Language Arts">Language Arts</option>
+                <option value="6">Foreign Language</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">Other/None</option>
+            </select>
+<button type="button", onclick="challengeView4()", class="c_button" >Next</button>
 
 </div>
 
@@ -101,35 +110,36 @@ Challenge name:
 	<p>Who or what type of people will you need to get help from?(Again, you can change this later).</p> </label>
 			  <br >
 			  
-            <%= f.text_area :needs, :size => "50x4" %>
+             <textarea name="needs" rows="4" cols="50">
+			</textarea>
 <button type="button", onclick="challengeView5()", class="c_button" >Next</button> 
 </div>
 
 <div id="challenge_view5" class="challenge_details" >
-<label for="goal">Next-to-Last item! <p>List specific goals you'll need to achieve.<p>
+<label for="goals">Next-to-Last item! <p>List specific goals you'll need to achieve.<p>
 
 <p class="smaller"> You'll perhaps make these more detailed in your plan; or maybe your goals are simply "Get A in online course." 
 </p>
 <p class="smaller">Or maybe you'll need to complete 4 of 6 badges in a series.<p>
 <p class="smaller">This is just to get you thinking. You can change it all later.</p> 
 <p class="smaller">Who or what type of people will you need to get help from?(Again, you can change this later).</p> </label>
-			  
-		
-		<%= f.text_area :goal, :size => "50x4" %>
+			  <br > 
+             <textarea name="goals" rows="4" cols="50">
+			</textarea>
 <button type="button", onclick="challengeView6()", class="c_button" >Next</button> 
 </div>
 
 
 <div id="challenge_view6" class="challenge_details" >
-<label for="teacher">One and you're done. <p>Who will decide if you succeeded? </p>
+<label for="goals">One and you're done. <p>Who will decide if you succeeded? </p>
 
 <p>A teacher, counselor, or administrator at your school must give the final OK. Have you thought about who?<p>
 <p></p> 
 </label>
 			  <br > 
-
-		<%= f.text_area :teacher, :size => "30x2" %>
-<button type="button", onclick="challengeDone()", class="c_button", id="done-button" >Done</button> 
+             <textarea name="goals" rows="4" cols="50">
+			</textarea>
+<button type="button", onclick="challengeDone()", class="c_button" >Done</button> 
 </div>
 
 
@@ -154,11 +164,7 @@ Remember! You must have a teacher or admin's approve your plan!
 
 </div>
 </div>
-  <div id="challenge-save" class="actions">
-    <%= f.submit %>
-  </div>
-
-<%# submit_tag("Save") %>
+<%= submit_tag("Save") %>
 <% end %>
 </div>
 </div>
@@ -172,20 +178,9 @@ Remember! You must have a teacher or admin's approve your plan!
 <li id="prog6" class="challenge_progress"><%= image_tag("checkmark_25.gif", :id => "check6") %>Assessment</li>
 </ul>
 </div>
+<div id="challenge_form" >
+<%# render 'form' %>
+</div>
 </div>
 <%= link_to 'Back', challenges_path %>
 </div>
-
-
-
-
-<div id="select_image">
-
-
-</div>
-
-
-
-
-
-<

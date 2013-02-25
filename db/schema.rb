@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130122204725) do
+ActiveRecord::Schema.define(:version => 20130205151729) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -30,13 +30,19 @@ ActiveRecord::Schema.define(:version => 20130122204725) do
 
   create_table "challenges", :force => true do |t|
     t.string   "name"
-    t.string   "description"
     t.integer  "user_id"
     t.string   "credit"
     t.string   "badge_name"
     t.integer  "badge_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.text     "goal"
+    t.text     "needs"
+    t.text     "detail"
+    t.text     "description"
+    t.string   "subject"
+    t.string   "teacher"
+    t.string   "district"
   end
 
   create_table "ckeditor_assets", :force => true do |t|
@@ -252,8 +258,9 @@ ActiveRecord::Schema.define(:version => 20130122204725) do
   create_table "wishes", :force => true do |t|
     t.string   "wish"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "challenge_id",  :null => false
   end
 
 end

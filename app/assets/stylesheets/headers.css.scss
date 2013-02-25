@@ -36,7 +36,22 @@ body {
     border-bottom: 1px solid #5B97B4;
     height: 86px;
     min-width: 914px;
+
 	
+}
+#h-bar2 {
+    /* background: none repeat scroll 0 0 #324567;
+    border-bottom: 0px none #5B97B4; */
+	background: none repeat scroll 0 0 #ffffff;
+	border-bottom: 0px none #ffffff;
+    height: 96px;
+    min-width: 914px;
+	background-image:url('blue-wave.png');
+	background-repeat:no-repeat;
+}
+.message-container {
+	background-color:#ffffff;
+
 }	
 a#user_nav1  {
 margin-right:100px;

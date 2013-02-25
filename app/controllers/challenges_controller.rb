@@ -29,7 +29,8 @@ class ChallengesController < ApplicationController
   def new
    @challenge = Challenge.new
 #@wish = Wish.find(params[:id])
-@wish = Wish.find(1)
+@wish = Wish.find(params[:wish])
+@challenge.name = @wish.wish
 
 subject = "Sciencing"
 image = MiniMagick::Image.open("#{Rails.root}/app/assets/images/badges/quarter.png")

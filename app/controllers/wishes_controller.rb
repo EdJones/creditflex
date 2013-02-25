@@ -2,13 +2,37 @@ class WishesController < ApplicationController
   # GET /wishes
   # GET /wishes.json
   def index
-    @wishes = Wish.last(4).reverse
-
+    #@wishes = Wish.last(4).reverse
+	@wishes = Wish.all.reverse
+	@projects = Project.all
+	@wish = Wish.new
+	@wish.user_id = 1
+	
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @wishes }
     end
   end
+
+  def show_challenge()
+	#logger.debug "*******************Show_challenge ran****************"
+	#logger.debug "Params[:id]: #{ params[:id] }"
+	#logger.debug "Params[]: #{ params.inspect }"
+	#logger.debug "Object: #{ @object }"
+	#logger.debug "Wish: #{ @wish }"
+	@wish = Wish.find( params[:id] )
+	#	logger.debug "Wish: #{ @wish.inspect }"
+	@challenge = @wish.challenge
+	#	logger.debug "Challenge: #{ @challenge.inspect }"
+    @challenge = @wish.challenge
+	@user = @wish.user
+     respond_to do |format|
+       format.html  # show.html.erb
+       format.js 
+     end
+  end
+
+
 
   # GET /wishes/1
   # GET /wishes/1.json

@@ -1,3 +1,6 @@
+<div class="content1">
+<div class="content_challenge_inner">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -21,6 +24,38 @@
 </p>
 
 <p>
+  <b>Subject:</b>
+  <%= Subject.find(@challenge.subject).name %>
+</p>
+
+
+<p>
+  <b>Description:</b>
+  <%= @challenge.description %>
+</p>
+
+<p>
+  <b>Teacher</b>
+  <%= @challenge.teacher %>
+</p>
+
+<p>
+  <b>Goals:</b>
+  <%= @challenge.goal %>
+</p>
+
+<p>
+  <b>Needs:</b>
+  <%= @challenge.needs %>
+</p>
+
+<p>
+<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
+<%= link_to 'Back', challenges_path %>
+</p>
+----------------------------------------------------------------------------
+
+<p>
   <b>Badge name:</b>
   <%= @challenge.badge_name %>
 </p>
@@ -30,6 +65,5 @@
   <%= @challenge.badge_id %>
 </p>
 
-
-<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
-<%= link_to 'Back', challenges_path %>
+</div>
+</div>

@@ -9,9 +9,11 @@ Creditflex::Application.routes.draw do
   resources :challenges
 
 
-  resources :wishes
-
-
+  resources :wishes do
+	member do
+		get 'show_challenge'
+	end
+	end
   resources :comments
 
   mount Ckeditor::Engine => '/ckeditor'

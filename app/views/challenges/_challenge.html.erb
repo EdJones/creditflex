@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+<b>Wish:</b>
+  <%= @wish.wish %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @challenge.description %>
+</p>
+
+<p>
+  <b>Credit:</b>
+  <%= @challenge.credit %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= Subject.find(@challenge.subject).name %>
+</p>
+
+
+<p>
+  <b>Description:</b>
+  <%= @challenge.description %>
+</p>
+
+
+
+<p>
+  <b>Goals:</b>
+  <%= @challenge.goal %>
+</p>
+<a id="show-challenge-details" >More</a>
+<div id="challenge-show-details">
+--------------------------------------------------------
+<div class="section-title">Needs</div>
+<p>
+  <b>Needs:</b>
+  <%= @challenge.needs %>
+</p>
+<p>
+  <b>Teacher</b>
+  <%= @challenge.teacher if (@wish.user == current_user) %>
+</p>
+
+--------------------------------------------------------
+<div class="section-title">Competency</div>
+<p>
+  <b>Draft badge:</b>
+</p>
+
+<p>
+  <%= @challenge.badge_id %> <br />
+ <%= @challenge.badge_name %>
+</p>
+--------------------------------------------------------
+<div class="section-title">Completed Achievement</div>
+<p>
+&nbsp;
+</p>
+</div>
+
+<div id="challenge-footer">
+
+<div id="challenge-manage">
+
+<%= link_to 'Edit', edit_challenge_path(@challenge) %> <br />
+<%= link_to 'Back', challenges_path %>
+
+</div>
+<div class="challenge-user"><%= image_tag(@wish.user.avatar.url, :class => 'avatar-small') if @wish.user.avatar? %></div>
+<div class="challenge-user"><%= @wish.user.username if @wish.user %></div>
+</div>
+<script>
+$('span#show-challenge-details').click(function(){
+  alert("click");
+   $('div#challenge-show-details').show();
+});
+</script>
