@@ -1,4 +1,6 @@
 class CoursesController < ApplicationController
+load_and_authorize_resource :except => [:index, :show]
+
   respond_to :js, :html
   # GET /courses
   # GET /courses.json
