@@ -272,6 +272,11 @@ p.smaller  {
 	}
 #show-challenge-details	{
 	text-decoration:underline;
+	cursor:default;
+	width:60px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
 	}
 
 #challenge-show-details {
@@ -288,3 +293,24 @@ p.smaller  {
 	display:none;
 	z-level:1000;
   }	
+  
+.challenge-summary {
+	width:400px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:11px;
+
+}  
+.challenge-summary p {
+	margin-top:4px;
+	margin-bottom:4px;
+}
+.badge_holder_3 {
+	width:180px;
+	margin-left:auto;
+	margin-right:auto;
+}
+img.badge_holder_3 {
+	width:90px;
+
+}

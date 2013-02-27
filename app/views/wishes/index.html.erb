@@ -157,6 +157,12 @@ $('span#show-challenge-details').click(function(){
 
 
 $(document).ready(function (){
+
+    $('#modal-close').hover(function(){
+   $('span#modal-close').toggleClass('modal-hover');
+  });
+  
+  
   $('#modal-close').click(function(){
    $('div#modal-container').hide("slow");
   });

@@ -308,11 +308,19 @@ font-size:11px;
 	right:0px;
 	width:18px;
 	font-weight:bold;
-
+	cursor: default;
+	text-align:center;
 }
 #modal-close a:hover {
-	text-style:underline;
+	text-decoration:underline;
 	border-width:1px;
+	cursor: pointer;
+}
+.modal-hover {
+	//text-decoration:underline;
+	border-width:1px;
+	border-style:solid;
+	cursor: pointer;
 }
 #modal-body {
 	position:relative;

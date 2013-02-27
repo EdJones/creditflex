@@ -1,13 +1,34 @@
+<script>
+challengeTitle = '<%= @challenge.name %>'
+quarterBadge = '<img src="<%= asset_path("badges/quarter.png")%>", class="challenge_badge" >';
+halfBadge = '<img src="<%= asset_path("badges/half.png")%>", class="challenge_badge" >';
+fullBadge = '<img src="<%= asset_path("badges/full.png")%>", class="challenge_badge" >';
+
+</script> 
+
 <div class="content1">
 <div class="content_challenge_inner">
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @challenge.name %>
-</p>
 
+
+Challenge underway. <br />
+
+
+  <b>You want to learn:</b><br />
+  <div class="wish_title"><%= @challenge.name %></div>
+  <a href="", id="add_image", onclick="pickChallengeImage()" >Add an image for your challenge</a>
+
+<div  class="challenge_details" >
+Congrats. You've got a CF concept!<p>Here's your draft badge:</p>
+<div class="badge_holder_3">
+<b><%= @challenge.name %></b><br />
+<%= image_tag('badges/' + @challenge.credit + '.png', :class => 'badge_holder_3') %>
+</div>
+</div>
+
+<div class="challenge-summary">
 <p>
   <b>Description:</b>
   <%= @challenge.description %>
@@ -30,12 +51,7 @@
 
 
 <p>
-  <b>Description:</b>
-  <%= @challenge.description %>
-</p>
-
-<p>
-  <b>Teacher</b>
+  <b>Teacher:</b>
   <%= @challenge.teacher %>
 </p>
 
@@ -64,6 +80,6 @@
   <b>Badge:</b>
   <%= @challenge.badge_id %>
 </p>
-
+</div>
 </div>
 </div>
