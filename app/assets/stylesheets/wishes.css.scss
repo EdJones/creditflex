@@ -154,7 +154,7 @@ margin:0 auto;
 .wish {
 	padding-top:5px;
 	padding-left:5px;
-	font-size:11px;
+	font-size:13px;
 	float:left;
 	width:270px;
 	height:54px;
@@ -193,6 +193,7 @@ margin:0 auto;
 .stream_header h2 {
 	margin-top:0px;
 	margin-bottom:3px;
+	color:#FF6600;
 }
 .stream_footer {
 	border-radius: 0 0 6px 6px;
@@ -411,6 +412,31 @@ font-size:11px;
 	font-size:12px !important ;
 	}
 	
-	
-	
-		
+#projects1 {
+	@include rounded-corners(4px);
+	@include box-shadow(0px, 2px, 2px, #666666 );
+	@include gradient(#ffffff, #3d3d3d );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
+	color: #4c4c4c; 
+	margin: 0 auto 24px auto; 
+	overflow: hidden;
+	width:240px;
+
+		}
+.item_desc3 {
+	font-size:11px !important ;
+	}	
+.item_desc3 p {
+	font-size:11px !important ;
+	margin-top:4px;
+	}
+.more1 {
+	color:#ffffff;
+	width:50px;
+	margin-top:-30px;
+	margin-left:auto;
+	margin-right:auto;
+	}	
+.more1 a {
+	color:#ffffff;
+	}
