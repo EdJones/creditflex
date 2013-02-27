@@ -38,7 +38,7 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
 <button type="button", onclick="displayChallenge()", class="b_button" >I have my own ideas about what to do.</button>
 </div>
 
-<%= form_for(@challenge) do |f| %>
+<%= form_for(@challenge)  do |f| %>
   <% if @challenge.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h2>

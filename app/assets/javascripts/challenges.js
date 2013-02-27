@@ -19,6 +19,8 @@ document.getElementById("badge_title").innerHTML= challengeTitle;
 
 document.getElementById("check1").style.visibility="visible";
 document.getElementById("prog1").style.backgroundColor="#50D55D";
+
+
 pickBadge()
 }
 
@@ -31,6 +33,7 @@ document.getElementById("challenge_view3").style.display="block";
 document.getElementById("check2").style.visibility="visible";
 
 document.getElementById("prog2").style.backgroundColor="#50D55D";
+
 }
 function challengeView4()
 {
@@ -39,20 +42,26 @@ badgeSubject = $.get("../subjects/"+subjectNumber+".json", function(subject) {
 //alert(subject["name"]) 
 document.getElementById("badge_subject").innerHTML= subject["name"]});
 document.getElementById("challenge_view3").style.display="none";
+
+
+
 document.getElementById("challenge_view4").style.display="block";
 document.getElementById("check3").style.visibility="visible";
 
 document.getElementById("prog3").style.backgroundColor="#50D55D";
+
 }
 function challengeView5()
 {
 document.getElementById("challenge_view4").style.display="none";
 document.getElementById("challenge_view5").style.display="block";
+
 document.getElementById("check4").style.visibility="visible";
 document.getElementById("prog4").style.backgroundColor="#50D55D";
 }
 function challengeView6()
 {
+
 document.getElementById("challenge_view5").style.display="none";
 document.getElementById("challenge_view6").style.display="block";
 document.getElementById("check5").style.visibility="visible";
@@ -62,6 +71,7 @@ document.getElementById("prog5").style.backgroundColor="#50D55D";
 }
 function challengeDone()
 {
+document.getElementById("new_challenge").submit()
 document.getElementById("challenge_view6").style.display="none";
 document.getElementById("badge_holder_2").innerHTML= document.getElementById("badge_holder").innerHTML;
 document.getElementById("badge_holder").style.visibility="hidden";
