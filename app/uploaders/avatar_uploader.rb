@@ -44,11 +44,11 @@ process :resize_to_fill => [200, 200]
   # end
 
   # Create rounded corner version of uploaded file:
-   version :rounded do
-       process :resize_to_fill => [50, 50]
-	   process :convert => ['-alpha img -virtual-pixel transparent \
-          -channel A -blur 0x8  -level 50%,100% +channel']
-   end
+   #version :rounded do
+    #   process :resize_to_fill => [50, 50]
+	#   process :convert => ['-alpha img -virtual-pixel transparent \
+    #      -channel A -blur 0x8  -level 50%,100% +channel']
+   #end
   
 
   
