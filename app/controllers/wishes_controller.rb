@@ -32,7 +32,15 @@ class WishesController < ApplicationController
      end
   end
 
-
+  def share_challenge()
+	@wish = Wish.find( params[:id] )
+	#	logger.debug "Wish: #{ @wish.inspect }"
+	@user = @wish.user
+     respond_to do |format|
+       format.html  # show.html.erb
+       format.js 
+     end
+  end
 
   # GET /wishes/1
   # GET /wishes/1.json

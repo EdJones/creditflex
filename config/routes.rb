@@ -12,6 +12,7 @@ Creditflex::Application.routes.draw do
   resources :wishes do
 	member do
 		get 'show_challenge'
+		get 'share_challenge'
 	end
 	end
   resources :comments
@@ -41,8 +42,14 @@ Creditflex::Application.routes.draw do
 	end
   resources :resources
 
-  resources :users
-
+  resources :users do
+			collection do
+			
+			get 'add_response'
+			post 'add_response'
+			end	
+			
+	end		
   resources :teachers 
   #do
   #      member do
