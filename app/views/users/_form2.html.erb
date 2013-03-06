@@ -1,0 +1,48 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="actions2">
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+  <% if !current_user %>
+	<%= f.radio_button(:role, :student) %> student <br /> <%= f.radio_button(:role, :teacher) %> teacher 
+	<% elsif current_user.role == 'admin'   %>
+		<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+	<% end %>
+  </p>
+  <p>
+    <%= f.label :email, "Email Address" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+    <p>
+    <%= f.label :avatar, "Upload an avatar" %><br />
+    <%= f.file_field :avatar %>
+  </p>
+      <p>
+    <%= f.check_box(:tos, {:class => 'accept_tos'}, true, false) %> I am 13 or over. 
+  </p>
+
+  
+    <%= f.submit 'Let me in!' %>
+  </div>
+<% end %>

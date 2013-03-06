@@ -1,0 +1,59 @@
+// Place all the styles related to the Badges controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#home-bg {
+	left:0;
+	width:100%;
+	height:100%;
+	position:fixed;
+	background-clip:border-box;
+	z-index:-1000;
+	min-width: 100%;
+  min-height: 100%;
+	}
+	
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}	
+	
+#signup {
+	top:15px;
+	left:500px;
+	background-color:#9f9f9f;
+	width:320px;
+	position:absolute;
+}
+#home-main {
+	left:200px;
+	top:160px;
+	width:400px;
+	position:absolute;
+
+}	
+#home-main h3 {
+	margin-bottom:5px;
+	}
+.actions2 {
+	margin-left:20px;
+	}
+#welcome3 {
+
+	margin-top:230px;
+	color:#ffffff;
+	font-size:16px;
+	}
