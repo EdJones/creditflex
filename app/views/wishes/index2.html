@@ -4,11 +4,12 @@
 
 
 <div class="main">
-<h3>&nbsp;Get High School Credit for what <i>you</i> want to do.</h3>
+<h1></h1>
 
 
 <div id="featured">
-<%= image_tag("apprentice4.jpg", :id => "main-pic", :alt => "cc Sorceress' Apprentice by Sheryl Westleigh", :title => "cc Sorceress' Apprentice by Sheryl Westleigh") %>
+<div id="tag">Get credit toward high school graduation by <i>doing almost anything</i>.</div>
+<%# image_tag("apprentice4.jpg", :id => "main-pic", :alt => "cc Sorceress' Apprentice by Sheryl Westleigh", :title => "cc Sorceress' Apprentice by Sheryl Westleigh") %>
 <%# image_tag("dragon.jpg", :id => "main-pic", :alt => "CC Julian Lee") %>
 <%# image_tag("cafe.jpg", :id => "main-pic") %>
 
@@ -23,11 +24,10 @@
 </div>
 <p >Take a trip, get an internship, do research, start a business, take a class outside school, go to iTunesU, you name it!
 </p>
-<i>Your</i> school grants the credit.<br /> 
 </div>
 <iframe width="200" height="150" src="http://www.youtube.com/embed/yAg1pNu2eWY" frameborder="0" allowfullscreen></iframe>
   <p class="learn_more">
-      <%= link_to("Explore", lycee_path) %> &nbsp; &nbsp; &nbsp;
+    <%= link_to("Explore", lycee_path) %> &nbsp; &nbsp; &nbsp;
     <%= link_to("Learn more", resources_path) %>.
   </p>
   <div id="fb">
@@ -79,9 +79,7 @@
     <%= link_to 'Destroy', wish, method: :delete, data: { confirm: 'Are you sure?' } %>
 	</div>
 	</div>
-	<div class="wish-footer">
-	<%=  (link_to 'Challenge a friend', share_challenge_wish_path(wish), remote: true )  %>&nbsp;&nbsp;&nbsp; Echo
-	<%=  (link_to 'View Challenge', show_challenge_wish_path(wish), remote: true ) if wish.try(:challenge_id) %>&nbsp;&nbsp;&nbsp; Echo
+	<div class="wish-footer"><%=  (link_to 'View Challenge', show_challenge_wish_path(wish), remote: true ) if wish.try(:challenge_id) %>&nbsp;&nbsp;&nbsp; Echo
 	</div>
 	</div></div>
 <% end %>

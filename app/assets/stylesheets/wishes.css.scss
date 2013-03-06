@@ -39,15 +39,23 @@ $bar_background__bottom: #dee698;
 	padding-top:15px;
 }
 #main-pic {
-	height:300px;
+	height:150px;
 	margin-left:6px;
 	}
-	
+#main h3 {
+	padding-left:7px;
+	width:350px;
+	//line-height:20px;
+	margin-bottom:10px;
+	margin-top:0px;
+
+		}
 #feature_text2 {
 	width: 400px;
 	float:right;
 	height:360px;
 	padding-bottom:0px;
+
 
 }	
 .wish_title {
@@ -296,7 +304,8 @@ font-size:11px;
 #modal-header {
 	position:relative;
 	padding:3px;
-	background-color:#02787B;
+	//background-color:#02787B;
+	background-color:#109EF0;
 	margin:-2px;
 	border-radius: 6px 6px 0px 0px;
 	border: 1px solid #02787B;
@@ -307,6 +316,7 @@ font-size:11px;
 	position:absolute;
 	right:0px;
 	width:18px;
+	padding:0px;
 	font-weight:bold;
 	cursor: default;
 	text-align:center;
@@ -445,6 +455,13 @@ font-size:11px;
 	margin-left:auto;
 	margin-right:auto;
 	}	
+#fb a {
+	font-size:10px;
+	line-height:14px;
+	}	
 .more1 a {
 	color:#ffffff;
 	}
+.learn_more {
+		margin-top:0px;
+		}
