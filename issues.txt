@@ -1,0 +1,22 @@
+Add support for non-Ohio users
+ - add Select State
+ - create generic badge
+ - researcch current potential in other states
+ - provide pointers for those states.
+ 
+Add links to badgebuilding (BadgeForge)
+ 
+Add Badge import 
+  - preliminary
+  - completed
+  
+Add Challenge Friend
+ - Add popup
+ - Twitter API
+ - Facebook API
+  -- Koala Gem
+ - email
+ - ?? 
+
+Add Add Image to Your Challenge
+ - uploader

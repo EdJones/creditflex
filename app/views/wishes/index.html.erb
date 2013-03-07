@@ -80,8 +80,10 @@
 	</div>
 	</div>
 	<div class="wish-footer">
-	<%=  (link_to 'Challenge a friend', share_challenge_wish_path(wish), remote: true )  %>&nbsp;&nbsp;&nbsp; Echo
-	<%=  (link_to 'View Challenge', show_challenge_wish_path(wish), remote: true ) if wish.try(:challenge_id) %>&nbsp;&nbsp;&nbsp; Echo
+	
+	<%=  (link_to 'View Challenge', show_challenge_wish_path(wish), remote: true ) if wish.try(:challenge_id) %>
+	<%=  (link_to 'Challenge a friend', share_challenge_wish_path(wish), remote: true )  %>
+	&nbsp; Echo
 	</div>
 	</div></div>
 <% end %>
@@ -147,6 +149,7 @@
 
 </div>
 </div>
+</div>
 
 
 
@@ -173,3 +176,5 @@ $(document).ready(function (){
 });
 
 </script> 
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
