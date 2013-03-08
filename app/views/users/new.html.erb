@@ -8,12 +8,13 @@
 </div>
 
 <div id="welcome1"></div>
-<div id="welcome2">
 
-</div>
-
+<div id="show-welcome-video"><span id="show-welcome-video">See the credit flexibility video</span></div>
 <div id="signup" >
 <%= render 'form2' %>
+<p>
+<%= button_to("I have an account", login_path, html_options = { :method => :get }) %>
+</p>
 </div>
 <div id="welcome3">You're on your way to learning that fits <i>you</i>.
 
@@ -25,3 +26,44 @@ Start now on making it better. </div>
 
 </div>
 </div>
+
+<div id="modal-container2" class="modal-container">
+<div id="popup">
+<div id="modal-header2">
+<div id="modal-close"><span id="modal-close">X</span></div>
+<div class="modal-title"></div>
+
+<div id="modal-body" class="modal-body2">
+<div id="video-popup">
+<iframe width="420" height="315" src="http://www.youtube.com/embed/yAg1pNu2eWY?rel=0" frameborder="0" allowfullscreen></iframe>
+
+</div>
+</div>
+</div>
+
+
+
+
+<script>
+$(document).ready(function (){
+
+
+$('span#show-welcome-video').click(function(){
+   $('div#modal-container2').show();
+});
+
+    $('span#show-welcome-video').hover(function(){
+   $('span#show-welcome-video').toggleClass('show-welcome-hover');
+  });
+  
+
+    $('#modal-close').hover(function(){
+   $('span#modal-close').toggleClass('modal-hover');
+  });
+  
+  
+  $('#modal-close').click(function(){
+   $('div#modal-container2').hide("slow");
+  });
+});
+</script>

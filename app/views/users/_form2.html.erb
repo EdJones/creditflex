@@ -11,13 +11,14 @@
     </div>
   <% end %>
   <div class="actions2">
+  What would you learn for HS credit?
   <p>
     <%= f.label :username %><br />
     <%= f.text_field :username %>
   </p>
   <p>
   <% if !current_user %>
-	<%= f.radio_button(:role, :student) %> student <br /> <%= f.radio_button(:role, :teacher) %> teacher 
+	<%= f.radio_button(:role, :student) %> student <%= f.radio_button(:role, :teacher) %> teacher 
 	<% elsif current_user.role == 'admin'   %>
 		<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
 	<% end %>
@@ -30,14 +31,8 @@
     <%= f.label :password %><br />
     <%= f.password_field :password %>
   </p>
-  <p>
-    <%= f.label :password_confirmation, "Confirm Password" %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-    <p>
-    <%= f.label :avatar, "Upload an avatar" %><br />
-    <%= f.file_field :avatar %>
-  </p>
+ 
+
       <p>
     <%= f.check_box(:tos, {:class => 'accept_tos'}, true, false) %> I am 13 or over. 
   </p>
