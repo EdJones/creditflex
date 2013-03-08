@@ -60,7 +60,7 @@
 	
 #popup {
 
-	width:440px;
+	width:430px;
 	min-height:350px;
 	z-index:1000;
 	margin-left:auto;
@@ -84,7 +84,23 @@
 	font-size:16px;
 	}
 
+#modal-body2 {
+	height:100%;
+	position:relative;
+	margin-top:3px;
+	margin-left:4px;
 
+		}
+
+#modal-close2 {
+	position:absolute;
+	right:0px;
+	width:18px;
+	padding:0px;
+	font-weight:bold;
+	cursor: default;
+	text-align:center;
+}
 #modal-header2 {
 	position:relative;
 	padding:3px;
@@ -102,18 +118,63 @@
 	left:0px;
 	top:0px;
 	}
-#show-welcome-video {
+
+#welcome2 {
 	margin-top:80px;
 	margin-left:25px;
+		}
+#video-link {
+	line-height:130%;
+	}
+span.video-link {
 	text-decoration:underline;
 	color:#ffffff;
-		}
+	font-size:1.1em;
+		}		
 .show-welcome-hover {
 	//text-decoration:underline;
-	font-weight:bold;
 	cursor: pointer;
 }
+#odestuff {
+	padding-top:5px;
+	font-size:90%;
+	text-decoration:underline;
 
+	}
+#modal-header3 {
+	position:relative;
+	padding:3px;
+	//background-color:#02787B;
+	background-color:#7F7F7F;
+	margin:-2px;
+	border-radius: 6px 6px 0px 0px;
+	border: 1px solid #02787B;
+	min-height:20px;
+}
+
+#modal-body3 {
+	height:100%;
+
+		}
+#ode-popup {
+
+	width:1000px;
+	min-height:600px;
+	z-index:1000;
+	margin-left:auto;
+	margin-right:auto;
+	position:absolute;
+	top:50px;
+	left:50px;
+	background:#ffffff;
+	border-radius: 6px 6px 6px 6px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+
+}	
+	
+	
+	
+	
 input[type=text],
 input[type=url],
 input[type=tel],
@@ -136,3 +197,4 @@ border: 5px solid white;
     background: rgba(255,255,255,0.5);
     margin: 0 0 10px 0;
 		}
+		
