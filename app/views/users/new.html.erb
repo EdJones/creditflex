@@ -9,7 +9,9 @@
 
 <div id="welcome1"></div>
 
-<div id="welcome2"><span id="video-link" class="video-link" > See the credit flexibility video</span><br /><span id="odestuff">The dry guidance stuff from ODE</span>
+<div id="welcome2"><span id="video-link" class="video-link" > See the credit flexibility video</span><br />
+<span id="odestuff">The dry guidance stuff from ODE</span><br />
+<span id="adult-stuff">Teachers and community: why support this?</span>
 </div>
 <div id="signup" >
 <%= render 'form2' %>
@@ -55,7 +57,19 @@ Start now on making it better. </div>
 </div>
 </div>
 
+<div id="modal-container4" class="modal-container">
+<div id="v-popup">
+<div id="modal-header3">
+<div id="modal-close"><span id="modal-close3">X</span></div>
+<div class="modal-title">http://www.ode.state.oh.us/GD/Templates/Pages/ODE/ODEDetail.aspx?page=61</div>
+</div>
+<div id="modal-body3" class="modal-body2">
+<div id="odelovin">
+<iframe src="http://www.ode.state.oh.us/GD/Templates/Pages/ODE/ODEDetail.aspx?page=61" width="100%" height="800px"></iframe>
 
+</div>
+</div>
+</div>
 
 <script>
 
@@ -81,6 +95,16 @@ $('span#odestuff').click(function(){
    $('span#odestuff').toggleClass('show-welcome-hover');
   });
 
+
+$('span#adult-stuff').click(function(){
+   $('div#modal-container2').show();
+   $('div#video-popup').html('<iframe width="420" height="315" src="http://www.youtube.com/embed/slF8NYm39hU?rel=0&autoplay=1&allowfullscreen=true" frameborder="0"  ></iframe>');
+});
+
+    $('span#adult-stuff').hover(function(){
+   $('span#adult-stuff').toggleClass('show-welcome-hover');
+  });
+
     $('#modal-close').hover(function(){
    $('span#modal-close').toggleClass('modal-hover');
   });
@@ -91,7 +115,7 @@ $('span#odestuff').click(function(){
   
     $('#modal-close2').click(function(){
    $('div#modal-container2').hide("slow");
-   $('div#modal-container2').html("");
+   $('div#video-popup').html("");
   });
       $('#modal-close3').hover(function(){
    $('span#modal-close3').toggleClass('modal-hover');
