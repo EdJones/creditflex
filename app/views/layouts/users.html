@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ohio Credit Flexibility</title>
+  <%= stylesheet_link_tag    "projects" %>
+    <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "headers" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render(:partial => "shared/header") %>
+
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash#{name}" %>
+  <% end %>
+<div class="ribbon">
+
+</div>
+<div class="clear"></div>
+
+<%= yield %>
+
+</body>
+</html>
