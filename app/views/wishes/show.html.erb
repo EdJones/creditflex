@@ -5,8 +5,11 @@
 
 
   <b>You want to learn:</b><br />
+  <div id="moz-cred">
+  <%= image_tag("we_issue.png", :id => "moz-cred1", :alt => "Mozilla Issuer Insignia", :title => "Mozilla Badge Issuer Insignia") %>
+</div>
   <div class="wish_title"><%= @wish.wish %></div>
-<%= link_to("Add an image for your challenge", new_wish_path, :id => "add_image", :class => "") %>
+<div id="upload-image">Add an image for your challenge</div>
 <div id="challenge_options">
 <p>Well, don't just sit there wishing...</p>
 
@@ -24,3 +27,21 @@
 <%= link_to 'Back', wishes_path %>
 <%= @wish.user.avatar? %>
 </div>
+
+
+
+<script>
+
+$(document).ready(function (){
+
+
+$('div#upload-image').click(function(){
+   $('div#modal-container2').show();
+   $('div#image-upload').html('');
+});
+
+    $('div#upload-image').hover(function(){
+   $('div#upload-image').toggleClass('show-welcome-hover');
+  });
+});
+</script>
