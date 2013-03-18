@@ -3,4 +3,6 @@ class Challenge < ActiveRecord::Base
   
   has_one :wish
   belongs_to :user
+  
+  mount_uploader :avatar, ChallengepicUploader
 end
