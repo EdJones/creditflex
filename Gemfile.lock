@@ -91,7 +91,7 @@ GEM
       railties
     method_source (0.8.1)
     mime-types (1.17.2)
-    mini_magick (3.5.0)
+    mini_magick (3.4)
       subexec (~> 0.2.1)
     multi_json (1.7.1)
     multipart-post (1.2.0)
@@ -192,7 +192,7 @@ DEPENDENCIES
   jquery-rails (>= 2.0.1)
   make_voteable
   meta_request
-  mini_magick
+  mini_magick (= 3.4)
   newrelic_rpm
   open_badges
   pg

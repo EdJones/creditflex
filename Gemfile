@@ -10,7 +10,7 @@ gem 'open_badges'
 
 gem 'carrierwave', '>= 0.8.0'
 #gem 'rmagick'
-gem 'mini_magick'
+gem 'mini_magick', '3.4'
 gem 'fog'
 
 gem "ckeditor", "3.7.0.rc2"
