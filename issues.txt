@@ -17,6 +17,8 @@ Add Challenge Friend
 Add Add Image to Your Challenge
  - uploader
 
+Add badge creation for course author/instructor/providers.
+
 Add support for non-Ohio users
  - add Select State
  - create generic badge
