@@ -1,5 +1,8 @@
 Creditflex::Application.routes.draw do
 
+  resources :echos
+
+
   resources :badges do
 	member do
 		get 'assertion'
@@ -13,6 +16,10 @@ Creditflex::Application.routes.draw do
 	member do
 		get 'show_challenge'
 		get 'share_challenge'
+		get 'echo'
+		post 'echo'
+		get 'confirm_echo'
+		post 'confirm_echo'
 	end
 	end
   resources :comments

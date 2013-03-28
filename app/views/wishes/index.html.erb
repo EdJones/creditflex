@@ -82,8 +82,8 @@
 	<div class="wish-footer">
 	
 	<%=  (link_to 'View Challenge', show_challenge_wish_path(wish), remote: true ) if wish.try(:challenge_id) %>
+	<%=  (link_to 'Echo', confirm_echo_wish_path(wish), remote: true )  %><%= image_tag('echo1.png', :class => 'echo-teeny')  %>
 	<%=  (link_to 'Challenge a friend', share_challenge_wish_path(wish), remote: true )  %>
-	&nbsp; Echo
 	</div>
 	</div></div>
 <% end %>
@@ -151,7 +151,18 @@
 </div>
 </div>
 
+<div id="modal-container2" class="modal-container">
+<div id="echo-popup">
+<div id="modal-header">
+<div id="modal-close2"><span id="modal-close2">X</span></div>
+<div class="modal-title"> </div>
+<div id="challenge-title">Title</div>
+</div>
+<div id="modal-body2" class="modal-body">
 
+</div>
+</div>
+</div>
 
 <script>
 
@@ -165,6 +176,21 @@ $('span#show-challenge-details').click(function(){
 
 $(document).ready(function (){
 
+      $('span#cancel').click(function(){
+	  alert("cancel");
+   //$('div#modal-container2').hide("slow");
+  });
+  
+$('span#echo-wish').click(function(){
+   $('div#modal-container2').show();
+   $('div#echo-popup').html(<%= render "confirm_echo" %>);
+});
+
+    $('span#echo-wish').hover(function(){
+   $('span#echo-wish').toggleClass('show-welcome-hover');
+  });
+
+
     $('#modal-close').hover(function(){
    $('span#modal-close').toggleClass('modal-hover');
   });
@@ -173,6 +199,11 @@ $(document).ready(function (){
   $('#modal-close').click(function(){
    $('div#modal-container').hide("slow");
   });
+    $('#modal-close2').click(function(){
+   $('div#modal-container2').hide("slow");
+  });
+  
+
 });
 
 </script> 

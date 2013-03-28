@@ -1,0 +1,2 @@
+module EchosHelper
+end

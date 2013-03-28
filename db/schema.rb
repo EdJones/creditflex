@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205151729) do
+ActiveRecord::Schema.define(:version => 20130327180716) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -79,6 +79,13 @@ ActiveRecord::Schema.define(:version => 20130205151729) do
     t.string   "curriculum_url"
     t.string   "course_image"
     t.boolean  "hqt",            :default => false
+  end
+
+  create_table "echos", :force => true do |t|
+    t.integer  "wish_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "flex_credits", :force => true do |t|
@@ -260,7 +267,7 @@ ActiveRecord::Schema.define(:version => 20130205151729) do
     t.integer  "user_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-    t.integer  "challenge_id",  :null => false
+    t.integer  "challenge_id"
   end
 
 end

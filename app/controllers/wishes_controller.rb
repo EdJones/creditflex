@@ -14,6 +14,34 @@ class WishesController < ApplicationController
     end
   end
 
+    def confirm_echo
+  logger.debug "Params[]: #{ params.inspect }"
+  #
+  @wish = Wish.find( params[:id] )
+      respond_to do |format|
+        format.html 
+        format.js
+    end
+  end
+
+  def echo
+  logger.debug "Params[]: #{ params.inspect }"
+  @echo = Echo.new
+  @echo.wish_id = params[:id]
+  @echo.user_id = current_user.id
+  #
+      respond_to do |format|
+      if @echo.save
+	  logger.debug "echo saved"
+        format.html { render action: "index", notice: 'Echo was successfully created.' }
+        format.json { render json: @echo, status: :created, location: @echo }
+      else
+        format.html { render action: "wishes" }
+        format.json { render json: @echo.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
   def show_challenge()
 	#logger.debug "*******************Show_challenge ran****************"
 	#logger.debug "Params[:id]: #{ params[:id] }"

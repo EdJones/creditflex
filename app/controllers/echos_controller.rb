@@ -1,0 +1,2 @@
+class EchosController < ApplicationController
+end

@@ -1,0 +1,14 @@
+  <div class="stream-item">
+  <div class="left-user">
+  <%= image_tag(@wish.user.avatar.url, :class => 'avatar-small') if @wish.user.avatar? %>&nbsp;
+  </div>
+<div class="wish">
+    <div class="wish-header"><span class="wisher">
+    <%= @wish.user.username if @wish.user %>
+	</span></div>
+	<div class="wish-body">
+	<%= @wish.wish %> 
+</div>
+</div>
+</div>
+<%=  (link_to 'Echo this wish?', echo_wish_path(:id), remote: true )  %><%= image_tag('echo1.png', :class => 'echo-teeny')  %>
