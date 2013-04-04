@@ -31,7 +31,7 @@
     <%= link_to("Learn more", resources_path) %>.
   </p>
   <div id="fb">
-    <%= link_to("Students at Reynoldsburg explain in a cool infographic!", "../infographic.png") %> <p style = "display:none" class="not_ohio"><a href="http://peerbackers.com/projects/10000-creit-flex-students-by-2013" target="blank">Help spread the word and get 10,000 students on CreditFlex</a> Not in Ohio? Credit Flexibility may be coming to your state!
+    <%= link_to("Students at Reynoldsburg explain in a cool infographic!", "../infographic.png") %> <p style="display:none" class="not_ohio"><a href="http://peerbackers.com/projects/10000-creit-flex-students-by-2013" target="blank">Help spread the word and get 10,000 students on CreditFlex</a> Not in Ohio? Credit Flexibility may be coming to your state!
   </p>
   </div>
 <div id="caption">
@@ -71,7 +71,9 @@
 	</span></div>
 	<div class="wish-body">
 	<%= wish.wish %> 
-
+    <% if (wish.echoes.count > 0 ) %>
+	<span class="echo-count"><%= wish.echoes.count %><%= " echo".pluralize(wish.echoes.count) %></span>
+	<% end %>
 	<div class="wish-admin">
 	User: <%= wish.user_id %>
     <%= link_to 'Show', wish %>
@@ -82,7 +84,9 @@
 	<div class="wish-footer">
 	
 	<%=  (link_to 'View Challenge', show_challenge_wish_path(wish), remote: true ) if wish.try(:challenge_id) %>
-	<%=  (link_to 'Echo', confirm_echo_wish_path(wish), remote: true )  %><%= image_tag('echo1.png', :class => 'echo-teeny')  %>
+	<%= link_to confirm_echo_wish_path(wish), remote: true do %>
+	    Echo <%= image_tag('echo1.png', :class => 'echo-teeny')  %>
+		<% end %>
 	<%=  (link_to 'Challenge a friend', share_challenge_wish_path(wish), remote: true )  %>
 	</div>
 	</div></div>
@@ -154,7 +158,7 @@
 <div id="modal-container2" class="modal-container">
 <div id="echo-popup">
 <div id="modal-header">
-<div id="modal-close2"><span id="modal-close2">X</span></div>
+<div id="modal-close"><span id="modal-close2">X</span></div>
 <div class="modal-title"> </div>
 <div id="challenge-title">Title</div>
 </div>
@@ -167,43 +171,29 @@
 <script>
 
 
-$('span#show-challenge-details').click(function(){
-  alert("click");
-   $('div#challenge-show-details').show();
-});
-
-
 
 $(document).ready(function (){
+alert("ready");
+  
 
-      $('span#cancel').click(function(){
-	  alert("cancel");
-   //$('div#modal-container2').hide("slow");
+
+ 
+
+      $('#modal-close2').hover(function(){
+   $('span#modal-close2').toggleClass('modal-hover');
   });
   
-$('span#echo-wish').click(function(){
-   $('div#modal-container2').show();
-   $('div#echo-popup').html(<%= render "confirm_echo" %>);
-});
-
-    $('span#echo-wish').hover(function(){
-   $('span#echo-wish').toggleClass('show-welcome-hover');
-  });
-
-
-    $('#modal-close').hover(function(){
-   $('span#modal-close').toggleClass('modal-hover');
-  });
-  
-  
-  $('#modal-close').click(function(){
-   $('div#modal-container').hide("slow");
-  });
-    $('#modal-close2').click(function(){
+      $('#modal-close2').click(function(){
    $('div#modal-container2').hide("slow");
+   //$('div#echo-popup').html("");
   });
   
-
+        $('#close').click(function(){
+   $('div#modal-container2').hide("slow");
+   //$('div#echo-popup').html("");
+  });
+  
+//
 });
 
 </script> 

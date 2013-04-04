@@ -12,6 +12,24 @@
 </div>
 </div>
 <div class="echo-footer">
-<span id="cancel" class="g_button3">Cancel</span>
-<%=  (link_to 'Echo', echo_wish_path(@wish.id), remote: true, :class => "b_button3" )  %><%= image_tag('echo1.png', :class => 'echo-teeny')  %>
+<div id="close">
+<span id="close" class="g_button3" >Cancel</span></div>
+<%= link_to echo_wish_path(@wish.id), remote: true, :class => "b_button3"  do %>
+	    Echo <%= image_tag('echo2.gif', :class => 'echo-teeny')  %>
+		<% end %>
+
 </div>
+
+
+<script>
+
+$(document).ready(function (){
+  
+  $('#close').click(function(){
+   $('div#modal-container2').hide("slow");
+   //$('div#echo-popup').html("");
+  });
+
+});
+
+</script>
