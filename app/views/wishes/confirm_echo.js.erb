@@ -1,3 +1,17 @@
  $('div#modal-body2').html('<%= j  render(@wish) %>');
   $('div#challenge-title').html('Echo this Wish?');
   $('div#modal-container2').show();
+  
+  
+    $(document).ready(function (){
+    
+	      $('#modal-close').hover(function(){
+   $('span#modal-close').toggleClass('modal-hover');
+  });
+        $('#modal-close').click(function(){
+   $('div#modal-container').hide("slow");
+   //$('div#echo-popup').html("");
+  });
+  
+//
+});

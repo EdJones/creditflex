@@ -314,3 +314,38 @@ img.badge_holder_3 {
 	width:90px;
 
 }
+
+.text-hover {
+	//text-decoration:underline;
+
+	cursor: pointer;
+}
+#modal-container5 {
+	display:none;
+	}
+.modal-container5 {
+    bottom: 0;
+
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5000;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+}
+.uploader-popup {
+	width:430px;
+	min-height:250px;
+	z-index:1000;
+	margin-left:auto;
+	margin-right:auto;
+	position:absolute;
+	top:175px;
+	left:350px;
+	background:#ffffff;
+	border-radius: 6px 6px 6px 6px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+
+}	

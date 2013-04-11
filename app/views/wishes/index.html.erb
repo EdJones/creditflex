@@ -57,43 +57,10 @@
 
 </div>
 </div>
-<div class="stream">
 
-
-<% @wishes.each do |wish| %>
-  <div class="stream-item">
-  <div class="left-user">
-  <%= image_tag(wish.user.avatar.url, :class => 'avatar-small') if wish.user.avatar? %>&nbsp;
-  </div>
-  <div class="wish">
-    <div class="wish-header"><span class="wisher">
-    <%= wish.user.username if wish.user %>
-	</span></div>
-	<div class="wish-body">
-	<%= wish.wish %> 
-    <% if (wish.echoes.count > 0 ) %>
-	<span class="echo-count"><%= wish.echoes.count %><%= " echo".pluralize(wish.echoes.count) %></span>
-	<% end %>
-	<div class="wish-admin">
-	User: <%= wish.user_id %>
-    <%= link_to 'Show', wish %>
-    <%= link_to 'Edit', edit_wish_path(wish) %>
-    <%= link_to 'Destroy', wish, method: :delete, data: { confirm: 'Are you sure?' } %>
-	</div>
-	</div>
-	<div class="wish-footer">
-	
-	<%=  (link_to 'View Challenge', show_challenge_wish_path(wish), remote: true ) if wish.try(:challenge_id) %>
-	<%= link_to confirm_echo_wish_path(wish), remote: true do %>
-	    Echo <%= image_tag('echo1.png', :class => 'echo-teeny')  %>
-		<% end %>
-	<%=  (link_to 'Challenge a friend', share_challenge_wish_path(wish), remote: true )  %>
-	</div>
-	</div></div>
-<% end %>
-
+<div id="wish-stream">
+<%= render 'wish_stream' %>
 </div>
-
 
 <div class="stream_footer">
 <%= link_to 'New Wish', new_wish_path %>
@@ -173,9 +140,19 @@
 
 
 $(document).ready(function (){
-alert("ready");
   
-
+    $(document).ready(function (){
+    
+	      $('#modal-close').hover(function(){
+   $('span#modal-close').toggleClass('modal-hover');
+  });
+        $('#modal-close').click(function(){
+   $('div#modal-container').hide("slow");
+   //$('div#echo-popup').html("");
+  });
+  
+//
+});
 
  
 

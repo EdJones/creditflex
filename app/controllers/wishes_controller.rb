@@ -6,6 +6,7 @@ class WishesController < ApplicationController
 	@wishes = Wish.all.reverse
 	@projects = Project.all
 	@wish = Wish.new
+	logger.debug "Wish: #{ @wish.inspect }"
 	@wish.user_id = 1
 	
     respond_to do |format|
@@ -14,10 +15,20 @@ class WishesController < ApplicationController
     end
   end
 
+  def wish_stream
+    #@wishes = Wish.last(4).reverse
+	@wishes = Wish.all.reverse
+	
+    respond_to do |format|
+      format.html { logger.debug "html!" }
+	  format.js { logger.debug "js!" }
+      format.json { render json: @wishes }
+    end
+  end
+
+
     def confirm_echo
-  logger.debug "Params[]: #{ params.inspect }"
-  #
-  @wish = Wish.find( params[:id] )
+      @wish = Wish.find( params[:id] )
       respond_to do |format|
         format.html 
         format.js
@@ -28,12 +39,16 @@ class WishesController < ApplicationController
   logger.debug "Params[]: #{ params.inspect }"
   @echo = Echo.new
   @echo.wish_id = params[:id]
+  logger.debug "current_user #{ current_user.inspect }"
   @echo.user_id = current_user.id
-  #
+  logger.debug "Echo: #{ @echo.inspect }"
+  @wishes = Wish.all.reverse
       respond_to do |format|
       if @echo.save
 	  logger.debug "echo saved"
-        format.html { render action: "index", notice: 'Echo was successfully created.' }
+        format.html { logger.debug "html!" }
+		#{ render action: "index", notice: 'Echo was successfully created.' }
+		format.js 
         format.json { render json: @echo, status: :created, location: @echo }
       else
         format.html { render action: "wishes" }
@@ -43,15 +58,11 @@ class WishesController < ApplicationController
   end
   
   def show_challenge()
-	#logger.debug "*******************Show_challenge ran****************"
 	#logger.debug "Params[:id]: #{ params[:id] }"
 	#logger.debug "Params[]: #{ params.inspect }"
-	#logger.debug "Object: #{ @object }"
-	#logger.debug "Wish: #{ @wish }"
+	#logger.debug "Wish: #{ @wish.inspect }"
 	@wish = Wish.find( params[:id] )
-	#	logger.debug "Wish: #{ @wish.inspect }"
 	@challenge = @wish.challenge
-	#	logger.debug "Challenge: #{ @challenge.inspect }"
     @challenge = @wish.challenge
 	@user = @wish.user
      respond_to do |format|
@@ -62,10 +73,9 @@ class WishesController < ApplicationController
 
   def share_challenge()
 	@wish = Wish.find( params[:id] )
-	#	logger.debug "Wish: #{ @wish.inspect }"
 	@user = @wish.user
      respond_to do |format|
-       format.html  # show.html.erb
+       format.html  
        format.js 
      end
   end

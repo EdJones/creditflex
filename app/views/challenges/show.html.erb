@@ -18,7 +18,7 @@ Challenge underway. <br />
 
   <b>You want to learn:</b><br />
   <div class="wish_title"><%= @challenge.name %></div>
-  <a href="", id="add_image", onclick="pickChallengeImage()" >Add an image for your challenge</a>
+  <span id="add_image" >Add an image for your challenge</span>
 
 <div  class="challenge_details" >
 Congrats. You've got a CF concept!<p>Here's your draft badge:</p>
@@ -83,3 +83,28 @@ Congrats. You've got a CF concept!<p>Here's your draft badge:</p>
 </div>
 </div>
 </div>
+
+
+<div id="modal-container5" class="modal-container5">
+<div id="upload-dialogue" class="uploader-popup">
+
+stuff
+
+</div>
+</div>
+
+<script>
+
+$(document).ready(function (){
+  
+ $('span#add_image').hover(function(){
+   $('span#add_image').toggleClass('text-hover');
+  });
+  
+ $('span#add_image').click(function(){
+    $('div#modal-container5').show();
+  });
+
+});
+
+</script> 
