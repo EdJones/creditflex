@@ -4,3 +4,17 @@ class Wish < ActiveRecord::Base
   belongs_to :challenge
   has_many :echoes
 end
+
+
+public
+def wish_stream
+
+  @wishes = Wish.all.reverse
+  @echoes = Echo.all.reverse
+  
+  @rewishes = @echoes.collect{|x| x.wish} + @wishes
+  
+  
+  
+
+end

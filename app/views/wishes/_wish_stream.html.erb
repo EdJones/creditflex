@@ -11,7 +11,7 @@
     <%= wish.user.username if wish.user %>
 	</span></div>
 	<div class="wish-body">
-	<%= wish.wish %> 
+	<%= wish.wish %>  
     <% if (wish.echoes.count > 0 ) %>
 	<span class="echo-count"><%= wish.echoes.count %><%= " echo".pluralize(wish.echoes.count) %></span>
 	<% end %>

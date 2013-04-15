@@ -11,4 +11,4 @@
 </div>
 </div>
 </div>
-<%=  (link_to 'Echo this wish?', echo_wish_path(:id), remote: true )  %><%= image_tag('echo1.png', :class => 'echo-teeny')  %>
+<%=  (link_to 'Echo this wish?', echo_wish_path(:id), :id => "echo-button", remote: true )  %><%= image_tag('echo1.png', :class => 'echo-teeny')  %>

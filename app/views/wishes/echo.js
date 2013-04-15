@@ -1,3 +1,2 @@
 $('div#modal-container2').hide();
-tweet = "<%= render 'wish_stream' %>"
-$('div#wish-stream').html("twit");
+$('div#wish-stream').replaceWith('<%=j render 'wish_stream' %>');

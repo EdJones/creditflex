@@ -8,7 +8,7 @@ class WishesController < ApplicationController
 	@wish = Wish.new
 	logger.debug "Wish: #{ @wish.inspect }"
 	@wish.user_id = 1
-	
+	@wishes = Wish.wish_stream
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @wishes }
@@ -16,14 +16,19 @@ class WishesController < ApplicationController
   end
 
   def wish_stream
+  	logger.debug "****************wish_stream controller************"
     #@wishes = Wish.last(4).reverse
-	@wishes = Wish.all.reverse
-	
+	#@wishes = Wish.all.reverse
+	@wishes = Wish.wish_stream
+	logger.info "****************wish_stream controller************"
+	logger.debug "Wishes: #{ @wishes.inspect }"
     respond_to do |format|
       format.html { logger.debug "html!" }
 	  format.js { logger.debug "js!" }
       format.json { render json: @wishes }
     end
+	
+	
   end
 
 
@@ -39,13 +44,12 @@ class WishesController < ApplicationController
   logger.debug "Params[]: #{ params.inspect }"
   @echo = Echo.new
   @echo.wish_id = params[:id]
-  logger.debug "current_user #{ current_user.inspect }"
   @echo.user_id = current_user.id
-  logger.debug "Echo: #{ @echo.inspect }"
-  @wishes = Wish.all.reverse
+
       respond_to do |format|
       if @echo.save
 	  logger.debug "echo saved"
+	    @wishes = Wish.wish_stream
         format.html { logger.debug "html!" }
 		#{ render action: "index", notice: 'Echo was successfully created.' }
 		format.js 

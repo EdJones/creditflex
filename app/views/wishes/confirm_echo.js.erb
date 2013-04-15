@@ -9,7 +9,13 @@
    $('span#modal-close').toggleClass('modal-hover');
   });
         $('#modal-close').click(function(){
-   $('div#modal-container').hide("slow");
+   $('div#modal-container2').hide("slow");
+   //$('div#echo-popup').html("");
+  });
+  
+   $('a#echo-button').click(function(){
+   alert("Bing");
+   $('div#modal-container2').hide("slow");
    //$('div#echo-popup').html("");
   });
   
