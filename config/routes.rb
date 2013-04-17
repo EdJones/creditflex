@@ -20,6 +20,8 @@ Creditflex::Application.routes.draw do
 		post 'echo'
 		get 'confirm_echo'
 		post 'confirm_echo'
+		get 'tweet'
+		post 'tweet'
 	end
 	end
   resources :comments

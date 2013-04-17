@@ -1,4 +1,4 @@
- $('div#modal-body').html('<a href="https://twitter.com/share" class="twitter-share-button" data-via="CreditFlex" data-size="large" data-hashtags="creditflex">Tweet</a>');
+ $('div#modal-body').html('<%=j render "share" %>');
  $('div#modal-title').html('<%= "" %>');
   $('div#challenge-title').html('<%= @wish.wish %>');
   $('div#modal-container').show();

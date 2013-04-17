@@ -84,6 +84,18 @@ class WishesController < ApplicationController
      end
   end
 
+  def tweet()
+  @wish = Wish.find( params[:id] )
+  logger.debug "#{ @wish.username} challenged #{ params[:challengee]}to #{ @wish.wish} with Ohio Credit Flexibility. http://creditflexibility.org" 
+  #Twitter.update("#{ @wish.user.user} challenges you to #{ @wish.wish} with Ohio Credit Flexibility.")
+  #logger.debug "Error #{ Twitter.error }"
+    #rescue Twitter::Error
+    #  flash[:notice] = "ERROR with Twitter"
+    #  redirect_to(:action => 'show')
+     # return
+
+  end
+
   # GET /wishes/1
   # GET /wishes/1.json
   def show

@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 
 
 gem 'open_badges'
+gem 'twitter'
 
 gem 'carrierwave', '>= 0.8.0'
 #gem 'rmagick'
