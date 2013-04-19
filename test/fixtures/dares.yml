@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  message: MyString
+  wish_id: 1
+  challengee_twitid: MyString
+  challengee_email: 
+
+two:
+  user_id: 1
+  message: MyString
+  wish_id: 1
+  challengee_twitid: MyString
+  challengee_email: 

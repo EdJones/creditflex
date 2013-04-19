@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @dare.user_id %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @dare.message %>
+</p>
+
+<p>
+  <b>Wish:</b>
+  <%= @dare.wish_id %>
+</p>
+
+<p>
+  <b>Challengee twitid:</b>
+  <%= @dare.challengee_twitid %>
+</p>
+
+<p>
+  <b>Challengee email:</b>
+  <%= @dare.challengee_email %>
+</p>
+
+
+<%= link_to 'Edit', edit_dare_path(@dare) %> |
+<%= link_to 'Back', dares_path %>

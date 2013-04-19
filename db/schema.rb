@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130327180716) do
+ActiveRecord::Schema.define(:version => 20130419191711) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130327180716) do
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "image"
   end
 
   create_table "challenges", :force => true do |t|
@@ -79,6 +80,16 @@ ActiveRecord::Schema.define(:version => 20130327180716) do
     t.string   "curriculum_url"
     t.string   "course_image"
     t.boolean  "hqt",            :default => false
+  end
+
+  create_table "dares", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "message"
+    t.integer  "wish_id"
+    t.string   "challengee_twitid"
+    t.string   "challengee_email"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "echos", :force => true do |t|

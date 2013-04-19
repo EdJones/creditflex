@@ -69,6 +69,7 @@ class WishesController < ApplicationController
 	@challenge = @wish.challenge
     @challenge = @wish.challenge
 	@user = @wish.user
+
      respond_to do |format|
        format.html  # show.html.erb
        format.js 
@@ -78,6 +79,7 @@ class WishesController < ApplicationController
   def share_challenge()
 	@wish = Wish.find( params[:id] )
 	@user = @wish.user
+		@dare = Dare.new
      respond_to do |format|
        format.html  
        format.js 
@@ -88,12 +90,15 @@ class WishesController < ApplicationController
   @wish = Wish.find( params[:id] )
   logger.debug "#{ @wish.username} challenged #{ params[:challengee]}to #{ @wish.wish} with Ohio Credit Flexibility. http://creditflexibility.org" 
   #Twitter.update("#{ @wish.user.user} challenges you to #{ @wish.wish} with Ohio Credit Flexibility.")
-  #logger.debug "Error #{ Twitter.error }"
+
     #rescue Twitter::Error
     #  flash[:notice] = "ERROR with Twitter"
     #  redirect_to(:action => 'show')
      # return
-
+     respond_to do |format|
+       format.html  
+       format.js 
+     end
   end
 
   # GET /wishes/1

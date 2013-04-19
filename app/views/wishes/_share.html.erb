@@ -16,13 +16,34 @@
 <div class="fb-send" data-href="http://example.com" data-font="arial"></div>
 <div>
 
+<%= form_for(@dare) do |f| %>
+  <% if @dare.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dare.errors.count, "error") %> prohibited this wish from being saved:</h2>
 
+      <ul>
+      <% @dare.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br />
+Who would you challenge?
+  <div class="new-wish">
 
-<%= link_to("Tweet", tweet_wish_path) %>
+    <%= f.text_area :challengee_twitid, :size => "30x1", :placeholder => "Twitter handle of friend" %>
+  </div>
+  <div class="field-hidden">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="flex-button">
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="CreditFlex" data-url="<%=j url_for(@wish) %>" data-size="large" data-text="Challenge issued: " data-hashtags="creditflex">Tweet</a>
-</div>
-<a href="https://twitter.com/share" data-text="Challenge issued: " data-url="<%=j url_for(@wish) %>" class="twitter-share-button" data-via="CreditFlex"  data-size="large" data-hashtags="creditflex">Tweet</a>
+    <%= f.submit "Challenge" %>
 
- 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+<% end %>
+
+<%# link_to("Tweet", tweet_wish_path, :class=>"twitter-share-button") %>
+
