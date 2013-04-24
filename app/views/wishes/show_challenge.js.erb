@@ -1,5 +1,6 @@
  $('div#modal-body').html('<%= j  render(@challenge) %>');
   $('div#challenge-title').html('<%= j @challenge.name %>');
+  $('div#badge').html('<%=j render("badge") %>');
   $('div#modal-container').show();
   
   

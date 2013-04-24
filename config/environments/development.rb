@@ -1,6 +1,8 @@
 Creditflex::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+
+Time.zone = "Eastern Time (US & Canada)"
   # Mozilla Open Badges
   config.after_initialize do
     OpenBadges.issuer_url = "http://www.ohiocreditflexibility.org"
