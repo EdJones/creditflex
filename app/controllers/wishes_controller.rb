@@ -66,6 +66,7 @@ class WishesController < ApplicationController
 	@wish = Wish.find( params[:id] )
 	@user = @wish.user
 	@dare = Dare.new
+	@dare.wish_id = @wish.id
      respond_to do |format|
        format.html  
        format.js 

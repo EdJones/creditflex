@@ -16,7 +16,7 @@
 <div class="fb-send" data-href="http://example.com" data-font="arial"></div>
 <div>
 
-<%= form_for(@dare) do |f| %>
+<%= form_for(@dare, :remote => true) do |f| %>
   <% if @dare.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@dare.errors.count, "error") %> prohibited this wish from being saved:</h2>
@@ -37,6 +37,10 @@ Who would you challenge?
   <div class="field-hidden">
     <%= f.label :user_id %><br />
     <%= f.number_field :user_id %>
+  </div>
+    <div class="field-hidden">
+    <%= f.label :wish_id %><br />
+    <%= f.number_field :wish_id %>
   </div>
   <div class="flex-button">
 

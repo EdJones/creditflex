@@ -41,10 +41,15 @@ class DaresController < ApplicationController
   # POST /dares.json
   def create
     @dare = Dare.new(params[:dare])
+	@dare.user_id = current_user.id
+#  logger.debug "#{ current_user.username} challenged #{ @dare.challengee_twitid} to #{ Wish.find(@dare.wish_id).wish } with Ohio Credit Flexibility. http://creditflexibility.org" 
+logger.debug "#{ @dare.challengee_twitid} was challenged by #{ current_user.username} to #{ Wish.find(@dare.wish_id).wish } with Ohio Credit Flexibility. http://ohiocreditflexibility.org"  
+ Twitter.update("#{ @dare.challengee_twitid} was challenged by #{ current_user.username} to #{ Wish.find(@dare.wish_id).wish } with Ohio Credit Flexibility. http://ohiocreditflexibility.org" )
 
     respond_to do |format|
       if @dare.save
         format.html { redirect_to @dare, notice: 'Dare was successfully created.' }
+		format.js 
         format.json { render json: @dare, status: :created, location: @dare }
       else
         format.html { render action: "new" }
