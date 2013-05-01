@@ -1,32 +1,25 @@
-<%= form_for(@project) do |f| %>
-  <% if @project.errors.any? %>
+<%= form_for(@challenge) do |f| %>
+  <% if @challenge.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+      <h2><%= pluralize(@challenge.errors.count, "error") %> prohibited this project from being saved:</h2>
 
       <ul>
-      <% @project.errors.full_messages.each do |msg| %>
+      <% @challenge.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
- <%= image_tag("abstract_landscape.png", :id => "form_image") %>
+
  <h2>Add an image for your challenge.</h2>
 
-  <div class="field">
-    <%= f.label :Title %><br />
-    <%= f.text_field :title, :size => 50 %>
-  </div>
+
    <div class="field">
     <%= f.label :challengepic, "Upload a picture" %><br />
-    <%= f.file_field :challengepik %>
+    <%= f.file_field :challengepic %>
   </div>  
  
-    <% unless can? :create, Project %>
-  <div class="login_warning">Warning: You must <%= link_to 'log in', :login %> to create/save a project.</div>
-	<%= can? :create, Project %>
-	
-	<% end %>  
+ 
   <div class="actions">
 
     <%= f.submit %>

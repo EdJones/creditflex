@@ -28,7 +28,12 @@
 <%= @wish.user.avatar? %>
 </div>
 
+<div id="modal-container5" class="modal-container5">
+<div id="upload-dialogue" class="uploader-popup">
 
+
+</div>
+</div>
 
 <script>
 
@@ -36,8 +41,17 @@ $(document).ready(function (){
 
 
 $('div#upload-image').click(function(){
-   $('div#modal-container2').show();
-   $('div#image-upload').html('');
+
+  $.get('/challenges/add_image.js');
+
+//   $('div#modal-container5').show();
+//    .done(function(data) {
+// $('div#upload-dialogue').html(data)
+// });
+   
+   
+   
+ //  $('div#image-upload').html($.get("add_image"));
 });
 
     $('div#upload-image').hover(function(){

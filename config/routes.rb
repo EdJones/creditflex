@@ -12,8 +12,11 @@ Creditflex::Application.routes.draw do
 	end
   end
 
-  resources :challenges
-
+  resources :challenges do
+	collection do 
+			get 'add_image'
+		end
+	end
 
   resources :wishes do
 	member do
@@ -25,7 +28,11 @@ Creditflex::Application.routes.draw do
 		post 'confirm_echo'
 		get 'tweet'
 		post 'tweet'
+
 	end
+	collection do 
+			get 'add_image'
+		end
 	end
   resources :comments
 

@@ -13,6 +13,7 @@ partialBadge = '<img src="<%= asset_path("badges/partial.png")%>", class="challe
   <b>You want to learn:</b><br />
   <div class="wish_title"><%= @wish.wish %></div>
   <a href="", id="add_image", onclick="pickChallengeImage()" >Add an image for your challenge</a>
+  <%=  (link_to 'Add an image for your challenge', add_image_challenge_path(@wish), remote: true )  %>
 </p>
 <div id="challenge">
 <div id="rightside">
@@ -186,6 +187,10 @@ Remember! You must have a teacher or admin's approve your plan!
 
 
 
+<div id="modal-container5" class="modal-container5">
+<div id="upload-dialogue" class="uploader-popup">
 
+<%= render("image_form2") %>
+</div>
+</div>
 
-<

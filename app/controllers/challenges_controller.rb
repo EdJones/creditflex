@@ -17,7 +17,8 @@ class ChallengesController < ApplicationController
   # GET /challenges/1.json
   def show
     @challenge = Challenge.find(params[:id])
-
+@challenge.credit = "unknown"	
+	@badge = Badge.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @challenge }
@@ -28,35 +29,41 @@ class ChallengesController < ApplicationController
   # GET /challenges/new.json
   def new
    @challenge = Challenge.new
-#@wish = Wish.find(params[:id])
-@wish = Wish.find(params[:wish])
-@challenge.name = @wish.wish
 
-subject = "Sciencing"
-image = MiniMagick::Image.open("#{Rails.root}/app/assets/images/badges/quarter.png")
-image.combine_options do |c|
-	c.font "helvetica"
-	c.fill "white"
-	c.pointsize '20'
-	c.gravity "center"
-	c.draw "text 0,0 '#{subject}'"
-	end
-image.write  "public/output.jpg"
 
-#variable = "Science"
 
-#mm = MiniMagick::Image.open("#{Rails.root}/app/assets/images/badges/quarter.png")
-  #$mm.combine_options do |c| 
-    #c.gravity 'center' 
-    #c.pointsize '13' 
-    #c.draw "text 33,0 '#{variable}'" 
-  #end
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @challenge }
     end
   end
 
+     def newfromwish
+   @challenge = Challenge.new
+   @challenge.name = @wish.wish
+
+
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @challenge }
+    end
+  end
+
+  def new_from_image
+   @challenge = Challenge.new
+
+@wish = Wish.find(params[:wish])
+@challenge.name = @wish.wish
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @challenge }
+    end
+  end
+  
+  
   def add_challenge
     @challenge = Challenge.new
 #@wish = Wish.find(params[:id])
@@ -67,7 +74,33 @@ image.write  "public/output.jpg"
     end
   end
 
-
+  def add_image
+    @challenge = Challenge.new
+#@wish = Wish.find(params[:id])
+@wish = Wish.find(1)
+    respond_to do |format|
+      format.html # new.html.erb
+	  format.js
+      format.json { render json: @challenge }
+    end
+  end 
+  
+    # POST /challenges
+  # POST /challenges.json
+  def new_challenge_with_image
+    @challenge = Challenge.new(params[:challenge])
+    respond_to do |format|
+      if @challenge.save
+        format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
+        format.json { render json: @challenge, status: :created, location: @challenge }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @challenge.errors, status: :unprocessable_entity }
+      end
+    end
+  end 
+  
+  
   # GET /challenges/1/edit
   def edit
     @challenge = Challenge.find(params[:id])
@@ -79,7 +112,10 @@ image.write  "public/output.jpg"
     @challenge = Challenge.new(params[:challenge])
 
     respond_to do |format|
-      if @challenge.save
+      if @challenge.save && @challenge.credit == nil 
+	    format.html { render 'edit', notice: 'Challenge was successfully created.' }
+        format.json { render json: @challenge, status: :created, location: @challenge }
+	  elsif @challenge.save
         format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
         format.json { render json: @challenge, status: :created, location: @challenge }
       else
@@ -116,4 +152,18 @@ image.write  "public/output.jpg"
       format.json { head :no_content }
     end
   end
+end
+
+private
+def image_write_test
+  subject = "Sciencing"
+  image = MiniMagick::Image.open("#{Rails.root}/app/assets/images/badges/quarter.png")
+  image.combine_options do |c|
+	c.font "helvetica"
+	c.fill "white"
+	c.pointsize '20'
+	c.gravity "center"
+	c.draw "text 0,0 '#{subject}'"
+	end
+  image.write  "public/output.jpg"
 end

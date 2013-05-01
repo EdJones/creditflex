@@ -2,12 +2,9 @@ class WishesController < ApplicationController
   # GET /wishes
   # GET /wishes.json
   def index
-    #@wishes = Wish.last(4).reverse
-	@wishes = Wish.all.reverse
 	@projects = Project.all
 	@wish = Wish.new
-	logger.debug "Wish: #{ @wish.inspect }"
-	@wish.user_id = 1
+	@wish.user_id = current_user.id
 	@wishes = Wish.wish_stream
     respond_to do |format|
       format.html # index.html.erb
@@ -16,11 +13,7 @@ class WishesController < ApplicationController
   end
 
   def wish_stream
-  	logger.debug "****************wish_stream controller************"
-    #@wishes = Wish.last(4).reverse
-	#@wishes = Wish.all.reverse
 	@wishes = Wish.wish_stream
-	logger.info "****************wish_stream controller************"
 	logger.debug "Wishes: #{ @wishes.inspect }"
     respond_to do |format|
       format.html { logger.debug "html!" }
@@ -31,7 +24,6 @@ class WishesController < ApplicationController
 	
   end
 
-
     def confirm_echo
       @wish = Wish.find( params[:id] )
       respond_to do |format|
@@ -41,17 +33,12 @@ class WishesController < ApplicationController
   end
 
   def echo
-  logger.debug "Params[]: #{ params.inspect }"
   @echo = Echo.new
   @echo.wish_id = params[:id]
   @echo.user_id = current_user.id
-
-      respond_to do |format|
+   respond_to do |format|
       if @echo.save
-	  logger.debug "echo saved"
 	    @wishes = Wish.wish_stream
-        format.html { logger.debug "html!" }
-		#{ render action: "index", notice: 'Echo was successfully created.' }
 		format.js 
         format.json { render json: @echo, status: :created, location: @echo }
       else
@@ -64,14 +51,13 @@ class WishesController < ApplicationController
   def show_challenge()
 	#logger.debug "Params[:id]: #{ params[:id] }"
 	#logger.debug "Params[]: #{ params.inspect }"
-	#logger.debug "Wish: #{ @wish.inspect }"
 	@wish = Wish.find( params[:id] )
 	@challenge = @wish.challenge
     @challenge = @wish.challenge
 	@user = @wish.user
 
      respond_to do |format|
-       format.html  # show.html.erb
+       format.html  
        format.js 
      end
   end
@@ -79,7 +65,7 @@ class WishesController < ApplicationController
   def share_challenge()
 	@wish = Wish.find( params[:id] )
 	@user = @wish.user
-		@dare = Dare.new
+	@dare = Dare.new
      respond_to do |format|
        format.html  
        format.js 
@@ -111,12 +97,20 @@ class WishesController < ApplicationController
       format.json { render json: @wish }
     end
   end
+  
+    def add_image
+     # @wish = Wish.find( params[:id] )
+      respond_to do |format|
+        format.html 
+        format.js
+    end
+  end
 
   # GET /wishes/new
   # GET /wishes/new.json
   def new
     @wish = Wish.new
-
+	@wish.user_id = current_user.id
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @wish }
