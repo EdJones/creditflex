@@ -1,10 +1,12 @@
 class WishesController < ApplicationController
+load_and_authorize_resource :except => [:index, :show]
+
   # GET /wishes
   # GET /wishes.json
   def index
 	@projects = Project.all
 	@wish = Wish.new
-	@wish.user_id = current_user.id
+	#@wish.user_id = current_user.id
 	@wishes = Wish.wish_stream
     respond_to do |format|
       format.html # index.html.erb
@@ -127,7 +129,7 @@ class WishesController < ApplicationController
   # POST /wishes.json
   def create
     @wish = Wish.new(params[:wish])
-
+    @wish.user_id = current_user.id
     respond_to do |format|
       if @wish.save
         format.html { redirect_to @wish, notice: 'Wish was successfully created.' }

@@ -13,6 +13,10 @@ Creditflex::Application.routes.draw do
   end
 
   resources :challenges do
+    member do
+	   get 'review'
+	end
+	   
 	collection do 
 			get 'add_image'
 		end
@@ -45,7 +49,7 @@ Creditflex::Application.routes.draw do
 	end
   get "sessions/new"
   get "logout" => "sessions#destroy", :as => "logout"
-  get "login" => "sessions#new", :as => "login"
+  #get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
   
   #get "/images/favicon.ico"
@@ -121,6 +125,7 @@ Creditflex::Application.routes.draw do
 	 match 'lycee/credits' => 'lycee#credits'
 	 match 'lycee/rigor' => 'lycee#rigor'
 	 match 'signup_now' => 'users#new'
+	 match 'login' => 'users#new'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -165,7 +170,7 @@ Creditflex::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'lycee#index'
+   root :to => 'wishes#index'
 
   # See how all your routes lay out with "rake routes"
 
