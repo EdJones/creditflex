@@ -7,7 +7,8 @@ document.getElementById("challenge_name").innerHTML= challengeTitle;
 
 function challengeView2()
 {
-
+//alert(this);
+//$(this).parent('form').submit();
 document.getElementById("credit_amount").style.display="none";
 
 

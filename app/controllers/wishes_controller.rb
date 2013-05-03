@@ -102,7 +102,7 @@ load_and_authorize_resource :except => [:index, :show]
   end
   
     def add_image
-     # @wish = Wish.find( params[:id] )
+      @wish = Wish.find( params[:id] )
       respond_to do |format|
         format.html 
         format.js

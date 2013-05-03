@@ -30,35 +30,31 @@ class ChallengesController < ApplicationController
   def new
    @challenge = Challenge.new
 
-
-
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @challenge }
     end
   end
 
-     def newfromwish
-   @challenge = Challenge.new
-   @challenge.name = @wish.wish
-
-
-
+  def new_from_wish
+    @challenge = Challenge.new
+    @wish = Wish.find(params[:wish])
+    @challenge.name = @wish.wish
+  
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render 'new' } # new.html.erb
       format.json { render json: @challenge }
     end
   end
 
   def new_from_image
-   @challenge = Challenge.new
+   @challenge = Challenge.find(params[:wish])
 
 @wish = Wish.find(params[:wish])
 @challenge.name = @wish.wish
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html 'new' # new.html.erb
       format.json { render json: @challenge }
     end
   end
@@ -76,8 +72,8 @@ class ChallengesController < ApplicationController
 
   def add_image
     @challenge = Challenge.new
-#@wish = Wish.find(params[:id])
-@wish = Wish.find(1)
+@wish = Wish.find(params[:id])
+#@wish = Wish.find(1)
     respond_to do |format|
       format.html # new.html.erb
 	  format.js
@@ -106,6 +102,11 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.find(params[:id])
   end
 
+  # GET /challenges/1/edit
+  def review
+    @challenge = Challenge.find(params[:id])
+  end
+  
   # POST /challenges
   # POST /challenges.json
   def create
@@ -113,10 +114,27 @@ class ChallengesController < ApplicationController
 
     respond_to do |format|
       if @challenge.save && @challenge.credit == nil 
-	    format.html { render 'edit', notice: 'Challenge was successfully created.' }
+	    format.html { render 'new', notice: 'Challenge was successfully created.' }
         format.json { render json: @challenge, status: :created, location: @challenge }
 	  elsif @challenge.save
         format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
+        format.json { render json: @challenge, status: :created, location: @challenge }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @challenge.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
+    def jcreate
+    @challenge = Challenge.new(params[:challenge])
+
+    respond_to do |format|
+      if @challenge.save && @challenge.credit == nil 
+	    format.html { render 'new', notice: 'Challenge was successfully created.' }
+        format.json { render json: @challenge, status: :created, location: @challenge }
+	  elsif @challenge.save && @challenge.credit == !nil
+        format.html { render :nothing => true }
         format.json { render json: @challenge, status: :created, location: @challenge }
       else
         format.html { render action: "new" }

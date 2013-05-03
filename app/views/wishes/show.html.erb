@@ -9,19 +9,29 @@
   <%= image_tag("we_issue.png", :id => "moz-cred1", :alt => "Mozilla Issuer Insignia", :title => "Mozilla Badge Issuer Insignia") %>
 </div>
   <div class="wish_title"><%= @wish.wish %></div>
-<div id="upload-image">Add an image for your challenge</div>
+<div id="upload-image">
+<% if @wish.challenge_id.nil? || @wish.challenge.challengepic.nil? %>  
+Add an image for your challenge
+<% else %>
+<%= "Your pic here" %>
+<% end %>
+</div>
+<% if @wish.challenge_id.nil? %>
 <div id="challenge_options">
 <p>Well, don't just sit there wishing...</p>
 
 
 
-<%= link_to("Start designing your challenge.", new_challenge_path(:wish => @wish), :id => "1", :class => "b_button") %>
+<%= link_to("Start designing your challenge.", new_from_wish_challenges_path(:wish => @wish),  :class => "b_button") %>
 <p>
 <%= link_to("I found a badge I'd like to earn and get credit for.", new_badge_path, :id => "add_badge", :class => "b_button") %>
 </p>
 <%= link_to("Not yet. Let's see more of what others are doing.", lycee_path, :id => "add_project", :class => "b_button2") %>
 </div>
+<% else %>
+<%= link_to("View your challenge.", challenge_path(:id => @wish.challenge_id),  :class => "b_button") %>
 
+<% end %>
 </div><div>
 <%= link_to 'Edit', edit_wish_path(@wish) %> |
 <%= link_to 'Back', wishes_path %>
@@ -42,7 +52,8 @@ $(document).ready(function (){
 
 $('div#upload-image').click(function(){
 
-  $.get('/challenges/add_image.js');
+  //$.get('/challenges/new_from_wish.js');
+  //$.get('<%=j new_from_wish_challenges_path(:wish => @wish) %>');
 
 //   $('div#modal-container5').show();
 //    .done(function(data) {
@@ -50,8 +61,8 @@ $('div#upload-image').click(function(){
 // });
    
    
-   
- //  $('div#image-upload').html($.get("add_image"));
+  $('div#image-upload').html($.get('<%=j add_image_wishes_path(:id => @wish.id, :remote => true ) %>')) 
+//   $('div#image-upload').html($.get("add_image"))
 });
 
     $('div#upload-image').hover(function(){

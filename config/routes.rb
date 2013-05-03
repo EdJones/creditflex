@@ -15,10 +15,15 @@ Creditflex::Application.routes.draw do
   resources :challenges do
     member do
 	   get 'review'
+	   get 'new_from_image'
+	   get 'add_image'
+
 	end
 	   
 	collection do 
-			get 'add_image'
+		get 'add_image'
+		get 'new_from_wish'
+		get 'new_from_image'
 		end
 	end
 
