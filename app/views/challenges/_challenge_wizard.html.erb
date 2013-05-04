@@ -55,64 +55,16 @@ Challenge name:
 <%= label_tag(:credit_partial, "partial credit") %>
 
 
+    <%= f.submit %>
+
+		<% end %>
 		
    <button type="button", onclick="challengeView2()", class="c_button" >Next</button> 
 </div>
 
-<div id="challenge_view2" class="challenge_details" >
-		<label for="description">Rad. Here's a draft badge for you.<p>Tell more about your course/challenge/project/experience. 1-5 paragraphs should do. (You can always edit this later.)</label></p>
-        
-		<%= f.label :description %><br />
-		<%= f.text_area :description, :size => "50x4" %>
-		
-	<button type="button", onclick="challengeView3()", class="c_button" >Next</button>
-
+<div id="wizard">
 </div>
 
-<div id="challenge_view3" class="challenge_details" >
-		<p>K! You're on your way!
-			</p>
-   			<label for="subject">Is this for a specific academic Subject? (It's cool if you don't have one.)</label>
-			
-			<%= f.select( "subject", options_for_select(Subject.all.collect {|p| [ p.name, p.id ] }),:prompt => 'Select Subject' ) %>
-			
-	<button type="button", onclick="challengeView4()", class="c_button" >Next</button>
-
-</div>
-
-<div id="challenge_view4" class="challenge_details" >
-<label for="needs">What will you need for this challenge? <p>Is it an online class? A series of experiments? What will you need to buy or borrow or beg?</p> 
-	<p>Who or what type of people will you need to get help from?(Again, you can change this later).</p> </label>
-			  <br >
-			  
-            <%= f.text_area :needs, :size => "50x4" %>
-<button type="button", onclick="challengeView5()", class="c_button" >Next</button> 
-</div>
-
-<div id="challenge_view5" class="challenge_details" >
-<label for="goal">Next-to-Last item! <p>List specific goals you'll need to achieve.<p>
-
-<p class="smaller"> You'll perhaps make these more detailed in your plan; or maybe your goals are simply "Get A in online course." 
-</p>
-<p class="smaller">Or maybe you'll need to complete 4 of 6 badges in a series.<p>
-<p class="smaller">This is just to get you thinking. You can change it all later.</p> 
-<p class="smaller">Who or what type of people will you need to get help from?(Again, you can change this later).</p> </label>
-			  
-		
-		<%= f.text_area :goal, :size => "50x4" %>
-<button type="button", onclick="challengeView6()", class="c_button" >Next</button> 
-</div>
-
-
-<div id="challenge_view6" class="challenge_details" >
-<label for="teacher">One and you're done. <p>Who will decide if you succeeded? </p>
-
-<p>A teacher, counselor, or administrator at your school must give the final OK. Have you thought about who?<p>
-<p></p> 
-</label>
-			  <br > 
-
-		<%= f.text_area :teacher, :size => "30x2" %>
 <button type="button", onclick="challengeDone()", class="c_button", id="done-button" >Done</button> 
 </div>
 
@@ -139,10 +91,10 @@ Remember! You must have a teacher or admin's approve your plan!
 </div>
 </div>
   <div id="challenge-save" class="actions">
-    <%= f.submit %>
+
   </div>
 
 <%# submit_tag("Save") %>
-<% end %>
+
 </div>
 </div>

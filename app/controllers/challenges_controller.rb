@@ -40,7 +40,7 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.new
     @wish = Wish.find(params[:wish])
     @challenge.name = @wish.wish
-  
+	
     respond_to do |format|
       format.html { render 'new' } # new.html.erb
       format.json { render json: @challenge }
@@ -101,7 +101,14 @@ class ChallengesController < ApplicationController
   def edit
     @challenge = Challenge.find(params[:id])
   end
-
+ 
+ def wizard2
+	@challenge = Challenge.find(params[:id])
+	respond_to do |format|
+	  format.js
+      format.json { render json: @challenge }
+    end
+ end
   # GET /challenges/1/edit
   def review
     @challenge = Challenge.find(params[:id])
@@ -113,16 +120,31 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.new(params[:challenge])
 
     respond_to do |format|
-      if @challenge.save && @challenge.credit == nil 
+      if @challenge.credit == nil &&  @challenge.save
+	    logger.debug "save 1"
 	    format.html { render 'new', notice: 'Challenge was successfully created.' }
         format.json { render json: @challenge, status: :created, location: @challenge }
-	  elsif @challenge.save
+	  elsif @challenge.save && @challenge.credit != nil
+	  logger.debug "save 2"
         format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
+		format.js 
         format.json { render json: @challenge, status: :created, location: @challenge }
       else
+	  logger.debug "save 3"
         format.html { render action: "new" }
         format.json { render json: @challenge.errors, status: :unprocessable_entity }
       end
+    end
+  end
+  
+  
+    def wcreate
+    @challenge = Challenge.new(params[:challenge])
+
+    respond_to do |format|
+        format.js { redirect_to 'wizard2', notice: 'Challenge was successfully created.' }
+	    format.html { render 'new', notice: 'Challenge was successfully created.' }
+        format.json { render json: @challenge, status: :created, location: @challenge }
     end
   end
   
