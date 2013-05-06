@@ -7,16 +7,12 @@ document.getElementById("challenge_name").innerHTML= challengeTitle;
 
 function challengeView2()
 {
-//alert(this);
-//$(this).parent('form').submit();
 document.getElementById("credit_amount").style.display="none";
-
 
 document.getElementById("challenge_view2").style.display="block";
 document.getElementById("badge_holder").style.visibility="visible";
 document.getElementById("badge_image").innerHTML= quarterBadge;
 document.getElementById("badge_title").innerHTML= challengeTitle;
-
 
 document.getElementById("check1").style.visibility="visible";
 document.getElementById("prog1").style.backgroundColor="#50D55D";
@@ -72,12 +68,11 @@ document.getElementById("prog5").style.backgroundColor="#50D55D";
 }
 function challengeDone()
 {
-document.getElementById("new_challenge").submit()
+//document.getElementById("new_challenge").submit()
 document.getElementById("challenge_view6").style.display="none";
 document.getElementById("badge_holder_2").innerHTML= document.getElementById("badge_holder").innerHTML;
 document.getElementById("badge_holder").style.visibility="hidden";
 document.getElementById("challenge_view_done").style.display="block";
-document.getElementById("done-button").style.display="none";
 document.getElementById("now_what").style.display="block";
 document.getElementById("check6").style.visibility="visible";
 document.getElementById("prog6").style.color="#123456"
@@ -87,6 +82,7 @@ function displayNext()
 {
 document.getElementById("challenge_view_done").style.display="none";
 document.getElementById("execution_view").style.display="block";
+document.getElementById("now_what").style.display="none";
 
 }
 

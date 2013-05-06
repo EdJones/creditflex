@@ -55,18 +55,17 @@ Challenge name:
 <%= label_tag(:credit_partial, "partial credit") %>
 
 
-    <%= f.submit %>
+    <%= f.submit 'Next', :class => 'c_button' %>
 
 		<% end %>
 		
-   <button type="button", onclick="challengeView2()", class="c_button" >Next</button> 
+
 </div>
 
 <div id="wizard">
 </div>
 
-<button type="button", onclick="challengeDone()", class="c_button", id="done-button" >Done</button> 
-</div>
+
 
 
 <div id="challenge_view_done" class="challenge_details" >
@@ -81,9 +80,9 @@ What's next? Lots!
 
 You can
 <p>Start bringing a teacher, counseler, or administrator on board.</p>
-<p>Fire over to BadgeForge.com to develop some incremental badges for your plan.</p>
+<p>Fire over to <a href= "http://badgeforge.com/index.php ">BadgeForge.com</a> to create badges for steps in your plan.</p>
 <p>Challenge other students to work on their plan, or join yours</p>
-<p>Continue developing your plan some more.<p>
+<p><%= link_to "Continue developing your plan some more.", new_proposal_path %><p>
 
 Remember! You must have a teacher or admin's approve your plan!
 <div id="badge_holder_2">
@@ -96,5 +95,4 @@ Remember! You must have a teacher or admin's approve your plan!
 
 <%# submit_tag("Save") %>
 
-</div>
 </div>

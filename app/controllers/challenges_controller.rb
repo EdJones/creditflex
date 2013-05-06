@@ -17,10 +17,10 @@ class ChallengesController < ApplicationController
   # GET /challenges/1.json
   def show
     @challenge = Challenge.find(params[:id])
-@challenge.credit = "unknown"	
 	@badge = Badge.new
     respond_to do |format|
       format.html # show.html.erb
+	  format.js
       format.json { render json: @challenge }
     end
   end
