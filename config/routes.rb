@@ -24,6 +24,7 @@ Creditflex::Application.routes.draw do
 		get 'add_image'
 		get 'new_from_wish'
 		get 'new_from_image'
+		post 'icreate'
 		end
 	end
 
@@ -86,8 +87,8 @@ Creditflex::Application.routes.draw do
 #			end
 #	end
 
-  resources :portfolios
-
+  resources :portfolios 
+		
   resources :requests do
         member do
             post 'new'
@@ -104,7 +105,13 @@ Creditflex::Application.routes.draw do
 			end	
 	end
 
-  resources :proposals
+  resources :proposals do
+  collection do 
+		get 'add_image'
+		get 'new_from_wish'
+		get 'new_from_challenge'
+		end
+  end
 
   resources :proposal_types
 

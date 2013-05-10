@@ -32,6 +32,20 @@ class ProposalsController < ApplicationController
     end
   end
 
+  def new_from_challenge
+    @proposal = Proposal.new
+	@challenge = Challenge.find(params[:challenge])
+	@proposal.goals = @challenge.goal
+	@proposal.description = @challenge.description
+	@proposal.title = @challenge.name
+	@proposal.student_id = @current_user.username
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @proposal }
+    end
+  end
+  
+  
   # GET /proposals/1/edit
   def edit
     @proposal = Proposal.find(params[:id])

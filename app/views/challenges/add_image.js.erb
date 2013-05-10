@@ -1,6 +1,24 @@
 // $.get("add_image", function(data) {
-$('div#upload-dialogue').append('<%=j render("image_form") %>');
+$('div#upload-dialogue').html('<%=j render("image_form") %>');
 // });
  
     $('div#modal-container5').show();
 
+$(document).ready(function (){
+    
+	      $('#modal-close').hover(function(){
+   $('span#modal-close').toggleClass('modal-hover');
+  });
+        $('#modal-close').click(function(){
+   $('div#modal-container5').hide("slow");
+
+  });
+  
+
+
+
+
+
+  
+
+});
