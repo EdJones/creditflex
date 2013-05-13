@@ -127,7 +127,7 @@ class ChallengesController < ApplicationController
 	  elsif @challenge.save && @challenge.credit != nil
 	  logger.debug "save 2"
         format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
-		format.js 
+		format.js { render 'challenge_wizard2', notice: 'Challenge was successfully created.' } 
         format.json { render json: @challenge, status: :created, location: @challenge }
       else
 	  logger.debug "save 3"

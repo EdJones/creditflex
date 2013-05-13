@@ -81,7 +81,8 @@ document.getElementById("prog6").style.backgroundColor="#50D55D";
 function displayNext()
 {
 document.getElementById("challenge_view_done").style.display="none";
-document.getElementById("execution_view").style.display="block";
+document.getElementById("challenge_next").style.display="block";
+document.getElementById("challenge_next").style.visibility="visible";
 document.getElementById("now_what").style.display="none";
 
 }
