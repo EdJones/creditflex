@@ -38,9 +38,9 @@ class ProposalsController < ApplicationController
 	@proposal.goals = @challenge.goal
 	@proposal.description = @challenge.description
 	@proposal.title = @challenge.name
-	@proposal.student_id = @current_user.username
+	@proposal.student_id = current_user.username
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render 'new' } # new.html.erb
       format.json { render json: @proposal }
     end
   end
