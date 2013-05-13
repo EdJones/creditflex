@@ -11,6 +11,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= cache do %>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -21,6 +22,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 <%= render(:partial => "shared/header2") %>
 <div class="clear"></div>
+<% end %>
 <%= yield %>
 
 </body>

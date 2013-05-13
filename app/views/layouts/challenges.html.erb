@@ -10,8 +10,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= cache do %>
 <%= render(:partial => "shared/header") %>
 <div class="clear"></div>
+<% end %>
 <%= yield %>
 
 </body>
