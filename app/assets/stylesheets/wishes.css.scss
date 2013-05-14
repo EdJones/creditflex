@@ -66,8 +66,11 @@ text-align:center;
 }
 
 .b_button {
-    background: -moz-linear-gradient(center top , #79BBFF 5%, #378DE5 100%) repeat scroll 0 0 #79BBFF;
-    border: 0px solid #84BBF3;
+    /* background: -moz-linear-gradient(center top , #79BBFF 5%, #378DE5 100%) repeat scroll 0 0 #79BBFF;
+    border: 0px solid #84BBF3; */
+		background-color: #67B646;
+    border-color: #6DA43F;
+    color: white;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0 1px 0 0 #BBDAF7 inset;
     color: #FFFFFF;
@@ -83,8 +86,11 @@ text-align:center;
 	text-align:center;
 }
 .b_button2 {
-    background: -moz-linear-gradient(center top , #79BBFF 5%, #378DE5 100%) repeat scroll 0 0 #79BBFF;
-    border: 0px solid #84BBF3;
+    /* background: -moz-linear-gradient(center top , #79BBFF 5%, #378DE5 100%) repeat scroll 0 0 #79BBFF;
+    border: 0px solid #84BBF3; */
+	  background-color: #309dd4;
+  color: white;
+  border-color: #27a1ba;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0 1px 0 0 #BBDAF7 inset;
     color: #FFFFFF;
@@ -478,6 +484,7 @@ float:right;
 .echo-teeny {
 		height:10px;
 		width:10px;
+		border:0px;
 		}
 .b_button3 {
     background: -moz-linear-gradient(center top , #79BBFF 5%, #378DE5 100%) repeat scroll 0 0 #79BBFF;

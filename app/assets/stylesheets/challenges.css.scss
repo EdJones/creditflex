@@ -60,8 +60,11 @@ margin-top:0px;
 }	
 
 .c_button {
-    background: -moz-linear-gradient(center top , #79BBFF 5%, #378DE5 100%) repeat scroll 0 0 #79BBFF;
-    border: 0px solid #84BBF3;
+    /* background: -moz-linear-gradient(center top , #79BBFF 5%, #378DE5 100%) repeat scroll 0 0 #79BBFF;
+    border: 0px solid #84BBF3; */
+	background-color: #67B646;
+    border-color: #6DA43F;
+    color: white;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0 1px 0 0 #BBDAF7 inset;
     color: #FFFFFF;
@@ -88,8 +91,11 @@ color: #FFFFFF;
     top: 1px;
 }
 .d_button {
-    background: -moz-linear-gradient(center top , #79BBFF 5%, #378DE5 100%) repeat scroll 0 0 #79BBFF;
-    border: 0px solid #84BBF3;
+    /* background: -moz-linear-gradient(center top , #79BBFF 5%, #378DE5 100%) repeat scroll 0 0 #79BBFF;
+    border: 0px solid #84BBF3; */
+		background-color: #67B646;
+    border-color: #6DA43F;
+    color: white;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0 1px 0 0 #BBDAF7 inset;
     color: #FFFFFF;
@@ -231,6 +237,9 @@ p.smaller  {
 #leftside {
 	width:500px;
 	margin-left:75px;
+    min-height: 300px; 
+    height:auto !important; 
+    height: 300px; 
 }
 #rightside {
 	width:175px;
