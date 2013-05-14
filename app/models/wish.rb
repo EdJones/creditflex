@@ -9,11 +9,11 @@ end
 public
 def wish_stream
 
-  @wishes = Wish.all.reverse
-  @echoes = Echo.all.reverse
+  @wishes = Wish.order("created_at desc").limit(200).reverse
+  @echoes = Echo.order("created_at desc").limit(200).reverse
   
   @rewishes = @echoes.collect{|x| x.wish} + @wishes
-  
+  @rewishes = @rewishes.sort_by { |obj| obj.created_at }.reverse
   
   
 
