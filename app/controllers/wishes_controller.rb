@@ -6,8 +6,10 @@ load_and_authorize_resource :except => [:index, :show]
   def index
 	@projects = Project.all
 	@wish = Wish.new
-	#@wish.user_id = current_user.id
+	@wish.user_id = current_user.id
+
 	@wishes = Wish.wish_stream
+	
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @wishes }

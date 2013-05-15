@@ -18,6 +18,8 @@ class Ability
 	  can :create, Project
 	  can :create, Response
 	  can :create, Resource
+	  can :manage, Wish, :user_id => user.id
+	  can :manage, Challenge, :user_id => user.id
 	elsif user.role == 'teacher'
       can :read, :all
 	  cannot :read, User
@@ -26,6 +28,8 @@ class Ability
 	  can :create, Comment
 	  can :manage, Request
 	  can :create, Resource
+	  can :manage, Wish, :user_id => user.id
+	  can :manage, Challenge, :user_id => user.id
 	elsif user.role == 'moderator'
       can :read, :all
 	  cannot :read, User
@@ -33,6 +37,8 @@ class Ability
 	  can :create, Project 
 	  can :manage, Course
 	  cannot :destroy, Course
+	  can :manage, Wish, :user_id => user.id
+	  can :manage, Challenge, :user_id => user.id
 #raise "role: #{user.role }, can create? #{can? :create, Project }"
 	else
 		can :read, :all

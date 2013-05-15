@@ -42,7 +42,10 @@ load_and_authorize_resource :except => [:index, :show, :new]
   # POST /resources.json
   def create
     @resource = Resource.new(params[:resource])
-	@resource.user_id = current_user.id if current_user else 8
+	@resource.user_id = current_user.id 
+	# if current_user else 8
+	# Allow anonymous?
+	
     respond_to do |format|
       if @resource.save
         format.html { redirect_to @resource, notice: 'Resource was successfully created.' }
