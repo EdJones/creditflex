@@ -1,12 +1,13 @@
 class WishesController < ApplicationController
-load_and_authorize_resource :except => [:index, :show]
+load_and_authorize_resource 
+# :except => [:index, :show]
 
   # GET /wishes
   # GET /wishes.json
   def index
 	@projects = Project.all
 	@wish = Wish.new
-	@wish.user_id = current_user.id
+	@wish.user_id = current_user.try(:id)
 
 	@wishes = Wish.wish_stream
 	
