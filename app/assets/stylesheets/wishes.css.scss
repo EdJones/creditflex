@@ -42,6 +42,11 @@ $bar_background__bottom: #dee698;
 	height:150px;
 	margin-left:6px;
 	}
+.open_badge {
+	height:120px;
+	margin-left:35px;
+	margin-top:12px;
+	}
 #main h3 {
 	padding-left:7px;
 	width:350px;
@@ -50,6 +55,11 @@ $bar_background__bottom: #dee698;
 	margin-top:0px;
 
 		}
+.left-box {
+    width:300px;
+	margin-left:10px;
+
+}
 #feature_text2 {
 	width: 400px;
 	float:right;
@@ -149,6 +159,7 @@ margin:0 auto;
 .col-right {
 	float:right;
 	width:780px;
+	margin-top:-150px;
 	}
 
 #content-wishes2 {
@@ -387,7 +398,7 @@ font-size:11px;
 	
 	
 #lower-left {
-	margin-left:10px;
+	margin-left:30px;
 	margin-top:20px;
 	}
 	
@@ -442,7 +453,7 @@ font-size:11px;
 	@include gradient(#ffffff, #3d3d3d );
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9e1', endColorstr='#f7edcf',GradientType=0 ); 
 	color: #4c4c4c; 
-	margin: 0 auto 24px auto; 
+	margin: 30 auto 24px auto; 
 	overflow: hidden;
 	width:240px;
 
