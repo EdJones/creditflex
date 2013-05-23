@@ -12,14 +12,12 @@
 	</span></div>
 	<div class="wish-body">
 	<%= wish.wish %>  
-    <% if (wish.echoes.count > 0 ) %>
-	<span class="echo-count"><%= wish.echoes.count %><%= " echo".pluralize(wish.echoes.count) %></span>
+    <% if (wish.echo_count > 0 ) %>
+	<span class="echo-count"><%= wish.echo_count  %><%= " echo".pluralize(wish.echo_count ) %></span>
 	<% end %>
 	<div class="wish-admin">
 	User: <%= wish.user_id %>
-    <%= link_to 'Show', wish %>
-    <%= link_to 'Edit', edit_wish_path(wish) %>
-    <%= link_to 'Destroy', wish, method: :delete, data: { confirm: 'Are you sure?' } %>
+	
 	</div>
 	</div>
 	<div class="wish-footer">
