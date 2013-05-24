@@ -56,10 +56,11 @@ end
 
 
 group :development, :test do
-    gem 'pry'
-	#gem 'eventmachine', "1.0.0.beta.4.1"
-	#gem 'thin'
-	gem 'sqlite3'
+   gem 'pry'
+   #gem 'eventmachine', "1.0.0.beta.4.1"
+   #gem 'thin'
+   gem 'sqlite3'
+   gem 'rspec-rails', '~> 2.0'
  end
     
 group :test do

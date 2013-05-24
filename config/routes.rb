@@ -1,5 +1,8 @@
 Creditflex::Application.routes.draw do
 
+  resources :interests
+
+
   resources :dares
 
 
