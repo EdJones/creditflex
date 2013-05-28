@@ -43,7 +43,7 @@ $bar_background__bottom: #dee698;
 	margin-left:6px;
 	}
 .open_badge {
-	height:120px;
+	height:100px;
 	margin-left:35px;
 	margin-top:12px;
 	}
@@ -58,10 +58,11 @@ $bar_background__bottom: #dee698;
 .left-box {
     width:300px;
 	margin-left:10px;
+	float:left;
 
 }
 #feature_text2 {
-	width: 400px;
+	width: 300px;
 	float:right;
 	height:360px;
 	padding-bottom:0px;
@@ -157,15 +158,19 @@ margin:0 auto;
 }
 
 .col-right {
-	float:right;
-	width:780px;
-	margin-top:-150px;
+	float:left;
+	width:610px;
+	margin-top:0px;
 	}
 
+.center-top {
+	margin-left:20px;
+	}
+	
 #content-wishes2 {
 	float:left;
-	margin-top:-25px;
-	margin-left:-50px;
+	margin-top:0px;
+	margin-left:0px;
 }
 #column-1 {
 	MARGIN-LEFT:10PX;
@@ -214,6 +219,11 @@ margin:0 auto;
 	background:#fff;
 	padding-left:3px;
 	padding-bottom:6px;
+}
+.col-right h2 {
+	margin-top:0px;
+	margin-bottom:3px;
+	color:#FF6600;
 }
 .stream_header h2 {
 	margin-top:0px;
@@ -399,7 +409,7 @@ font-size:11px;
 	
 #lower-left {
 	margin-left:30px;
-	margin-top:20px;
+	margin-top:0px;
 	}
 	
 	
@@ -446,6 +456,9 @@ font-size:11px;
 .item_desc p {
 	font-size:12px !important ;
 	}
+
+
+
 	
 #projects1 {
 	@include rounded-corners(4px);
@@ -458,6 +471,17 @@ font-size:11px;
 	width:240px;
 
 		}
+
+#projects1 h3 {
+	font-weight:bold;
+	margin-bottom:4px;
+}
+.spacer12 {
+	height:120px;
+}
+.spacer13 {
+	height:80px;
+}
 .item_desc3 {
 	font-size:11px !important ;
 	}	

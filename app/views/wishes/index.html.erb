@@ -15,30 +15,15 @@
 <%# image_tag("apprentice4.jpg", :id => "main-pic", :alt => "cc Sorceress' Apprentice by Sheryl Westleigh", :title => "cc Sorceress' Apprentice by Sheryl Westleigh") %>
 <%# image_tag("dragon.jpg", :id => "main-pic", :alt => "CC Julian Lee") %>
 <%# image_tag("cafe.jpg", :id => "main-pic") %>
+<p>Teachers, students, community members, let's work together here to re-imagine school.</p>
 </div>
 <div class="col-right">
-
-
-
-
-<div id="feature_text2">
-<div id="main_text">
-<div id="intro">
+<div class="center-top">
+<h2>What would you master?</h2>
+...for credit in school?
 </div>
 
-</div>
-<iframe width="200" height="150" src="http://www.youtube.com/embed/yAg1pNu2eWY" frameborder="0" allowfullscreen></iframe>
-  <p class="learn_more">
-      <%= link_to("Explore", lycee_path) %> &nbsp; &nbsp; &nbsp;
-    <%= link_to("Learn more", resources_path) %>.
-  </p>
-  <div id="fb">
-    <%= link_to("Students at Reynoldsburg explain in a cool infographic!", "../infographic.png") %> <p style="display:none" class="not_ohio"><a href="http://peerbackers.com/projects/10000-creit-flex-students-by-2013" target="blank">Help spread the word and get 10,000 students on CreditFlex</a> Not in Ohio? Credit Flexibility may be coming to your state!
-  </p>
-  </div>
-<div id="caption">
-</div>
-</div>
+
 
 
 
@@ -51,8 +36,7 @@
 <div id="column-1">
 <div id="wish-list">
 <div class="stream_header">
-<h2>What would you master?</h2>
-...for credit in school?
+
 <div class="new-wish">
 <%= render 'form1' %>
 
@@ -75,7 +59,6 @@
 
 
 
-</div>
 
 
 
@@ -84,8 +67,12 @@
 <div id="projects1">
  <div class="clearfix" id="projects_bar">
 <div class="t_band">
-
- Who's Used Credit Flex?<br />&nbsp;</div>
+ <div class="spacer12" ></div>
+ <h3>Who's Used Credit Flex?</h3></div>
+ (I already learned...)
+ <div class="spacer14" >
+ <%=link_to("Tell us about your CF project", new_project_path, :id => "add_project", :class => "add_button4") %>
+ </div>
 <% @projects[0..3].each do |project| %>
 <div id="projects_item">
 	<div class="item_desc3">
@@ -107,6 +94,31 @@
 
 
 </div>
+
+
+</div>
+
+
+<div id="feature_text2">
+<div id="main_text">
+<div id="intro">
+</div>
+
+</div>
+<iframe width="200" height="150" src="http://www.youtube.com/embed/yAg1pNu2eWY" frameborder="0" allowfullscreen></iframe>
+  <p class="learn_more">
+      <%= link_to("Explore", lycee_path) %> &nbsp; &nbsp; &nbsp;
+    <%= link_to("Learn more", resources_path) %>.
+  </p>
+  <div id="fb">
+    <%= link_to("Students at Reynoldsburg explain in a cool infographic!", "../infographic.png") %> <p style="display:none" class="not_ohio"><a href="http://peerbackers.com/projects/10000-creit-flex-students-by-2013" target="blank">Help spread the word and get 10,000 students on CreditFlex</a> Not in Ohio? Credit Flexibility may be coming to your state!
+  </p>
+  </div>
+<div id="caption">
+</div>
+</div>
+
+
 
 
 

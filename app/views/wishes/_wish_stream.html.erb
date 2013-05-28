@@ -7,9 +7,7 @@
   <%= image_tag(wish.user.avatar.url, :class => 'avatar-small') if wish.user.avatar? %>&nbsp;
   </div>
   <div class="wish">
-    <div class="wish-header"><span class="wisher">
-    <%= wish.user.username if wish.user %>
-	</span></div>
+    <div class="wish-header"></div>
 	<div class="wish-body">
 	<%= wish.wish %>  
     <% if (wish.echo_count > 0 ) %>
@@ -21,7 +19,9 @@
 	</div>
 	</div>
 	<div class="wish-footer">
-	
+	<span class="wisher">
+    <%= wish.user.username if wish.user %>
+	</span>
 	<%=  (link_to 'View Challenge', show_challenge_wish_path(wish), remote: true ) if wish.try(:challenge_id) %>
 	<%= link_to confirm_echo_wish_path(wish), remote: true do %>
 	    Echo <%= image_tag('echo1.png', :class => 'echo-teeny')  %>
