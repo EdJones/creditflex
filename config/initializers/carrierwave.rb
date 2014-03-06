@@ -25,8 +25,8 @@ CarrierWave.configure do |config|
     #config.storage = :s3
     config.fog_credentials = {
     :provider               => 'AWS',
-    :aws_access_key_id      => 'AKIAI7NSIOUFIDPFRWCA',
-    :aws_secret_access_key  => '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',
+    :aws_access_key_id      => '',
+    :aws_secret_access_key  => '',
     :region                 => 'us-east-1'
   }
   config.fog_directory  = 'creditflexibility'
